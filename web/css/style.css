@@ -110,16 +110,15 @@ p a:hover,
 	top: 22px;
 }
 #body div.header div div#tagline {
-	height: 165px;
 	margin: 0;
 	width: 465px;
 }
 #body div.header div div#tagline h1 {
 	color: #ed2a45;
 	font-family: 'Conv_BreeSerif-Regular';
-	font-size: 90px;
+	font-size: 45px;
 	font-weight: normal;
-	line-height: 80px;
+	line-height: 40px;
 	margin: 0;
 	padding: 35px 0 0;
 	text-transform: uppercase;
