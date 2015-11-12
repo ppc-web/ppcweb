@@ -1,6 +1,5 @@
 /* Website template by freewebsitetemplates.com */
 body {
-	background: url(../images/bg-body.jpg) repeat;
 	color: #7e868c;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
@@ -44,8 +43,7 @@ p a:hover,
 	color: #44505a;
 }
 #header {
-	background: url(../images/bg-header.png) repeat-x;
-	height: 169px;
+//	height: 169px;
 }
 #header div {
 	margin: 0 auto;
@@ -58,7 +56,7 @@ p a:hover,
 }
 #header div a#logo img {
 	display: block;
-	margin: 70px 0 0;
+	margin: 25px 0 0;
 }
 #header div ul {
 	background: url(../images/bg-navigation.png) no-repeat;
@@ -95,8 +93,7 @@ p a:hover,
 	padding: 11px 0 20px;
 }
 #body div.header {
-	background: url(../images/bg-featured.png) repeat-x;
-	height: 409px;
+	height: 310px;
 }
 #body div.header div {
 	margin: 0 auto;
@@ -107,7 +104,7 @@ p a:hover,
 	display: block;
 	right: 0;
 	position: absolute;
-	top: 22px;
+	top: 10px;
 }
 #body div.header div div#tagline {
 	margin: 0;
@@ -120,7 +117,7 @@ p a:hover,
 	font-weight: normal;
 	line-height: 40px;
 	margin: 0;
-	padding: 35px 0 0;
+	padding: 25px 0 0;
 	text-transform: uppercase;
 }
 #body div.header div div#tagline h3 {
@@ -137,8 +134,7 @@ p a:hover,
 	background: none;
 	border: none;
 	margin: 0;
-	padding: 23px 0 0;
-	width: 520px;
+	width: 420px;
 }
 #body div.header div div.section h2,
 #body div#campaigns div.header div h2,
