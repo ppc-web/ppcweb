@@ -577,16 +577,12 @@ hr {
 	padding: 3px;
 }
 
-#contents div.body.camp {
-	background-image: none;
-	
-}
-
 #header h1 {
 	margin: 15px 0 15px 50px;
 	color: lightgray;
+	text-transform: none;
 }
-#header h1 span.logo {
+#header h1 span.logo, #content h1 span.logo, #content div.camp h1 span.logo {
 	display: inline-block;
 	vertical-align: middle;
 	margin-top: -7px;
