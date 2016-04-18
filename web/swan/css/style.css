@@ -1,12 +1,13 @@
 /* Website template by freewebsitetemplates.com */
 body {
-	background: #ffb744 url(../images/bg-body.jpg) repeat left bottom;
+	//background: #ffb744 url(../images/bg-body.jpg) repeat left bottom;
+	background-color: lavender;
 	font-family: "Times New Roman", Times, serif;
 	margin: 0;
 }
 #background {
-	background: url(../images/bg-pattern.jpg) repeat-x center top;
-	min-height: 1318px;
+	//background: url(../images/bg-pattern.jpg) repeat-x center top;
+	//min-height: 1318px;
 }
 #page {
 	width: 960px;
@@ -116,9 +117,9 @@ img {
 #contents p {
 	color: #5a4535;
 	font-size: 15px;
-	line-height: 30px;
+	line-height: 20px;
 	margin: 0;
-	padding: 0 0 24px 2px;
+	padding: 10px 0 10px 2px;
 }
 #contents p a {
 	color: #5a4535;
@@ -157,6 +158,7 @@ img {
 }
 #adbox p {
 	font-size: 16px;
+	padding-top: 0px;
 }
 .ads {
 	float: right;
