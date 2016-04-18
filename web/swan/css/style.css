@@ -141,7 +141,6 @@ img {
 #contents div.body {
 	background-position: -871px top;
 	background-repeat: repeat-y;
-	min-height: 980px;
 	padding: 30px 40px 0;
 }
 /** Adbox **/
@@ -555,4 +554,16 @@ hr {
 	font: 26px/30px "Times New Roman", Times, serif;
 	color: white;
 	text-align: center;
+}
+
+#contents .camp h2 {
+	margin-bottom: 10px;
+}
+.camp li {
+	line-height: 20px;
+	padding: 3px;
+}
+
+#contents div.body.camp {
+	background-image: none;
 }
