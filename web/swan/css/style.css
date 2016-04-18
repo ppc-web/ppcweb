@@ -21,6 +21,19 @@ img {
 	background-image: url(../images/bg-menu.png);
 	background-repeat: repeat-x;
 }
+
+#navigation li.logo img {
+	position: absolute;
+	margin-left: -55px;
+	margin-top: 7px;
+	
+}
+
+#navigation li.home a {
+	padding-left: 16px;
+	padding-top: 2px
+}
+
 #contents div.box, #contents div.box > div, #contents div.body {
 	background-image: url(../images/content-box.png);
 	background-repeat: no-repeat;
@@ -93,7 +106,7 @@ img {
 	width: 865px;
 	padding: 0 47px;
 }
-#contents h1 {
+#contents h1, #header h1 {
 	color: #316e66;
 	font: 26px/30px "Times New Roman", Times, serif;
 	margin: 18px 0 20px;
@@ -566,4 +579,19 @@ hr {
 
 #contents div.body.camp {
 	background-image: none;
+	
+}
+
+#header h1 {
+	margin: 15px 0 15px 50px;
+	color: lightgray;
+}
+#header h1 span.logo {
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: -7px;
+	height: 45px;
+	width: 45px;	
+	background-image: url('../images/logo-45.png');
+    background-repeat: no-repeat;
 }
