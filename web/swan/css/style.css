@@ -569,7 +569,7 @@ hr {
 	text-align: center;
 }
 
-.camp li {
+div.box li {
 	line-height: 20px;
 	padding: 3px;
 }
@@ -591,4 +591,12 @@ hr {
 ul.end {
 	margin-bottom: 0;
 	padding-bottom: 6px;
+}
+
+table.fee td {
+	font-size: 12pt;
+	vertical-align: top;
+}
+table.fee {
+	padding-bottom: 10px;
 }
