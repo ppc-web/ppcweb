@@ -121,7 +121,7 @@ img {
 }
 #contents h2 {
 	font-size: 22px;
-	margin: 0 0 30px;
+	margin: 0 0 5px;
 }
 #contents h2 a {
 	color: #2c9688;
@@ -569,9 +569,6 @@ hr {
 	text-align: center;
 }
 
-#contents .camp h2 {
-	margin-bottom: 10px;
-}
 .camp li {
 	line-height: 20px;
 	padding: 3px;
@@ -590,4 +587,8 @@ hr {
 	width: 45px;	
 	background-image: url('../images/logo-45.png');
     background-repeat: no-repeat;
+}
+ul.end {
+	margin-bottom: 0;
+	padding-bottom: 6px;
 }
