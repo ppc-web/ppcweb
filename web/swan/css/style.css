@@ -127,6 +127,11 @@ img {
 	color: #2c9688;
 	text-decoration: none;
 }
+
+#contents {
+	color: #5a4535;
+}
+
 #contents p {
 	color: #5a4535;
 	font-size: 15px;
@@ -169,7 +174,6 @@ img {
 	border-color: white
 }
 #adbox p {
-	font-size: 16px;
 	padding-top: 0px;
 }
 .ads {
@@ -213,8 +217,9 @@ hr {
 	padding: 0 0 12px;
 	text-transform: uppercase;
 }
-#main div.box h4 {
-	font: 22px/24px "Times New Roman", Times, serif;
+#main div.box h4, #contents div.box h4 {
+	color: #5a4535;
+	font: 20px "Times New Roman", Times, serif;
 	font-weight: normal;
 	margin: 6px 0 0;
 }
@@ -502,6 +507,8 @@ hr {
 #footer ul.navigation li {
 	float: left;
 	margin-right: 10px;
+	line-height: inherit;
+	font-size: inherit;
 }
 #footer ul.navigation li a {
 	color: #594334;
@@ -569,9 +576,12 @@ hr {
 	text-align: center;
 }
 
-div.box li {
-	line-height: 20px;
-	padding: 3px;
+li {
+	color: #5a4535;
+    font-size: 15px;
+    line-height: 20px;
+}
+.camp li {
 }
 
 #header h1 {
@@ -593,9 +603,10 @@ ul.end {
 	padding-bottom: 6px;
 }
 
-table.fee td {
-	font-size: 12pt;
+.fee td, .fee th {
+	font-size: 15px;
 	vertical-align: top;
+	padding: 2px;
 }
 table.fee {
 	padding-bottom: 10px;
