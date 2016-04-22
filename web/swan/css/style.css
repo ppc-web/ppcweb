@@ -611,3 +611,7 @@ ul.end {
 table.fee {
 	padding-bottom: 10px;
 }
+
+table.coach td {
+	padding: 5px;
+}
