@@ -615,3 +615,8 @@ table.fee {
 table.coach td {
 	padding: 5px;
 }
+
+table.coach td.short-column {
+	width: 10%;
+	text-align: center; 
+}
