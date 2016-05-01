@@ -459,7 +459,7 @@ p a:hover,
 	border: none;
 	margin: 0;
 	overflow: hidden;
-	padding: 35px 0 0;
+	padding: 15px 0 0;
 }
 #body div#campaigns div.body div {
 //	background: #ffffff;
@@ -496,7 +496,7 @@ p a:hover,
 	background: #085180;
 	border: 1px solid #00c6ff;
 	color: #00c6ff;
-	margin: 35px 0 0;
+	margin: 15px 0 0;
 	overflow: hidden;
 	padding: 0 19px;
 }
