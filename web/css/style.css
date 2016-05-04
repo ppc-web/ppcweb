@@ -525,23 +525,15 @@ p a:hover,
 	text-shadow: 1px 1px 1px #74cddf;
 	width: 240px;
 }
-#body div#getinvolved div:first-child {
-	background: none;
-	height: auto;
-	padding: 0;
-}
 #body div#getinvolved div:first-child div.aside {
 	background: #fff6c2;
 	border: 1px solid #ffe801;
 	float: left;
 	margin: 0;
 	padding: 22px 19px 17px;
-	width: 580px;
+	width: 100%;
 }
-#body div#getinvolved div:first-child div.aside div:first-child {
-	padding: 0 0 23px;
-	width: auto;
-}
+
 #body div#getinvolved div:first-child div.aside div:first-child h1 {
 	color: #dc7b14;
 	font-family: 'Conv_BreeSerif-Regular';
@@ -555,9 +547,10 @@ p a:hover,
 }
 #body div#getinvolved div:first-child div.aside div:first-child p {
 	color: #A67D35;
-	float: none;
-	padding: 0;
-	width: auto;
+}
+
+div#getinvolved h2 {
+	color: #dc7b14;
 }
 #body div#getinvolved div:first-child div.aside > div > p a,
 #body div#getinvolved div:first-child div.aside div div p a,
@@ -569,96 +562,8 @@ p a:hover,
 #body div#campaigns div.header div p a:hover {
 	color: #9c550f;
 }
-#body div#getinvolved div:first-child div.aside > div {
-	float: none;
-	margin: 0;
-	overflow: hidden;
-	padding: 0;
-	width: auto;
-}
-#body div#getinvolved div:first-child div.aside div p {
-	color: #A67D35;
-	float: none;
-	padding: 0;
-	width: auto;
-}
-#body div#getinvolved div:first-child div.aside > div > p {
-	float: left;
-	padding: 0 20px 0 0;
-	width: 260px;
-}
-#body div#getinvolved div:first-child div.aside div div {
-	float: right;
-	margin: 0;
-	padding: 0;
-	width: 260px;
-}
-#body div#getinvolved div:first-child div.aside div div img {
-	border: 1px solid #ffe801;
-	display: block;
-	margin: 5px 0 7px;
-	position: static;
-	top: 0;
-}
-#body div#getinvolved div:first-child div.sidebar {
-	float: right;
-	margin: 0;
-	padding: 0;
-	width: 300px;
-	position:static;
-}
-#body div#getinvolved div:first-child div.sidebar div:first-child {
-	background: none;
-	border: none;
-	height: auto;
-	margin: 0 0 18px;
-	padding: 0;
-	position: relative;
-	width: auto;
-}
-#body div#getinvolved div:first-child div.sidebar div:first-child h2 {
-	bottom: 9px;
-	width: 298px;
-}
-#body div#getinvolved div:first-child div.sidebar div:first-child a img {
-	border: 1px solid #d9d9d9;
-	display: block;
-	filter: alpha(opacity=100);/* Needed for IE8 and old versions */
-	opacity: 1;
-}
-#body div#getinvolved div:first-child div.sidebar div {
-	background: #085180;
-	border: 1px solid #00c6ff;
-	float: none;
-	height: 266px;
-	margin: 0;
-	padding: 20px 20px 0;
-	width: auto;
-}
-#body div#getinvolved div:first-child div.sidebar div h2 {
-	position: static;
-}
-#body div#getinvolved > div {
-	overflow: hidden;
-	padding: 30px 0 0;
-}
 #body div#getinvolved div h1 {
 	padding: 0 0 41px;
-}
-#body div#getinvolved div p {
-	float: left;
-	padding: 0 5px 0 0;
-	width: 455px;
-}
-#body div#getinvolved div div {
-	float: left;
-	margin: 0 0 0 20px;
-	width: 220px;
-}
-#body div#getinvolved div div p {
-	float: none;
-	padding: 0;
-	width: auto;
 }
 #body div#getinvolved div div h3 {
 	color: #085180;
