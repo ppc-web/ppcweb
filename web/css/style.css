@@ -549,6 +549,11 @@ p a:hover,
 	color: #A67D35;
 }
 
+h2 em, li em {
+	font-weight: bold;
+	font-style: normal;
+	color: red;
+}
 div#getinvolved h2 {
 	color: #dc7b14;
 }
