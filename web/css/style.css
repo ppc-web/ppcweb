@@ -386,7 +386,7 @@ p a:hover,
 	margin: 23px 0 0;
 	padding: 18px 19px;
 }
-#body div#about li {
+#body div#about li, #body div#newsblog li {
 	line-height: 24px;
 }
 
