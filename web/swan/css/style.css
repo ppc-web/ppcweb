@@ -620,3 +620,14 @@ table.coach td.short-column {
 	text-align: center; 
 }
 
+#navigation li a.logo {
+	background-image: url('../images/logo-small.png');
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 5px;
+}
+
+#navigation li a.logo span {
+	padding-left: 45px;
+	margin-right: 15px;
+}
