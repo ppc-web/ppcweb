@@ -631,3 +631,16 @@ table.coach td.short-column {
 	padding-left: 45px;
 	margin-right: 15px;
 }
+
+table.match-table, .match-table th, .match-table td {
+	border: 1px solid #5a4535;
+	padding: 5px 10px;
+    text-align: center;
+    color: #5a4535;
+}
+
+
+table.match-table {
+	border-collapse: collapse;
+	margin: 10px 0;
+}
