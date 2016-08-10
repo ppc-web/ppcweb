@@ -637,6 +637,9 @@ table.match-table, .match-table th, .match-table td {
 	padding: 5px 10px;
     text-align: center;
     color: #5a4535;
+    font-size: 15px;
+    line-height: 20px;
+    
 }
 
 table.history-table, .history-table th, .history-table td {
@@ -656,4 +659,20 @@ table.history-table, .history-table th, .history-table td {
 table.match-table {
 	border-collapse: collapse;
 	margin: 10px 0;
+}
+
+table.entry-table {
+  counter-reset: serial-number;  /* Set the serial number counter to 0 */
+}
+
+.entry-table td:first-child:before {
+  counter-increment: serial-number;  /* Increment the serial number counter */
+  content: counter(serial-number);  /* Display the counter */
+}
+
+.entry-table td, .entry-table th {
+	color: #5a4535;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: left;
 }
