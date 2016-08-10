@@ -639,6 +639,14 @@ table.match-table, .match-table th, .match-table td {
     color: #5a4535;
 }
 
+table.history-table, .history-table th, .history-table td {
+	padding: 10px 0px;
+	color: #5a4535;
+}
+
+.history-table td img {
+	width: 450px;
+}
 
 table.match-table {
 	border-collapse: collapse;
