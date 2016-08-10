@@ -644,6 +644,11 @@ table.history-table, .history-table th, .history-table td {
 	color: #5a4535;
 }
 
+.history-table td h3 {
+	color: #5a4535;
+	font-weight: normal;
+}
+
 .history-table td img {
 	width: 450px;
 }
