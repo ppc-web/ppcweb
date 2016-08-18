@@ -676,3 +676,10 @@ table.entry-table {
     line-height: 20px;
     text-align: left;
 }
+
+.box td, .box th {
+	color: #5a4535;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: left;
+}
