@@ -683,3 +683,19 @@ table.entry-table {
     line-height: 20px;
     text-align: left;
 }
+
+#contents h2 + p {
+	padding-top: 2px;
+}
+
+#contents p + ul {
+	margin-top: 2px;
+}
+
+#contents p + h2 {
+	margin-top: 2px;
+}
+
+#contents p + p {
+	padding-top: 2px;
+}
