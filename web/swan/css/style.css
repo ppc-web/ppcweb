@@ -677,6 +677,10 @@ table.entry-table {
     text-align: left;
 }
 
+.guest {
+	background-color: #ff9966;
+}
+
 .box td, .box th {
 	color: #5a4535;
     font-size: 15px;
