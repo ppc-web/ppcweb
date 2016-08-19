@@ -703,3 +703,21 @@ table.entry-table {
 #contents p + p {
 	padding-top: 2px;
 }
+
+#contents div.body div.video-holder, #contents div.body div.logo-holder {
+	position: relative;
+	flow: right;
+}
+
+iframe.clc-video {
+	position: absolute;
+	right: 80px;
+	top: 10px;
+}
+
+img.logo-right {
+	position: absolute;
+	right: 10px;
+	top: -5px;
+	
+}
