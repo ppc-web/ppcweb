@@ -4,6 +4,160 @@
 <title>2016 CLC</title>
 <link rel="stylesheet" href="../css/style.css" type="text/css">
 <link rel="icon" type="image/png" href="../images/logo.png">
+
+<link href='../lib/calendar/fullcalendar.css' rel='stylesheet' />
+<link href='../lib/calendar/fullcalendar.print.css' rel='stylesheet' media='print' />
+<script src='../lib/moment.min.js'></script>
+<script src='../lib/jquery.min.js'></script>
+<script src='../lib/calendar/fullcalendar.js'></script>
+<script>
+
+	$(document).ready(function() {
+		
+		$('#calendar').fullCalendar({
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'month,agendaWeek,agendaDay'
+			},
+			eventLimit: true, // allow "more" link when too many events
+			events: [
+				{
+					title: '- 1030p <center> CLC Special<br/><u> Result </u> </center>',
+					start: '2016-08-19T18:30:00',
+					end: '2016-08-19T22:30:00',
+					url: "https://docs.google.com/spreadsheets/d/1CXAWaGW-JyIE2YKhygt2ZebnMKztu-h4NTT7fU36dLs/edit#gid=0",
+					color: "#777"
+					
+				},
+				{
+					title: '- 1030p <center> CLC Special<br/><u> Result </u> </center>',
+					start: '2016-08-25T18:30:00',
+					end: '2016-08-25T22:30:00',
+					url: "https://docs.google.com/spreadsheets/d/1t6eNQ31VhVWt9zsurRCB-p-hYgmG30rCi8bpqcTkrTQ/edit#gid=0",
+					color: "#777"
+					
+					
+				},
+				{
+					title: '- 1030p <center> CLC Special<br/><u> Result </u> </center>',
+					start: '2016-09-02T18:30:00',
+					end: '2016-09-02T22:30:00',
+					url: "https://docs.google.com/spreadsheets/d/1AzbNkiPKPMPm7TnE1b9Ytl8jTdogWx0GLts2QAs0xNI/edit#gid=2067258938",
+					color: "#777"
+					
+				},
+				{
+					title: '- 1030p <center> CLC Special <br/> <u> Register </u></center>',
+					url: "https://docs.google.com/spreadsheets/d/1nxEWIPUZkmK8ESgcAP_Phwo-LEaUU308e8WAxqRPykc/edit#gid=764630973",
+					start: '2016-09-08T18:30:00',
+					end: '2016-09-08T22:30:00'
+					
+				},
+				{
+					title: '- 1030p <center> CLC Special <br/> <u> Register </u></center>',
+					url: "https://docs.google.com/spreadsheets/d/1nxEWIPUZkmK8ESgcAP_Phwo-LEaUU308e8WAxqRPykc/edit#gid=764630973",
+					start: '2016-09-16T18:30:00',
+					end: '2016-09-16T22:30:00'
+					
+				},
+				{
+					title: '- 1030p <center> CLC Special <br/> <u> Register </u></center>',
+					url: "https://docs.google.com/spreadsheets/d/1nxEWIPUZkmK8ESgcAP_Phwo-LEaUU308e8WAxqRPykc/edit#gid=764630973",
+					start: '2016-09-29T18:30:00',
+					end: '2016-09-29T22:30:00'
+					
+				},
+				{
+					title: '- 1030p <center> CLC Special<br/> <u> Register </u></center>',
+					url: "https://docs.google.com/spreadsheets/d/1nxEWIPUZkmK8ESgcAP_Phwo-LEaUU308e8WAxqRPykc/edit#gid=764630973",
+					start: '2016-10-07T18:30:00',
+					end: '2016-10-07T22:30:00'
+					
+				},
+				{
+					title: '- 1030p <center> CLC Special<br/> <u> Register </u></center>',
+					url: "https://docs.google.com/spreadsheets/d/1nxEWIPUZkmK8ESgcAP_Phwo-LEaUU308e8WAxqRPykc/edit#gid=764630973",
+					start: '2016-10-13T18:30:00',
+					start: '2016-10-13T22:30:00'
+					
+				},
+				{
+					title: '- 1030p <center> CLC Special<br/> <u> Register </u></center>',
+					url: "https://docs.google.com/spreadsheets/d/1nxEWIPUZkmK8ESgcAP_Phwo-LEaUU308e8WAxqRPykc/edit#gid=764630973",
+					start: '2016-10-20T18:30:00',
+					end: '2016-10-20T22:30:00'
+					
+				},
+			
+				{
+					title: '- 1030p <center> CLC Special<br/><u> Result </u> </center>',
+					start: '2016-08-13T14:00:00',
+					end: '2016-08-13T22:30:00',
+					url: "https://docs.google.com/spreadsheets/d/1c7uEq3Dc00kmxXqlzHJE9LKnkc-FMoMq5dLrF4YdGUI/edit#gid=0",
+					color: "#777"
+					
+				},
+				{
+					title: '- 1030p <center> CLC Special<br/><u> Result </u> </center>',
+					start: '2016-08-27T14:00:00',
+					end: '2016-08-27T22:30:00',
+					url: "https://docs.google.com/spreadsheets/d/1g479I3dDlcg89zsGAoqwfo_nqab4xZVPsTIOJDpS0Uk/edit#gid=0",
+					color: "#777"
+				},
+				{
+					title: '- 1030p <center> CLC Special<br/> <u> Register </u></center>',
+					start: '2016-09-10T14:00:00',
+					end: '2016-09-10T22:30:00'
+				},
+				{
+					title: '- 1030p <center> CLC Special<br/> <u> Register </u></center>',
+					url: "https://docs.google.com/spreadsheets/d/1nxEWIPUZkmK8ESgcAP_Phwo-LEaUU308e8WAxqRPykc/edit#gid=966873669",
+					start: '2016-09-17T14:00:00',
+					end: '2016-09-17T22:30:00'
+				},
+				{
+					title: '- 1030p <center> CLC Special<br/> <u> Register </u></center>',
+					url: "https://docs.google.com/spreadsheets/d/1nxEWIPUZkmK8ESgcAP_Phwo-LEaUU308e8WAxqRPykc/edit#gid=966873669",
+					start: '2016-09-24T14:00:00',
+					end: '2016-09-24T22:30:00'
+				},
+				{
+					title: '- 1030p <center> CLC Special<br/> <u> Register </u></center>',
+					url: "https://docs.google.com/spreadsheets/d/1nxEWIPUZkmK8ESgcAP_Phwo-LEaUU308e8WAxqRPykc/edit#gid=966873669",
+					start: '2016-10-08T14:00:00',
+					end: '2016-10-08T22:30:00'
+				},
+				{
+					title: '- 1030p <center> CLC Special<br/> <u> Register </u></center>',
+					url: "https://docs.google.com/spreadsheets/d/1nxEWIPUZkmK8ESgcAP_Phwo-LEaUU308e8WAxqRPykc/edit#gid=966873669",
+					start: '2016-10-15T14:00:00',
+					end: '2016-10-15T22:30:00'
+				},
+				{
+					title: '- 1030p <center> CLC Special<br/> <u> Register </u></center>',
+					url: "https://docs.google.com/spreadsheets/d/1nxEWIPUZkmK8ESgcAP_Phwo-LEaUU308e8WAxqRPykc/edit#gid=966873669",
+					start: '2016-10-22T14:00:00',
+					end: '2016-10-22T22:30:00'
+				},
+				{
+					title: '- 9p <center> CLC Play Off <br/> Top 16 </br>Group RR</center>',
+					start: '2016-11-05T10:00:00',
+					end: '2016-11-05T21:00:00'
+				},
+				{
+					title: '- 9p <center> CLC Play Off <br/> Final 8 </br> SE</center>',
+					start: '2016-11-12T10:00:00',
+					end: '2016-11-12T21:00:00'
+				}
+				
+			]
+		});
+		
+	});
+
+</script>
+
 </head>
 <body>
 	<div id="background">
@@ -39,77 +193,41 @@
 							</h2>
 							
 							<p>
-								In the Preliminary big RR phase, Captains can schedule the matches themselves, or participate in Swan Special events. 
+								In the Preliminary big RR phase, Teams can schedule the matches themselves, or participate in Swan Special events. 
 								In a Swan Special Event, the teams just need to be there. Any teams can play with each other if both agree to play and have
-								not played before. Tables will be reserved for the CLC matches.
+								not played before. 8 Tables will be reserved for the CLC matches.
 							</p>
 
 						
 							<h2> Play Off Schedule </h2>
 							
 							<p>
-								The top 16 teams of the Big RR phase advance to the play off stage. They will draw randomly into 4 groups. Play off will be played on two Saturdays.  
-								On the first Saturday, each group will play round robin and the top 2 teams advance to the final 8. On the second Saturday, the final 8
+								The top 16 teams of the Big RR phase advance to the play off stage. They will draw randomly into 4 groups. Play off will be played on two Saturdays, Nov 5th and Nov 12th.
+							</p>
+							
+							<p> <B> <em> Play off Group RR: Nov 5th, Saturday. </em></B></p>
+							<p>  
+								On the Nov 5th, the four groups will play group round robin. The top 2 teams of each group advance to the final 8. 
+							</p>
+							
+							<p> <B><em>Play off final single elimination: Nov. 12th Saturday. </em></B></p>
+							
+							<p>
+								On Nov 12th, the final 8
 								will play single elimination to decide the CLC Champion and runner up. 
 							</p>
 							
-							<p>	
-								On the second Saturday, Swan club will rearrange to have only 4-5 tables. Spectator seats will be setup. 
+							<p>
+								For the CLC final on Nov 12th,  Swan club will rearrange to have only 4-5 tables. Spectator seats will be set up. 
 								The games will be lively broadcasted. There will be media coverage. We will do our best to make the game
 								a high level competing and watching experience.
 							</p>
 							
-							<p>	
-								The play off date has not been finalized yet. The time frame is from end of Oct. to  beginning of Nov. We are coordinating with Oriental Pearl Cup to make sure there is no conflict. Stay tuned. 
-							</p>
+							<h2> Special and Play Off Schedule </h2>
 							
-							<h2> Swan Special Weekend </h2>
+							<p> Click an event to see the result or register for the event </p>
 							
-							<p> Swan Special Weekends will be held on Saturdays. The time is from 11am - 10:30pm. 
-							 
-							</p>
-							
-							<p>
-							Please register 
-							<a href="https://docs.google.com/spreadsheets/d/1nxEWIPUZkmK8ESgcAP_Phwo-LEaUU308e8WAxqRPykc/edit#gid=966873669"> here </a>
-							</p>
-							
-							<ul>
-							
-								<li> <a href="https://docs.google.com/spreadsheets/d/1c7uEq3Dc00kmxXqlzHJE9LKnkc-FMoMq5dLrF4YdGUI/edit#gid=0"> 
-								8/13 Opening Ceremony Result</a></li>
-								<li> <a href="https://docs.google.com/spreadsheets/d/1g479I3dDlcg89zsGAoqwfo_nqab4xZVPsTIOJDpS0Uk/edit#gid=0"> 
-								8/27 Result</a></li>
-								<li> 9/10</li>
-								<li> 9/17</li>
-								<li> 9/24</li>
-								<li> 10/8</li>
-								<li> 10/15</li>
-								<li> 10/22</li>
-							</ul>
-						
-							<h2> Swan Special Weekday </h2>
-							
-							<p> Swan Special Weekday will be held on nights. The time is from 630pm - 10:30pm.  
-							
-							</p>
-							<p>
-							Please register
-							<a href="https://docs.google.com/spreadsheets/d/1nxEWIPUZkmK8ESgcAP_Phwo-LEaUU308e8WAxqRPykc/edit#gid=764630973"> here </a>
-							</p>
-							
-							<ul>
-								<li> <a href="https://docs.google.com/spreadsheets/d/1CXAWaGW-JyIE2YKhygt2ZebnMKztu-h4NTT7fU36dLs/edit#gid=0">8/19 Friday Result</a></li>
-								<li> <a href="https://docs.google.com/spreadsheets/d/1t6eNQ31VhVWt9zsurRCB-p-hYgmG30rCi8bpqcTkrTQ/edit#gid=0">8/25 Thursday Result</a></li>
-								<li> 9/2 Friday</li>
-								<li> 9/8 Thursday</li>
-								<li> 9/16 Friday</li>
-								<li> 9/29 Thursday</li>
-								<li> 10/7 Friday</li>
-								<li> 10/13 Thursday</li>
-								<li> 10/20 Thursday</li>
-							</ul>
-
+							<div id="calendar"></div>
 								
 							<p> <span> &nbsp; </span> </p>	
 
