@@ -721,3 +721,7 @@ img.logo-right {
 	top: -5px;
 	
 }
+
+.border-bottom th, .border-bottom td {
+    border-bottom: 1px solid #ddd;
+}
