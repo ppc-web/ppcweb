@@ -692,6 +692,10 @@ table.entry-table {
 	padding-top: 2px;
 }
 
+#contents h2 + ul {
+	margin-top: 2px;
+}
+
 #contents p + ul {
 	margin-top: 2px;
 }

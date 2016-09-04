@@ -841,3 +841,19 @@ div#getinvolved h2 {
 	padding: 0 0 25px;
 	text-align: center;
 }
+
+#contents h2 + p, #contents h2 + ul {
+	padding-top: 2px;
+}
+
+#contents p + ul {
+	margin-top: 2px;
+}
+
+#contents p + h2 {
+	margin-top: 2px;
+}
+
+#contents p + p {
+	padding-top: 2px;
+}
