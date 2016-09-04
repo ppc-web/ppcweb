@@ -60,7 +60,7 @@ img {
 	height: 50px;
 	width: 860px;
 	margin: 0 auto;
-	padding: 1px;
+	padding: 1px 1px 0 1px;
 }
 #navigation ul {
 	display: inline-block;
