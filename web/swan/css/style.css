@@ -55,7 +55,7 @@ img {
 }
 /** Navigation **/
 #navigation {
-	background: url(../images/bg-navigation.png) no-repeat;
+	background: url(../images/bg-navigation2.png) no-repeat;
 	clear: both;
 	height: 50px;
 	width: 860px;
@@ -722,10 +722,15 @@ iframe.clc-video {
 img.logo-right {
 	position: absolute;
 	right: -25px;
-	top: -5px;
+	top: -3px;
 	
 }
 
 .border-bottom th, .border-bottom td {
     border-bottom: 1px solid #ddd;
+}
+
+td.commercial {
+	text-align: center;
+	padding: 5px 30px;
 }
