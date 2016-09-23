@@ -8,11 +8,14 @@ import os
 import sys
 import glob
 from shutil import copyfile
+import base64
 
 #detach_dir = '/Users/xingang/'
 #web_dir = '/Users/xingang/Documents/up/ppcweb/web/swan/images/webcam'
 detach_dir='/home/ubuntu'
 web_dir='/var/www/html/swan/images/webcam'
+
+badEnd="-------part1-----"
 
 def updateLatest(camId):
 	webcam = glob.glob(detach_dir+'/'+'webcam'+'/' + camId + '_20*.jpg')
@@ -67,8 +70,17 @@ try:
                 filePath = os.path.join(detach_dir, 'webcam', fileName)
                 if not os.path.isfile(filePath) :
                     print fileName
+                    payload = part.get_payload(decode=True)
+                    print payload[0]
+                    if payload[0]=='/':
+                        print 'b64 encoded, decode'
+                        
+                        if  payload.endswith(badEnd):
+                        	payload = payload[0: (len(payload) - len(badEnd))] + "==="
+                        
+                        payload = base64.b64decode(payload)
                     fp = open(filePath, 'wb')
-                    fp.write(part.get_payload(decode=True))
+                    fp.write(payload)
                     fp.close()
     imapSession.close()
     imapSession.logout()
@@ -76,8 +88,9 @@ try:
     updateLatest('00')
     updateLatest('01')
     
-except :
+except Exception, e:
     print 'Not able to download all attachments.'
+    print str(e)
     
 
 	    
