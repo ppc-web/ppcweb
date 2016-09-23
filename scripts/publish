@@ -8,3 +8,4 @@ scp -i ~/ec2-webserver.pem /tmp/ppcweb.tgz ubuntu@pp-community.org:/home/ubuntu
 ssh -i ~/ec2-webserver.pem  ubuntu@pp-community.org "rm -rf /home/ubuntu/web"
 ssh -i ~/ec2-webserver.pem  ubuntu@pp-community.org "cd /home/ubuntu/; tar xzf ppcweb.tgz"
 ssh -i ~/ec2-webserver.pem  ubuntu@pp-community.org "sudo rm -rf /var/www/html.bak; sudo mv /var/www/html/ /var/www/html.bak; sudo mv /home/ubuntu/web /var/www/html"
+ssh -i ~/ec2-webserver.pem  ubuntu@pp-community.org "sudo cp /var/www/html.bak/swan/images/webcam/* /var/www/html/swan/images/webcam/"
