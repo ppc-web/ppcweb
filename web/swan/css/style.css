@@ -609,17 +609,22 @@ ul.end {
 	padding: 2px;
 }
 table.fee {
-	padding-bottom: 10px;
+	padding-bottom: 0 0 5px 2px;
 }
 
 table.coach td {
-	padding: 5px;
+	padding: 5px 2px;
 }
 
 table.coach td.short-column {
-	text-align: center; 
+//	text-align: center; 
+	padding-left: 25px;
+	
 }
 
+#contents table.coach td p {
+	padding: 0 0 3px
+}
 #navigation li a.logo {
 	background-image: url('../images/logo-small.png');
     background-repeat: no-repeat;
