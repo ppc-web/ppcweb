@@ -647,6 +647,10 @@ table.match-table, .match-table th, .match-table td {
     
 }
 
+table.match-table.same-width td {
+	width: 16%;
+}
+
 table.history-table, .history-table th, .history-table td {
 	padding: 10px 0px;
 	color: #5a4535;
