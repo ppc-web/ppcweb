@@ -1,0 +1,1368 @@
+.error-message {
+	background-color: #F2F4F3;
+	color: red;
+	padding: 2;
+	text-align: left;
+	border: none;
+	font-family: Verdana;
+	font-weight: bold;
+	font-size: 14px;
+	width: 100%;
+}
+
+.info-message {
+	background-color: #F2F4F3;
+	color: black;
+	padding: 3;
+	text-align: left;
+	border: none;
+	font-family: Verdana;
+	font-weight: bold;
+	font-size: 14px;
+	width: 100%;
+}
+
+#header_bar_zero {
+	background: #EFEFEF none repeat scroll 0%;
+	border-bottom: 1px solid #DEDEDE;
+	padding: 0pt 0pt 1px;
+}
+
+#header_bar {
+	background: #EFEFEF none repeat scroll 0%;
+	padding: 0pt 0pt 1px;
+}
+
+<!--
+-
+header -->#header_bar_help {
+	
+}
+
+#header_bar_help td {
+	font-weight: normal;
+	font-family: Verdana;
+	font-size: 11px;
+	border-right: 1px solid #DEDEDE;
+	border-left: 1px solid #DEDEDE;
+	text-align: center;
+}
+
+#header_bar table {
+	height: 6px;
+	background: #EFEFEF;
+	color: #000000;
+	font-weight: normal;
+	font-family: Verdana;
+	font-size: 11px;
+	padding: 3px;
+	white-space: nowrap;
+}
+
+.header_bar_td {
+	height: 6px;
+	background: #EFEFEF;
+	color: #000000;
+	font-weight: normal;
+	font-family: Verdana;
+	font-size: 11px;
+	padding: 3px;
+	white-space: nowrap;
+	border-right: 1px solid #DEDEDE;
+}
+
+.header_bar_td_selected {
+	background: transparent url(../images/gradient.jpg) repeat-x;
+	height: 6px;
+	color: #FFFFFF;
+	font-weight: normal;
+	font-family: Verdana;
+	font-size: 11px;
+	padding: 3px;
+	white-space: nowrap;
+	border-right: 1px solid #DEDEDE;
+}
+
+#header_bar_right {
+	background: #EFEFEF none repeat scroll 0%;
+	padding: 0pt 0pt 1px;
+}
+
+<!--
+-
+header -->#header_bar_right td {
+	height: 6px;
+	background: #0099cc;
+	color: #FFFFFF;
+	font-weight: normal;
+	font-family: Verdana;
+	font-size: 11px;
+	padding: 3px;
+	white-space: nowrap;
+}
+
+#header_bar_right td a {
+	height: 6px;
+	background: #0099cc;
+	color: #FFFFFF;
+	font-weight: normal;
+	font-family: Verdana;
+	font-size: 11px;
+	padding: 3px;
+	white-space: nowrap;
+}
+
+#header_under_bar {
+	border-top: 1px solid #B3B3B3;
+	padding: 2px 0pt 2px;
+	height: 0px;
+}
+
+<!--
+footer -->#footer_base {
+	background-color: #F2F4F3;
+	border: 1px solid #999999;
+	width: 100%;
+	border: none;
+}
+
+#footer_content {
+	background: transparent url(../images/gradient.jpg) repeat-x;
+	font-family: Verdana;
+	font-size: 20px;
+	color: #cc3300;
+	font-weight: bold;
+	text-align: center;
+	white-space: nowrap;
+}
+
+#footer_content td {
+	background: transparent url(../images/gradient.jpg) repeat-x;
+	font-family: Verdana;
+	font-size: 20px;
+	color: #cc3300;
+	font-weight: bold;
+	text-align: center;
+	white-space: nowrap;
+}
+
+#footer_above_bar {
+	border-top: 1px solid #B3B3B3;
+}
+
+#footer_action {
+	font-size: 12px;
+}
+
+#footer_name {
+	font-size: 16px;
+}
+
+<!--
+form -->#form_title_wrapper {
+	background: #0099cc;
+	width: 100%;
+	white-space: nowrap;
+}
+
+#form_title_wrapper td {
+	background: #0099cc;
+	padding: 3px;
+	width: 100%;
+	white-space: nowrap;
+}
+
+#form_title_text {
+	background: #0099cc;
+	text-align: left;
+	font-family: Verdana;
+	color: #FFFFFF;
+	font-weigth: bold;
+	font-size: 18px;
+	white-space: nowrap;
+	width: 100%;
+}
+
+#form_title_link {
+	background: #0099cc;
+	text-align: right;
+	white-space: nowrap;
+}
+
+#form_title_link a {
+	background: #0099cc;
+	font-family: Verdana;
+	color: #FFFFFF;
+	font-size: 14px;
+	white-space: nowrap;
+}
+
+#form_wrapper {
+	background-color: #F2F4F3;
+	border: 1px solid #999999;
+}
+
+.form_outer_table {
+	width: 40%;
+}
+
+#form_content {
+	background: transparent url(../images/gradient.jpg) repeat-x;
+	padding: 4px;
+	font-family: Verdana;
+	font-size: 12px;
+	text-align: left;
+}
+
+#form_content td {
+	width: 33%;
+	font-family: Verdana;
+	font-size: 12px;
+	white-space: nowrap;
+}
+
+#form_content td span {
+	width: 40px;
+	font-family: Verdana;
+	font-size: 12px;
+	white-space: nowrap;
+}
+
+#form_content th {
+	width: 33%;
+	font-family: Verdana;
+	font-size: 12px;
+	white-space: nowrap;
+	vertical-align: top;
+}
+
+.form_required {
+	width: 33%;
+	font-family: Verdana;
+	font-size: 12px;
+	color: red;
+	white-space: nowrap;
+	vertical-align: top;
+}
+
+.form_comment {
+	font-family: Verdana;
+	font-size: 12px;
+	white-space: nowrap;
+	font-style: italic;
+}
+
+#form_content_wrap {
+	background: transparent url(../images/gradient.jpg) repeat-x;
+	padding: 4px;
+	font-family: Verdana;
+	text-align: left;
+}
+
+#form_content_wrap td {
+	width: 100%;
+}
+
+#form_content_wrap th {
+	width: 100%;
+	font-size: 12px;
+}
+
+.form_selection_table {
+	
+}
+
+.form_selection_table td {
+	vertical-align: bottom;
+	padding: 1px;
+}
+
+.form_search_list_input {
+	font-family: Verdana;
+	font-size: 11px;
+	height: 20px;
+	vertical-align: middle;
+}
+
+<!--
+list header -->#list_header_content {
+	background: #EFEFEF;
+	padding: 0px;
+}
+
+#list_header_content table {
+	background: #EFEFEF;
+}
+
+#list_header_content td {
+	height: 6px;
+	background: transparent url(../images/gradient.jpg) repeat-x;
+	color: #000000;
+	font-weight: normal;
+	font-family: Verdana;
+	font-size: 12px;
+	padding: 6px;
+}
+
+#list_header_link {
+	text-align: left;
+	font-family: Verdana;
+	font-size: 12px;
+	white-space: nowrap;
+}
+
+#list_header_name {
+	text-align: center;
+	font-family: Verdana;
+	font-weight: bold;
+	font-size: 14px;
+	white-space: nowrap;
+}
+
+#list_header_action {
+	text-align: right;
+	white-space: nowrap;
+}
+
+#list_header_under_bar {
+	border-top: 1px solid #B3B3B3;
+	padding: 2px 0pt 2px;
+}
+
+<!--
+list body -->.list_table_wrapper {
+	background-color: #F2F4F3;
+}
+
+.list_table_wrapper td {
+	background: transparent url(../images/gradient.jpg) repeat-x;
+	font-family: Verdana;
+	font-size: 14px;
+	font-weight: normal;
+	padding: 1px;
+	white-space: nowrap;
+	border-bottom: 1px solid #999999;
+}
+
+.list_table_wrapper th {
+	background: #0099cc;
+	color: #FFFFFF;
+	padding: 4px;
+	font-family: Verdana;
+	font-size: 16px;
+	text-align: left;
+	white-space: nowrap;
+}
+
+.list_table_wrapper_blank {
+	background-color: #F2F4F3;
+}
+
+.list_table_wrapper_blank td {
+	background: #F2F4F3;
+	font-family: Verdana;
+	font-size: 14px;
+	font-weight: normal;
+	padding: 1px;
+	white-space: nowrap;
+}
+
+.list_table_wrapper_blank th {
+	background: #0099cc;
+	color: #FFFFFF;
+	padding: 4px;
+	font-family: Verdana;
+	font-size: 16px;
+	text-align: left;
+	white-space: nowrap;
+}
+
+.grid_table_wrapper {
+	background-color: #F2F4F3;
+}
+
+.grid_table_wrapper td {
+	background: transparent url(../images/gradient.jpg) repeat-x;
+	font-family: Verdana;
+	font-size: 12px;
+	font-weight: normal;
+	padding: 1px;
+	white-space: nowrap;
+	border-bottom: 1px solid #999999;
+}
+
+.grid_table_wrapper th {
+	background: #0099cc;
+	color: #FFFFFF;
+	padding: 4px;
+	font-family: Verdana;
+	font-size: 12px;
+	text-align: left;
+}
+
+.grid_first_column {
+	background: #0099cc;
+	color: #FFFFFF;
+	padding: 4px;
+	font-family: Verdana;
+	font-size: 12px;
+	text-align: left;
+	white-space: nowrap;
+}
+
+.grid_diagonal {
+	background: #99ccff;
+	color: #FFFFFF;
+	padding: 4px;
+	font-family: Verdana;
+	font-size: 12px;
+	text-align: left;
+	white-space: nowrap;
+}
+
+#grid_header {
+	background: #EFEFEF;
+	width: 100%;
+	white-space: nowrap;
+}
+
+#grid_header td {
+	background: #EFEFEF;
+	padding: 3px;
+	width: 100%;
+	white-space: nowrap;
+	text-align: center;
+}
+
+.grid_title_text {
+	background: #EFEFEF;
+	text-align: left;
+	font-family: Verdana;
+	color: #000000;
+	font-weigth: bold;
+	font-size: 18px;
+	white-space: nowrap;
+	width: 100%;
+	text-align: center;
+}
+
+.list_content {
+	background: #0099cc;
+	color: #FFFFFF;
+	padding: 4px;
+	font-family: Verdana;
+	font-size: 17px;
+	text-align: left;
+	white-space: nowrap;
+}
+
+.list_content_dropdown {
+	font-family: Verdana;
+	font-size: 11px;
+	height: 18px;
+	vertical-align: top;
+}
+
+.list_row_wrapper {
+	background-color: #F2F4F3;
+	border: 1px solid #999999;
+	width: 100%;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	white-space: nowrap;
+}
+
+.list_row_content {
+	background: transparent url(../images/gradient.jpg) repeat-x;
+	font-family: Verdana;
+	font-size: 14px;
+	font-weight: normal;
+	padding-left: 3px;
+	padding: 3px;
+	padding-bottom: 2px;
+	white-space: nowrap;
+}
+
+.list_row_content_select_class {
+	font-family: Verdana;
+	font-size: 11px;
+	height: 18px;
+	vertical-align: middle;
+}
+
+.list_checkbox {
+	height: 10px;
+}
+
+.list_row_content_input_class {
+	font-family: Verdana;
+	font-size: 11px;
+	height: 18px;
+	vertical-align: middle;
+}
+
+<!--
+list navigation -->.list_nav_wrapper {
+	background-color: #F2F4F3;
+	border: 1px solid #999999;
+	width: 97%;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.list_nav_button {
+	padding: 1px;
+	font-family: Verdana;
+	font-size: 15px;
+	font-weight: normal;
+}
+
+.list_nav_text {
+	text-align: left;
+	font-family: Verdana;
+	font-size: 12px;
+	text-align: center;
+}
+
+#checklist {
+	margin-left: 2px;
+	background-color: #FFFFFF;
+	border: 1px solid #ccc;
+	list-style: none;
+	height: 16em;
+	overflow: auto;
+	width: 20em;
+}
+
+#checklist td {
+	font-family: Arial;
+	font-size: 12px;
+}
+
+#smallchecklist {
+	margin-left: 2px;
+	background-color: #FFFFFF;
+	border: 1px solid #ccc;
+	list-style: none;
+	height: 10em;
+	overflow: auto;
+	width: 100%;
+}
+
+#smallchecklist td {
+	font-family: Arial;
+	font-size: 10px;
+	vertical-align: text-bottom;
+}
+
+#smallchecklist_league {
+	margin-left: 2px;
+	background-color: #FFFFFF;
+	border: 1px solid #ccc;
+	list-style: none;
+	height: 8em;
+	overflow: auto;
+	width: 100%;
+}
+
+#smallchecklist_league td {
+	font-family: Arial;
+	font-size: 10px;
+	vertical-align: text-bottom;
+}
+
+#smallchecklist_mailing {
+	margin-left: 2px;
+	background-color: #FFFFFF;
+	border: 1px solid #ccc;
+	list-style: none;
+	height: 18em;
+	overflow: auto;
+	width: 100%;
+}
+
+#smallchecklist_mailing td {
+	font-family: Arial;
+	font-size: 10px;
+	vertical-align: text-bottom;
+}
+
+#smallchecklist_players {
+	margin-left: 2px;
+	background-color: #FFFFFF;
+	border: 1px solid #ccc;
+	list-style: none;
+	height: 14em;
+	overflow: auto;
+	width: 100%;
+}
+
+#smallchecklist_players td {
+	font-family: Arial;
+	font-size: 10px;
+	vertical-align: text-bottom;
+}
+
+#smallchecklist_leagueentity {
+	margin-left: 2px;
+	background-color: #FFFFFF;
+	border: 1px solid #ccc;
+	list-style: none;
+	height: 19em;
+	overflow: auto;
+	width: 100%;
+}
+
+#smallchecklist_leagueentity td {
+	font-family: Arial;
+	font-size: 10px;
+	vertical-align: text-bottom;
+}
+
+#smallchecklist_mailing {
+	margin-left: 2px;
+	background-color: #FFFFFF;
+	border: 1px solid #ccc;
+	list-style: none;
+	height: 6em;
+	overflow: auto;
+	width: 100%;
+}
+
+#smallchecklist_mailing td {
+	font-family: Arial;
+	font-size: 10px;
+	vertical-align: text-bottom;
+}
+
+#readonlylist {
+	margin-left: 2px;
+	background-color: #F0F0F0;
+	border: 1px solid #ccc;
+	list-style: none;
+	height: 5em;
+	overflow: auto;
+	width: 17em;
+	font-family: Verdana;
+	font-size: 12px;
+}
+
+#readonlylist td {
+	font-family: Verdana;
+	font-size: 12px;
+	color: #ccc;
+}
+
+.help_header_title {
+	background: #EFEFEF;
+	font-family: Verdana;
+	font-size: 20px;
+	color: #cc3300;
+	font-weight: bold;
+	text-align: center;
+	white-space: nowrap;
+}
+
+#translationdiscalimer {
+	width: 100%;
+}
+
+#translationdiscalimer td {
+	font-family: Arial;
+	font-size: 9px;
+	vertical-align: text-bottom;
+}
+
+#tourn_bracket_template {
+	margin-left: 2px;
+	background-color: #FFFFFF;
+	border: 1px solid #ccc;
+	list-style: none;
+	height: 54em;
+	overflow: auto;
+	width: 100%;
+}
+
+#tourn_bracket_template td {
+	font-family: Arial;
+	font-size: 10px;
+	vertical-align: text-bottom;
+}
+
+table.sample {
+	border-width: 0px;
+	border-spacing: 0;
+	border-style: outset;
+	border-color: gray;
+	border-collapse: separate;
+	background-color: transparent;
+	font-size: 80%;
+}
+
+table.sample td.zero {
+	border-top: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	border-bottom: 1px;
+	border-style: solid;
+	border-color: gray;
+	background-color: transparent;
+}
+
+table.sample td.child {
+	border-top: 0px;
+	border-left: 1px;
+	border-right: 0px;
+	border-bottom: 1px;
+	border-style: solid;
+	border-color: gray;
+	background-color: transparent;
+}
+
+table.sample td.leftvertical {
+	border-top: 0px;
+	border-left: 1px;
+	border-right: 0px;
+	border-bottom: 0px;
+	border-style: solid;
+	border-color: gray;
+	background-color: transparent;
+}
+
+table.sample1 {
+	border-width: 0px;
+	border-spacing: 0;
+	border-style: outset;
+	border-color: gray;
+	border-collapse: separate;
+	background-color: transparent;
+	font-size: 80%;
+}
+
+table.sample1 td.zero {
+	border-width: 1px;
+	border-top: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	border-style: solid;
+	border-color: gray;
+	background-color: transparent;
+}
+
+table.sample1 td.child {
+	border-width: 1px;
+	border-top: 0px;
+	border-left: 0px;
+	border-right: 1px;
+	border-style: solid;
+	border-color: gray;
+	background-color: transparent;
+}
+
+table.sample1 td.leftvertical {
+	border-width: 1px;
+	border-top: 0px;
+	border-left: 0px;
+	border-right: 1px;
+	border-bottom: 0px;
+	border-style: solid;
+	border-color: gray;
+	background-color: transparent;
+}
+
+.form_selection_table th {
+	vertical-align: bottom;
+	padding: 1px;
+	text-align: left;
+	background: transparent url(../images/gradient.jpg) repeat-x;
+	width: 100%;
+}
+
+table.zzx {
+	border-spacing: 0px;
+	padding: 0;
+	background-color: transparent;
+	position: relative;
+	top: -103px;
+	left: -176px;
+}
+
+table.cm {
+	border-spacing: 0px;
+	padding: 0;
+	background-color: transparent;
+}
+
+table.cm td {
+	background: #F3F3C1 url(../images/comment_grad.gif) repeat-x;
+	margin: 0;
+	padding: 10px;
+	border: 1px #999966 solid;
+	border-top: none;
+	font-weight: normal;
+	font-family: Verdana;
+	font-size: 11px;
+	font-height: 17px;
+	border-spacing: 0px;
+}
+
+table.cm1 {
+	border-spacing: 0px;
+	padding: 0;
+	background-color: #EFEFEF;
+}
+
+table.cm1 td {
+	background: #EFEFEF;
+	margin: 0;
+	padding: 10px;
+	border: 1px #999999 solid;
+	font-weight: normal;
+	font-family: Verdana;
+	font-size: 18px;
+	border-spacing: 0px;
+}
+
+table.cm1 th {
+	background: #0099cc;
+	margin: 0;
+	padding: 10px;
+	border: 1px #999999 solid;
+	font-weight: normal;
+	font-family: Verdana;
+	font-size: 18px;
+	color: #FFFFFF;
+	border-spacing: 0px;
+}
+
+#smallchecklist_leagueentity_extended {
+	margin-left: 2px;
+	background-color: #FFFFFF;
+	border: 1px solid #ccc;
+	list-style: none;
+	height: 40em;
+	overflow: auto;
+	width: 100%;
+}
+
+#smallchecklist_leagueentity td {
+	font-family: Arial;
+	font-size: 10px;
+	vertical-align: text-bottom;
+}
+
+#add_pat {
+	background: #FFFFFF;
+	padding: 4px;
+	font-family: Verdana;
+	font-size: 12px;
+}
+
+.yui-content list_table_wrapper {
+	background-color: #F2F4F3;
+}
+
+.yui-content list_table_wrapper td {
+	background: transparent url(../images/gradient.jpg) repeat-x;
+	font-family: Verdana;
+	font-size: 14px;
+	font-weight: normal;
+	padding: 1px;
+	white-space: nowrap;
+	border-bottom: 1px solid #999999;
+}
+
+.yui-content list_table_wrapper th {
+	background: #0099cc;
+	color: #FFFFFF;
+	padding: 4px;
+	font-family: Verdana;
+	font-size: 16px;
+	text-align: left;
+	white-space: nowrap;
+}
+
+.yui-content list_table_wrapper_blank {
+	background-color: #F2F4F3;
+}
+
+.yui-content list_table_wrapper_blank td {
+	background: #F2F4F3;
+	font-family: Verdana;
+	font-size: 14px;
+	font-weight: normal;
+	padding: 1px;
+	white-space: nowrap;
+}
+
+.yui-content list_table_wrapper_blank th {
+	background: #0099cc;
+	color: #FFFFFF;
+	padding: 4px;
+	font-family: Verdana;
+	font-size: 16px;
+	text-align: left;
+	white-space: nowrap;
+}
+
+table.sample td.zero1 {
+	border-top: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	border-bottom: 1px;
+	border-style: solid;
+	border-color: white;
+	background-color: transparent;
+}
+
+table.sample1 td.zero1 {
+	border-width: 1px;
+	border-top: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	border-style: solid;
+	border-color: white;
+	background-color: transparent;
+}
+
+.wk {
+	font-family: Verdana;
+	font-size: 18pt;
+	font-weight: Normal;
+	font-style: Normal;
+	color: #FFFFFF;
+	text-decoration: None;
+	border-color: #000000;
+	border-width: 1pt;
+	border-style: Solid;
+	text-align: Center;
+	background: #0099CC none repeat scroll 0;
+}
+
+.clnd {
+	width: 100%;
+	border-color: #000000;
+	/*border-width: 1pt;*/
+	text-align: Center;
+	/* cell-spacing: 1; */
+	border-collapse: collapse;
+	background-color: #F2F4F3;
+	margin: 0px;
+}
+
+.clnd td {
+	font-family: Arial;
+	font-size: 8pt;
+	font-weight: Normal;
+	font-style: Normal;
+	color: #000000;
+	text-decoration: None;
+	border-color: #000000;
+	border-width: 1pt;
+	border-style: Solid;
+	text-align: Left;
+	vertical-align: top;
+	padding: 4px;
+	width: 200px;
+	white-space: nowrap;
+	background: transparent url(../images/gradient.jpg) repeat-x scroll 0;
+	background-position: top;
+}
+
+.cnv {
+	width: 97%;
+	border-color: #000000;
+	border-width: 1pt;
+	border-style: Solid;
+	text-align: center;
+	background-color: #FFFFFF;
+	margin: 15px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+TABLE.tsample {
+	BORDER-RIGHT: gray 0px outset;
+	BORDER-TOP: gray 0px outset;
+	FONT-SIZE: 80%;
+	BORDER-LEFT: gray 0px outset;
+	BORDER-BOTTOM: gray 0px outset;
+	BORDER-COLLAPSE: separate;
+	BACKGROUND-COLOR: transparent;
+	border-spacing: 0
+}
+
+TABLE.tsample TD.zero {
+	BORDER-RIGHT: gray 0px solid;
+	BORDER-TOP: gray 0px solid;
+	BORDER-LEFT: gray 0px solid;
+	BORDER-BOTTOM: gray 1px solid;
+	BACKGROUND-COLOR: transparent;
+	min-width: 140px;
+	padding-left: 5px;
+	padding-right: 5px;
+	text-align: right;
+}
+
+TABLE.tsample TD.zero1 {
+	BORDER-RIGHT: white 0px solid;
+	BORDER-TOP: white 0px solid;
+	BORDER-LEFT: white 0px solid;
+	BORDER-BOTTOM: white 1px solid;
+	BACKGROUND-COLOR: transparent;
+	min-width: 140px;
+	text-align: right;
+}
+
+TABLE.tsample TD.child {
+	BORDER-RIGHT: gray 0px solid;
+	BORDER-TOP: gray 0px solid;
+	BORDER-LEFT: gray 1px solid;
+	BORDER-BOTTOM: gray 1px solid;
+	BACKGROUND-COLOR: transparent;
+	min-width: 40px;
+}
+
+TABLE.tsample TD.leftvertical {
+	BORDER-RIGHT: gray 0px solid;
+	BORDER-TOP: gray 0px solid;
+	BORDER-LEFT: gray 1px solid;
+	BORDER-BOTTOM: gray 0px solid;
+	BACKGROUND-COLOR: transparent
+}
+
+TABLE.tsample1 {
+	BORDER-RIGHT: gray 0px outset;
+	BORDER-TOP: gray 0px outset;
+	FONT-SIZE: 80%;
+	BORDER-LEFT: gray 0px outset;
+	BORDER-BOTTOM: gray 0px outset;
+	BORDER-COLLAPSE: separate;
+	BACKGROUND-COLOR: transparent;
+	border-spacing: 0
+}
+
+TABLE.tsample1 TD.zero {
+	BORDER-RIGHT: gray 0px solid;
+	BORDER-TOP: gray 0px solid;
+	BORDER-LEFT: gray 0px solid;
+	BORDER-BOTTOM: gray 1px solid;
+	BACKGROUND-COLOR: transparent;
+	padding-left: 5px;
+	padding-right: 5px;
+	min-width: 140px;
+}
+
+TABLE.tsample1 TD.zero1 {
+	BORDER-RIGHT: white 0px solid;
+	BORDER-TOP: white 0px solid;
+	BORDER-LEFT: white 0px solid;
+	BORDER-BOTTOM: white 1px solid;
+	BACKGROUND-COLOR: transparent;
+	width: 140px;
+}
+
+TABLE.tsample1 TD.child {
+	BORDER-RIGHT: gray 1px solid;
+	BORDER-TOP: gray 0px solid;
+	BORDER-LEFT: gray 0px solid;
+	BORDER-BOTTOM: gray 1px solid;
+	BACKGROUND-COLOR: transparent;
+	min-width: 40px;
+}
+
+TABLE.tsample1 TD.leftvertical {
+	BORDER-RIGHT: gray 1px solid;
+	BORDER-TOP: gray 0px solid;
+	BORDER-LEFT: gray 0px solid;
+	BORDER-BOTTOM: gray 0px solid;
+	BACKGROUND-COLOR: transparent
+}
+
+TABLE.tdsample {
+	BORDER-RIGHT: gray 0px outset;
+	BORDER-TOP: gray 0px outset;
+	FONT-SIZE: 80%;
+	BORDER-LEFT: gray 0px outset;
+	BORDER-BOTTOM: gray 0px outset;
+	BORDER-COLLAPSE: separate;
+	BACKGROUND-COLOR: transparent;
+	border-spacing: 0
+}
+
+TABLE.tdsample TD.zero {
+	BORDER-RIGHT: gray 0px solid;
+	BORDER-TOP: gray 0px solid;
+	BORDER-LEFT: gray 0px solid;
+	BORDER-BOTTOM: gray 1px solid;
+	BACKGROUND-COLOR: transparent;
+	width: 70px;
+	text-align: right;
+}
+
+TABLE.tdsample TD.zero0 {
+	BORDER-RIGHT: gray 0px solid;
+	BORDER-TOP: gray 0px solid;
+	BORDER-LEFT: gray 0px solid;
+	BORDER-BOTTOM: gray 1px solid;
+	BACKGROUND-COLOR: transparent;
+	width: 140px;
+	text-align: right;
+}
+
+TABLE.tdsample TD.zero1 {
+	BORDER-RIGHT: white 0px solid;
+	BORDER-TOP: white 0px solid;
+	BORDER-LEFT: white 0px solid;
+	BORDER-BOTTOM: white 1px solid;
+	BACKGROUND-COLOR: transparent;
+	width: 70px;
+	text-align: right;
+}
+
+TABLE.tdsample TD.child {
+	BORDER-RIGHT: gray 0px solid;
+	BORDER-TOP: gray 0px solid;
+	BORDER-LEFT: gray 1px solid;
+	BORDER-BOTTOM: gray 1px solid;
+	BACKGROUND-COLOR: transparent;
+	width: 70px;
+}
+
+TABLE.tdsample TD.leftvertical {
+	BORDER-RIGHT: gray 0px solid;
+	BORDER-TOP: gray 0px solid;
+	BORDER-LEFT: gray 1px solid;
+	BORDER-BOTTOM: gray 0px solid;
+	BACKGROUND-COLOR: transparent
+}
+
+#add_new a {
+	background-color: #0099cc;
+	color: #FFFFFF;
+	padding: 4px;
+	font-family: Verdana;
+	font-size: 12px;
+}
+
+.ce {
+	
+}
+
+.ce thead {
+	display: none;
+	border-width: 0px;
+	border-style: none solid none none;
+}
+
+.ce table {
+	border-width: 0px;
+	border-style: none solid none none;
+}
+
+.ce td {
+	border-width: 0px;
+	border-style: none solid none none;
+	white-space: nowrap;
+}
+
+.ce0 {
+	text-align: right
+}
+
+.ce0 thead {
+	display: none;
+	border-width: 0px;
+	border-style: none solid none none;
+}
+
+.ce0 table {
+	border-width: 0px;
+	border-style: none solid none none;
+}
+
+.ce0 td {
+	border-width: 0px;
+	color: #FFFFFF;
+	border-style: none solid none none;
+	white-space: nowrap;
+}
+
+TABLE.etsample {
+	BORDER-RIGHT: gray 0px outset;
+	BORDER-TOP: gray 0px outset;
+	FONT-SIZE: 80%;
+	BORDER-LEFT: gray 0px outset;
+	BORDER-BOTTOM: gray 0px outset;
+	BORDER-COLLAPSE: separate;
+	BACKGROUND-COLOR: transparent;
+	border-spacing: 0
+}
+
+TABLE.etsample TD.zero {
+	BORDER-RIGHT: gray 0px solid;
+	BORDER-TOP: gray 0px solid;
+	BORDER-LEFT: gray 0px solid;
+	BORDER-BOTTOM: gray 1px solid;
+	BACKGROUND-COLOR: transparent;
+	width: 1%;
+	text-align: left;
+}
+
+TABLE.etsample TD.zero1 {
+	BORDER-RIGHT: white 0px solid;
+	BORDER-TOP: white 0px solid;
+	BORDER-LEFT: white 0px solid;
+	BORDER-BOTTOM: white 1px solid;
+	BACKGROUND-COLOR: transparent;
+	width: 1%;
+	text-align: left;
+}
+
+TABLE.etsample TD.child {
+	BORDER-RIGHT: gray 0px solid;
+	BORDER-TOP: gray 0px solid;
+	BORDER-LEFT: gray 1px solid;
+	BORDER-BOTTOM: gray 1px solid;
+	BACKGROUND-COLOR: transparent;
+	width: 40px;
+}
+
+TABLE.etsample TD.childz {
+	BORDER-RIGHT: gray 0px solid;
+	BORDER-TOP: gray 0px solid;
+	BORDER-LEFT: gray 1px solid;
+	BORDER-BOTTOM: gray 1px solid;
+	BACKGROUND-COLOR: transparent;
+	width: 40px;
+	color: #FFFFFF;
+}
+
+TABLE.etsample TD.leftvertical {
+	BORDER-RIGHT: gray 0px solid;
+	BORDER-TOP: gray 0px solid;
+	BORDER-LEFT: gray 1px solid;
+	BORDER-BOTTOM: gray 0px solid;
+	BACKGROUND-COLOR: transparent
+}
+
+TABLE.etsample1 {
+	BORDER-RIGHT: gray 0px outset;
+	BORDER-TOP: gray 0px outset;
+	FONT-SIZE: 80%;
+	BORDER-LEFT: gray 0px outset;
+	BORDER-BOTTOM: gray 0px outset;
+	BORDER-COLLAPSE: separate;
+	BACKGROUND-COLOR: transparent;
+	border-spacing: 0
+}
+
+TABLE.etsample1 TD.zero {
+	BORDER-RIGHT: gray 0px solid;
+	BORDER-TOP: gray 0px solid;
+	BORDER-LEFT: gray 0px solid;
+	BORDER-BOTTOM: gray 1px solid;
+	BACKGROUND-COLOR: transparent;
+	width: 1%;
+	text-align: right;
+}
+
+TABLE.etsample1 TD.zero1 {
+	BORDER-RIGHT: white 0px solid;
+	BORDER-TOP: white 0px solid;
+	BORDER-LEFT: white 0px solid;
+	BORDER-BOTTOM: white 1px solid;
+	BACKGROUND-COLOR: transparent;
+	width: 1%;
+	text-align: right;
+}
+
+TABLE.etsample1 TD.child {
+	BORDER-RIGHT: gray 1px solid;
+	BORDER-TOP: gray 0px solid;
+	BORDER-LEFT: gray 0px solid;
+	BORDER-BOTTOM: gray 1px solid;
+	BACKGROUND-COLOR: transparent;
+	width: 40px;
+}
+
+TABLE.etsample1 TD.childz {
+	BORDER-RIGHT: gray 1px solid;
+	BORDER-TOP: gray 0px solid;
+	BORDER-LEFT: gray 0px solid;
+	BORDER-BOTTOM: gray 1px solid;
+	BACKGROUND-COLOR: transparent;
+	width: 40px;
+	color: #FFFFFF;
+}
+
+TABLE.etsample1 TD.leftvertical {
+	BORDER-RIGHT: gray 1px solid;
+	BORDER-TOP: gray 0px solid;
+	BORDER-LEFT: gray 0px solid;
+	BORDER-BOTTOM: gray 0px solid;
+	BACKGROUND-COLOR: transparent
+}
+
+#jstrvalue {
+	margin-left: 10px;
+	background-color: #FFFFFF;
+	list-style: none;
+	height: 24em;
+	overflow: auto;
+	width: 32em;
+}
+
+.ploff {
+	color: #FFFFFF;
+	background-color: #A9A9F5;
+	width: 100%;
+}
+
+.l_tbl_wr {
+	background-color: #F2F4F3;
+}
+
+.l_tbl_wr td {
+	background: transparent url(../images/gradient.jpg) repeat-x;
+	font-family: Verdana;
+	font-size: 14px;
+	font-weight: normal;
+	padding: 1px 4px 1px 4px;
+	white-space: nowrap;
+	border-bottom: 1px solid #999999;
+}
+
+.l_tbl_wr th {
+	background: #0099cc;
+	color: #FFFFFF;
+	padding: 4px;
+	font-family: Verdana;
+	font-size: 16px;
+	text-align: left;
+	white-space: nowrap;
+}
+
+.insbr {
+	vertical-align: sub;
+	margin: 10 5 10 0;
+	font-style: italic;
+	color: brown
+}
+
+#blackoutd {
+	margin-left: 2px;
+	background-color: #FFFFFF;
+	border: 1px solid #ccc;
+	list-style: none;
+	height: 16em;
+	overflow: auto;
+	width: 160px;
+}
+
+#blackoutd td {
+	font-family: Arial;
+	font-size: 10px;
+	vertical-align: text-bottom;
+}
