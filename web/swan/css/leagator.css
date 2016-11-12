@@ -1366,3 +1366,19 @@ TABLE.etsample1 TD.leftvertical {
 	font-size: 10px;
 	vertical-align: text-bottom;
 }
+
+TABLE.tsample TD.round, TABLE.tsample1 TD.round {
+	text-align: center;
+	min-width: 100px;
+	padding-bottom: 10px;
+	font-style: italic;
+	font-size: 13px;
+}
+
+TABLE.tsample TD.final.round {
+	text-align: right;
+}
+
+TABLE.tsample1 TD.final.round {
+	text-align: left;
+}
