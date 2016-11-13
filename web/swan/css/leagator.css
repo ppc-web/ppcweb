@@ -1021,7 +1021,7 @@ TABLE.tsample TD.child {
 	BORDER-LEFT: gray 1px solid;
 	BORDER-BOTTOM: gray 1px solid;
 	BACKGROUND-COLOR: transparent;
-	min-width: 40px;
+	min-width: 90px;
 	text-align: right;
 }
 
@@ -1070,7 +1070,7 @@ TABLE.tsample1 TD.child {
 	BORDER-LEFT: gray 0px solid;
 	BORDER-BOTTOM: gray 1px solid;
 	BACKGROUND-COLOR: transparent;
-	min-width: 40px;
+	min-width: 90px;
 }
 
 TABLE.tsample1 TD.leftvertical {
