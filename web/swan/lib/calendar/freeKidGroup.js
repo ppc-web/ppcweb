@@ -6,7 +6,7 @@ eventSources.push(
 		    start: '15:00',
 		    end: '16:00', 
 		    dow: [ 1,2,3,4 ], // Repeat monday to thursday
-		    url: 'goo.gl/nFhNhm',
+		    url: 'https://goo.gl/nFhNhm',
 		    ranges:[{start:"2016-11-27", end:"2016-12-02"}]
 		},
 		{
