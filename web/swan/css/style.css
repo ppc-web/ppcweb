@@ -743,3 +743,7 @@ td.commercial {
 	text-align: center;
 	padding: 5px 30px;
 }
+
+#contents table.fee + h2 {
+	margin-top: 7px;
+}
