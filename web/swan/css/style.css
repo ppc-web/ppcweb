@@ -606,7 +606,7 @@ ul.end {
 .fee td, .fee th {
 	font-size: 15px;
 	vertical-align: top;
-	padding: 2px;
+	padding: 2px 25px 2px 0px;
 }
 table.fee {
 	padding-bottom: 0 0 5px 2px;
