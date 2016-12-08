@@ -6,6 +6,7 @@ $(document).ready(function() {
 			center: 'title',
 			right: 'month,agendaWeek,agendaDay'
 		},
+		fixedWeekCount: false, 
 		eventSources: eventSources,
 		eventRender: function(event){
 	    	if (!event.ranges)
@@ -18,6 +19,13 @@ $(document).ready(function() {
 
 		    }).length)>0; //if it isn't in one of the ranges, don't render it (by returning false)
 		},
+		businessHours: {
+		    // days of week. an array of zero-based day of week integers (0=Sunday)
+		    dow: [ 0, 1, 2, 3, 4, 5, 6] ,// Sun - Sat
+
+		    start: '11:00', 
+		    end: '22:30'
+		}
 
 	});
 });
