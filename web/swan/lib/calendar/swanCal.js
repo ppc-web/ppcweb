@@ -19,6 +19,8 @@ $(document).ready(function() {
 
 		    }).length)>0; //if it isn't in one of the ranges, don't render it (by returning false)
 		},
+		contentHeight: "auto",
+		displayEventEnd: true,
 		businessHours: {
 		    // days of week. an array of zero-based day of week integers (0=Sunday)
 		    dow: [ 0, 1, 2, 3, 4, 5, 6] ,// Sun - Sat

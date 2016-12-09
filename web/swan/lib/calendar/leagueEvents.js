@@ -2,7 +2,7 @@ eventSources.push(
 {
 	events: [
 	{
-		title: '- 5p <center> Sunday League </center>',
+		title: '<center> Sunday League </center>',
 		start: '14:00',
 		end: '17:00',
 		url: 'http://ayiwei.com/vcac',
