@@ -132,12 +132,14 @@ events.push.apply(events,
 	{
 		title: '<center> CLC Play Off <br/> Top 16 </br>Group RR</center>',
 		color: "#1D7018",
+		url: "http://swanpp.com/2016clc/results.html",
 		start: '2016-11-05T10:00:00',
 		end: '2016-11-05T21:00:00'
 	},
 	{
 		title: '<center> CLC Play Off <br/> Final 8 SE</center>',
 		color: "#1D7018",
+		url: "http://swanpp.com/2016clc/results.html",
 		start: '2016-11-12T13:00:00',
 		end: '2016-11-12T21:00:00'
 	}
