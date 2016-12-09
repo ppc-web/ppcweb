@@ -8,7 +8,22 @@ $(document).ready(function() {
 		},
 		fixedWeekCount: false, 
 		eventSources: eventSources,
-		eventRender: function(event){
+		eventRender: function(event, element, view){
+            var ntoday = new Date().getTime();
+            var eventEnd = moment( event.end ).valueOf();
+            var eventStart = moment( event.start ).valueOf();
+            if (!event.end){
+                if (eventStart < ntoday){
+                    element.addClass("past-event");
+                    element.children().addClass("past-event");
+                }
+            } else {
+                if (eventEnd < ntoday){
+                    element.addClass("past-event");
+                    element.children().addClass("past-event");
+                }
+            }
+            
 	    	if (!event.ranges)
 	    		return true;
 		    return (event.ranges.filter(function(range){ // test event against all the ranges
