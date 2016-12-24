@@ -856,3 +856,12 @@ div#getinvolved h2 {
 #contents p + p {
 	padding-top: 2px;
 }
+
+table.donation td {
+	vertical-align: top;
+	padding: 10px;
+}
+
+table.donation tr {
+	margin-bottom: 10px;
+}
