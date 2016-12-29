@@ -6,7 +6,7 @@ $(document).ready(function() {
 			center: 'title',
 			right: 'month,agendaWeek,agendaDay'
 		},
-		fixedWeekCount: false, 
+		//fixedWeekCount: false, 
 		eventSources: eventSources,
 		eventRender: function(event, element, view){
             var ntoday = new Date().getTime();
