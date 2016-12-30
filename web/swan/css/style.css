@@ -749,11 +749,10 @@ td.commercial {
 }
 
 tr.winner td {
-	font-size: 120%;
+	font-size: 125%;
 	font-weight: bold;
 }
 
 tr.runnerup td {
-	font-size: 105%;
-	font-weight: bold;
+	font-size: 110%;
 }
