@@ -747,3 +747,13 @@ td.commercial {
 #contents table.fee + h2 {
 	margin-top: 7px;
 }
+
+tr.winner td {
+	font-size: 120%;
+	font-weight: bold;
+}
+
+tr.runnerup td {
+	font-size: 105%;
+	font-weight: bold;
+}
