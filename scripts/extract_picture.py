@@ -85,7 +85,7 @@ try:
     imapSession.close()
     imapSession.logout()
         	
-    updateLatest('00')
+    updateLatest('03')
     updateLatest('01')
     
 except Exception, e:
