@@ -4,6 +4,6 @@
 //Where do you want to redirect the user after login
 //note that this path is relative from the userc/scripts folder, hence the ../../
 
-Redirect::to('../../users/account.php');
+Redirect::to('../users/account.php');
 
 ?>
