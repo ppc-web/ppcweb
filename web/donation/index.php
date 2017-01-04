@@ -16,14 +16,13 @@ require_once $abs_us_root.$us_url_root.'users/includes/navigation.php';
 <div class="row">
 	<div class="col-xs-12">
 		<div class="jumbotron">
-			<h2>Welcome to <?php echo $settings->site_name;?></h2>
-			<p class="text-muted">Donation Management System. <?php //print_r($_SESSION);?></p>
 			<p>
 			<?php if($user->isLoggedIn()){$uid = $user->data()->id;?>
-				<a class="btn btn-default" href="users/account.php" role="button">User Account &raquo;</a>
 			<?php }else{?>
+				<h2>Ping Pong Community</h2>
+				<p>Donation Management System <?php //print_r($_SESSION);?></p>
 				<a class="btn btn-warning" href="users/login.php" role="button">Log In &raquo;</a>
-				<a class="btn btn-info" href="users/join.php" role="button">Sign Up &raquo;</a>
+				<!--a class="btn btn-info" href="users/join.php" role="button">Sign Up &raquo;</a-->
 			<?php } ?>
 			</p>
 		</div>
