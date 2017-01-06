@@ -81,7 +81,12 @@ class Validate{
 								$this->addError(["{$display} has to be a number. Please use a numeric value.",$item]);
 							}
 							break;
-
+						case 'date':
+							if (!$this->valid_mysql_date($value)) {
+								$this->addError(["{$display} has to be a date in format of YYYY-mm-dd, i.e, 2017-01-31",$item]);
+							}
+							break;
+									
 						case 'valid_email':
 							if(!filter_var($value,FILTER_VALIDATE_EMAIL)){
 								$this->addError(["{$display} must be a valid email address.",$item]);
@@ -129,4 +134,20 @@ class Validate{
 	public function passed(){
 		return $this->_passed;
 	}
+	
+	public function valid_mysql_date($str) {
+		$date_parts = explode ( '-', $str );
+		if (count ( $date_parts ) != 3)
+			return false;
+		if ((strlen ( $date_parts [0] ) != 4) || (! is_numeric ( $date_parts [0] )))
+			return false;
+		if ((strlen ( $date_parts [1] ) != 2) || (! is_numeric ( $date_parts [1] )))
+			return false;
+		if ((strlen ( $date_parts [2] ) != 2) || (! is_numeric ( $date_parts [2] )))
+			return false;
+		if (! checkdate ( $date_parts [1], $date_parts [2], $date_parts [0] ))
+			return false;
+		return true;
+	}
+
 }

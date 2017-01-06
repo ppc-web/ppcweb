@@ -98,6 +98,14 @@ function fetchAllUsers() {
 	return ($results);
 }
 
+//Retrieve donations from for a users
+function fetchAllUserDonations($userId) {
+	$db = DB::getInstance();
+	$query = $db->query("SELECT * FROM donation Where user_id=$userId");
+	$results = $query->results();
+	return ($results);
+}
+
 //Retrieve complete user information by username, token or ID
 function fetchUserDetails($username=NULL,$token=NULL, $id=NULL){
 	if($username!=NULL) {

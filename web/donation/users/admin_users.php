@@ -250,7 +250,7 @@ $userData = fetchAllUsers(); //Fetch information for all users
 					<td><?=$v1->email?></td>
 					<td><?=$v1->fname?></td>
 					<td><?=$v1->lname?></td>
-					<td><a href='admin_user_donation.php?id=<?=$v1->id?>'>$<?=$v1->totalDonation?></td>
+					<td><a href='admin_user_donations.php?id=<?=$v1->id?>'>$<?=$v1->totalDonation?></td>
 					<td>$<?=$v1->lastDonation?></td>
 					<td><?=$v1->lastDonationDate?></td>
 					</tr>
