@@ -270,6 +270,7 @@ $userData = fetchAllUsers(); //Fetch information for all users
 
   </div>
 </div>
+</div>
 
 
 	<!-- End of main content section -->

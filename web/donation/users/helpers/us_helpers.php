@@ -66,6 +66,18 @@ function userIdExists($id) {
 	}
 }
 
+//Check if a donation ID exists in the DB
+function donationIdExists($id) {
+	$db = DB::getInstance();
+	$query = $db->query("SELECT * FROM donation WHERE id = ?",array($id));
+	$num_returns = $query->count();
+	if ($num_returns > 0){
+		return true;
+	}else{
+		return false;
+	}
+}
+
 //Retrieve information for a single permission level
 function fetchPermissionDetails($id) {
 	$db = DB::getInstance();
@@ -117,6 +129,13 @@ function fetchUserDetails($username=NULL,$token=NULL, $id=NULL){
 	}
 	$db = DB::getInstance();
 	$query = $db->query("SELECT * FROM users WHERE $column = $data LIMIT 1");
+	$results = $query->first();
+	return ($results);
+}
+
+function fetchDonationDetails($id){
+	$db = DB::getInstance();
+	$query = $db->query("SELECT * FROM donation WHERE id = $id LIMIT 1");
 	$results = $query->first();
 	return ($results);
 }
@@ -340,6 +359,11 @@ function deleteUsers($users) {
 		$i++;
 	}
 	return $i;
+}
+
+function deleteDonation($id) {
+	$db = DB::getInstance();
+	return $db->deleteById("donation", $id);
 }
 
 // retrieve ?dest=page and check that it exists in the legitimate pages in the

@@ -22,7 +22,7 @@ $userdetails = fetchUserDetails(NULL, NULL, $userId); //Fetch user details
 if (!empty($_POST)) {
 	$date = Input::get('date');
 	$amount = Input::get('amount');
-	$type = Input::get('type');
+	$dtype = Input::get('dtype');
 	$company = Input::get('company');
 	$comment = Input::get('comment');
 	$token = $_POST['csrf'];
@@ -54,7 +54,7 @@ if (!empty($_POST)) {
 			$fields=array(
 					'date' => Input::get('date'),
 					'amount' => Input::get('amount'),
-					'type' => Input::get('type'),
+					'dtype' => Input::get('dtype'),
 					'company' => Input::get('company'),
 					'comment' => Input::get('comment'),
 					'user_id' => $userId,
@@ -101,13 +101,13 @@ $userData = fetchAllUserDonations($userId); //Fetch all donations from this user
 																echo display_errors ( $validation->errors () );
 															}
 															?>
-               <form class="form-signup"
+               <form class="form-horizental"
 								action="<?php echo $_SERVER['PHP_SELF']."?id=$userId";?>" method="POST"
 								id="payment-form">
 
 								<div class="well well-sm">
 									<h4 class="form-signin-heading">Add a Donation</h4>
-									<div class="form-group">
+									<div class="form-group row">
 										<div class="col-xs-3">
 											<input class="form-control" type="text" name="date" id="date"
 												placeholder="Date: 2017-01-01"
@@ -121,7 +121,7 @@ $userData = fetchAllUserDonations($userId); //Fetch all donations from this user
 												required>
 										</div>
 										<div class="col-xs-2">
-											<select class="form-control" name="type" id="type">
+											<select class="form-control" name="dtype" id="dtype">
 												<option value='0'>Self</option>
 												<option value='1'>Match from Company</option>
 											</select>
@@ -133,25 +133,28 @@ $userData = fetchAllUserDonations($userId); //Fetch all donations from this user
 												>
 										</div>
 										<div class="col-xs-2">
-											<select class="form-control" name="type" id="visibility">
+											<select class="form-control" name="visibility" id="visibility">
 												<option value='0'>Show to Public</option>
 												<option value='1'>Private</option>
 											</select>
 										</div>
+									</div>
+									<div class="form-group row">
+										
 										<div class="col-xs-10">
 											<input class="form-control" type="text" name="comment"
 												id="comment" placeholder="Comment">
 										</div>
 
 										<div class="col-xs-2">
-											<input class='btn btn-primary btn-sm' type='submit'
-												name='addUserDonation' value='Add Donation' style="margin-top: 5px;" />
+											<input class='btn btn-primary' type='submit'
+												name='addUserDonation' value='Add Donation' />
 										</div>
 										
 
 									</div>
 
-									<br /> <br /> <br /> <br /> <input type="hidden"
+									 <input type="hidden"
 										value="<?=Token::generate();?>" name="csrf">
 								</div>
 							</form>
@@ -170,6 +173,7 @@ $userData = fetchAllUserDonations($userId); //Fetch all donations from this user
 												<th>Amount</th>
 												<th>Match from Company</th>
 												<th>Comment</th>
+												<th> Privacy </th>
 											</tr>
 										</thead>
 										<tbody>
@@ -178,10 +182,11 @@ $userData = fetchAllUserDonations($userId); //Fetch all donations from this user
 					foreach ( $userData as $v1 ) {
 						?>
 					<tr>
-												<td><a href='admin_user_doantion.php?id=<?=$v1->donation_id?>'><?=$v1->date?></a></td>
-												<td><?=money_format('%.2n', $v1->amount)?></td>
-												<td><?=($v1->type) ? $v1->company: "" ?></td>
+												<td><a href='admin_user_donation.php?id=<?=$v1->id?>'><?=$v1->date?></a></td>
+												<td>$<?=money_format('%.2n', $v1->amount)?></td>
+												<td><?=($v1->dtype==1) ? $v1->company : "" ?></td>
 												<td><?=$v1->comment?></td>
+												<td><?=($v1->visibility==0 ? "Show to public" : "Private") ?></td>
 											</tr>
 							<?php } ?>
 
@@ -199,7 +204,9 @@ $userData = fetchAllUserDonations($userId); //Fetch all donations from this user
 				</div>
 			</div>
 
-			<!-- End of main content section -->
+		</div>
+		</div>
+		<!-- End of main content section -->
 
 <?php require_once $abs_us_root.$us_url_root.'users/includes/page_footer.php'; // the final html footer copyright row + the external js calls ?>
 
