@@ -11,3 +11,11 @@ div.footer-wrapper {
 body {
 	background-color: #777;
 }
+
+#pdf h3  {
+	font-size: 18pt; 
+}
+
+#pdf p, #pdf td, #pdf th {
+	font-size: 15pt; 
+}
