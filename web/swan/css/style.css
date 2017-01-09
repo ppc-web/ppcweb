@@ -756,3 +756,8 @@ tr.winner td {
 tr.runnerup td {
 	font-size: 110%;
 }
+
+span.important {
+	font-size: 108%;
+	font-weight: bold;
+}
