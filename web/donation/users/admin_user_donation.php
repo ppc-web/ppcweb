@@ -94,6 +94,8 @@ if (! empty ( $_POST )) {
 						'company' => Input::get('company'),
 						'comment' => Input::get('comment'),
 						'visibility' => Input::get('visibility'),
+						'last_modified_by' => $user->data()->id,
+						'last_modified_at' => date("Y-m-d H:i:s")
 						
 				);
 				$db = DB::getInstance();

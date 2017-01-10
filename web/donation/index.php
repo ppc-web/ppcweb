@@ -63,12 +63,16 @@ if($user->isLoggedIn()) {
 					foreach ( $userData as $v1 ) {
 						?>
 					<tr>
-												<td><a href='users/user_donation.php?id=<?=$v1->id?>'>#<?=$v1->date?></a></td>
+												<td><a href='users/user_donation.php?id=<?=$v1->id?>'><?=mysql2DateString($v1->date)?></a></td>
 												<td>$<?=money_format('%.2n', $v1->amount)?></td>
 												<td><?=($v1->dtype==1) ? $v1->company : "" ?></td>
 												<td><?=$v1->comment?></td>
 												<td><?=($v1->visibility==0 ? "Show to public" : "Private") ?></td>
+												<?php if (!isMatch($v1->dtype, $v1->company)) { ?>
 												<td> <a href='users/donation_receipt.php?id=<?=$v1->id?>'> <?=$v1->id?> </a></td>
+												<?php } else { ?>
+												<td> </td>
+												<?php } ?>
 											</tr>
 							<?php } ?>
 

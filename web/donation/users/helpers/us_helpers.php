@@ -659,3 +659,13 @@ function updateEmail($id, $email) {
 
 	return true;
 }
+
+function mysql2DateString($d) {
+	$phpDate = strtotime( $d );
+	return date('M d, Y', $phpDate);
+}
+
+
+function isMatch($type, $company) {
+	return $type == 1 && !empty($company);
+}

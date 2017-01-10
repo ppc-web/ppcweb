@@ -40,94 +40,21 @@ if ($loggedInUserId != $userId) {
 
 	<div class="container">
 
-<!-- 
-
-		<div id="pdf" class="row">
-			<div class="col-xs-1">
-			</div>
-			<div class="col-xs-10">
-				<h3>Charitable Donation Receipt</h3>
-				<p>Issued on: <?php echo date("M d, Y")?></p>
-				<p>
-					Ping Pong Community <br /> 3273 Falerno Way 
-					<br />San Jose, CA
-					95135 
-					<br />Tel: 408-915-7464 
-					<br />Email: pingpong.community@gmail.com
-					<br />EIN#: 81-2451936
-				</p>
-
-				<p>
-					We acknowledge, with thanks, the receipt of following contributions
-					from <b> <?=$userdetails->fname?> <?=$userdetails->lname?></b>:
-				
-				
-				<table>
-					<thead>
-						<tr>
-							<th>No.</th>
-							<th>Receipt #</th>
-							<th>Contribution Date</th>
-							<th>Amount</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>1</td>
-							<td> <?=$donationDetails->id?></td>
-							<td> <?=$donationDetails->date?></td>
-							<td> $<?=money_format('%.2n', $donationDetails->amount)?></td>
-						</tr>
-						<tr>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<td></td>
-							<td></td>
-							<td><b> Total </b></td>
-							<td> $<?=money_format('%.2n', $donationDetails->amount)?></td>
-						</tr>
-					</tbody>
-				</table>
-				<p>No benefit was bestowed upon this donor in exchange for these
-					contributions.</p>
-				<p>Ping Pong Community is an exempt organization as described in
-					Section 501(c)(3) of the Internal Revenue Code.</p>
-
-				<p>Sincerely,</p>
-				<p>
-					<img src='../images/yj-signature.png'>
-				</p>
-				<p>
-					Yongjun Liu <br />CFO, Ping Pong Community
-				</p>
-			</div>
-		</div>
-			
-		<hr/>
 		<div class="row">
-			<div class="col-xs-3">
-			
-				<input class='btn btn-primary' type='button'
-					name='print' value='Print' onclick="print()"> 
+			<div class="col-xs-3 text-center">
+				<label> &nbsp; </label>
+				<input class='btn btn-primary print-receipt' type='submit'
+												name='print' value='Print' />
+												<label>&nbsp;</label>
+												
+				<input class='btn btn-primary print-receipt' type='submit'
+												name='download' value='Download' />
+												<label>&nbsp;</label>
+				<input class='btn btn-primary email-receipt' type='submit'
+												name='email' value='Email' />
 			</div>
-			
-		</div>
-		<br/>
-	-->
-		<div class="row">
-			<div class="col-xs-2"></div>
-			<div class="col-xs-8 text-center">
-			<iframe class="preview-pane " type="application/pdf"  width=600 height="800" frameborder="0" style="position:relative;z-index:999">
+			<div class="col-xs-9 text-center">
+			<iframe class="preview-pane" type="application/pdf"  width="600" height="900" frameborder="0" style="position:relative;z-index:999">
 			</iframe>
 			</div>
 			
@@ -186,7 +113,7 @@ function getDoc() {
 
 	doc.text(25, 112, '1');
 	doc.text(105, 112, '<?=$donationId?>', 'right');
-	doc.text(145, 112, '<?=$date?>', 'right');
+	doc.text(145, 112, '<?=mysql2DateString($date)?>', 'right');
 	doc.text(175, 112, '$<?=money_format('%.2n', $amount)?>', 'right');
 
 

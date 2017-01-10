@@ -58,6 +58,8 @@ if (!empty($_POST)) {
 					'company' => Input::get('company'),
 					'comment' => Input::get('comment'),
 					'user_id' => $userId,
+					'created_by' => $user->data()->id,
+					'created_at' => date("Y-m-d H:i:s")
 			);
 			$db->insert('donation', $fields);
 			$theNewId=$db->lastId();
@@ -182,7 +184,7 @@ $userData = fetchAllUserDonations($userId); //Fetch all donations from this user
 					foreach ( $userData as $v1 ) {
 						?>
 					<tr>
-												<td><a href='admin_user_donation.php?id=<?=$v1->id?>'><?=$v1->date?></a></td>
+												<td><a href='admin_user_donation.php?id=<?=$v1->id?>'><?=mysql2DateString($v1->date)?></a></td>
 												<td>$<?=money_format('%.2n', $v1->amount)?></td>
 												<td><?=($v1->dtype==1) ? $v1->company : "" ?></td>
 												<td><?=$v1->comment?></td>
