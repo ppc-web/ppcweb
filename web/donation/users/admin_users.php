@@ -141,6 +141,12 @@ if (!empty($_POST)) {
 
 $userData = fetchAllUsers(); //Fetch information for all users
 
+// fetch the total donations of all users.
+$totalDonations = fetchTotalDonations(); 
+
+// fetch the latest donations of all users.
+$latestDonations = fetchLatestDonations(); 
+
 
 ?>
 <div id="page-wrapper">
@@ -240,9 +246,14 @@ $userData = fetchAllUsers(); //Fetch information for all users
 					<?php
 					//Cycle through users
 					foreach ($userData as $v1) {
-						$v1->totalDonation=0;
-						$v1->lastDonation=0;
-						$v1->lastDonationDate="";
+						$v1->totalDonation=empty($totalDonations["$v1->id"]) ? 0 : $totalDonations["$v1->id"];
+						if (!empty($latestDonations["$v1->id"])){
+							$v1->lastDonation=$latestDonations["$v1->id"]->amount;
+							$v1->lastDonationDate=$latestDonations["$v1->id"]->date;
+							}
+						else {
+							$v1->lastDonation = 0;
+						}
 							?>
 					<tr>
 					<td><div class="form-group"><input type="checkbox" name="delete[<?=$v1->id?>]" value="<?=$v1->id?>" /></div></td>
@@ -250,8 +261,8 @@ $userData = fetchAllUsers(); //Fetch information for all users
 					<td><?=$v1->email?></td>
 					<td><?=$v1->fname?></td>
 					<td><?=$v1->lname?></td>
-					<td><a href='admin_user_donations.php?id=<?=$v1->id?>'>$<?=$v1->totalDonation?></td>
-					<td>$<?=$v1->lastDonation?></td>
+					<td><a href='admin_user_donations.php?id=<?=$v1->id?>'>$<?=money_format('%.0n', $v1->totalDonation)?></td>
+					<td>$<?=money_format('%.0n', $v1->lastDonation)?></td>
 					<td><?=$v1->lastDonationDate?></td>
 					</tr>
 							<?php } ?>

@@ -128,6 +128,15 @@ function email($to,$subject,$body,$attachment=false){
 
 	$mail->Subject = $subject;
 	$mail->Body    = $body;
+	
+	if (is_array($attachment)) {
+		$mail->AddStringAttachment(
+			file_get_contents($attachment["data"]), 
+			$attachment["filename"],
+			$attachment["encoding"],
+			$attachment["type"]);
+	}
+	
 
 	$result = $mail->send();
 

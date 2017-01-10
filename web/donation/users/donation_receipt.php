@@ -16,6 +16,15 @@ if (! donationIdExists ( $donationId )) {
 	die ();
 }
 
+$token = Input::get('csrf');
+if(Input::exists()){
+	if(!Token::check($token)){
+		die('Token doesn\'t match!');
+	}
+}
+
+
+
 $donationDetails = fetchDonationDetails ( $donationId );
 $date = $donationDetails->date;
 $amount = $donationDetails->amount;
@@ -29,10 +38,34 @@ $userId = $donationDetails->user_id;
 $userdetails = fetchUserDetails ( NULL, NULL, $userId ); // Fetch user details
 
 $loggedInUserId = $user->data ()->id;
-if ($loggedInUserId != $userId) {
+if ($loggedInUserId != $userId &&!checkMenu(2,$user->data()->id)) {
 	// not your donation. You cannot access it.
 	Redirect::to ( "../index.php" );
 	die ();
+}
+
+//Forms posted
+if (!empty($_POST) && !empty($_POST["email"])) {
+	echo "sending email";
+	$subject = "Your donation receipt #$donationId";
+	$options = array(
+			'fname' => $userdetails->fname,
+			'lname' => $userdetails->lname,
+	);
+	$body =  email_body('_receipt.php',$options);
+	$attachment = array(
+			"data" => Input::get("pdfdata"),
+			"filename" => receiptFileName($donationDetails, $userdetails) . "pdf",
+			"encoding" => "base64", "type" => "application/pdf"
+	);
+	
+	$email_sent=email($userdetails->email,$subject,$body, $attachment);
+	
+	if(!$email_sent){
+		$errors[] = 'Email NOT sent due to error. Please contact site administrator.';
+	} else {
+		$successes[] ="Successfully sent receipt to $userdetails->email.";
+	}
 }
 
 ?>
@@ -40,18 +73,29 @@ if ($loggedInUserId != $userId) {
 
 	<div class="container">
 
+			<div class="row">
+				<div class="col-md-12">
+          <?php
+										
+										echo resultBlock ( $errors, $successes );
+										?>
 		<div class="row">
 			<div class="col-xs-3 text-center">
+			<form class="form-signup" action="donation_receipt.php?id=<?=$donationId?>" method="POST" id="payment-form">
 				<label> &nbsp; </label>
 				<input class='btn btn-primary print-receipt' type='submit'
 												name='print' value='Print' />
 												<label>&nbsp;</label>
 												
-				<input class='btn btn-primary print-receipt' type='submit'
+				<input class='btn btn-primary download-receipt' type='submit'
 												name='download' value='Download' />
 												<label>&nbsp;</label>
 				<input class='btn btn-primary email-receipt' type='submit'
 												name='email' value='Email' />
+												<label>&nbsp;</label>
+				<input type="hidden" id="pdfdata" name="pdfdata" value="Mickey Mouse">
+				<input type="hidden" value="<?=Token::generate();?>" name="csrf">
+			</form>
 			</div>
 			<div class="col-xs-9 text-center">
 			<iframe class="preview-pane" type="application/pdf"  width="600" height="900" frameborder="0" style="position:relative;z-index:999">
@@ -75,6 +119,7 @@ if ($loggedInUserId != $userId) {
 <script src="../js/standard_fonts_metrics.js"></script>
 <script>
 
+var doc;
 	
 function getDoc() {
 	doc=new jsPDF('p', 'mm', 'letter');
@@ -150,15 +195,49 @@ function update() {
 				console.error('Sorry, we cannot show live PDFs in MSIE')
 			} else {
 				var string = doc.output('bloburi');
+				var blob = doc.output('blob');
 			}
 			$('.preview-pane').attr('src', string);
+			var reader = new window.FileReader();
+			reader.readAsDataURL(blob); 
+			reader.onloadend = function() {
+			                base64data = reader.result;                
+			                console.log(base64data);
+			    			$('#pdfdata').val(base64data);
+			}
 		} catch(e) {
 			alert('Error ' + e);
 		}
 	}, 0);
 }
 
+var initDownload = function() {
+	$('.download-receipt').click(function(){
+		if (typeof doc !== 'undefined') {
+			file = '<?php echo receiptFileName($donationDetails, $userdetails);
+		?>';
+			doc.save(file + '.pdf');
+		} else {
+			alert('Error 0xE001BADF');
+		}
+	});
+	return false;
+};
+
+
+var initPrint = function() {
+	$('.print-receipt').click(function(){
+		doc.autoPrint();
+
+		// need the follwing line of hack to make print work.
+		doc.output("dataurlnewwindow");
+	});
+	return false;
+}
+
 update();
+initDownload();
+initPrint();
 </script>
 
 <?php require_once $abs_us_root.$us_url_root.'users/includes/html_footer.php'; // currently just the closing /body and /html ?>

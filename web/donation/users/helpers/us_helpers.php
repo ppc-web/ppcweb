@@ -133,6 +133,40 @@ function fetchUserDetails($username=NULL,$token=NULL, $id=NULL){
 	return ($results);
 }
 
+// fetch all user donations
+function fetchTotalDonations() {
+	$db = DB::getInstance();
+	$query = $db->query("SELECT user_id, sum(amount) as total FROM donation group by user_id");
+	$results = $query->results();
+	$s = array();
+	foreach ($results as $u) {
+		$s["$u->user_id"] = $u->total;
+	}
+	return $s;
+	
+}
+
+
+function fetchLatestDonations() {
+	$db = DB::getInstance ();
+	$query = $db->query ( "Select t.user_id as user_id, date, amount
+		from donation t 
+		inner join 
+		(SELECT user_id,MAX(date) as max_date
+		FROM donation
+		WHERE amount>0
+		GROUP BY user_id)a
+		on a.user_id = t.user_id and a.max_date = date" );
+	$results = $query->results();
+	$s = array();
+	foreach ($results as $u) {
+		$s["$u->user_id"] = $u;
+	}
+	
+	return $s;
+	
+}
+
 function fetchDonationDetails($id){
 	$db = DB::getInstance();
 	$query = $db->query("SELECT * FROM donation WHERE id = $id LIMIT 1");
@@ -668,4 +702,9 @@ function mysql2DateString($d) {
 
 function isMatch($type, $company) {
 	return $type == 1 && !empty($company);
+}
+
+function receiptFileName($donationDetails, $userDetails) {
+	return "$donationDetails->date" . "_" . "$userDetails->fname" .
+				"_" . "$userDetails->lname" . "_" . "$donationDetails->id";
 }

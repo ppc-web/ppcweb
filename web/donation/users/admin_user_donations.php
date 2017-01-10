@@ -176,6 +176,7 @@ $userData = fetchAllUserDonations($userId); //Fetch all donations from this user
 												<th>Match from Company</th>
 												<th>Comment</th>
 												<th> Privacy </th>
+												<th> Receipt </th>
 											</tr>
 										</thead>
 										<tbody>
@@ -189,6 +190,12 @@ $userData = fetchAllUserDonations($userId); //Fetch all donations from this user
 												<td><?=($v1->dtype==1) ? $v1->company : "" ?></td>
 												<td><?=$v1->comment?></td>
 												<td><?=($v1->visibility==0 ? "Show to public" : "Private") ?></td>
+												<?php if (!isMatch($v1->dtype, $v1->company)) { ?>
+												<td> <a href='donation_receipt.php?id=<?=$v1->id?>'> <?=$v1->id?> </a></td>
+												<?php } else { ?>
+												<td> </td>
+												<?php } ?>
+												
 											</tr>
 							<?php } ?>
 
