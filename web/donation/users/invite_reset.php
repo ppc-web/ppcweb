@@ -56,17 +56,15 @@ if(Input::get('reset') == 1){ //$_GET['reset'] is set when clicking the link in 
 	}
 }
 
-?>
-
 <div id="page-wrapper">
 <div class="container">
 
 <?php
 if ((Input::get('reset') == 1)){
 	if($reset_password_success){
-		require 'views/_forgot_password_reset_success.php';
+		require 'views/_invite_reset_success.php';
 	}elseif((!Input::get('resetPassword') || !$reset_password_success) && $password_change_form){
-		require 'views/_forgot_password_reset.php';
+		require 'views/_invite_reset.php';
 	}else{
 		require 'views/_forgot_password_reset_error.php';
 	}

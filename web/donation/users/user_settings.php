@@ -71,7 +71,7 @@ if(!empty($_POST)) {
 		));
 		if($validation->passed()){
 			//echo 'Username changes are disabled by commenting out this field and disabling input in the form/view';
-			//$db->update('users',$userId,$fields);
+			$db->update('users',$userId,$fields);
 
 			$successes[]="Username updated.";
 		}else{
@@ -227,7 +227,7 @@ if(!empty($_POST)) {
 </div>
 <div class="col-xs-12 col-md-10">
 <h1>Update your user settings</h1>
-<strong>Want to change your profile picture? </strong><br> Visit <a href="https://en.gravatar.com/">https://en.gravatar.com/</a> and setup an account with the email address <?=$email?>.  It works across millions of sites. It's fast and easy!<br>
+<strong>Want to change your profile picture? </strong><br> Visit <a href="https://en.gravatar.com/">https://en.gravatar.com/</a> and setup an account with the email address <?=$email?>.  <br>
 <span class="bg-danger"><?=display_errors($errors);?></span>
 <span><?=display_successes($successes);?></span>
 
@@ -235,17 +235,17 @@ if(!empty($_POST)) {
 
 	<div class="form-group">
 		<label>Username</label>
-		<input  class='form-control' type='text' name='username' value='<?=$displayname?>' readonly/>
+		<input  class='form-control' type='text' name='username' value='<?=$displayname?>' />
 	</div>
 
 	<div class="form-group">
 		<label>First Name</label>
-		<input  class='form-control' type='text' name='fname' value='<?=$fname?>' />
+		<input  class='form-control' type='text' name='fname' value='<?=$fname?>' readonly/>
 	</div>
 
 	<div class="form-group">
 		<label>Last Name</label>
-		<input  class='form-control' type='text' name='lname' value='<?=$lname?>' />
+		<input  class='form-control' type='text' name='lname' value='<?=$lname?>' readonly/>
 	</div>
 
 	<div class="form-group">
@@ -271,7 +271,7 @@ if(!empty($_POST)) {
 	<input type="hidden" name="csrf" value="<?=Token::generate();?>" />
 
 	<p><input class='btn btn-primary' type='submit' value='Update' class='submit' /></p>
-	<p><a class="btn btn-info" href="account.php">Cancel</a></p>
+	<p><a class="btn btn-info" href="../index.php">Cancel</a></p>
 
 </form>
 </div>
