@@ -304,6 +304,13 @@ function updatePrivate($id, $private) {
 	return $result;
 }
 
+// update the invite_sent_at field to today for a user.
+function updateInviteSentAt($id) {
+	$db = DB::getInstance();
+	$d = date("Y-m-d");
+	$result = $db->query("UPDATE users SET invite_sent_at = ? WHERE id = ?",array($d,$id));
+	return $result;
+}
 //Add a page to the DB
 function createPages($pages) {
 	$db = DB::getInstance();

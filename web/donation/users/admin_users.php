@@ -84,29 +84,21 @@ if (!empty($_POST)) {
       'valid_email' => true,
       'unique' => 'users',
       ),
-      'password' => array(
-      'display' => 'Password',
-      'required' => true,
-      'min' => 6,
-      'max' => 25,
-      ),
-      'confirm' => array(
-      'display' => 'Confirm Password',
-      'required' => true,
-      'matches' => 'password',
-      ),
+ 
+      
     ));
   	if($validation->passed()) {
 		$form_valid=TRUE;
       try {
         // echo "Trying to create user";
+        $vericode = rand(100000,999999); 
         $fields=array(
           'username' => Input::get('username'),
           'fname' => Input::get('fname'),
           'lname' => Input::get('lname'),
           'email' => Input::get('email'),
           'password' =>
-          password_hash(Input::get('password'), PASSWORD_BCRYPT, array('cost' => 12)),
+          password_hash($vericode, PASSWORD_BCRYPT, array('cost' => 12)),
           'permissions' => 1,
           'account_owner' => 1,
           'stripe_cust_id' => '',
@@ -114,7 +106,7 @@ if (!empty($_POST)) {
           'company' => Input::get('company'),
           'email_verified' => 1,
           'active' => 1,
-          'vericode' => 111111,
+          'vericode' => $vericode,
         );
         $db->insert('users',$fields);
         $theNewId=$db->lastId();
@@ -213,20 +205,16 @@ $latestDonations = fetchLatestDonations();
                   <div class="col-xs-2">
                		<input type="text" class="form-control" id="lname" name="lname" placeholder="Last Name" value="<?php if (!$form_valid && !empty($_POST)){ echo $lname;} ?>" required>
 </div>
-                  <div class="col-xs-2">
+                  <div class="col-xs-4">
                		<input  class="form-control" type="text" name="email" id="email" placeholder="Email Address" value="<?php if (!$form_valid && !empty($_POST)){ echo $email;} ?>" required >
 </div>
                   <div class="col-xs-2">
-               		<input  class="form-control" type="password" name="password" id="password" placeholder="Password" required aria-describedby="passwordhelp">
-</div>
-                  <div class="col-xs-2">
-               		<input  type="password" id="confirm" name="confirm" class="form-control" placeholder="Confirm Password" required >
+                  <input class='btn btn-primary' type='submit' name='addUser' value='Add User' />
 </div>
                	</div>
 
                 <br /><br />
                	<input type="hidden" value="<?=Token::generate();?>" name="csrf">
-	            <input class='btn btn-primary' type='submit' name='addUser' value='Manually Add User' />
               </div>
                </form>
                </div>
@@ -239,7 +227,8 @@ $latestDonations = fetchLatestDonations();
 					<table class='table table-hover table-list-search'>
 					<thead>
 					<tr>
-						<th>Delete</th><th>Username</th><th>Email</th><th>First Name</th><th>Last Name</th><th>Total Donation</th><th>Last Donation</th><th>Last Donate Date</th>
+						<th>Delete</th><th>Username</th><th>Email</th><th>First Name</th><th>Last Name</th><th>Total Donation</th>
+						<th>Last Donation</th><th>Last Donate Date</th><th>Last Seen</th>
 					 </tr>
 					</thead>
 				 <tbody>
@@ -264,6 +253,18 @@ $latestDonations = fetchLatestDonations();
 					<td><a href='admin_user_donations.php?id=<?=$v1->id?>'>$<?=money_format('%.0n', $v1->totalDonation)?></td>
 					<td>$<?=money_format('%.0n', $v1->lastDonation)?></td>
 					<td><?=$v1->lastDonationDate?></td>
+					<td> <?php 
+						if ($v1->logins>0) {
+							echo "Active on<br>". substr($v1->last_login, 0, 10);
+						} else {
+							if (!empty($v1->invite_sent_at)) {
+								echo "Invited on $v1->invite_sent_at</br/>";
+								echo "<a href='invite.php?id=". $v1->id . "'> Invite Again </a>";
+							} else {
+								echo "<a href='invite.php?id=$v1->id'> invite </a>";
+							}
+						}
+					?></td>
 					</tr>
 							<?php } ?>
 
