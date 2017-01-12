@@ -748,13 +748,14 @@ td.commercial {
 	margin-top: 7px;
 }
 
-tr.winner td {
+.winner td, td.winner, .winner {
 	font-size: 125%;
 	font-weight: bold;
 }
 
-tr.runnerup td {
+.runnerup td, td.runnerup, .runnerup {
 	font-size: 110%;
+	font-weight: bold;
 }
 
 span.important {
