@@ -23,8 +23,9 @@ require_once $abs_us_root.$us_url_root.'users/helpers/helpers.php';
 
 // Set config
 $GLOBALS['config'] = array(
-	'mysql'      => array('host'         => 'localhost:3306',
+	'mysql'      => array('host'         => 'localhost',
 'username'     => 'root',
+'port' => '3306',
 'password'     => '',
 'db'           => 'ppc',
 ),
