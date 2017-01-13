@@ -55,6 +55,7 @@ if(Input::get('reset') == 1){ //$_GET['reset'] is set when clicking the link in 
 		$password_change_form=TRUE;
 	}
 }
+?>
 
 <div id="page-wrapper">
 <div class="container">
