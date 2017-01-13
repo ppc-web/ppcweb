@@ -27,6 +27,7 @@ if(Input::exists()){
 
 $donationDetails = fetchDonationDetails ( $donationId );
 $date = $donationDetails->date;
+$cdate = $donationDetails->created_at;
 $amount = $donationDetails->amount;
 $dtype = $donationDetails->dtype;
 $company = $donationDetails->company;
@@ -131,7 +132,7 @@ function getDoc() {
 	doc.setFontType("normal");
 	doc.setFontSize(11);
 	
-	doc.text(25, 40, 'Issued on: <?php echo date("M d, Y")?>');
+	doc.text(25, 40, 'Issued on: <?=mysql2DateString(substr($cdate, 0, 10))?>');
 
 	doc.setFontType("bold");
 	doc.text(25, 50, 'Ping Pong Community');
