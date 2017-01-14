@@ -167,6 +167,14 @@ function fetchLatestDonations() {
 	
 }
 
+function fetchAllDonations() {
+	$db = DB::getInstance ();
+	$query = $db->query ( "Select * from donation" );
+	$results = $query->results();
+	return $results;
+
+}
+
 function fetchDonationDetails($id){
 	$db = DB::getInstance();
 	$query = $db->query("SELECT * FROM donation WHERE id = $id LIMIT 1");

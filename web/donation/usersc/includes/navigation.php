@@ -6,6 +6,7 @@
 		<li><a href="<?=$us_url_root?>"><i class="fa"></i> My Donations</a></li>
 		<?php if (checkMenu(2,$user->data()->id)){  //Links for permission level 2 (default admin) ?>
 		<li><a href="<?=$us_url_root?>users/admin_users.php"><i class="fa"></i> Manage Users</a></li>
+		<li><a href="<?=$us_url_root?>users/report.php"><i class="fa"></i> Report </a></li>
 		<?php } ?>
 <!-- Custom menus. Uncomment or copy/paste to use
 		<li class="dropdown"><a class="dropdown-toggle" href="" data-toggle="dropdown"><i class="fa fa-wrench"></i> Custom 1 <b class="caret"></b></a>
