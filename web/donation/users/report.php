@@ -12,6 +12,11 @@ $totalDonations = fetchTotalDonations ();
 // fetch the latest donations of all users.
 $latestDonations = fetchLatestDonations ();
 
+// sort user data by last donation date.
+function cmpLastDonationDate($u1, $u2) {
+	return strcmp ( $u2->lastDonationDate, $u1->lastDonationDate );
+}
+
 // fill in total donation, last donation and last donate date for each user.
 $userArray = array ();
 $total = 0;
@@ -26,6 +31,7 @@ foreach ( $userData as $v1 ) {
 	}
 	$userArray ["$v1->id"] = $v1;
 }
+usort($userData, "cmpLastDonationDate");
 
 $donations = fetchAllDonations ();
 function cmpDate($u1, $u2) {
@@ -109,8 +115,8 @@ usort ( $donations, "cmpDate" );
 									<tr>
 										<th>Username</th>
 										<th>Last Donate Date</th>
-										<th>Total Donation</th>
 										<th>Last Donation</th>
+										<th>Total Donation</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -123,8 +129,8 @@ usort ( $donations, "cmpDate" );
 					<tr>
 										<td><?=$v1->username?></td>
 										<td><?=$v1->lastDonationDate?></td>
-										<td>$<?=money_format('%.0n', $v1->totalDonation)?></td>
 										<td>$<?=money_format('%.0n', $v1->lastDonation)?></td>
+										<td>$<?=money_format('%.0n', $v1->totalDonation)?></td>
 									</tr>
 							<?php } ?>
 
