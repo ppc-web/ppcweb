@@ -35,7 +35,7 @@ usort($userData, "cmpLastDonationDate");
 
 $donations = fetchAllDonations ();
 function cmpDonation($u1, $u2) {
-	if ($u1->id >= 10140 && $u2->id >= 10140) {
+	if ($u1->id >= 10140 || $u2->id >= 10140) {
 		return $u2->id - $u1->id;
 	}
 	return strcmp ( $u2->date, $u1->date );
