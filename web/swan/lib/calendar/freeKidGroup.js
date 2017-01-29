@@ -38,7 +38,15 @@ eventSources.push(
 		    start: '15:30',
 		    end: '16:30', 
 		    dow: [ 1,2,3,4 ], // Repeat monday to thursday
-		    ranges:[{start:"2017-01-29", end:"2017-02-19"}]
+		    url: 'https://docs.google.com/spreadsheets/d/1wR6iw8z69RLMEbp9W6DTdW9GaMOwHhKAxyOMPlY2bkA/edit#gid=0',
+		    ranges:[{start:"2017-01-29", end:"2017-02-02"}]
+		},
+ 		{
+		    title:"<center> Free Kid Group Class </center>",
+		    start: '15:30',
+		    end: '16:30', 
+		    dow: [ 1,2,3,4 ], // Repeat monday to thursday
+		    ranges:[{start:"2017-02-04", end:"2017-02-19"}]
 		},
 		{
 		    title:"<center> Free Kid Group Class </center>",
