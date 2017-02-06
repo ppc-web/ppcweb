@@ -46,7 +46,23 @@ eventSources.push(
 		    start: '15:30',
 		    end: '16:30', 
 		    dow: [ 1,2,3,4 ], // Repeat monday to thursday
-		    ranges:[{start:"2017-02-04", end:"2017-02-19"}]
+		    url: 'https://docs.google.com/spreadsheets/d/1wdj3R2Dn9yZVOEvV9-7rEHsUgy14hVGOqw_OVT3HoJg/edit#gid=0',
+		    ranges:[{start:"2017-02-05", end:"2017-02-11"}]
+		},
+ 		{
+		    title:"<center> Free Kid Group Class </center>",
+		    start: '15:30',
+		    end: '16:30', 
+		    dow: [ 1,2,3,4 ], // Repeat monday to thursday
+		    url: 'https://docs.google.com/spreadsheets/d/15JKI_wrWAV5OgP8sDi2ZuU0eipFRYrwQhcYLx3e3oPw/edit#gid=0',
+		    ranges:[{start:"2017-02-12", end:"2017-02-18"}]
+		},
+ 		{
+		    title:"<center> Free Kid Group Class </center>",
+		    start: '15:30',
+		    end: '16:30', 
+		    dow: [ 1,2,3,4 ], // Repeat monday to thursday
+		    ranges:[{start:"2017-02-19", end:"2017-02-19"}]
 		},
 		{
 		    title:"<center> Free Kid Group Class </center>",
