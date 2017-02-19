@@ -16,6 +16,9 @@ eventSources.push(
 			}, {
 				start: '2017-01-08',
 				end: '2017-02-01'
+			}, {
+				start: '2017-02-12',
+				end: '2017-04-02'
 			}],
 		
 		color: "RoyalBlue"
