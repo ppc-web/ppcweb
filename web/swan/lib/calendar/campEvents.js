@@ -16,3 +16,42 @@ events.push.apply(events,
 		color: "OliveDrab"
 	}
 	]);
+
+eventSources.push(
+		{
+			events: [
+				{
+				    title:"<center>Spring Camp</center>",
+				    start: '09:00',
+				    end: '12:00', 
+				    dow: [ 1,2,3,4,5 ], // Repeat monday to Friday
+				    url: 'http://swanpp.com/camp.html',
+				    ranges:[{start:"2017-04-03", end:"2017-04-15"}]
+				},
+				{
+				    title:"<center>Spring Camp</center>",
+				    start: '14:00',
+				    end: '17:00', 
+				    dow: [ 1,2,3,4,5 ], // Repeat monday to Friday
+				    url: 'http://swanpp.com/camp.html',
+				    ranges:[{start:"2017-04-03", end:"2017-04-15"}]
+				},
+				{
+				    title:"<center>Summer Camp</center>",
+				    start: '09:00',
+				    end: '12:00', 
+				    dow: [ 1,2,3,4,5 ], // Repeat monday to Friday
+				    url: 'http://swanpp.com/camp.html',
+				    ranges:[{start:"2017-06-12", end:"2017-07-03"}, {start:"2017-07-05", end:"2017-08-18"}]
+				},
+				{
+				    title:"<center>Summer Camp</center>",
+				    start: '14:00',
+				    end: '17:00', 
+				    dow: [ 1,2,3,4,5 ], // Repeat monday to Friday
+				    url: 'http://swanpp.com/camp.html',
+				    ranges:[{start:"2017-06-12", end:"2017-07-03"}, {start:"2017-07-05", end:"2017-08-18"}]
+				}],
+			color: "#C66505"
+
+		});
