@@ -55,6 +55,8 @@ events.push.apply(events,
 		end: '2016-12-14T20:00:00',
 		url: "http://www.swanpp.com/group.html#paid",
 		color: "Orchid"
-	}
+	},
+	
+	
 	
 ]);
