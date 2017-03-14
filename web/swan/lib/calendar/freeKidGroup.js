@@ -177,3 +177,18 @@ eventSources.push(
 	], 
 	color: "Orchid"
 });
+
+eventSources.push(
+		{
+			events: [
+		 		{
+				    title:"<center> Adult Group</center>",
+				    start: '20:00',
+				    end: '21:30', 
+				    dow: [ 1 ], // Repeat monday to thursday
+				    url: 'https://docs.google.com/spreadsheets/d/1-02w2bnpMWOetZdED404w0XdkmELXlQjzQiMuOaU9NI/edit#gid=0',
+				    ranges:[{start:"2017-03-20", end:"2017-04-10"}]
+				}
+			], 
+			color: "#9900ff"
+		});
