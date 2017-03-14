@@ -186,7 +186,7 @@ eventSources.push(
 				    start: '20:00',
 				    end: '21:30', 
 				    dow: [ 1 ], // Repeat monday to thursday
-				    url: 'https://docs.google.com/spreadsheets/d/1-02w2bnpMWOetZdED404w0XdkmELXlQjzQiMuOaU9NI/edit#gid=0',
+				    url: 'https://docs.google.com/spreadsheets/d/1e7yA8Awr71d5T0IyG-aWMWfYMBYiUPHXRnAtXT8RHeI/edit#gid=0',
 				    ranges:[{start:"2017-03-20", end:"2017-04-10"}]
 				}
 			], 
