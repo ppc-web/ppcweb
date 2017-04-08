@@ -169,11 +169,28 @@ eventSources.push(
 		},
  		{
 		    title:"<center> Free Kid Group</center>",
+		    start: '18:00',
+		    end: '19:30', 
+		    dow: [ 3 ], // Repeat monday to thursday
+		    url: 'https://docs.google.com/spreadsheets/d/1-02w2bnpMWOetZdED404w0XdkmELXlQjzQiMuOaU9NI/edit#gid=72016005',
+		    ranges:[{start:"2017-04-12", end:"2017-05-03"}]
+		},
+		
+		{
+		    title:"<center> Free Kid Group</center>",
 		    start: '15:30',
 		    end: '17:00', 
 		    dow: [ 6 ], // Repeat monday to thursday
 		    url: 'https://docs.google.com/spreadsheets/d/1C-f_FHm1EFivryZYxzu0xNb7wMHlK_JDShUiO6Hz5pY/edit#gid=0',
 		    ranges:[{start:"2017-03-18", end:"2017-04-08"}]
+		},
+		{
+		    title:"<center> Free Kid Group</center>",
+		    start: '15:30',
+		    end: '17:00', 
+		    dow: [ 6 ], // Repeat monday to thursday
+		    url: 'https://docs.google.com/spreadsheets/d/1C-f_FHm1EFivryZYxzu0xNb7wMHlK_JDShUiO6Hz5pY/edit#gid=357468490',
+		    ranges:[{start:"2017-04-15", end:"2017-05-06"}]
 		},
 	], 
 	color: "Orchid"
@@ -189,7 +206,16 @@ eventSources.push(
 				    dow: [ 1 ], // Repeat monday to thursday
 				    url: 'https://docs.google.com/spreadsheets/d/1e7yA8Awr71d5T0IyG-aWMWfYMBYiUPHXRnAtXT8RHeI/edit#gid=0',
 				    ranges:[{start:"2017-03-20", end:"2017-04-10"}]
+				},
+		 		{
+				    title:"<center> Adult Group</center>",
+				    start: '19:30',
+				    end: '21:00', 
+				    dow: [ 1 ], // Repeat monday to thursday
+				    url: 'https://docs.google.com/spreadsheets/d/1e7yA8Awr71d5T0IyG-aWMWfYMBYiUPHXRnAtXT8RHeI/edit#gid=1250394443',
+				    ranges:[{start:"2017-04-17", end:"2017-05-08"}]
 				}
+
 			], 
 			color: "#9900ff"
 		});
