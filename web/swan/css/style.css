@@ -762,3 +762,8 @@ span.important {
 	font-size: 108%;
 	font-weight: bold;
 }
+
+span.expired {
+	color: grey;
+	text-decoration: line-through;
+}
