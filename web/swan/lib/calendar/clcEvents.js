@@ -142,6 +142,13 @@ events.push.apply(events,
 		url: "http://swanpp.com/2016clc/results.html",
 		start: '2016-11-12T13:00:00',
 		end: '2016-11-12T21:00:00'
-	}
+	},
+	{
+		title: '<center> U1800 Final</center>',
+		color: "#1D7018",
+		url: "http://swanpp.com/u1800/final.html",
+		start: '2017-06-03T14:30',
+		end: '2017-06-03T19:30'
+	},
 	
 ]);

@@ -262,7 +262,7 @@ eventSources.push(
 				    dow: [ 1 ], // Repeat monday to thursday
 				    url: 'https://docs.google.com/spreadsheets/d/1e7yA8Awr71d5T0IyG-aWMWfYMBYiUPHXRnAtXT8RHeI/edit#gid=1250394443',
 				    ranges:[{start:"2017-04-17", end:"2017-05-08"}]
-				}
+				},
 		 		{
 				    title:"<center> Adult Group</center>",
 				    start: '19:30',
