@@ -147,8 +147,8 @@ events.push.apply(events,
 		title: '<center> U1800 Final</center>',
 		color: "#1D7018",
 		url: "http://swanpp.com/u1800/final.html",
-		start: '2017-06-03T14:30',
-		end: '2017-06-03T19:30'
+		start: '2017-06-10T14:30',
+		end: '2017-06-10T19:30'
 	},
 	
 ]);
