@@ -7,10 +7,10 @@
 $userData = fetchAllUsers (); // Fetch information for all users
                               
 // fetch the total donations of all users.
-$totalDonations = fetchTotalDonations ();
+$totalDonations = fetchTotalDonationsPublic ();
 
 // fetch the latest donations of all users.
-$latestDonations = fetchLatestDonations ();
+$latestDonations = fetchLatestDonationsPublic ();
 
 // sort user data by last donation date.
 function cmpLastDonationDate($u1, $u2) {
@@ -33,7 +33,7 @@ foreach ( $userData as $v1 ) {
 }
 usort($userData, "cmpLastDonationDate");
 
-$donations = fetchAllDonations ();
+$donations = fetchAllDonationsPublic ();
 function cmpDonation($u1, $u2) {
 	if ($u1->id >= 10140 || $u2->id >= 10140) {
 		return $u2->id - $u1->id;

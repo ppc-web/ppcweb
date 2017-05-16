@@ -57,6 +57,7 @@ if (!empty($_POST)) {
 					'dtype' => Input::get('dtype'),
 					'company' => Input::get('company'),
 					'comment' => Input::get('comment'),
+					'visibility' => Input::get('visibility'),
 					'user_id' => $userId,
 					'created_by' => $user->data()->id,
 					'created_at' => date("Y-m-d H:i:s")

@@ -105,7 +105,7 @@ function usernameExists($username)   {
 //Retrieve information for all users
 function fetchAllUsers() {
 	$db = DB::getInstance();
-	$query = $db->query("SELECT * FROM users");
+	$query = $db->query("SELECT * FROM users order by id desc");
 	$results = $query->results();
 	return ($results);
 }
@@ -146,6 +146,19 @@ function fetchTotalDonations() {
 	
 }
 
+// fetch all user public donations
+function fetchTotalDonationsPublic() {
+	$db = DB::getInstance();
+	$query = $db->query("SELECT user_id, sum(amount) as total FROM donation where visibility=0 group by user_id");
+	$results = $query->results();
+	$s = array();
+	foreach ($results as $u) {
+		$s["$u->user_id"] = $u->total;
+	}
+	return $s;
+
+}
+
 
 function fetchLatestDonations() {
 	$db = DB::getInstance ();
@@ -167,9 +180,29 @@ function fetchLatestDonations() {
 	
 }
 
-function fetchAllDonations() {
+function fetchLatestDonationsPublic() {
 	$db = DB::getInstance ();
-	$query = $db->query ( "Select * from donation" );
+	$query = $db->query ( "Select t.user_id as user_id, date, amount
+		from donation t
+		inner join
+		(SELECT user_id,MAX(date) as max_date
+		FROM donation
+		WHERE amount>0 and visibility=0
+		GROUP BY user_id)a
+		on a.user_id = t.user_id and a.max_date = date" );
+	$results = $query->results();
+	$s = array();
+	foreach ($results as $u) {
+		$s["$u->user_id"] = $u;
+	}
+
+	return $s;
+
+}
+
+function fetchAllDonationsPublic() {
+	$db = DB::getInstance ();
+	$query = $db->query ( "Select * from donation where visibility=0" );
 	$results = $query->results();
 	return $results;
 
