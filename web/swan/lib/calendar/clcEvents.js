@@ -150,5 +150,19 @@ events.push.apply(events,
 		start: '2017-06-10T14:30',
 		end: '2017-06-10T19:30'
 	},
+	{
+		title: '<center> Tao Swan Open<br> Group RR </center>',
+		color: "#1D7018",
+		url: "http://swanpp.com/taoopen",
+		start: '2017-06-24T09:00',
+		end: '2017-06-24T19:30'
+	},
+	{
+		title: '<center> Tao Swan Open<br> SE/Final </center>',
+		color: "#1D7018",
+		url: "http://swanpp.com/taoopen",
+		start: '2017-06-25T09:00',
+		end: '2017-06-25T19:30'
+	}
 	
 ]);
