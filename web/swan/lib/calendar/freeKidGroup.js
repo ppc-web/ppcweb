@@ -215,6 +215,14 @@ eventSources.push(
 		    url: 'https://docs.google.com/spreadsheets/d/1-02w2bnpMWOetZdED404w0XdkmELXlQjzQiMuOaU9NI/edit#gid=1791811714',
 		    ranges:[{start:"2017-05-10", end:"2017-05-31"}]
 		},
+ 		{
+		    title:"<center> Free Kid Group</center>",
+		    start: '18:00',
+		    end: '19:30', 
+		    dow: [ 3 ], // Repeat monday to thursday
+		    url: 'https://docs.google.com/spreadsheets/d/1-02w2bnpMWOetZdED404w0XdkmELXlQjzQiMuOaU9NI/edit#gid=2012137213',
+		    ranges:[{start:"2017-06-07", end:"2017-06-28"}]
+		},
 		
 		{
 		    title:"<center> Free Kid Group</center>",
@@ -239,6 +247,14 @@ eventSources.push(
 		    dow: [ 6 ], // Repeat monday to thursday
 		    url: 'https://docs.google.com/spreadsheets/d/1C-f_FHm1EFivryZYxzu0xNb7wMHlK_JDShUiO6Hz5pY/edit#gid=431442959',
 		    ranges:[{start:"2017-05-13", end:"2017-06-03"}]
+		},
+		{
+		    title:"<center> Free Kid Group</center>",
+		    start: '15:30',
+		    end: '17:00', 
+		    dow: [ 6 ], // Repeat monday to thursday
+		    url: 'https://docs.google.com/spreadsheets/d/1C-f_FHm1EFivryZYxzu0xNb7wMHlK_JDShUiO6Hz5pY/edit#gid=1956813994',
+		    ranges:[{start:"2017-06-10", end:"2017-07-01"}]
 		},
 	], 
 	color: "Orchid"
