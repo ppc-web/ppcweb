@@ -766,3 +766,14 @@ span.expired {
 	color: grey;
 	text-decoration: line-through;
 }
+
+table.group-draw-table {
+	width: 45%;
+	display: inline-block;
+	border: 1px solid black;
+	margin: 5px;
+}
+
+table.group-draw-table td {
+	margin-right: 10px;
+}
