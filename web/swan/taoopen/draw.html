@@ -10,7 +10,25 @@
     <script>
     	loadCommon();
     </script>
+	<script src='../lib/jquery.bracket.min.js'></script>
+<link href="../lib/jquery.bracket.min.css" rel="stylesheet" type="text/css" />	
+<script>
 
+var minimalData = {"teams":[["Bob Chen","Kenneth Pinili"],["George Siu","Khoa Nguyen"],["Qian Sun","Aditya Godhwani"],["James Goodwin","Xiangjin Zhang"],["Nick Tio","Roger Liu"],["Ying Wang","Sahil Puri"],["Peter Li","William Bai"],["Deng Lang","Wenzhang Tao"]],"results":[[[[3,0],[1,3],[3,0],[0,3],[3,2],[3,1],[3,2],[0,3]],[[4,0],[0,4],[4,2],[2,4]],[[4,3],[0,4]],[[3,4],[0,0]]]]};
+
+ 
+
+	$(function() {
+		$('#minimal .demo').bracket({
+			teamWidth : 120,
+			scoreWidth : 20,
+			matchMargin : 10,
+			roundMargin : 30,
+
+			init : minimalData
+		/* data to initialize the bracket with */})
+	})
+</script>
 </head>
 <body>
 	<div id="background">
@@ -42,7 +60,8 @@
 </table>
 <p> &nbsp; </p>
  						
-					
+	
+<!-- 					
  							<H2> Draw </H2>
  							
  							Rules:
@@ -77,8 +96,8 @@
  								</ul>
  							<li> Cash prize will be given after semi-finals. Same for the raffle. </li>
  							</ul>
- 							 
- 							<H2> Group Draw
+--> 							 
+ 							<H2> Group RR
  							</H2>
  							
  							<h3> Morning Session: Sat 9am - 2pm, <a href="https://docs.google.com/spreadsheets/d/11RzEbV8uGVEK7ZZ8k5xP_br-7CNklz67UwjD7WaOPvg/edit#gid=364076199"> Live Result </a>							
@@ -245,38 +264,71 @@
 <tr><td>Hanyu Xiao</td><td>1550.1</td><td></td></tr>
 <tr><td>Olivia lee</td><td>1531.1</td><td></td></tr>
 </table>
-
+<p> &nbsp; </p>
 
 							
  							<H2> Round of 32</H2>
-<H3> 900 - 945am</H3> 							
- <table class="group-draw-table">
-<tr><td>Player A</td><td width="50px" ></td><td>Player B</td><td>Table</td></tr>
-<tr><td>Andrew Chang</td><td>vs</td><td>Kevin Lu</td><td>1</td></tr>
-<tr><td>Nathan Li</td><td>vs</td><td>Alexandar Qi</td><td>2</td></tr>
-<tr><td>Angie Tan</td><td>vs</td><td>Jose Antony</td><td>3</td></tr>
-<tr><td>Ken Chen</td><td>vs</td><td>Magnus Wilklund</td><td>4</td></tr>
-<tr><td>Keiran</td><td>vs</td><td>James Liu</td><td>5</td></tr>
-<tr><td>Wendy Chen</td><td>vs</td><td>Wen Huang</td><td>6</td></tr>
-<tr><td>Roger Liu</td><td>vs</td><td>James Nguyen</td><td>7</td></tr>
-<tr><td>Abhalish</td><td>vs</td><td>Henry Kwong</td><td>8</td></tr>
+<table class="group-draw-table">
+<tr><td class="winner">900 - 945am</td><td></td><td></td></tr>
+<tr><td class="winner">Andrew Chang</td><td>def</td><td>Kevin Lu</td></tr>
+<tr><td class="winner">Nathan Li</td><td>3:1</td><td>Alexandar Qi</td></tr>
+<tr><td class="winner">Angie Tan</td><td>3:1</td><td>Jose Antony</td></tr>
+<tr><td>Ken Chen</td><td>1:3</td><td class="winner">Magnus Wilklund</td></tr>
+<tr><td class="winner">Keiran</td><td>3:0</td><td>James Liu</td></tr>
+<tr><td>Wendy Chen</td><td>0:3</td><td class="winner">Wen Huang</td></tr>
+<tr><td class="winner">Roger Liu</td><td>3:0</td><td>James Nguyen</td></tr>
+<tr><td>Abhilash</td><td>1:3</td><td class="winner">Henry Kwong</td></tr>
 </table>
 
-<H3> 945 - 1030am</H3>
+
 <table class="group-draw-table">
-<tr><td>Player A</td><td width="50px"></td><td>Player B</td><td>Table</td></tr>
-<tr><td>Xiaoyi Hu</td><td>vs</td><td>Ananda Krishnan</td><td>1</td></tr>
-<tr><td>Henry Wu</td><td>vs</td><td>Felix Li</td><td>2</td></tr>
-<tr><td>Wucheng Tao</td><td>vs</td><td>Chao Zhang</td><td>3</td></tr>
-<tr><td>James Wan</td><td>vs</td><td>Henrick Zhang</td><td>4</td></tr>
-<tr><td>Lang Deng</td><td>vs</td><td>Fielding Feng</td><td>5</td></tr>
-<tr><td>Jeff Zhou</td><td>vs</td><td>Yun Peng</td><td>6</td></tr>
-<tr><td>James Goodwin</td><td>vs</td><td>Gautam Anand</td><td>7</td></tr>
-<tr><td>Kenneth Pinili</td><td>vs</td><td>Emily Tan</td><td>8</td></tr>
+<tr><td class="winner">945 - 1030am</td><td></td><td></td></tr>
+<tr><td>Xiaoyi Hu</td><td>0:3</td><td class="winner">Ananda Krishnan</td></tr>
+<tr><td class="winner">Henry Wu</td><td>3:2</td><td>Felix Li</td></tr>
+<tr><td>Wucheng Tao</td><td>1:3</td><td class="winner">Chao Zhang</td></tr>
+<tr><td>James Wan</td><td>2:3</td><td class="winner">Henrik Zhang</td></tr>
+<tr><td class="winner">Lang Deng</td><td>3:1</td><td>Fielding Feng</td></tr>
+<tr><td>Jeff Zhou</td><td>1:3</td><td class="winner">Yun Peng</td></tr>
+<tr><td class="winner">James Goodwin</td><td>3:1</td><td>Gautam Anand</td></tr>
+<tr><td class="winner">Kenneth Pinili</td><td>3:0</td><td>Emily Tan</td></tr>
 </table>
  							
- 							
- 							<p> Results will be published when they are available. </p>
+<h3> <a href="https://docs.google.com/spreadsheets/d/1LAb6h77Nv_AzhEodXjJoV0ZhuYszjg1vS_AtPQmA7KQ/edit?ts=594fee29#gid=0"> Live Draw/Result For Sunday</a> </h3>
+
+<h2> Round of 24 </h2>
+<table class="group-draw-table">
+<tr><td>5</td><td class="winner">Khoa Nguyen</td><td>3:1</td><td>Yun Peng</td></tr>
+<tr><td>6</td><td class="winner">Peter Li</td><td>3:0</td><td>Keiran</td></tr>
+<tr><td>7</td><td class="winner">Qian Sun</td><td>3:1</td><td>Henrik Zhang</td></tr>
+<tr><td>8</td><td class="winner">Ying Wang</td><td>3:0</td><td>Andrew Chang</td></tr>
+<tr><td>9</td><td class="winner">Sahil Puri</td><td>3:1</td><td>Nathan Li</td></tr>
+<tr><td>10</td><td class="winner">William Bai</td><td>3:0</td><td>Chao Zhang</td></tr>
+</table> 
+
+<table class="group-draw-table">
+<tr><td>11</td><td class="winner">Aditaya Godhwani</td><td>3:1</td><td>Wen Huang</td></tr>
+<tr><td>12</td><td class="winner">George Siu</td><td>3:0</td><td>Angie Tan</td></tr>
+<tr><td>A</td><td class="winner">Kenneth Pinili</td><td>3:2</td><td>Ananda Krishnan</td></tr>
+<tr><td>B</td><td class="winner">James Goodwin</td><td>3:0</td><td>Henry Wu</td></tr>
+<tr><td>C</td><td class="winner">Roger Liu</td><td>3:0</td><td>Henry Kwong</td></tr>
+<tr><td>D</td><td>Magnus Wilklund</td><td>0:3</td><td class="winner">Lang Deng</td></tr>
+</table> 
+
+<h2> Last 16 Bracket</h2>
+
+<div id="minimal">
+<div class="demo"></div>
+</div>
+
+<p> ** </p>
+<h2> Prize </h2>
+<ul>
+<li> Wenzhang Tao: $2,260
+<li> Bob Chen: $1,100
+<li> Xiangjin Zhang: $300
+<li> Nick Tio: $300
+</ul>
+ 							<p> &nbsp; </p>
 
 						</div>
 					</div>

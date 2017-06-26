@@ -777,3 +777,8 @@ table.group-draw-table {
 table.group-draw-table td {
 	padding-right: 15px;
 }
+
+table.group-draw-table td.winner {
+	font-weight: bold;
+	font-size: 100%;
+}
