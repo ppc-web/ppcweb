@@ -782,3 +782,14 @@ table.group-draw-table td.winner {
 	font-weight: bold;
 	font-size: 100%;
 }
+
+table.prize-table {
+	border-collapse: collapse;
+	border-spacing: 5px;
+}
+
+table.prize-table td {
+	border: 1px solid black;
+	padding: 5px;
+	
+}
