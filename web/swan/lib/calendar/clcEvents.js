@@ -166,3 +166,99 @@ events.push.apply(events,
 	}
 	
 ]);
+
+eventSources.push(
+		{
+			events: [
+			{
+				title: '<center> CLC Special </center>',
+				start: '10:00',
+				end: '13:00',
+				dow: [6],
+				url: "https://docs.google.com/spreadsheets/d/1cexxDrNY8mFTqIXQEnPRDsK5BOpmwQjrX0-GP55XSTQ/edit#gid=119490071",
+
+				ranges: [{
+						start: '2017-09-23',
+						end: '2017-10-29'
+					}],
+				
+				color: "#f49542"
+			}, {
+				title: '<center> CLC Special </center>',
+				start: '19:00',
+				end: '22:00',
+				dow: [6],
+				ranges: [{
+						start: '2017-09-23',
+						end: '2017-10-29'
+					}],
+				
+				url: "https://docs.google.com/spreadsheets/d/1cexxDrNY8mFTqIXQEnPRDsK5BOpmwQjrX0-GP55XSTQ/edit#gid=119490071",
+				color: "#f49542"
+			},{
+				title: '<center> CLC Special </center>',
+				start: '19:00',
+				end: '22:00',
+				dow: [0],
+				url: "https://docs.google.com/spreadsheets/d/1cexxDrNY8mFTqIXQEnPRDsK5BOpmwQjrX0-GP55XSTQ/edit#gid=119490071",
+
+				ranges: [{
+						start: '2017-09-23',
+						end: '2017-10-29'
+					}],
+				
+				color: "#f49542"
+			},{
+				title: '<center> CLC Special </center>',
+				start: '14:00',
+				end: '18:00',
+				url: "https://docs.google.com/spreadsheets/d/1cexxDrNY8mFTqIXQEnPRDsK5BOpmwQjrX0-GP55XSTQ/edit#gid=119490071",
+
+				dow: [6],
+				ranges: [{
+						start: '2017-09-23',
+						end: '2017-09-23'
+					}],
+				
+				color: "#f49542"
+			},{
+				title: '<center> CLC Lost Pearl </center>',
+				start: '13:00',
+				end: '19:00',
+
+				dow: [6],
+				ranges: [{
+						start: '2017-11-11',
+						end: '2017-11-11'
+					}],
+				
+				color: "blue"
+			}, {
+				title: '<center> CLC Top 16 RR <br/> 8 tables reserved </center>',
+				start: '12:00',
+				end: '20:00',
+
+				dow: [6],
+				ranges: [{
+						start: '2017-11-18',
+						end: '2017-11-18'
+					}],
+				
+				color: "blue"
+			}, {
+				title: '<center> CLC Final 8 <br/> all tables reserved </center>',
+				start: '13:00',
+				end: '19:00',
+
+				dow: [0],
+				ranges: [{
+						start: '2017-11-19',
+						end: '2017-11-19'
+					}],
+				
+				color: "blue"
+			},
+			
+		]
+
+		});
