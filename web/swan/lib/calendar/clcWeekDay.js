@@ -13,7 +13,7 @@ eventSources.push(
 						end: '2017-11-08'
 					}],
 				
-				color: "#f49542"
+				color: "lightblue"
 			}, 			{
 				title: '<center> CLC Night </center>',
 				start: '19:00',
@@ -26,7 +26,7 @@ eventSources.push(
 						end: '2017-11-08'
 					}],
 				
-				color: "#f49542"
+				color: "lightblue"
 			}
 
 		]
