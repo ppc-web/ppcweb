@@ -24,11 +24,28 @@ eventSources.push(
 				end: '2017-07-02'
 			}, {
 				start: '2017-07-09',
-				end: '2017-12-31'
+				end: '2017-11-04'
 			}],
 		
 		color: "RoyalBlue"
+	},
+	{
+		title: '<center> Sunday League </center>',
+		start: '15:00',
+		end: '18:00',
+		url: 'http://weimingcup.com/vcac',
+		dow: [0],
+		ranges: [{
+				start: '2017-11-05',
+				end: '2017-11-17'
+			},{
+				start: '2017-11-26',
+				end: '2018-12-31'
+			},],
+		
+		color: "RoyalBlue"
 	}
+
 ]
 
 });
