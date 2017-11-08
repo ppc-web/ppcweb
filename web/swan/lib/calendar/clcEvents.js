@@ -222,7 +222,7 @@ eventSources.push(
 				
 				color: "#f49542"
 			},{
-				title: '<center> CLC Lost Pearl </center>',
+				title: '<center> CLC Lost Pearl <br/> 6 tables reserved </center>',
 				start: '13:00',
 				end: '19:00',
 
