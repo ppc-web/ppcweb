@@ -51,6 +51,22 @@ eventSources.push(
 				    dow: [ 1,2,3,4,5 ], // Repeat monday to Friday
 				    url: 'http://swanpp.com/camp.html',
 				    ranges:[{start:"2017-06-05", end:"2017-07-02"}, {start:"2017-07-05", end:"2017-08-18"}]
+				},
+				{
+				    title:"<center>Winter Camp</center>",
+				    start: '09:00',
+				    end: '12:00', 
+				    dow: [ 1,2,3,4,5 ], // Repeat monday to Friday
+				    url: 'http://swanpp.com/camp.html',
+				    ranges:[{start:"2017-11-20", end:"2017-11-22"}, {start:"2017-12-18", end:"2017-12-22"},, {start:"2017-12-27", end:"2017-12-29"}]
+				},
+				{
+				    title:"<center>Winter Camp</center>",
+				    start: '14:00',
+				    end: '17:00', 
+				    dow: [ 1,2,3,4,5 ], // Repeat monday to Friday
+				    url: 'http://swanpp.com/camp.html',
+				    ranges:[{start:"2017-11-20", end:"2017-11-22"}, {start:"2017-12-18", end:"2017-12-22"},, {start:"2017-12-27", end:"2017-12-29"}]
 				}],
 			color: "#C66505"
 
