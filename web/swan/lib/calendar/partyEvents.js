@@ -19,5 +19,12 @@ events.push.apply(events,
 		url: "ppc-ann-chinese.html",
 		color: "Magenta"
 	},
+	{
+		title: '<center> 2018 Dream Open <br/>all tables reserved </center>',
+		start: '2018-01-01T09:00:00',
+		end: '2018-01-01T18:00:00',
+		url: "http://www.amandachou.com/",
+		color: "Magenta"
+	},
 	
 ]);
