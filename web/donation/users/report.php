@@ -4,13 +4,15 @@
 
 
 <?php
+$timeFilter = empty ( $_REQUEST["filter"] ) ? "" :  $_REQUEST["filter"];
+
 $userData = fetchAllUsers (); // Fetch information for all users
                               
 // fetch the total donations of all users.
-$totalDonations = fetchTotalDonationsPublic ();
+$totalDonations = fetchTotalDonationsPublic ($timeFilter);
 
 // fetch the latest donations of all users.
-$latestDonations = fetchLatestDonationsPublic ();
+$latestDonations = fetchLatestDonationsPublic ($timeFilter);
 
 // sort user data by last donation date.
 function cmpLastDonationDate($u1, $u2) {
@@ -28,12 +30,13 @@ foreach ( $userData as $v1 ) {
 		$v1->lastDonationDate = $latestDonations ["$v1->id"]->date;
 	} else {
 		$v1->lastDonation = 0;
+		$v1->lastDonationDate = "";
 	}
 	$userArray ["$v1->id"] = $v1;
 }
 usort($userData, "cmpLastDonationDate");
 
-$donations = fetchAllDonationsPublic ();
+$donations = fetchAllDonationsPublic ($timeFilter);
 function cmpDonation($u1, $u2) {
 	if ($u1->id >= 10140 || $u2->id >= 10140) {
 		return $u2->id - $u1->id;
@@ -57,10 +60,24 @@ usort ( $donations, "cmpDonation" );
 		<!-- Page Heading -->
 		<div class="row">
 
-			<div class="col-xs-12 col-md-6">
-				<h2>Total Donations: $<?= money_format('%.0n', $total)?> </h2>
+			<div class="col-xs-12 col-md-2">
+				<h3>
+				<form class="" method="GET" >
+					<select name="filter" onchange="this.form.submit()">
+						<option value='All'> All Time</option>
+						<option value='2016' <?= ($timeFilter=="2016") ? "selected" : "" ?> > 2016 </option>
+						<option value='2017' <?= ($timeFilter=="2017") ? "selected" : "" ?> > 2017 </option>
+						<option value='2018' <?= ($timeFilter=="2018") ? "selected" : "" ?> > 2018 </option>
+                  	</select>
+				</form>
+				</h3>
 			</div>
-		</div>
+			<div class="col-xs-12 col-md-6">
+				<h2>Donation: $<?= number_format($total, 0)?> </h2>
+			</div>
+
+        </div>
+			
 		<div class="row">
 
 			<div class="col-xs-12">
@@ -94,7 +111,7 @@ usort ( $donations, "cmpDonation" );
 					<tr>
 										<td><?=$v1->date?></td>
 										<td><?=$v1->username?></td>
-										<td>$<?=money_format('%.0n', $v1->amount)?></td>
+										<td>$<?=number_format($v1->amount, 0)?></td>
 										<td> <?=($v1->dtype==1) ? $v1->company : ""?>
 					</td>
 									</tr>

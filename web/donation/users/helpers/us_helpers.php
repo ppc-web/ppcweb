@@ -147,9 +147,10 @@ function fetchTotalDonations() {
 }
 
 // fetch all user public donations
-function fetchTotalDonationsPublic() {
+function fetchTotalDonationsPublic($timeFilter) {
+	$where = addTimeFilter("visibility=0", $timeFilter);
 	$db = DB::getInstance();
-	$query = $db->query("SELECT user_id, sum(amount) as total FROM donation where visibility=0 group by user_id");
+	$query = $db->query("SELECT user_id, sum(amount) as total FROM donation where $where group by user_id");
 	$results = $query->results();
 	$s = array();
 	foreach ($results as $u) {
@@ -180,14 +181,15 @@ function fetchLatestDonations() {
 	
 }
 
-function fetchLatestDonationsPublic() {
+function fetchLatestDonationsPublic($timeFilter="") {
+	$where = addTimeFilter ("amount>0 and visibility=0", $timeFilter );
 	$db = DB::getInstance ();
 	$query = $db->query ( "Select t.user_id as user_id, date, amount
 		from donation t
 		inner join
 		(SELECT user_id,MAX(date) as max_date
 		FROM donation
-		WHERE amount>0 and visibility=0
+		WHERE $where
 		GROUP BY user_id)a
 		on a.user_id = t.user_id and a.max_date = date" );
 	$results = $query->results();
@@ -200,9 +202,25 @@ function fetchLatestDonationsPublic() {
 
 }
 
-function fetchAllDonationsPublic() {
+
+/**
+ * @param timeFilter
+ */
+
+function addTimeFilter($where, $timeFilter) {
+	if (strpos($timeFilter, "20")===0) {
+		// filter starts with 20, we treat it as a year, i.e, 2017
+		$where .= " and year(date) = $timeFilter";
+		
+	}
+	return $where;
+}
+
+function fetchAllDonationsPublic($timeFilter="") {
 	$db = DB::getInstance ();
-	$query = $db->query ( "Select * from donation where visibility=0" );
+	$where = addTimeFilter("visibility=0", $timeFilter);
+	
+	$query = $db->query ( "Select * from donation where $where" );
 	$results = $query->results();
 	return $results;
 
