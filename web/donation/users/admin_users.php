@@ -242,6 +242,7 @@ $latestDonations = fetchLatestDonations();
 							}
 						else {
 							$v1->lastDonation = 0;
+							$v1->lastDonationDate = "";
 						}
 							?>
 					<tr>

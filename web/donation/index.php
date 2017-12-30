@@ -148,14 +148,6 @@ if ($user->isLoggedIn ()) {
 								
 								</ul>
 							</li>
-							<li>If you are a previous Swan Annual Member, and you wish to
-								donate your unused membership fee, please send us an email.
-							</li>
-							<li>If you have previously donated to PPC but haven't received
-								any donation receipt or account registration email, please send
-								us an email. We will create an account for
-								you upon getting your email address.
-							</li>
 							<li> If you find any errors or missings in our donation receipt, please send us an email so we can correct them.
 							</li>
 							<li> Our email address is: <a
@@ -164,7 +156,7 @@ if ($user->isLoggedIn ()) {
 							</li>
 							
 						</ol>
-						<h4> We greatly appreciate your support to PPC and wish you a happy and fruitful year 2017! </h4>
+						<h4> We greatly appreciate your support to PPC and wish you a happy and fruitful year 2018! </h4>
 				</div>
 			</div>
 		</div>
