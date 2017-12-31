@@ -8,7 +8,7 @@ eventSources.push(
 		dow: [0],
 		ranges: [{
 				start: '2016-10-30',
-				end: '2017-12-31'
+				end: '2017-11-05'
 			}],
 		
 		color: "#f49542"
