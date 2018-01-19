@@ -64,5 +64,67 @@ eventSources.push(
 		    url: "http://swanpp.com/u3700/schedule.html",
 		    color: "#1D7018"
 		},
+		
+		// 2018
+ 		{
+		    title:"<center> U3700 <br/> Warmup <br/></center>",
+		    start: '2018-01-27T17:00',
+		    end: '2018-01-27T22:00',
+		    color: "Magenta"
+		},
+		{
+		    title:"<center> U3700 <br/> Group RR <br/> 6 tables reserved </center>",
+		    start: '2018-02-03T17:00',
+		    end: '2018-02-03T22:00',
+		    url: "http://swanpp.com/2018u3700/draw.html",
+		    color: "Blue"
+		},
+		{
+		    title:"<center> U3700 <br/> Group RR <br/> 6 tables reserved </center>",
+		    start: '2018-02-10T17:00',
+		    end: '2018-02-10T22:00',
+		    url: "http://swanpp.com/2018u3700/draw.html",
+		    color: "Blue"
+		},
+		{
+		    title:"<center> U3700 <br/> Group RR <br/> 6 tables reserved </center>",
+		    start: '2018-02-17T17:00',
+		    end: '2018-02-17T22:00',
+		    url: "http://swanpp.com/2018u3700/draw.html",
+		    color: "Blue"
+		},
+		{
+		    title:"<center> U3700 <br/> Group RR <br/> 6 tables reserved </center>",
+		    start: '2018-02-24T17:00',
+		    end: '2018-02-24T22:00',
+		    url: "http://swanpp.com/2018u3700/draw.html",
+		    color: "Blue"
+		},
+		{
+		    title:"<center> U3700 <br/> Group RR <br/> 6 tables reserved </center>",
+		    start: '2018-03-03T17:00',
+		    end: '2018-03-03T22:00',
+		    url: "http://swanpp.com/2018u3700/draw.html",
+		    color: "Blue"
+		},
+		{
+		    title:"<center> U3700 Lost Pearl 1</center>",
+		    start: '2018-03-10T17:00',
+		    end: '2018-03-10T22:00',
+		    color: "#ff9933"
+		},
+		{
+		    title:"<center> U3700 Lost Pearl 2</center>",
+		    start: '2018-03-11T15:00',
+		    end: '2018-03-1120:00',
+		    color: "#ff9933"
+		},
+		{
+		    title:"<center> U3700 Final",
+		    start: '2018-03-17T14:00',
+		    end: '2018-03-17T21:00',
+		    color: "#1D7018"
+		},
+
  	]
 });
