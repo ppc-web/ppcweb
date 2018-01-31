@@ -73,35 +73,35 @@ eventSources.push(
 		    color: "Magenta"
 		},
 		{
-		    title:"<center> U3700 <br/> Group RR <br/> 6 tables reserved </center>",
+		    title:"<center> U3700 <br/> Group A <br/> 3 tables reserved </center>",
 		    start: '2018-02-03T17:00',
 		    end: '2018-02-03T22:00',
 		    url: "http://swanpp.com/2018u3700/draw.html",
 		    color: "Blue"
 		},
 		{
-		    title:"<center> U3700 <br/> Group RR <br/> 6 tables reserved </center>",
+		    title:"<center> U3700 <br/> Group B, C <br/> 6 tables reserved </center>",
 		    start: '2018-02-10T17:00',
 		    end: '2018-02-10T22:00',
 		    url: "http://swanpp.com/2018u3700/draw.html",
 		    color: "Blue"
 		},
 		{
-		    title:"<center> U3700 <br/> Group RR <br/> 6 tables reserved </center>",
+		    title:"<center> U3700 <br/> Group D <br/> 3 tables reserved </center>",
 		    start: '2018-02-17T17:00',
 		    end: '2018-02-17T22:00',
 		    url: "http://swanpp.com/2018u3700/draw.html",
 		    color: "Blue"
 		},
 		{
-		    title:"<center> U3700 <br/> Group RR <br/> 6 tables reserved </center>",
+		    title:"<center> U3700 <br/> Group E <br/> 3 tables reserved </center>",
 		    start: '2018-02-24T17:00',
 		    end: '2018-02-24T22:00',
 		    url: "http://swanpp.com/2018u3700/draw.html",
 		    color: "Blue"
 		},
 		{
-		    title:"<center> U3700 <br/> Group RR <br/> 6 tables reserved </center>",
+		    title:"<center> U3700 <br/> Group F, G <br/> 7 tables reserved </center>",
 		    start: '2018-03-03T17:00',
 		    end: '2018-03-03T22:00',
 		    url: "http://swanpp.com/2018u3700/draw.html",
