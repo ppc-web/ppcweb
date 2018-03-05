@@ -69,6 +69,22 @@ eventSources.push(
 				    url: 'http://swanpp.com/camp.html',
 				    ranges:[{start:"2017-11-20", end:"2017-11-22"}, {start:"2017-12-18", end:"2017-12-22"}, {start:"2017-12-27", end:"2017-12-29"}, 
 				    	{start:"2018-01-02", end:"2018-01-05"}, {start:"2018-02-20", end:"2018-02-23"}]
+				},
+				{
+				    title:"<center>Spring Camp</center>",
+				    start: '09:00',
+				    end: '12:00', 
+				    dow: [ 1,2,3,4,5 ], // Repeat monday to Friday
+				    url: 'http://swanpp.com/camp.html',
+				    ranges:[{start:"2018-04-02", end:"2018-04-20"}]
+				},
+				{
+				    title:"<center>Spring Camp</center>",
+				    start: '14:00',
+				    end: '17:00', 
+				    dow: [ 1,2,3,4,5 ], // Repeat monday to Friday
+				    url: 'http://swanpp.com/camp.html',
+				    ranges:[{start:"2018-04-02", end:"2018-04-20"}]
 				}],
 			color: "#C66505"
 
