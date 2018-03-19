@@ -664,6 +664,10 @@ table.history-table, .history-table th, .history-table td {
 	width: 350px;
 }
 
+.history-table td img.expand {
+	width: 480px;
+}
+
 table.match-table {
 	border-collapse: collapse;
 	margin: 10px 0;
