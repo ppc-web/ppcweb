@@ -805,3 +805,8 @@ table.prize-table td {
   -o-transform: rotate(90deg);
   transform: rotate(90deg);
 }
+
+a.memorial, #main div.box a.memorial {
+	background-color: black;
+	color: white;
+}

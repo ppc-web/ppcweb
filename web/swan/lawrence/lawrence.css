@@ -33,7 +33,11 @@ table.donation {
 	font-weight: bold;
 }
 
+.donation td.time {
+	font-style: italic;	
+}
+
 span.note {
-	font-size: 90%;
+	font-size: 85%;
 	font-style: italic;
 }
