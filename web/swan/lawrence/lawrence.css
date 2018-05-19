@@ -41,3 +41,12 @@ span.note {
 	font-size: 85%;
 	font-style: italic;
 }
+
+table.song {
+	width: 90%;
+	border-spacing: 20px 10px;
+}
+
+.box .song td, .box .song th {
+	font-size: 18px;
+}
