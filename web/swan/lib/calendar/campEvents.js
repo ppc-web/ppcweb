@@ -85,6 +85,21 @@ eventSources.push(
 				    dow: [ 1,2,3,4,5 ], // Repeat monday to Friday
 				    url: 'http://swanpp.com/camp.html',
 				    ranges:[{start:"2018-04-02", end:"2018-04-20"}]
+				},{
+				    title:"<center>Summer Camp<br/>All tables reserved</center>",
+				    start: '09:00',
+				    end: '12:00', 
+				    dow: [ 1,2,3,4,5 ], // Repeat monday to Friday
+				    url: 'http://swanpp.com/camp.html',
+				    ranges:[{start:"2018-06-04", end:"2018-08-24"}]
+				},
+				{
+				    title:"<center>Summer Camp<br/>All tables reserved</center>",
+				    start: '14:00',
+				    end: '17:00', 
+				    dow: [ 1,2,3,4,5 ], // Repeat monday to Friday
+				    url: 'http://swanpp.com/camp.html',
+				    ranges:[{start:"2018-06-04", end:"2018-08-24"}]
 				}],
 			color: "#C66505"
 
