@@ -247,7 +247,14 @@ events.push.apply(events,
 		color: "#1D7018",
 		start: '2018-11-11T13:00',
 		end: '2018-11-11T20:00'
-	}
+	},
+	{
+		title: '<center> CLC Registration',
+		color: "#1D7018",
+		url: "/2018clc/entries.html",
+		start: '2018-07-15T00:00',
+		end: '2018-08-13T23:59'
+	},
 	
 ]);
 
