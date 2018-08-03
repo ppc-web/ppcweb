@@ -163,6 +163,90 @@ events.push.apply(events,
 		url: "http://swanpp.com/taoopen",
 		start: '2017-06-25T09:00',
 		end: '2017-06-25T19:30'
+	},
+	{
+		title: '<center> CLC 1<sup>st</sup> Round<br> Group A,B </center>',
+		color: "#777",
+		start: '2018-08-18T18:00',
+		end: '2018-08-18T22:30'
+	},
+	{
+		title: '<center> CLC 1<sup>st</sup> Round<br> Group C,D </center>',
+		color: "#777",
+		start: '2018-08-25T18:00',
+		end: '2018-08-25T22:30'
+	},
+	{
+		title: '<center> CLC 1<sup>st</sup> Round<br> Group E,F </center>',
+		color: "#777",
+		start: '2018-09-01T18:00',
+		end: '2018-09-01T22:30'
+	},
+	{
+		title: '<center> CLC 1<sup>st</sup> Round<br> Group G,H </center>',
+		color: "#777",
+		start: '2018-09-08T18:00',
+		end: '2018-09-08T22:30'
+	},
+	{
+		title: '<center> CLC 1<sup>st</sup> Round<br> Group I,J </center>',
+		color: "#777",
+		start: '2018-09-15T18:00',
+		end: '2018-09-15T22:30'
+	},
+	{
+		title: '<center> CLC 1<sup>st</sup> Round<br> Group K,L </center>',
+		color: "#777",
+		start: '2018-09-22T18:00',
+		end: '2018-09-22T22:30'
+	},
+	{
+		title: '<center> CLC Div B<br> Group A,B </center>',
+		color: "#777",
+		start: '2018-09-29T18:00',
+		end: '2018-09-29T22:30'
+	},
+	{
+		title: '<center> CLC Div B<br> Group C,D </center>',
+		color: "#777",
+		start: '2018-10-06T18:00',
+		end: '2018-10-06T22:30'
+	},
+	{
+		title: '<center> CLC Div B<br> Group E,F </center>',
+		color: "#777",
+		start: '2018-10-13T18:00',
+		end: '2018-10-13T22:30'
+	},
+	{
+		title: '<center> CLC Div B<br> Group G,H </center>',
+		color: "#777",
+		start: '2018-10-20T18:00',
+		end: '2018-10-20T22:30'
+	},
+	{
+		title: '<center> CLC Div B<br> Playoff Group<br> 16&rarr;8 </center>',
+		color: "#1D7018",
+		start: '2018-11-03T12:00',
+		end: '2018-11-03T22:00'
+	},
+	{
+		title: '<center> CLC Div B<br> Playoff Final<br> Top 8 SE</center>',
+		color: "#1D7018",
+		start: '2018-11-04T13:00',
+		end: '2018-11-04T20:00'
+	},
+	{
+		title: '<center> CLC Div A<br> Playoff Group<br> 24&rarr;8 </center>',
+		color: "#1D7018",
+		start: '2018-11-10T12:00',
+		end: '2018-11-10T22:00'
+	},
+	{
+		title: '<center> CLC Div A<br> Playoff Final<br> Top 8 SE</center>',
+		color: "#1D7018",
+		start: '2018-11-11T13:00',
+		end: '2018-11-11T20:00'
 	}
 	
 ]);
