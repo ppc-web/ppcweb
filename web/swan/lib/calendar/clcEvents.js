@@ -221,8 +221,8 @@ events.push.apply(events,
 	{
 		title: '<center> CLC Div B<br> Group G,H </center>',
 		color: "#777",
-		start: '2018-10-20T18:00',
-		end: '2018-10-20T22:30'
+		start: '2018-10-27T18:00',
+		end: '2018-10-27T22:30'
 	},
 	{
 		title: '<center> CLC Div B<br> Playoff Group<br> 16&rarr;8 </center>',
