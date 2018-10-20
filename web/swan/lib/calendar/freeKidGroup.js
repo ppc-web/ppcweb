@@ -617,7 +617,15 @@ eventSources.push(
 				    end: '20:30', 
 				    dow: [ 1 ], // Mon
 				    url: 'https://docs.google.com/spreadsheets/d/1e7yA8Awr71d5T0IyG-aWMWfYMBYiUPHXRnAtXT8RHeI/edit#gid=879293124',
-				    ranges:[{start:"2018-10-01", end:"2018-10-31"}]
+				    ranges:[{start:"2018-10-01", end:"2018-10-21"}]
+				},
+				{
+				    title:"<center> Adult Group</center>",
+				    start: '19:30',
+				    end: '21:00', 
+				    dow: [ 1 ], // Mon
+				    url: 'https://docs.google.com/spreadsheets/d/1e7yA8Awr71d5T0IyG-aWMWfYMBYiUPHXRnAtXT8RHeI/edit#gid=879293124',
+				    ranges:[{start:"2018-10-21", end:"2018-10-31"}]
 				},
 				
 				{
@@ -650,7 +658,15 @@ eventSources.push(
 				    end: '20:30', 
 				    dow: [ 3 ], // Wed
 				    url: 'https://docs.google.com/spreadsheets/d/1ihnKIhZbs9VBS3CQPXY0ukvuciks9A1H717KsKhQT-M/edit#gid=1229948214',
-				    ranges:[{start:"2018-10-01", end:"2018-10-31"}]
+				    ranges:[{start:"2018-10-01", end:"2018-10-21"}]
+				},
+				{
+				    title:"<center> Adult Group</center>",
+				    start: '19:30',
+				    end: '21:00', 
+				    dow: [ 3 ], // Wed
+				    url: 'https://docs.google.com/spreadsheets/d/1ihnKIhZbs9VBS3CQPXY0ukvuciks9A1H717KsKhQT-M/edit#gid=1229948214',
+				    ranges:[{start:"2018-10-21", end:"2018-10-31"}]
 				}
 				
 				
