@@ -254,7 +254,17 @@ events.push.apply(events,
 		url: "/2018clc/entries.html",
 		start: '2018-07-15T00:00',
 		end: '2018-08-13T23:59'
-	},
+	}, {
+		title: '<center> Swan Warriors Open<br/>All Club Reserved</center>',
+		color: "#1D7018",
+		start: '2018-11-17T09:00',
+		end: '2018-11-17T21:00'
+	}, {
+		title: '<center> Swan Warriors Open<br/>All Club Reserved</center>',
+		color: "#1D7018",
+		start: '2018-11-18T09:00',
+		end: '2018-11-18T21:00'
+	}
 	
 ]);
 
@@ -348,7 +358,7 @@ eventSources.push(
 					}],
 				
 				color: "blue"
-			},
+			}
 			
 		]
 
