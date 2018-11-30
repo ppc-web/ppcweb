@@ -480,6 +480,14 @@ eventSources.push(
 		    dow: [ 6 ], // Sat
 		    url: 'https://docs.google.com/spreadsheets/d/1C-f_FHm1EFivryZYxzu0xNb7wMHlK_JDShUiO6Hz5pY/edit#gid=1461738790',
 		    ranges:[{start:"2018-11-01", end:"2018-11-07"}]
+		},
+		{
+		    title:"<center> Free Kid Group</center>",
+		    start: '15:30',
+		    end: '17:00', 
+		    dow: [ 6 ], // Sat
+		    url: 'https://docs.google.com/spreadsheets/d/1C-f_FHm1EFivryZYxzu0xNb7wMHlK_JDShUiO6Hz5pY/edit#gid=283315351',
+		    ranges:[{start:"2018-12-01", end:"2018-12-31"}]
 		}			
 		
 		
@@ -643,6 +651,14 @@ eventSources.push(
 				    url: 'https://docs.google.com/spreadsheets/d/1e7yA8Awr71d5T0IyG-aWMWfYMBYiUPHXRnAtXT8RHeI/edit#gid=417501929',
 				    ranges:[{start:"2018-11-01", end:"2018-11-30"}]
 				},
+				{
+				    title:"<center> Adult Group</center>",
+				    start: '19:30',
+				    end: '21:00', 
+				    dow: [ 1 ], // Mon
+				    url: 'https://docs.google.com/spreadsheets/d/1e7yA8Awr71d5T0IyG-aWMWfYMBYiUPHXRnAtXT8RHeI/edit#gid=175831074',
+				    ranges:[{start:"2018-12-01", end:"2018-12-20"}]
+				},
 				
 				{
 				    title:"<center> Adult Group</center>",
@@ -691,6 +707,14 @@ eventSources.push(
 				    dow: [ 3 ], // Wed
 				    url: 'https://docs.google.com/spreadsheets/d/1ihnKIhZbs9VBS3CQPXY0ukvuciks9A1H717KsKhQT-M/edit#gid=347733165',
 				    ranges:[{start:"2018-11-01", end:"2018-11-30"}]
+				},
+				{
+				    title:"<center> Adult Group</center>",
+				    start: '19:30',
+				    end: '21:00', 
+				    dow: [ 3 ], // Wed
+				    url: 'https://docs.google.com/spreadsheets/d/1ihnKIhZbs9VBS3CQPXY0ukvuciks9A1H717KsKhQT-M/edit#gid=1478818178',
+				    ranges:[{start:"2018-12-01", end:"2018-12-30"}]
 				}
 				
 				
