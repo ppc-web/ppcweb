@@ -264,6 +264,12 @@ events.push.apply(events,
 		color: "#1D7018",
 		start: '2018-11-18T09:00',
 		end: '2018-11-18T21:00'
+	}, {
+		title: '<center> TT Dream Open<br/>All Club Reserved</center>',
+		color: "#1D7018",
+		url: "http://www.amandachou.com",
+		start: '2019-01-01T09:00',
+		end: '2019-01-01T21:00'
 	}
 	
 ]);

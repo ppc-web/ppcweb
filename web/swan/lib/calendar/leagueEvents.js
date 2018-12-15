@@ -53,7 +53,23 @@ eventSources.push(
 			}],
 		
 		color: "RoyalBlue"
+	},
+	
+	{
+		title: '<center> Swan Warriors League <br/> 7 tables reserved </center>',
+			
+		start: '12:30',
+		end: '19:30',
+		url: 'https://www.swanwarriors.com/league/',
+		dow: [0],
+		ranges: [{
+				start: '2019-01-02',
+				end: '2019-12-31'
+			}],
+		
+		color: "RoyalBlue"
 	}
+
 
 ]
 
