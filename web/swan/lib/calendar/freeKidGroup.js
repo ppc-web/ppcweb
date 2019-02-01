@@ -496,6 +496,14 @@ eventSources.push(
 		    dow: [ 6 ], // Sat
 		    url: 'https://docs.google.com/spreadsheets/d/1C-f_FHm1EFivryZYxzu0xNb7wMHlK_JDShUiO6Hz5pY/edit#gid=870164678',
 		    ranges:[{start:"2019-01-01", end:"2019-01-31"}]
+		},
+		{
+		    title:"<center> Free Kid Group</center>",
+		    start: '15:30',
+		    end: '17:00', 
+		    dow: [ 6 ], // Sat
+		    url: 'https://docs.google.com/spreadsheets/d/1C-f_FHm1EFivryZYxzu0xNb7wMHlK_JDShUiO6Hz5pY/edit#gid=296420072',
+		    ranges:[{start:"2019-02-01", end:"2019-02-28"}]
 		}			
 		
 		
@@ -678,6 +686,14 @@ eventSources.push(
 				},
 				{
 				    title:"<center> Adult Group</center>",
+				    start: '19:30',
+				    end: '21:00', 
+				    dow: [ 1 ], // Mon
+				    url: 'https://docs.google.com/spreadsheets/d/1e7yA8Awr71d5T0IyG-aWMWfYMBYiUPHXRnAtXT8RHeI/edit#gid=1880103040',
+				    ranges:[{start:"2019-02-01", end:"2019-02-28"}]
+				},
+				{
+				    title:"<center> Adult Group</center>",
 				    start: '19:00',
 				    end: '20:30', 
 				    dow: [ 1 ], // Wed
@@ -739,6 +755,14 @@ eventSources.push(
 				    dow: [ 3 ], // Wed
 				    url: 'https://docs.google.com/spreadsheets/d/1ihnKIhZbs9VBS3CQPXY0ukvuciks9A1H717KsKhQT-M/edit#gid=386011406',
 				    ranges:[{start:"2019-01-02", end:"2019-01-31"}]
+				},
+				{
+				    title:"<center> Adult Group</center>",
+				    start: '19:30',
+				    end: '21:00', 
+				    dow: [ 3 ], // Wed
+				    url: 'https://docs.google.com/spreadsheets/d/1ihnKIhZbs9VBS3CQPXY0ukvuciks9A1H717KsKhQT-M/edit#gid=386011406',
+				    ranges:[{start:"2019-02-01", end:"2019-02-28"}]
 				}
 				
 				

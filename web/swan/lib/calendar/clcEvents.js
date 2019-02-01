@@ -364,6 +364,18 @@ eventSources.push(
 					}],
 				
 				color: "blue"
+			}, {
+				title: '<center> Spring Festival <br/> Celebration </center>',
+				start: '18:00',
+				end: '22:00',
+
+				dow: [6],
+				ranges: [{
+						start: '2019-02-02',
+						end: '2019-02-02'
+					}],
+				
+				color: "blue"
 			}
 			
 		]
