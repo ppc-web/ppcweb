@@ -68,6 +68,7 @@ usort ( $donations, "cmpDonation" );
 						<option value='2016' <?= ($timeFilter=="2016") ? "selected" : "" ?> > 2016 </option>
 						<option value='2017' <?= ($timeFilter=="2017") ? "selected" : "" ?> > 2017 </option>
 						<option value='2018' <?= ($timeFilter=="2018") ? "selected" : "" ?> > 2018 </option>
+						<option value='2019' <?= ($timeFilter=="2019") ? "selected" : "" ?> > 2019 </option>
                   	</select>
 				</form>
 				</h3>
