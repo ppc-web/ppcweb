@@ -122,7 +122,7 @@ eventSources.push(
 				    start: '09:00',
 				    end: '12:00', 
 				    dow: [ 1,2,3,4,5 ], // Repeat monday to Friday
-				    url: 'http://swanpp.com/camp.html',
+				    url: 'http://swanpp.com/camp2.html',
 				    ranges:[{start:"2019-02-18", end:"2019-02-22"}]
 				},
 				{
@@ -130,7 +130,7 @@ eventSources.push(
 				    start: '14:00',
 				    end: '17:00', 
 				    dow: [ 1,2,3,4,5 ], // Repeat monday to Friday
-				    url: 'http://swanpp.com/camp.html',
+				    url: 'http://swanpp.com/camp2.html',
 				    ranges:[{start:"2019-02-18", end:"2019-02-22"}]
 				},
 ],
