@@ -145,10 +145,10 @@ function getDoc() {
 	doc.text(25, 80, 'EIN#: 81-2451936');
 
 	
-	doc.text(25, 92, 'We acknowledge, with thanks, the receipt of following contributions from');
+	doc.text(25, 92, 'We acknowledge, with thanks, the receipt of following cash contributions from');
 
 	doc.setFontType('bold');
-	doc.text(150, 92, '<?php echo "$userdetails->fname $userdetails->lname"?>:');
+	doc.text(159, 92, '<?php echo "$userdetails->fname $userdetails->lname"?>:');
 
 	doc.setFontType('normal');
 	doc.text(25, 102, 'No.');
