@@ -517,8 +517,8 @@ eventSources.push(
 		    start: '15:30',
 		    end: '17:00', 
 		    dow: [ 6 ], // Sat
-		    url: 'https://docs.google.com/spreadsheets/d/1C-f_FHm1EFivryZYxzu0xNb7wMHlK_JDShUiO6Hz5pY/edit#gid=1702238369',
-		    ranges:[{start:"2019-04-01", end:"2019-04-30"}]
+		    url: 'https://docs.google.com/spreadsheets/d/1C-f_FHm1EFivryZYxzu0xNb7wMHlK_JDShUiO6Hz5pY/edit#gid=1548248432',
+		    ranges:[{start:"2019-05-01", end:"2019-05-31"}]
 		}			
 		
 		
@@ -801,7 +801,7 @@ eventSources.push(
 				    end: '21:00', 
 				    dow: [ 1 ], // Mon
 				    url: 'https://docs.google.com/spreadsheets/d/1e7yA8Awr71d5T0IyG-aWMWfYMBYiUPHXRnAtXT8RHeI/edit#gid=603200367',
-				    ranges:[{start:"2018-04-01", end:"2019-04-30"}]
+				    ranges:[{start:"2019-04-01", end:"2019-04-30"}]
 				},
 				{
 				    title:"<center> Adult Group</center>",
@@ -810,6 +810,30 @@ eventSources.push(
 				    dow: [ 3 ], // Wed
 				    url: 'https://docs.google.com/spreadsheets/d/1e7yA8Awr71d5T0IyG-aWMWfYMBYiUPHXRnAtXT8RHeI/edit#gid=603200367',
 				    ranges:[{start:"2019-04-01", end:"2019-04-30"}]
+				},
+				{
+				    title:"<center> Adult Group</center>",
+				    start: '19:30',
+				    end: '21:00', 
+				    dow: [ 1 ], // Mon
+				    url: 'https://docs.google.com/spreadsheets/d/1e7yA8Awr71d5T0IyG-aWMWfYMBYiUPHXRnAtXT8RHeI/edit#gid=1283137149',
+				    ranges:[{start:"2019-05-01", end:"2019-05-31"}]
+				},
+				{
+				    title:"<center> Adult Group</center>",
+				    start: '19:30',
+				    end: '21:00', 
+				    dow: [ 3 ], // Wed
+				    url: 'https://docs.google.com/spreadsheets/d/1e7yA8Awr71d5T0IyG-aWMWfYMBYiUPHXRnAtXT8RHeI/edit#gid=759028499',
+				    ranges:[{start:"2019-05-01", end:"2019-05-07"}, {start:"2019-05-09", end:"2019-05-31"}]
+				},
+				{
+				    title:"<center> Adult Group</center>",
+				    start: '19:30',
+				    end: '21:00', 
+				    dow: [ 2 ], // Wed
+				    url: 'https://docs.google.com/spreadsheets/d/1e7yA8Awr71d5T0IyG-aWMWfYMBYiUPHXRnAtXT8RHeI/edit#gid=759028499',
+				    ranges:[{start:"2019-05-07", end:"2019-05-09"}]
 				}
 				
 				
