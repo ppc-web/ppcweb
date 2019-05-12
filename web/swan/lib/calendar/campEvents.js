@@ -133,6 +133,13 @@ eventSources.push(
 				    url: 'http://swanpp.com/camp2.html',
 				    ranges:[{start:"2019-04-15", end:"2019-04-19"}]
 				},
+				{
+				    title:"<center>Summer Camp Registration</center>",
+				    start: '2019-03-15',
+				    end: '2019-06-08', 
+				    url: 'http://swanpp.com/camp.html',
+				    color: 'Pink'
+				}
 ],
 			color: "#C66505"
 
