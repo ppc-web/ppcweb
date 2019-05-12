@@ -130,7 +130,7 @@ eventSources.push(
 		    title:"<center> U3700 Registration</center>",
 		    start: '2019-05-08',
 		    end: '2019-05-27',
-		    url: "http://swanpp.com/2019u3700/2019u3700",
+		    url: "http://swanpp.com/2019u3700/",
 		    color: "Green"
 		},
 		{
