@@ -104,7 +104,7 @@ eventSources.push(
 		    title:"<center> U3700 <br/> Group F, G <br/> 7 tables reserved </center>",
 		    start: '2018-03-03T17:00',
 		    end: '2018-03-03T22:00',
-		    url: "http://swanpp.com/2018u3700/draw.html",
+		    url: "http://swanpp.com/2019u3700/d.html",
 		    color: "Blue"
 		},
 		{
@@ -123,6 +123,74 @@ eventSources.push(
 		    title:"<center> U3700 Final",
 		    start: '2018-03-17T14:00',
 		    end: '2018-03-17T21:00',
+		    color: "#1D7018"
+		},
+		// 2019 U 3700
+		{
+		    title:"<center> U3700 Registration</center>",
+		    start: '2019-05-08',
+		    end: '2019-05-27',
+		    url: "http://swanpp.com/2019u3700/2019u3700",
+		    color: "Green"
+		},
+		{
+		    title:"<center> U3700 Warm Up</center>",
+		    start: '2019-05-25T17:00',
+		    end: '2019-05-25T22:00',
+		    url: "http://swanpp.com/2019u3700/draw.html",
+		    color: "Blue"
+		},
+		{
+		    title:"<center> U3700 Group</center>",
+		    start: '2019-06-01T17:00',
+		    end: '2019-06-01T22:00',
+		    url: "http://swanpp.com/2019u3700/draw.html",
+		    color: "Blue"
+		},
+		{
+		    title:"<center> U3700 Group</center>",
+		    start: '2019-06-08T17:00',
+		    end: '2019-06-08T22:00',
+		    url: "http://swanpp.com/2019u3700/draw.html",
+		    color: "Blue"
+		},
+		{
+		    title:"<center> U3700 Group</center>",
+		    start: '2019-06-15T17:00',
+		    end: '2019-06-15T22:00',
+		    url: "http://swanpp.com/2019u3700/draw.html",
+		    color: "Blue"
+		},
+		{
+		    title:"<center> U3700 Group</center>",
+		    start: '2019-06-22T17:00',
+		    end: '2019-06-22T22:00',
+		    url: "http://swanpp.com/2019u3700/draw.html",
+		    color: "Blue"
+		},
+		{
+		    title:"<center> U3700 Group</center>",
+		    start: '2019-07-06T17:00',
+		    end: '2019-07-06T22:00',
+		    url: "http://swanpp.com/2019u3700/draw.html",
+		    color: "Blue"
+		},
+		{
+		    title:"<center> U3700 Lost Pearl 1</center>",
+		    start: '2019-07-13T17:00',
+		    end: '2019-07-13T22:00',
+		    color: "#ff9933"
+		},
+		{
+		    title:"<center> U3700 Lost Pearl 2</center>",
+		    start: '2019-07-14T15:00',
+		    end: '2019-07-1420:00',
+		    color: "#ff9933"
+		},
+		{
+		    title:"<center> U3700 Final",
+		    start: '2019-07-20T14:00',
+		    end: '2019-07-20T21:00',
 		    color: "#1D7018"
 		},
 
