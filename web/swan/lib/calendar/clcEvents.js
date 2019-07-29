@@ -270,6 +270,97 @@ events.push.apply(events,
 		url: "http://www.amandachou.com",
 		start: '2019-01-01T09:00',
 		end: '2019-01-01T21:00'
+	},
+	{
+		title: '<center> CLC 1<sup>st</sup> Round<br> Group A,B </center>',
+		color: "#777",
+		start: '2019-08-17T18:00',
+		end: '2019-08-17T22:30'
+	},
+	{
+		title: '<center> CLC 1<sup>st</sup> Round<br> Group C,D </center>',
+		color: "#777",
+		start: '2019-08-24T18:00',
+		end: '2019-08-24T22:30'
+	},
+	{
+		title: '<center> CLC 1<sup>st</sup> Round<br> Group E,F </center>',
+		color: "#777",
+		start: '2019-08-31T18:00',
+		end: '2019-08-31T22:30'
+	},
+	{
+		title: '<center> CLC 1<sup>st</sup> Round<br> Group G,H </center>',
+		color: "#777",
+		start: '2019-09-07T18:00',
+		end: '2019-09-07T22:30'
+	},
+	{
+		title: '<center> CLC 1<sup>st</sup> Round<br> Group I,J </center>',
+		color: "#777",
+		start: '2019-09-14T18:00',
+		end: '2019-09-14T22:30'
+	},
+	{
+		title: '<center> CLC 1<sup>st</sup> Round<br> Group K,L </center>',
+		color: "#777",
+		start: '2019-09-21T18:00',
+		end: '2019-09-21T22:30'
+	},
+	{
+		title: '<center> CLC Div B<br> Group A,B </center>',
+		color: "#777",
+		start: '2019-09-28T18:00',
+		end: '2019-09-28T22:30'
+	},
+	{
+		title: '<center> CLC Div B<br> Group C,D </center>',
+		color: "#777",
+		start: '2019-10-05T18:00',
+		end: '2019-10-05T22:30'
+	},
+	{
+		title: '<center> CLC Div B<br> Group E,F </center>',
+		color: "#777",
+		start: '2019-10-12T18:00',
+		end: '2019-10-12T22:30'
+	},
+	{
+		title: '<center> CLC Div B<br> Group G,H </center>',
+		color: "#777",
+		start: '2019-10-26T18:00',
+		end: '2019-10-26T22:30'
+	},
+	{
+		title: '<center> CLC Div B<br> Playoff Group<br> 16&rarr;8 </center>',
+		color: "#1D7018",
+		start: '2019-11-02T12:00',
+		end: '2019-11-02T22:00'
+	},
+	{
+		title: '<center> CLC Div B<br> Playoff Final<br> Top 8 SE</center>',
+		color: "#1D7018",
+		start: '2019-11-03T13:00',
+		end: '2019-11-03T20:00'
+	},
+	{
+		title: '<center> CLC Div A<br> Playoff Group<br> 24&rarr;8 </center>',
+		color: "#1D7018",
+		start: '2019-11-09T12:00',
+		end: '2019-11-09T22:00'
+	},
+	{
+		title: '<center> CLC Div A<br> Playoff Final<br> Top 8 SE</center>',
+		color: "#1D7018",
+		start: '2019-11-10T13:00',
+		end: '2019-11-10T20:00'
+	},
+	{
+		title: '<center> CLC Registration',
+		color: "#1D7018",
+		url: "/2019clc/entries.html",
+		start: '2019-07-21',
+		end: '2019-08-14'
 	}
 	
 ]);
