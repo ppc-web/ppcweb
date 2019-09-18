@@ -1,0 +1,346 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Tao Open</title>
+<link rel="stylesheet" href="../css/style.css" type="text/css">
+<link rel="icon" type="image/png" href="../images/logo.png">
+<link href="../css/leagator.css" rel="stylesheet" type="text/css" />
+	<script src='../lib/jquery.min.js'></script>
+    <script src="../swan.js"></script>  
+    <script>
+    	loadCommon();
+    </script>
+	<script src='../lib/jquery.bracket.min.js'></script>
+<link href="../lib/jquery.bracket.min.css" rel="stylesheet" type="text/css" />	
+<script>
+
+var minimalData = {"teams":[["Bob Chen","Kenneth Pinili"],["George Siu","Khoa Nguyen"],["Qian Sun","Aditya Godhwani"],["James Goodwin","Xiangjin Zhang"],["Nick Tio","Roger Liu"],["Ying Wang","Sahil Puri"],["Peter Li","William Bai"],["Deng Lang","Wenzhang Tao"]],"results":[[[[3,0],[1,3],[3,0],[0,3],[3,2],[3,1],[3,2],[0,3]],[[4,0],[0,4],[4,2],[2,4]],[[4,3],[0,4]],[[3,4],[0,0]]]]};
+
+ 
+
+	$(function() {
+		$('#minimal .demo').bracket({
+			teamWidth : 120,
+			scoreWidth : 20,
+			matchMargin : 10,
+			roundMargin : 30,
+
+			init : minimalData
+		/* data to initialize the bracket with */})
+	})
+</script>
+</head>
+<body>
+	<div id="background">
+		<div id="page">
+			<div id="header">
+				<div id="navigation">
+				</div>
+			</div>
+			<div id="contents">
+				<div class="box">
+					<div>
+						<div class="body">
+
+ 							<H2> Seeds </H2>
+<table>
+<tr><td width=10%>1</td><td width=20%>Bob Chen</td><td width=20%>2765</td><td width=20%>ICC</td></tr>
+<tr><td>2</td><td>Wenzhang Tao</td><td>2734</td><td>Tao Champion</td></tr>
+<tr><td>3</td><td>Xiang Jin Zhang</td><td>2646</td><td></td></tr>
+<tr><td>4</td><td>Nick Tio</td><td>2515</td><td></td></tr>
+<tr/>
+<tr><td>5</td><td>Khoa Nguyen</td><td>2488</td><td>ICC</td></tr>
+<tr><td>6</td><td>Peter Li</td><td>2480</td><td></td></tr>
+<tr><td>7</td><td>Qian Sun</td><td>2447</td><td>SVTTC</td></tr>
+<tr><td>8</td><td>Ying Wang</td><td>2395</td><td></td></tr>
+<tr><td>9</td><td>Sahil Puri</td><td>2313</td><td>ICC</td></tr>
+<tr><td>10</td><td>William Bai</td><td>2306</td><td>ICC</td></tr>
+<tr><td>11</td><td>Aditaya Godhwani</td><td>2263</td><td>ICC</td></tr>
+<tr><td>12</td><td>George Siu</td><td>2259</td><td>ICC</td></tr>
+</table>
+<p> &nbsp; </p>
+ 						
+	
+<!-- 					
+ 							<H2> Draw </H2>
+ 							
+ 							Rules:
+ 							<ul>
+ 							<li> <b>Group Draw</b>: 96 unseeded players will use the "snake" system to draw into Groups 1-16 according to rating.
+ 								<ul>
+ 									<li> Minor adjustments may be used to put players of same club into different groups.
+ 									<li> Odd numbered groups 1, 3, 5, ..., 15 will play at Saturday Morning Session 9am - 2pm.
+ 									<li> Even numbered groups 2, 4, 6, ..., 16 will play at Saturday Afternoon Session 2pm - 7pm.
+ 									<li> Group Draw result will be published late Tuesday or Early Wednesday.
+ 									<li> We will send out the group draw result to all players using the emails they used to sign up.
+ 								</ul>
+ 							<li> <b> Round of 32</b>: 16 group winners draw 16 group runner ups.
+ 								<ul>
+ 								<li> Drawing result will be published on Saturday night. Group winner will do the draw if available. Else organizer will do the draw 
+ 								for a group winner.
+ 								</li>
+ 								</ul>
+ 							<li> <b> Round of 24 </b>: 8 minor seeds and 16 group advancers will form 12 groups. Minor seeds will be put into 8 different groups. The 16 
+ 							group advancers randomly draw into the remaining positions.
+ 								<ul>
+ 									<li> Draw is done immediately after Round of 32.
+ 								</ul>
+ 								</li>
+ 							<li> <b> Round of 16 and later</b>:
+ 								<ul>
+ 									<li> #1 seed is put at position 1.
+ 									<li> #2 seed is put at position 16.
+ 									<li> #3 and #4 seeds are randomly drawn into position 8 and 9.
+ 									<li> The rest 12 players are randomly drawn into the remaining positions.
+ 									<li> Draw will be done immediately after Round of 24.
+ 								</ul>
+ 							<li> Cash prize will be given after semi-finals. Same for the raffle. </li>
+ 							</ul>
+--> 							 
+ 							<H2> Group RR
+ 							</H2>
+ 							
+ 							<h3> Morning Session: Sat 9am - 2pm, <a href="https://docs.google.com/spreadsheets/d/11RzEbV8uGVEK7ZZ8k5xP_br-7CNklz67UwjD7WaOPvg/edit#gid=364076199"> Live Result </a>							
+ 							</h3>
+<table class="group-draw-table">
+<tr><td>Group 1</td><td></td><td></td></tr>
+<tr><td><b>1. Roger Liu</b></td><td>2259</td><td></td></tr>
+<tr><td>Ethan Wang</td><td>1946</td><td></td></tr>
+<tr><td><b>2. Felix Li</b></td><td>1935</td><td>ICC</td></tr>
+<tr><td>Lee Kuang</td><td>1700.3</td><td></td></tr>
+<tr><td>Wendy Fung</td><td>1700.3</td><td></td></tr>
+<tr><td>Linjun Zhou</td><td>0</td><td>Saratoga</td></tr>
+</table>
+ 							
+<table class="group-draw-table">
+<tr><td>Group 3</td><td></td><td></td></tr>
+<tr><td><b> 1.Keiran Mark Pinili</b></td><td>2243</td><td>ICC</td></tr>
+<tr><td><b> 2. Chao Zhang </b></td><td>1963</td><td>SVTTC</td></tr>
+<tr><td>Anil Godhwani</td><td>1930</td><td>ICC</td></tr>
+<tr><td>Yuan Yuan</td><td>1722.1</td><td></td></tr>
+<tr><td>Tiger Che</td><td>1692</td><td>123 Ping Pong</td></tr>
+<tr><td>Victor Lee</td><td>0</td><td></td></tr>
+</table> 
+
+<table class="group-draw-table">
+<tr><td>Group 5</td><td></td><td></td></tr>
+<tr><td><b> 1. Angie Tan</b></td><td>2200</td><td>SVTTC</td></tr>
+<tr><td>Neha Saju</td><td>1967</td><td>ICC</td></tr>
+<tr><td>Handson Li</td><td>1899</td><td>ICC</td></tr>
+<tr><td><b>2. Fielding Feng</b></td><td>1729</td><td></td></tr>
+<tr><td>Eric Tse</td><td>1700.2</td><td>Swan</td></tr>
+<tr><td>Niklas Chang</td><td>458</td><td>Swan</td></tr>
+</table>
+
+<table class="group-draw-table">
+<tr><td>Group 7</td><td></td><td></td></tr>
+<tr><td><b> 1. Nathan Lee</b></td><td>2158</td><td>Pong Planet</td></tr>
+<tr><td><b> 2. Gautam Anand</b></td><td>1975</td><td>WCTTA</td></tr>
+<tr><td>Jensen Feng</td><td>1892</td><td>123 Ping Pong</td></tr>
+<tr><td>Wendy Wang</td><td>1750</td><td>Swan</td></tr>
+<tr><td>Ashish Jha</td><td>1667</td><td>Icc</td></tr>
+<tr><td>Sean Ji</td><td>515.1</td><td>ICC</td></tr>
+</table>
+
+<table class="group-draw-table">
+<tr><td>Group 9</td><td></td><td></td></tr>
+<tr><td><b> 1. Andrew Chang</b></td><td>2142</td><td></td></tr>
+<tr><td><b> 2. Emily Tan</b></td><td>2000</td><td>SVTTC</td></tr>
+<tr><td>Srinjoy Dutta</td><td>1890</td><td>ICC</td></tr>
+<tr><td>Darryl Tsao</td><td>1756</td><td>ICC</td></tr>
+<tr><td>Evelina Zhang</td><td>1600.2</td><td>Swan</td></tr>
+<tr><td>Ritika Rajamani</td><td>1082</td><td>WCTTA</td></tr>
+</table>
+
+<table class="group-draw-table">
+<tr><td>Group 11</td><td></td><td></td></tr>
+<tr><td><b> 2. Henrik Zhang</b></td><td>2131</td><td>SVTTC</td></tr>
+<tr><td><b> 1. Abhilash Rajesh Kumar</b></td><td>2013</td><td>WCTTA</td></tr>
+<tr><td>Jinchang Chen</td><td>1870</td><td></td></tr>
+<tr><td>Hemant Puri</td><td>1781</td><td>ICC</td></tr>
+<tr><td>Paul Chang</td><td>1649</td><td>ICC</td></tr>
+<tr><td>Michael xu</td><td>1088.1</td><td>Pttc</td></tr>
+</table>
+
+<table class="group-draw-table">
+<tr><td>Group 13</td><td></td><td></td></tr>
+<tr><td><b> 1. Wendy Chen</b></td><td>2086</td><td>ICC</td></tr>
+<tr><td>Xiang Ma</td><td>1817</td><td></td></tr>
+<tr><td>Lin Sun</td><td>1844</td><td></td></tr>
+<tr><td><b> 2. Yun Peng</b></td><td>1814</td><td>Swan</td></tr>
+<tr><td>Alton Wang</td><td>1584</td><td></td></tr>
+<tr><td>Derek Mun</td><td>1350</td><td></td></tr>
+</table>
+
+<table class="group-draw-table">
+<tr><td>Group 15</td><td></td><td></td></tr>
+<tr><td><b> 1. Ken Chen</b></td><td>2050.3</td><td></td></tr>
+<tr><td><b> 2. Ananda Krishnan</b></td><td>2041</td><td>WCTTA</td></tr>
+<tr><td>Praneeth Tummala</td><td>1823</td><td>ICC</td></tr>
+<tr><td>Anwen Liu</td><td>1800.1</td><td>Swan</td></tr>
+<tr><td>Wenli Liu</td><td>1543.1</td><td></td></tr>
+<tr><td>Byron White</td><td>1513</td><td>Google</td></tr>
+</table>
+
+<h3> Sat Afternoon 2pm - 7pm, <a href="https://docs.google.com/spreadsheets/d/11RzEbV8uGVEK7ZZ8k5xP_br-7CNklz67UwjD7WaOPvg/edit#gid=364076199"> Live Result </a>							
+</h3>
+ 
+<table class="group-draw-table">
+<tr><td>Group 2</td><td></td><td></td></tr>
+<tr><td><b> 1. Kenneth Pinili</b></td><td>2246</td><td>ICC</td></tr>
+<tr><td><b> 2 Wen Huang</b></td><td>1940</td><td></td></tr>
+<tr><td>DANNY HUI</td><td>1911</td><td>SWAN</td></tr>
+<tr><td>Mike Wong</td><td>1700.3</td><td></td></tr>
+<tr><td>Tao Xia</td><td>1700.2</td><td></td></tr>
+<tr><td>Anvay Deshpande</td><td>0</td><td>Swan</td></tr>
+</table>
+
+<table class="group-draw-table">
+<tr><td>Group 4</td><td></td><td></td></tr>
+<tr><td><b> 2.Henry Kwong</b></td><td>2200</td><td>Swan</td></tr>
+<tr><td>Ryan Wu</td><td>1965</td><td>TTA</td></tr>
+<tr><td><b> 1. Jeff Zhou</b></td><td>1903.1</td><td>Swan</td></tr>
+<tr><td>Qingzhou Luo</td><td>1712</td><td>TTA</td></tr>
+<tr><td>Mike Zhang</td><td>1700.1</td><td></td></tr>
+<tr><td>Jin Zhang</td><td>1193</td><td>Svttc</td></tr>
+</table>
+
+<table class="group-draw-table">
+<tr><td>Group 6</td><td></td><td></td></tr>
+<tr><td>Adrian Fu</td><td>2170</td><td>SVTTC</td></tr>
+<tr><td><b> 1. Henry Wu</b></td><td>1967</td><td>Pong Planet</td></tr>
+<tr><td><b> 2. Jose Antony</b></td><td>1898.1</td><td>Swan</td></tr>
+<tr><td>Sharath Bellulli Amarnath</td><td>1740</td><td>Swan</td></tr>
+<tr><td>Steven Li</td><td>1679</td><td></td></tr>
+<tr><td>Vivan Sinha</td><td>485</td><td></td></tr>
+</table>
+
+<table class="group-draw-table">
+<tr><td>Group 8</td><td></td><td></td></tr>
+<tr><td><b> 1. James Goodwin</b></td><td>2147</td><td>SVTTC</td></tr>
+<tr><td>Hui Su</td><td>1980.1</td><td>Swan</td></tr>
+<tr><td>Anestasia Wang</td><td>1890</td><td>ICC</td></tr>
+<tr><td><b> 2. Magnus Wiklund</b></td><td>1751</td><td>WCTTA</td></tr>
+<tr><td>Jeremy Lu</td><td>1666</td><td>SuperSpinTT</td></tr>
+<tr><td>Ajitsinh Solanki</td><td>975</td><td></td></tr>
+</table>
+
+<table class="group-draw-table">
+<tr><td>Group 10</td><td></td><td></td></tr>
+<tr><td>Patrick Sunman wu</td><td>2140</td><td></td></tr>
+<tr><td><b> 1. Lang Deng </b></td><td>2027</td><td>TTA</td></tr>
+<tr><td><b> 2. James Nguyen </b></td><td>1875</td><td>Swan</td></tr>
+<tr><td>Kash Noorani</td><td>1775</td><td>Swan</td></tr>
+<tr><td>Pradyuman Sai Vijayakumar</td><td>1631</td><td>ICC</td></tr>
+<tr><td>Yizhi zhao</td><td>1083</td><td></td></tr>
+</table>
+
+<table class="group-draw-table">
+<tr><td>Group 12</td><td></td><td></td></tr>
+<tr><td><b> 1. Wucheng Tao</b></td><td>2095</td><td></td></tr>
+<tr><td><b> 2. James Liu </b></td><td>2000.1</td><td>Swan</td></tr>
+<tr><td>Maxwell Yao</td><td>1852</td><td></td></tr>
+<tr><td>Yuan Lin</td><td>1765</td><td></td></tr>
+<tr><td>Eric Liu</td><td>1603</td><td>Superspin</td></tr>
+<tr><td>DUANE ANDERSON</td><td>1309</td><td>SWAN</td></tr>
+</table>
+
+<table class="group-draw-table">
+<tr><td>Group 14</td><td></td><td></td></tr>
+<tr><td>Voltaire Benedicto</td><td>2057</td><td>svttc</td></tr>
+<tr><td><b> 1. Xiaoyi Hu</b></td><td>2050.2</td><td>Swan</td></tr>
+<tr><td><b>2. Kevin lu</b></td><td>1850.2</td><td></td></tr>
+<tr><td>James S Goodwin IV</td><td>1797</td><td>WCTTA</td></tr>
+<tr><td>shuo jia</td><td>1562</td><td></td></tr>
+<tr><td>Tom Zhao</td><td>1530.1</td><td>Swan</td></tr>
+</table>
+
+<table class="group-draw-table">
+<tr><td>Group 16</td><td></td><td></td></tr>
+<tr><td><b> 1. James Wan</b></td><td>2050</td><td>Swan</td></tr>
+<tr><td><b> 2. Alexander Qi</b></td><td>2047</td><td>ICC</td></tr>
+<tr><td>Yongjun Luo</td><td>1597.1</td><td>Swan/ICC</td></tr>
+<tr><td>Chiping Zhou</td><td>1786.1</td><td>TTA</td></tr>
+<tr><td>Hanyu Xiao</td><td>1550.1</td><td></td></tr>
+<tr><td>Olivia lee</td><td>1531.1</td><td></td></tr>
+</table>
+<p> &nbsp; </p>
+
+							
+ 							<H2> Round of 32</H2>
+<table class="group-draw-table">
+<tr><td class="winner">900 - 945am</td><td></td><td></td></tr>
+<tr><td class="winner">Andrew Chang</td><td>def</td><td>Kevin Lu</td></tr>
+<tr><td class="winner">Nathan Li</td><td>3:1</td><td>Alexandar Qi</td></tr>
+<tr><td class="winner">Angie Tan</td><td>3:1</td><td>Jose Antony</td></tr>
+<tr><td>Ken Chen</td><td>1:3</td><td class="winner">Magnus Wilklund</td></tr>
+<tr><td class="winner">Keiran</td><td>3:0</td><td>James Liu</td></tr>
+<tr><td>Wendy Chen</td><td>0:3</td><td class="winner">Wen Huang</td></tr>
+<tr><td class="winner">Roger Liu</td><td>3:0</td><td>James Nguyen</td></tr>
+<tr><td>Abhilash</td><td>1:3</td><td class="winner">Henry Kwong</td></tr>
+</table>
+
+
+<table class="group-draw-table">
+<tr><td class="winner">945 - 1030am</td><td></td><td></td></tr>
+<tr><td>Xiaoyi Hu</td><td>0:3</td><td class="winner">Ananda Krishnan</td></tr>
+<tr><td class="winner">Henry Wu</td><td>3:2</td><td>Felix Li</td></tr>
+<tr><td>Wucheng Tao</td><td>1:3</td><td class="winner">Chao Zhang</td></tr>
+<tr><td>James Wan</td><td>2:3</td><td class="winner">Henrik Zhang</td></tr>
+<tr><td class="winner">Lang Deng</td><td>3:1</td><td>Fielding Feng</td></tr>
+<tr><td>Jeff Zhou</td><td>1:3</td><td class="winner">Yun Peng</td></tr>
+<tr><td class="winner">James Goodwin</td><td>3:1</td><td>Gautam Anand</td></tr>
+<tr><td class="winner">Kenneth Pinili</td><td>3:0</td><td>Emily Tan</td></tr>
+</table>
+ 							
+<h2> Round of 24 </h2>
+<table class="group-draw-table">
+<tr><td>5</td><td class="winner">Khoa Nguyen</td><td>3:1</td><td>Yun Peng</td></tr>
+<tr><td>6</td><td class="winner">Peter Li</td><td>3:0</td><td>Keiran</td></tr>
+<tr><td>7</td><td class="winner">Qian Sun</td><td>3:1</td><td>Henrik Zhang</td></tr>
+<tr><td>8</td><td class="winner">Ying Wang</td><td>3:0</td><td>Andrew Chang</td></tr>
+<tr><td>9</td><td class="winner">Sahil Puri</td><td>3:1</td><td>Nathan Li</td></tr>
+<tr><td>10</td><td class="winner">William Bai</td><td>3:0</td><td>Chao Zhang</td></tr>
+</table> 
+
+<table class="group-draw-table">
+<tr><td>11</td><td class="winner">Aditaya Godhwani</td><td>3:1</td><td>Wen Huang</td></tr>
+<tr><td>12</td><td class="winner">George Siu</td><td>3:0</td><td>Angie Tan</td></tr>
+<tr><td>A</td><td class="winner">Kenneth Pinili</td><td>3:2</td><td>Ananda Krishnan</td></tr>
+<tr><td>B</td><td class="winner">James Goodwin</td><td>3:0</td><td>Henry Wu</td></tr>
+<tr><td>C</td><td class="winner">Roger Liu</td><td>3:0</td><td>Henry Kwong</td></tr>
+<tr><td>D</td><td>Magnus Wilklund</td><td>0:3</td><td class="winner">Lang Deng</td></tr>
+</table> 
+
+<h2> Last 16 Bracket</h2>
+
+<div id="minimal">
+<div class="demo"></div>
+</div>
+
+<p> ** </p>
+<h2> Winners </h2>
+<table class="prize-table" width="90%">
+<tr><td width="20%">Champion</td><td width="20%">$2,260</td><td width="60%">Wenzhang Tao</td></tr>
+<tr><td>Runner up: </td><td>$1,100</td><td>Bob Chen</td></tr>
+<tr><td>Semi-Finalists</td><td>$300</td><td>XiangJin Zhang,Nick Tio</td></tr>
+<tr><td>Quarter-Finalists</td><td>$100</td><td>Ying Wang,Peter Li, Khoa Nguyen,Qian Sun</td></tr>
+<tr><td>Last 16</td><td>$40</td><td>Kenneth Pinili, George Siu, Aditya Godhwani, James Goodwin, Roger Liu, Sahil Puri, William Bai, Deng Lang</td></tr>
+<tr><td>Last 28</td><td>$20</td><td>Yun Peng, Keiran Mark Pinili, Henrik Zhang, Andrew Chang, Nathan Li, Chao Zhang, Wen Huang, Angie Tan, Ananda Krishnan, Henry Wu, Henry Kwong,Magnus Wilklund</td></tr>
+<tr><td>Last 44</td><td>$10</td><td>Kevin Lu, Alexandar Qi, Jose Antony, Ken Chen, James Liu, Wendy Chen, James Nguyen, Abhilash</td></tr>
+<tr><td></td><td>$10</td><td>Xiaoyi Hu, Felix Li, Wucheng Tao, James Wan, Fielding Feng, Jeff Zhou, Gautam Anand, Emily Tan</td></tr>
+</table>
+
+
+ 							<p> &nbsp; </p>
+
+						</div>
+					</div>
+				</div>
+				<div id="footer">
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

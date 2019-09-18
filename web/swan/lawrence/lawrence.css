@@ -1,0 +1,52 @@
+
+#navigation li.lawrence {
+	width: 735px;
+	
+}
+
+img.lawrence {
+	float: right;
+	clear: right;
+	margin-left: 20px;
+	height：400px;
+}
+
+div {
+    font-size: 18px;
+    line-height: 130%;
+}
+.box .donation td, .box .donation th {
+    color: #5a4535;
+    font-size: 18px;
+    line-height: 130%;;
+}
+
+table.donation {
+	border-spacing: 20px 10px;
+}
+.box .donation  td:first-child{
+	margin-right: 20px;
+}
+
+.donation td.large {
+	font-size: 130%;
+	font-weight: bold;
+}
+
+.donation td.time {
+	font-style: italic;	
+}
+
+span.note {
+	font-size: 85%;
+	font-style: italic;
+}
+
+table.song {
+	width: 90%;
+	border-spacing: 20px 10px;
+}
+
+.box .song td, .box .song th {
+	font-size: 18px;
+}

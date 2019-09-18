@@ -626,8 +626,7 @@ div#getinvolved h2 {
 }
 #body div#newsblog div.aside div p {
 	float: left;
-	margin: -5px 0 0 21px;
-	width: 300px;
+	margin: 0 0 0 0px;
 }
 #body div#newsblog div.aside ul {
 	list-style: none;
@@ -856,4 +855,13 @@ div#getinvolved h2 {
 
 #contents p + p {
 	padding-top: 2px;
+}
+
+table.donation td {
+	vertical-align: top;
+	padding: 10px;
+}
+
+table.donation tr {
+	margin-bottom: 10px;
 }

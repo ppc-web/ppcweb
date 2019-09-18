@@ -880,7 +880,7 @@ a.fc-more:hover {
 }
 
 .fc-basic-view .fc-body .fc-row {
-	min-height: 4em; /* ensure that all rows are at least this tall */
+	//min-height: 1.5em; /* ensure that all rows are at least this tall */
 }
 
 /* a "rigid" row will take up a constant amount of height because content-skeleton is absolute */
@@ -927,7 +927,7 @@ a.fc-more:hover {
 	text-align: left;
 }
 
-.fc-day-number.fc-other-month {
+.fc-day-number.fc-other-month, .fc-day-number.fc-past {
 	opacity: 0.3;
 	filter: alpha(opacity=30); /* for IE */
 	/* opacity with small font can sometimes look too faded
@@ -935,6 +935,18 @@ a.fc-more:hover {
 	   making day-numbers bold also fixes the problem */
 }
 
+.fc-event.past-event {
+	opacity: 0.6;
+	filter: alpha(opacity=60); /* for IE */
+	/* opacity with small font can sometimes look too faded
+	   might want to set the 'color' property instead
+	   making day-numbers bold also fixes the problem */
+}
+
+.fc-day-number.fc-today {
+	font-weight: bold;
+	font-size: 1.4em;
+}
 /* AgendaView all-day area
 --------------------------------------------------------------------------------------------------*/
 

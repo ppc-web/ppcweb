@@ -87,10 +87,9 @@ img {
 #navigation li a {
 	color: #fff;
 	display: block;
-	font: bold 14px/48px Arial, Helvetica, sans-serif;
+	font: 16px/48px Arial, Helvetica, sans-serif;
 	height: 49px;
 	text-decoration: none;
-	text-transform: uppercase;
 }
 #navigation li a:hover {
 	background-position: 0 -59px;
@@ -606,7 +605,7 @@ ul.end {
 .fee td, .fee th {
 	font-size: 15px;
 	vertical-align: top;
-	padding: 2px;
+	padding: 2px 25px 2px 0px;
 }
 table.fee {
 	padding-bottom: 0 0 5px 2px;
@@ -663,6 +662,10 @@ table.history-table, .history-table th, .history-table td {
 
 .history-table td img {
 	width: 350px;
+}
+
+.history-table td img.expand {
+	width: 480px;
 }
 
 table.match-table {
@@ -742,4 +745,68 @@ img.logo-right {
 td.commercial {
 	text-align: center;
 	padding: 5px 30px;
+}
+
+#contents table.fee + h2 {
+	margin-top: 7px;
+}
+
+.winner td, td.winner, .winner {
+	font-size: 125%;
+	font-weight: bold;
+}
+
+.runnerup td, td.runnerup, .runnerup {
+	font-size: 110%;
+	font-weight: bold;
+}
+
+span.important {
+	font-size: 108%;
+	font-weight: bold;
+}
+
+span.expired {
+	color: grey;
+	text-decoration: line-through;
+}
+
+table.group-draw-table {
+	width: 45%;
+	display: inline-block;
+	border: 1px solid black;
+	margin: 5px;
+}
+
+table.group-draw-table td {
+	padding-right: 15px;
+}
+
+table.group-draw-table td.winner {
+	font-weight: bold;
+	font-size: 100%;
+}
+
+table.prize-table {
+	border-collapse: collapse;
+	border-spacing: 5px;
+}
+
+table.prize-table td {
+	border: 1px solid black;
+	padding: 5px;
+	
+}
+
+.rotateimg90 {
+  -webkit-transform:rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+a.memorial, #main div.box a.memorial {
+	background-color: black;
+	color: white;
 }
