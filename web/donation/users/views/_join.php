@@ -51,11 +51,14 @@ if (!$form_valid && Input::exists()){
 		<label for="confirm">Confirm Password*</label>
 		<input  type="password" id="confirm" name="confirm" class="form-control" placeholder="Confirm Password" required autocomplete="off" >
 
-		<label for="confirm">Registration User Terms and Conditions</label>
+        <br>
+        <label for="confirm">Check this box to agree to our waiver: <a href=http://www.swanpp.com/images/waiver.pdf target="_blank">www.swanpp.com/images/waiver.pdf</a>.</label>
+        <br>
+		<input type="checkbox" id="agreement_checkbox" name="agreement_checkbox" class="form-control"> <label for="confirm">Check this box to agree to User Terms and Conditions</label>
 		<textarea id="agreement" name="agreement" rows="5" class="form-control" disabled ><?php require $abs_us_root.$us_url_root.'usersc/includes/user_agreement.php'; ?></textarea>
+        <br>
 
-		<label for="confirm">Check box to agree to terms</label>
-		<input type="checkbox" id="agreement_checkbox" name="agreement_checkbox" class="form-control">
+
 	</div>
 
 	<?php if($settings->recaptcha == 1){ ?>

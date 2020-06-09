@@ -110,6 +110,21 @@ function fetchAllUsers() {
 	return ($results);
 }
 
+function fetchTopDonations($limit, $days) {
+	$db = DB::getInstance();
+	if ($days>0) {
+	    $where = " WHERE (date BETWEEN DATE_SUB(NOW(), INTERVAL $days DAY) AND NOW()) ";
+	}
+	else {
+	    $where = " ";
+	}
+	$query = $db->query("SELECT sum(donation.amount) as amt, donation.user_id, users.fname, users.lname
+	                    FROM donation JOIN users ON users.id=donation.user_id".$where.
+	                    "group by user_id order by amt desc LIMIT $limit");
+	$results = $query->results();
+	return ($results);
+}
+
 //Retrieve donations from for a users
 function fetchAllUserDonations($userId) {
 	$db = DB::getInstance();
@@ -117,6 +132,7 @@ function fetchAllUserDonations($userId) {
 	$results = $query->results();
 	return ($results);
 }
+
 
 //Retrieve complete user information by username, token or ID
 function fetchUserDetails($username=NULL,$token=NULL, $id=NULL){
@@ -143,7 +159,6 @@ function fetchTotalDonations() {
 		$s["$u->user_id"] = $u->total;
 	}
 	return $s;
-	
 }
 
 // fetch all user public donations
