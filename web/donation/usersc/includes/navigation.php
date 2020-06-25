@@ -7,7 +7,9 @@
 		<?php if (checkMenu(2,$user->data()->id)){  //Links for permission level 2 (default admin) ?>
 
 		<li><a href="<?=$us_url_root?>users/admin_users.php"><i class="fa"></i> Manage Users</a></li>
+		<li><a href="<?=$us_url_root?>users/memberRequests.php"><i class="fa"></i> Member Requests </a></li>
 		<li><a href="<?=$us_url_root?>users/report.php"><i class="fa"></i> Report </a></li>
+
 
 		<?php } ?>
 

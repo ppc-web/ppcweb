@@ -78,6 +78,57 @@ function donationIdExists($id) {
 	}
 }
 
+// membership related functions
+/*
+
+membership table:
+1: Swan Friend
+2: Swan Friend and Family
+3: Swan Sponsor
+
+membership status:
+0- has not requested
+1- requested
+2- request verified
+
+*/
+function fetchMembershipDetails($id) {
+    $db = DB::getInstance();
+    $query = $db->query("SELECT * FROM membership WHERE id=$id LIMIT 1");
+    $results = $query->first();
+    return ($results);
+}
+
+function fetchMemRequests() {
+    $db = DB::getInstance();
+	$query = $db->query("SELECT * FROM membership WHERE membership_status=1");
+	$results = $query->results();
+	return $results;
+}
+
+function fetchRequestsAndUserDetails() {
+    $db = DB::getInstance();
+	$query = $db->query("SELECT users.username, users.id, users.fname, users.lname, users.email, membership.date_requested,
+                         membership.membership FROM users JOIN membership ON users.id=membership.id
+                         WHERE membership.membership_status=1 ORDER BY membership.date_requested;");
+	$results = $query->results();
+	return $results;
+}
+
+function updateMembership($id, $mem_request, $mem_status) {
+    $db = DB::getInstance();
+    $date = ($mem_status==2)? "date_accepted=CURDATE()" :"date_requested=CURDATE()";
+	$query = $db->query("UPDATE membership SET membership_status = $mem_status, membership = $mem_request, $date WHERE id = $id");
+	$results = $query->results();
+}
+
+function fetchMembership($mem_id) {
+    $db = DB::getInstance();
+	$query = $db->query("SELECT * FROM membership_id WHERE id=$mem_id");
+	$results = $query->first();
+	return $results;
+}
+
 //Retrieve information for a single permission level
 function fetchPermissionDetails($id) {
 	$db = DB::getInstance();
@@ -113,10 +164,10 @@ function fetchAllUsers() {
 function fetchTopDonations($limit, $days) {
 	$db = DB::getInstance();
 	if ($days>0) {
-	    $where = " WHERE (date BETWEEN DATE_SUB(NOW(), INTERVAL $days DAY) AND NOW()) ";
+	    $where = " WHERE (date BETWEEN DATE_SUB(NOW(), INTERVAL $days DAY) AND NOW()) AND visibility=0 ";
 	}
 	else {
-	    $where = " ";
+	    $where = " WHERE visibility=0 ";
 	}
 	$query = $db->query("SELECT sum(donation.amount) as amt, donation.user_id, users.fname, users.lname
 	                    FROM donation JOIN users ON users.id=donation.user_id".$where.

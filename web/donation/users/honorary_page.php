@@ -6,7 +6,7 @@
 
 <?php
 
-$limit = empty ( $_REQUEST["filter"] ) ? "" :  $_REQUEST["filter"];
+$limit = empty ( $_REQUEST["filter"] ) ? 10 :  $_REQUEST["filter"];
 
 $userData = fetchTopDonations($limit,0);// Fetch top donations
 

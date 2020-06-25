@@ -26,6 +26,13 @@ if (!$form_valid && Input::exists()){
 }
 ?>
 
+<style>
+        input.smallCheckbox {
+            width: 11px;
+            height: 11px;
+        }
+</style>
+
 <form class="form-signup" action="<?=$form_action;?>" method="<?=$form_method;?>" id="payment-form">
 
 	<h2 class="form-signin-heading"> <?=lang("SIGNUP_TEXT","");?></h2>
@@ -52,12 +59,12 @@ if (!$form_valid && Input::exists()){
 		<input  type="password" id="confirm" name="confirm" class="form-control" placeholder="Confirm Password" required autocomplete="off" >
 
         <br>
-        <label for="confirm">Check this box to agree to our waiver: <a href=http://www.swanpp.com/images/waiver.pdf target="_blank">www.swanpp.com/images/waiver.pdf</a>.</label>
-        <br>
-		<input type="checkbox" id="agreement_checkbox" name="agreement_checkbox" class="form-control"> <label for="confirm">Check this box to agree to User Terms and Conditions</label>
+		<input type="checkbox" id="agreement_checkbox" name="agreement_checkbox" class="smallCheckbox"> <label for="confirm">Check this box to agree to User Terms and Conditions</label>
 		<textarea id="agreement" name="agreement" rows="5" class="form-control" disabled ><?php require $abs_us_root.$us_url_root.'usersc/includes/user_agreement.php'; ?></textarea>
         <br>
-
+        <input type="checkbox" id="waiver_checkbox" name="waiver_checkbox" class="smallCheckbox">
+        <label for="confirm">Check this box to agree to our waiver: <a href=http://www.swanpp.com/images/waiver.pdf target="_blank">www.swanpp.com/images/waiver.pdf</a>.</label>
+        <br>
 
 	</div>
 

@@ -10,7 +10,18 @@ require_once $abs_us_root . $us_url_root . 'users/includes/header.php';
 require_once $abs_us_root . $us_url_root . 'users/includes/navigation.php';
 ?>
 
+<?php
 
+// set membership
+
+$userId = $user->data ()->id;
+
+if (isset($_POST["membership"])) {
+    $memRequest=$_POST["membership"];
+    updateMembership($userId, $memRequest, 1);
+}
+
+?>
 
 <div id="page-wrapper">
 
@@ -22,15 +33,50 @@ if ($user->isLoggedIn ()) {
 	
 	// Fetch user details
 	$userdetails = fetchUserDetails ( NULL, NULL, $userId );
-	
+
+	// Fetch membership details
+	$membershipDetails = fetchMembershipDetails ( $userId );
+
 	// Fetch all donations from this user
 	$userData = fetchAllUserDonations ( $userId );
 	?>
 		<!-- Page Heading -->
 		<div class="row">
+            <div class="col-md-6">
+                 <h2>Hello, <?=$userdetails->fname . " " . $userdetails->lname?></h2>
+            </div>
+        </div>
+<?php if ($membershipDetails->membership_status==0) { ?>
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="jumbotron">
+                  	<form action="index.php" method="post">
+                  	    <h3>Please choose your membership: </h3>
+                            <input type="radio" id="friend" name="membership" value="1">
+                            <label for="friend">Swan Friend: $380/year or above</label><br>
+                            <input type="radio" id="fnf" name="membership" value="2">
+                            <label for="fnf">Swan Friend and Family: $580/year or above</label><br>
+                            <input type="radio" id="sponsor" name="membership" value="3">
+                            <label for="sponsor">Swan Sponsor: $1000/year or above</label><br> <br>
+                            <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+<?php } else{?>
+        <div class="row">
+			<div class="col-md-12">
+				<h3>Your membership status: <?php if ($membershipDetails->membership_status==1) {
+				echo "</h3><h4>The membership type you have requested is ".fetchMembership($membershipDetails->membership)->membership_type.". Your request will be verified by admins.</h4>"; }
+				else {echo fetchMembership($membershipDetails->membership)->membership_type."</h3>";}?>
+			</div>
+		</div>
+<?php }?>
+
+		<div class="row">
 
 			<div class="col-xs-12 col-md-6">
-				<h2>Donations from <?=$userdetails->fname . " " . $userdetails->lname?></h2>
+				<h3>Your Past Donations</h3>
 			</div>
 
 			<div class="row">

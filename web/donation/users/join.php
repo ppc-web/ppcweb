@@ -124,6 +124,9 @@ if(Input::exists()){
 	if (!$agreement_checkbox){
 		$validation->addError(["Please read and accept terms and conditions"]);
 	}
+	if (!$waiver_checkbox){
+    	$validation->addError(["Please read and accept to waiver"]);
+    }
 
 	if($validation->passed() && $agreement_checkbox){
 		//Logic if ReCAPTCHA is turned ON

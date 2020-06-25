@@ -31,6 +31,8 @@ $permOpsQ = $db->query("SELECT * FROM permissions");
 $permOps = $permOpsQ->results();
 // dnd($permOps);
 
+$memberrequests=fetchMemRequests();
+
 //Forms posted
 if (!empty($_POST)) {
   //Delete User Checkboxes
@@ -141,6 +143,30 @@ $latestDonations = fetchLatestDonations();
 
 
 ?>
+
+<style>
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+</style>
+
 <div id="page-wrapper">
 
   <div class="container">
@@ -148,6 +174,12 @@ $latestDonations = fetchLatestDonations();
     <!-- Page Heading -->
     <div class="row">
 
+    <?php if (count((array)$memberrequests)>0) {?>
+    <div class="alert">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+      You have <strong><?php echo count((array)$memberrequests); ?></strong> new membership request(s). Click <a href="<?=$us_url_root?>users/memberRequests.php">here</a> to view.
+    </div>
+    <?php } ?>
 	    <div class="col-xs-12 col-md-6">
 		<h1>Manage Users</h1>
 	  </div>
