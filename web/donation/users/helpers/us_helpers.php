@@ -117,10 +117,24 @@ function fetchRequestsAndUserDetails() {
 
 function updateMembership($id, $mem_request, $mem_status) {
     $db = DB::getInstance();
-    $date = ($mem_status==2)? "date_accepted=CURDATE()" :"date_requested=CURDATE()";
-	$query = $db->query("UPDATE membership SET membership_status = $mem_status, membership = $mem_request, $date WHERE id = $id");
+    $date = ($mem_status==3)? "":($mem_status==2)? ", date_accepted=CURDATE()" :", date_requested=CURDATE()";
+	$query = $db->query("UPDATE membership SET membership_status = $mem_status, membership = $mem_request $date WHERE id = $id");
+	if ($mem_status==2 && $mem_request<4) {
+	    $query2 = $db->query("UPDATE membership SET date_expire = (date_add(CURDATE(), INTERVAL 1 YEAR)) WHERE id = $id;");
+	}
+	if ($mem_status==2 && $mem_request==4) {
+    	$query2 = $db->query("UPDATE membership SET date_expire = (date_add(CURDATE(), INTERVAL 1 MONTH)) WHERE id = $id;");
+    }
 	$results = $query->results();
 }
+
+function checkExpire($userId, $expire) {
+    $db = DB::getInstance();
+	$query = $db->query("SELECT IF (curdate()>$expire, TRUE, FALSE)");
+    $results=$query->first();
+    return $results;
+}
+
 
 function fetchMembership($mem_id) {
     $db = DB::getInstance();
@@ -161,10 +175,10 @@ function fetchAllUsers() {
 	return ($results);
 }
 
-function fetchTopDonations($limit, $days) {
+function fetchTopDonations($limit, $interval) {
 	$db = DB::getInstance();
-	if ($days>0) {
-	    $where = " WHERE (date BETWEEN DATE_SUB(NOW(), INTERVAL $days DAY) AND NOW()) AND visibility=0 ";
+	if ($interval!=NULL) {
+	    $where = " WHERE (date BETWEEN DATE_ADD(CURDATE(), INTERVAL -1 $interval) AND NOW()) AND visibility=0 ";
 	}
 	else {
 	    $where = " WHERE visibility=0 ";
@@ -174,6 +188,20 @@ function fetchTopDonations($limit, $days) {
 	                    "group by user_id order by amt desc LIMIT $limit");
 	$results = $query->results();
 	return ($results);
+}
+
+function fetchSumDonations($id, $interval) {
+	$db = DB::getInstance();
+	if ($interval!=NULL) {
+	    $where = " WHERE (date BETWEEN DATE_ADD(CURDATE(), INTERVAL -1 $interval) AND NOW()) AND visibility=0  AND user_id=$id ";
+	}
+	else {
+	    $where = " WHERE visibility=0 AND user_id=$id ";
+	}
+	$query = $db->query("SELECT sum(amount) FROM donation".$where.
+	                    "group by user_id");
+	$results = (array)$query->first();
+	return $results['sum(amount)'];
 }
 
 //Retrieve donations from for a users
@@ -190,7 +218,7 @@ function fetchUserDetails($username=NULL,$token=NULL, $id=NULL){
 	if($username!=NULL) {
 		$column = "username";
 		$data = $username;
-	}elseif($id!=NULL) {
+	}else if($id!=NULL) {
 		$column = "id";
 		$data = $id;
 	}
@@ -443,6 +471,20 @@ function createPages($pages) {
 		$fields=array('page'=>$page, 'private'=>'0');
 		$db->insert('pages',$fields);
 	}
+}
+
+function updateUsers($column=NULL,$value=NULL, $id=NULL, $username=NULL){
+	if($username!=NULL) {
+		$target = "username";
+		$data = $username;
+	}else if($id!=NULL) {
+		$target = "id";
+		$data = $id;
+	}
+	$db = DB::getInstance();
+	$query = $db->query("UPDATE users SET $column=$value WHERE $target = $data LIMIT 1");
+	$results = $query->first();
+	return ($results);
 }
 
 //Match permission level(s) with page(s)

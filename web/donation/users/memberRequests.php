@@ -33,6 +33,7 @@
 <?php
     $userData=fetchRequestsAndUserDetails();
 ?>
+
 <div id="page-wrapper">
 
   <div class="container">
@@ -46,7 +47,7 @@
 <div class="row">
         <div class="col-xs-12">
 				 <div class="alluinfo">&nbsp;</div>
-				<form name="membershipAccept" action="memberRequests.php" method="post">
+				 <form name="membershipAccept" action="memberRequests.php" method="post">
 				 <?php if (count($userData)>0) { ?>
 				 <div class="allutable table-responsive">
 					<table class='table'>
@@ -67,7 +68,7 @@
                     ?>
                     <tr>
                     <td><div class="form-group"><input type="checkbox" name="approve[<?=$v1->id?>]" value="<?=$v1->id?>"/></div></td>
-					<td><a href='admin_user.php?id=<?=$v1->id?>'><?=$v1->username?></a></td>
+					<td><a href='admin_user_donations.php?id=<?=$v1->id?>'><?=$v1->username?></a></td>
 					<td><?=$v1->fname?> <?=$v1->lname?></td>
 					<td><?=$v1->email?></td>
 
@@ -78,7 +79,7 @@
 
 				    </table>
 				    </div>
-                <input class='buttonGreen' style= "width:100%"type='submit' name='Submit' value='Approve' /><br><br>
+                    <input class='buttonGreen' style= "width:100%"type='submit' name='Submit' value='Approve' /><br><br>
 						<?php
 					}
 					else {
@@ -87,7 +88,7 @@
                         }?>
 
 				  </tbody>
-			</form>
+				  </form>
 
 		  </div>
 		</div>

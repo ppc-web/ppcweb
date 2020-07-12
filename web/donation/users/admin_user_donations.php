@@ -18,6 +18,7 @@ if (! userIdExists ( $userId )) {
 
 $userdetails = fetchUserDetails(NULL, NULL, $userId); //Fetch user details
 
+
 //Forms posted
 if (!empty($_POST)) {
 	$date = Input::get('date');
@@ -71,6 +72,23 @@ if (!empty($_POST)) {
 			die($e->getMessage());
 		}
 	}
+
+    $memDetails = fetchMembershipDetails($userId);
+
+
+    if ($memDetails->membership_status==1 || $memDetails->membership_status==3) {
+        $memInfo= fetchMembership($memDetails->membership_id);
+        echo $memDetails->membership_id;
+        // could change the numbers to match the exact date and year
+        if ($memInfo->id<4) {
+            $amt=fetchSumDonations($userId, "year");
+        } else {
+            $amt=fetchSumDonations($userId, "month");
+        }
+        if ($amt>=$memInfo->min_amount) {
+            updateMembership($userId, $memDetails->membership, 2);
+        }
+    }
 	
 }
 

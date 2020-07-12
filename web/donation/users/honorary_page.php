@@ -8,55 +8,10 @@
 
 $limit = empty ( $_REQUEST["filter"] ) ? 10 :  $_REQUEST["filter"];
 
-$userData = fetchTopDonations($limit,0);// Fetch top donations
+$userData = fetchTopDonations($limit,NULL);// Fetch top donations
 
-$userData2 = fetchTopDonations($limit,365);
+$userData2 = fetchTopDonations($limit,"year");
 
-/*
-// fetch the total donations of all users.
-$totalDonations = fetchTotalDonationsPublic ($timeFilter);
-
-// fetch the latest donations of all users.
-$latestDonations = fetchLatestDonationsPublic ($timeFilter);
-
-// sort user data by last donation date.
-function cmpLastDonationDate($u1, $u2) {
-	return strcmp ( $u2->lastDonationDate, $u1->lastDonationDate );
-}
-
-// fill in total donation, last donation and last donate date for each user.
-$userArray = array ();
-$total = 0;
-foreach ( $userData as $v1 ) {
-	$v1->totalDonation = empty ( $totalDonations ["$v1->id"] ) ? 0 : $totalDonations ["$v1->id"];
-	$total += $v1->totalDonation;
-	if (! empty ( $latestDonations ["$v1->id"] )) {
-		$v1->lastDonation = $latestDonations ["$v1->id"]->amount;
-		$v1->lastDonationDate = $latestDonations ["$v1->id"]->date;
-	} else {
-		$v1->lastDonation = 0;
-		$v1->lastDonationDate = "";
-	}
-	$userArray ["$v1->id"] = $v1;
-}
-usort($userData, "cmpLastDonationDate");
-
-$donations = fetchAllDonationsPublic ($timeFilter);
-function cmpDonation($u1, $u2) {
-	if ($u1->id >= 10140 || $u2->id >= 10140) {
-		return $u2->id - $u1->id;
-	}
-	return strcmp ( $u2->date, $u1->date );
-}
-
-// fill in username for each donation.
-foreach ( $donations as $d1 ) {
-	$u = $userArray ["$d1->user_id"];
-	$d1->username = "$u->username";
-}
-
-usort ( $donations, "cmpDonation" );
-*/
 ?>
 
 <div id="page-wrapper">
