@@ -26,11 +26,11 @@ require_once $abs_us_root.$us_url_root.'users/helpers/helpers.php';
 
 // Set config
 $GLOBALS['config'] = array(
-	'mysql'      => array('host'         => 'localhost',
-'username'     => 'root',
-'port' => '3306',
-'password'     => '',
-'db'           => 'ppc',
+	'mysql'      => array('host'         => '127.0.0.1',
+                          'username'     => 'root',
+                          'port' => '3306',
+                          'password'     => 'root',
+                          'db'           => 'ppc',
 ),
 'remember'        => array(
   'cookie_name'   => 'pmqesoxiw318374csb',

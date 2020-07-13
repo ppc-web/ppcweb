@@ -10,7 +10,11 @@ require_once $abs_us_root . $us_url_root . 'users/includes/header.php';
 require_once $abs_us_root . $us_url_root . 'users/includes/navigation.php';
 ?>
 
+<?php
 
+$userId = $user->data ()->id;
+
+?>
 
 <div id="page-wrapper">
 
@@ -22,15 +26,28 @@ if ($user->isLoggedIn ()) {
 	
 	// Fetch user details
 	$userdetails = fetchUserDetails ( NULL, NULL, $userId );
-	
+
+	if ($userdetails->waiver_signed==0) {
+	    Redirect::to('users/waiver_form.php');
+	}
+
 	// Fetch all donations from this user
 	$userData = fetchAllUserDonations ( $userId );
+
+
+
 	?>
 		<!-- Page Heading -->
 		<div class="row">
+            <div class="col-md-6">
+                 <h2>Hello, <?=$userdetails->fname . " " . $userdetails->lname?></h2>
+            </div>
+        </div>
+
+		<div class="row">
 
 			<div class="col-xs-12 col-md-6">
-				<h2>Donations from <?=$userdetails->fname . " " . $userdetails->lname?></h2>
+				<h3>Your Past Donations</h3>
 			</div>
 
 			<div class="row">
