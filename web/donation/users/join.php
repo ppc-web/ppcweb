@@ -198,6 +198,7 @@ if(Input::exists()){
 					'email_verified' => $pre,
 					'active' => 1,
 					'vericode' => $vericode,
+					'waiver_signed' => 1,
 				));
 			} catch (Exception $e) {
 				die($e->getMessage());
