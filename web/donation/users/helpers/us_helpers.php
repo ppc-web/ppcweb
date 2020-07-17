@@ -78,6 +78,71 @@ function donationIdExists($id) {
 	}
 }
 
+// membership related functions
+/*
+
+membership table:
+1: Swan Friend
+2: Swan Friend and Family
+3: Swan Sponsor
+
+membership status:
+0- has not requested
+1- requested
+2- request verified
+
+*/
+function fetchMembershipDetails($id) {
+    $db = DB::getInstance();
+    $query = $db->query("SELECT * FROM membership WHERE id=$id LIMIT 1");
+    $results = $query->first();
+    return ($results);
+}
+
+function fetchMemRequests() {
+    $db = DB::getInstance();
+	$query = $db->query("SELECT * FROM membership WHERE membership_status=1");
+	$results = $query->results();
+	return $results;
+}
+
+function fetchRequestsAndUserDetails() {
+    $db = DB::getInstance();
+	$query = $db->query("SELECT users.username, users.id, users.fname, users.lname, users.email, membership.date_requested,
+                         membership.membership FROM users JOIN membership ON users.id=membership.id
+                         WHERE membership.membership_status=1 ORDER BY membership.date_requested;");
+	$results = $query->results();
+	return $results;
+}
+
+function updateMembership($id, $mem_request, $mem_status) {
+    $db = DB::getInstance();
+    $date = ($mem_status==3)? "":($mem_status==2)? ", date_accepted=CURDATE()" :", date_requested=CURDATE()";
+	$query = $db->query("UPDATE membership SET membership_status = $mem_status, membership = $mem_request $date WHERE id = $id");
+	if ($mem_status==2 && $mem_request<4) {
+	    $query2 = $db->query("UPDATE membership SET date_expire = (date_add(CURDATE(), INTERVAL 1 YEAR)) WHERE id = $id;");
+	}
+	if ($mem_status==2 && $mem_request==4) {
+    	$query2 = $db->query("UPDATE membership SET date_expire = (date_add(CURDATE(), INTERVAL 1 MONTH)) WHERE id = $id;");
+    }
+	$results = $query->results();
+}
+
+function checkExpire($userId, $expire) {
+    $db = DB::getInstance();
+	$query = $db->query("SELECT IF (curdate()>$expire, TRUE, FALSE)");
+    $results=$query->first();
+    return $results;
+}
+
+
+function fetchMembership($mem_id) {
+    $db = DB::getInstance();
+	$query = $db->query("SELECT * FROM membership_id WHERE id=$mem_id");
+	$results = $query->first();
+	return $results;
+}
+
 //Retrieve information for a single permission level
 function fetchPermissionDetails($id) {
 	$db = DB::getInstance();
@@ -110,6 +175,35 @@ function fetchAllUsers() {
 	return ($results);
 }
 
+function fetchTopDonations($limit, $interval) {
+	$db = DB::getInstance();
+	if ($interval!=NULL) {
+	    $where = " WHERE (date BETWEEN DATE_ADD(CURDATE(), INTERVAL -1 $interval) AND NOW()) AND visibility=0 ";
+	}
+	else {
+	    $where = " WHERE visibility=0 ";
+	}
+	$query = $db->query("SELECT sum(donation.amount) as amt, donation.user_id, users.fname, users.lname
+	                    FROM donation JOIN users ON users.id=donation.user_id".$where.
+	                    "group by user_id order by amt desc LIMIT $limit");
+	$results = $query->results();
+	return ($results);
+}
+
+function fetchSumDonations($id, $interval) {
+	$db = DB::getInstance();
+	if ($interval!=NULL) {
+	    $where = " WHERE (date BETWEEN DATE_ADD(CURDATE(), INTERVAL -1 $interval) AND NOW()) AND visibility=0  AND user_id=$id ";
+	}
+	else {
+	    $where = " WHERE visibility=0 AND user_id=$id ";
+	}
+	$query = $db->query("SELECT sum(amount) FROM donation".$where.
+	                    "group by user_id");
+	$results = (array)$query->first();
+	return $results['sum(amount)'];
+}
+
 //Retrieve donations from for a users
 function fetchAllUserDonations($userId) {
 	$db = DB::getInstance();
@@ -118,12 +212,13 @@ function fetchAllUserDonations($userId) {
 	return ($results);
 }
 
+
 //Retrieve complete user information by username, token or ID
 function fetchUserDetails($username=NULL,$token=NULL, $id=NULL){
 	if($username!=NULL) {
 		$column = "username";
 		$data = $username;
-	}elseif($id!=NULL) {
+	}else if($id!=NULL) {
 		$column = "id";
 		$data = $id;
 	}
@@ -143,7 +238,6 @@ function fetchTotalDonations() {
 		$s["$u->user_id"] = $u->total;
 	}
 	return $s;
-	
 }
 
 // fetch all user public donations
@@ -377,6 +471,20 @@ function createPages($pages) {
 		$fields=array('page'=>$page, 'private'=>'0');
 		$db->insert('pages',$fields);
 	}
+}
+
+function updateUsers($column=NULL,$value=NULL, $id=NULL, $username=NULL){
+	if($username!=NULL) {
+		$target = "username";
+		$data = $username;
+	}else if($id!=NULL) {
+		$target = "id";
+		$data = $id;
+	}
+	$db = DB::getInstance();
+	$query = $db->query("UPDATE users SET $column=$value WHERE $target = $data LIMIT 1");
+	$results = $query->first();
+	return ($results);
 }
 
 //Match permission level(s) with page(s)

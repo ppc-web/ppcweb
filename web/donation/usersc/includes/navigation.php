@@ -5,10 +5,15 @@
 	<ul class="nav navbar-nav ">
 		<li><a href="<?=$us_url_root?>"><i class="fa"></i> My PPC Donations</a></li>
 		<?php if (checkMenu(2,$user->data()->id)){  //Links for permission level 2 (default admin) ?>
+
 		<li><a href="<?=$us_url_root?>users/admin_users.php"><i class="fa"></i> Manage Users</a></li>
-		
-		<?php } ?>
+		<li><a href="<?=$us_url_root?>users/memberRequests.php"><i class="fa"></i> Member Requests </a></li>
 		<li><a href="<?=$us_url_root?>users/report.php"><i class="fa"></i> Report </a></li>
+
+
+		<?php } ?>
+
+		<li><a href="<?=$us_url_root?>users/honorary_page.php"><i class="fa"></i> Honorary Page </a></li>
 <!-- Custom menus. Uncomment or copy/paste to use
 		<li class="dropdown"><a class="dropdown-toggle" href="" data-toggle="dropdown"><i class="fa fa-wrench"></i> Custom 1 <b class="caret"></b></a>
 			<ul class="dropdown-menu">
