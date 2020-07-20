@@ -69,19 +69,12 @@ if(Input::exists()){
 	$lname = Input::get('lname');
 	$email = Input::get('email');
 	$agreement_checkbox = Input::get('agreement_checkbox');
-	$waiver_checkbox = Input::get('waiver_checkbox');
 
 	if ($agreement_checkbox=='on'){
 		$agreement_checkbox=TRUE;
 	}else{
 		$agreement_checkbox=FALSE;
 	}
-
-	if ($waiver_checkbox=='on'){
-    		$waiver_checkbox=TRUE;
-    	}else{
-    		$waiver_checkbox=FALSE;
-    	}
 
 	$db = DB::getInstance();
 	$settingsQ = $db->query("SELECT * FROM settings");
@@ -131,9 +124,6 @@ if(Input::exists()){
 	if (!$agreement_checkbox){
 		$validation->addError(["Please read and accept terms and conditions"]);
 	}
-	if (!$waiver_checkbox){
-    	$validation->addError(["Please read and accept to waiver"]);
-    }
 
 	if($validation->passed() && $agreement_checkbox){
 		//Logic if ReCAPTCHA is turned ON
