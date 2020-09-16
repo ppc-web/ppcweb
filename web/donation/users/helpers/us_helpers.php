@@ -92,45 +92,63 @@ membership status:
 2- request verified
 
 */
-function fetchMembershipDetails($id) {
-    $db = DB::getInstance();
-    $query = $db->query("SELECT * FROM membership WHERE id=$id LIMIT 1");
-    $results = $query->first();
-    return ($results);
-}
 
 function fetchMemRequests() {
     $db = DB::getInstance();
-	$query = $db->query("SELECT * FROM membership WHERE membership_status=1");
+	$query = $db->query("SELECT * FROM users WHERE membership_status=1");
 	$results = $query->results();
 	return $results;
 }
 
-function fetchRequestsAndUserDetails() {
+function fetchUserMembershipDetails($status, $order) {
     $db = DB::getInstance();
-	$query = $db->query("SELECT users.username, users.id, users.fname, users.lname, users.email, membership.date_requested,
-                         membership.membership FROM users JOIN membership ON users.id=membership.id
-                         WHERE membership.membership_status=1 ORDER BY membership.date_requested;");
+	$query = $db->query("SELECT * FROM users
+                         WHERE membership_status=$status ORDER BY mem_date_requested;");
 	$results = $query->results();
 	return $results;
 }
 
-function updateMembership($id, $mem_request, $mem_status) {
+function updateMembershipStatus($id, $mem_request, $mem_status) {
     $db = DB::getInstance();
-    $date = ($mem_status==3)? "":($mem_status==2)? ", date_accepted=CURDATE()" :", date_requested=CURDATE()";
-	$query = $db->query("UPDATE membership SET membership_status = $mem_status, membership = $mem_request $date WHERE id = $id");
+    $date = ($mem_status==3)? "":($mem_status==2)? ", mem_date_accepted=CURDATE()" :", mem_date_requested=CURDATE()";
+	$query = $db->query("UPDATE users SET membership_status = $mem_status, membership = $mem_request $date WHERE id = $id");
 	if ($mem_status==2 && $mem_request<4) {
-	    $query2 = $db->query("UPDATE membership SET date_expire = (date_add(CURDATE(), INTERVAL 1 YEAR)) WHERE id = $id;");
+	    $query2 = $db->query("UPDATE users SET mem_date_expire = (date_add(CURDATE(), INTERVAL 1 YEAR)) WHERE id = $id;");
 	}
 	if ($mem_status==2 && $mem_request==4) {
-    	$query2 = $db->query("UPDATE membership SET date_expire = (date_add(CURDATE(), INTERVAL 1 MONTH)) WHERE id = $id;");
+    	$query2 = $db->query("UPDATE users SET mem_date_expire = (date_add(CURDATE(), INTERVAL 1 MONTH)) WHERE id = $id;");
     }
 	$results = $query->results();
+    return $results;
+}
+
+function updateMembershipDetails($id, $type, $status, $request, $accepted, $expire) {
+    $db = DB::getInstance();
+    $t=""; $s=""; $r=""; $a=""; $e="";
+    $str="";
+    if ($type!=NULL) {
+        $str="membership=$type";
+    }
+    if ($status!=NULL) {
+        $str=$str.", membership_status=$status";
+    }
+    if ($request!=NULL) {
+        $str=$str.", mem_date_requested=STR_TO_DATE('$request', '%Y-%m-%d')";
+    }
+    if ($accepted!=NULL) {
+        $str=$str.", mem_date_accepted=STR_TO_DATE('$accepted', '%Y-%m-%d')";
+    }
+    if ($expire!=NULL) {
+        $str=$str.", mem_date_expire=STR_TO_DATE('$expire', '%Y-%m-%d')";
+    }
+	$query = $db->query("UPDATE users SET $str WHERE id = $id");
+	$results = $query->results();
+    return $results;
 }
 
 function checkExpire($userId, $expire) {
     $db = DB::getInstance();
-	$query = $db->query("SELECT IF (curdate()>$expire, TRUE, FALSE)");
+	$query = $db->query("SELECT IF (curdate()>$expire, 1, 0)");
     $results=$query->first();
     return $results;
 }
@@ -142,6 +160,16 @@ function fetchMembership($mem_id) {
 	$results = $query->first();
 	return $results;
 }
+
+
+
+function fetchMembershipStatus($status) {
+    $db = DB::getInstance();
+	$query = $db->query("SELECT * FROM membership_status WHERE id=$status");
+	$results = $query->first();
+	return $results;
+}
+
 
 //Retrieve information for a single permission level
 function fetchPermissionDetails($id) {

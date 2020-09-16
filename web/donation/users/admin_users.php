@@ -259,7 +259,7 @@ $latestDonations = fetchLatestDonations();
 					<table class='table table-hover table-list-search'>
 					<thead>
 					<tr>
-						<th>Delete</th><th>Username</th><th>Email</th><th>First Name</th><th>Last Name</th><th>Total Donation</th>
+						<th>Delete</th><th>Username</th><th>Membership</th><th>Email</th><th>First Name</th><th>Last Name</th><th>Total Donation</th>
 						<th>Last Donation</th><th>Last Donate Date</th><th>Last Seen</th>
 					 </tr>
 					</thead>
@@ -276,10 +276,18 @@ $latestDonations = fetchLatestDonations();
 							$v1->lastDonation = 0;
 							$v1->lastDonationDate = "";
 						}
+						if ($v1->membership==null) {
+						    $membership="None";
+						} else {
+						    if ($v1->membership_status==2) {
+						        $membership=fetchMembership($v1->membership)->membership_type;
+						    }
+						}
 							?>
 					<tr>
 					<td><div class="form-group"><input type="checkbox" name="delete[<?=$v1->id?>]" value="<?=$v1->id?>" /></div></td>
 					<td><a href='admin_user.php?id=<?=$v1->id?>'><?=$v1->username?></a></td>
+					<td><a href='update_members.php?id=<?=$v1->id?>'><?echo $membership?></td>
 					<td><?=$v1->email?></td>
 					<td><?=$v1->fname?></td>
 					<td><?=$v1->lname?></td>

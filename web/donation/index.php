@@ -16,32 +16,6 @@ require_once $abs_us_root . $us_url_root . 'users/includes/navigation.php';
 
 $userId = $user->data ()->id;
 
-//check if okay for membership
-$memDetails = fetchMembershipDetails($userId);
-
-    if ($memDetails->membership_status==1 || $memDetails->membership_status==3) {
-        $memInfo= fetchMembership($memDetails->membership_id);
-        // could change the numbers to match the exact date and year
-        if ($memInfo->id<4) {
-            $amt=fetchSumDonations($userId, "year");
-        } else {
-            $amt=fetchSumDonations($userId, "month");
-        }
-        if ($amt>=$memInfo->min_amount) {
-            echo "update: ".$userId." ".$memDetails->membership;
-            updateMembership($userId, $memDetails->membership, 2);
-        }
-    }
-
-// check expire
-    if (checkExpire($userId, $memDetails->date_expire)>0) {
-        updateMembership($userId, $memDetails->membership, 3);
-    }
-
-if (isset($_POST["membership"])) {
-    $memRequest=$_POST["membership"];
-    updateMembership($userId, $memRequest, 1);
-}
 
 ?>
 
@@ -60,13 +34,19 @@ if ($user->isLoggedIn ()) {
 	    Redirect::to('users/waiver_form.php');
 	}
 
-	// Fetch membership details
-	$membershipDetails = fetchMembershipDetails ( $userId );
-
 	// Fetch all donations from this user
 	$userData = fetchAllUserDonations ( $userId );
 
 
+// check expire
+    if ($userdetails->membership_status==2 && checkExpire($userId, $memDetails->date_expire)==1) {
+        updateMembershipStatus($userId, $memDetails->membership, 3);
+    }
+
+    if (isset($_POST["membership"])) {
+    $memRequest=$_POST["membership"];
+    updateMembershipStatus($userId, $memRequest, 1);
+}
 
 	?>
 		<!-- Page Heading -->
@@ -75,7 +55,7 @@ if ($user->isLoggedIn ()) {
                  <h2>Hello, <?=$userdetails->fname . " " . $userdetails->lname?></h2>
             </div>
         </div>
-<?php if ($membershipDetails->membership_status==0) { ?>
+<?php if ($userdetails->membership_status==0) { ?>
         <div class="row">
             <div class="col-xs-6">
                 <div class="jumbotron">
@@ -97,12 +77,14 @@ if ($user->isLoggedIn ()) {
 <?php } else{?>
         <div class="row">
 			<div class="col-md-12">
-				<h3>Your membership status: <?php if ($membershipDetails->membership_status==1) {
-				echo "</h3><h4>The membership type you have requested is ".fetchMembership($membershipDetails->membership)->membership_type.". Your request will be verified by admins.</h4>"; }
-				else if ($membershipDetails->membership_status==2) {echo fetchMembership($membershipDetails->membership)->membership_type."</h3>";}
-				else if ($membershipDetails->membership_status==3){
-				    echo "</h3><h4>Oops! Your ".fetchMembership($membershipDetails->membership)->membership_type." membership
-				    has expired. Be sure to donate again to renew your membership!</h4>";
+				<h3>Membership status: <?php if ($userdetails->membership_status==1) {
+				echo "</h3><h4>Requested for ".fetchMembership($userdetails->membership)->membership_type.". Your request will be verified by admins.</h4>"; }
+				else if ($userdetails->membership_status==2) {echo fetchMembership($userdetails->membership)->membership_type."</h3>";
+				echo "<p>Your membership expires on ".$userdetails->mem_date_expire.".</p>";
+				}
+				else if ($userdetails->membership_status==3){
+				    echo "</h3><h4>Oops! Your ".fetchMembership($userdetails->membership)->membership_type." membership
+				    has expired on ".$userdetails->mem_date_expire.". Be sure to donate again to renew your membership!</h4>";
 				}?>
 			</div>
 		</div>
