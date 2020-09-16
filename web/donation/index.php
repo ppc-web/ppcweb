@@ -38,15 +38,15 @@ if ($user->isLoggedIn ()) {
 	$userData = fetchAllUserDonations ( $userId );
 
 
-// check expire
-    if ($userdetails->membership_status==2 && checkExpire($userId, $memDetails->date_expire)==1) {
-        updateMembershipStatus($userId, $memDetails->membership, 3);
+// check expire DOESN'T WORK :CC
+    if ($userdetails->membership_status==2 && checkExpire($userId, $userdetails->mem_date_expire)===1) {
+        updateMembershipStatus($userId, $userdetails->membership, 3);
     }
 
     if (isset($_POST["membership"])) {
-    $memRequest=$_POST["membership"];
-    updateMembershipStatus($userId, $memRequest, 1);
-}
+        $memRequest=$_POST["membership"];
+        updateMembershipStatus($userId, $memRequest, 1);
+    }
 
 	?>
 		<!-- Page Heading -->
