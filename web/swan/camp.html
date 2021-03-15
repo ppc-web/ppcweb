@@ -4,137 +4,275 @@
 	<meta charset="UTF-8">
 	<title>PPC Swan</title>
 	<link rel="stylesheet" href="css/style.css" type="text/css">
-	<link rel="icon" 
-      type="image/png" 
-      href="images/logo.png">
+	<link rel="icon" type="image/png" href="images/logo.png">
+
+	<!-- Calendar related -->
 	<link href='lib/calendar/fullcalendar.css' rel='stylesheet' />
 	<link href='lib/calendar/fullcalendar.print.css' rel='stylesheet'
-	media='print' />
+		  media='print' />
 	<script src='lib/moment.min.js'></script>
 	<script src='lib/jquery.min.js'></script>
 	<script src='lib/calendar/fullcalendar.js'></script>
 	<script src='lib/calendar/swanCal.js'></script>
-	<script src='lib/calendar/winterCamp.js'></script>
+	<script src='lib/calendar/groupEvents.js'></script>
 	<script src='lib/calendar/campEvents.js'></script>
-	<script src="swan.js"></script>  
+	<script src='lib/calendar/freeKidGroup.js'></script>
+	<script src="swan.js"></script>
 	<script>
-		loadCommon();
-	</script>  
+    	loadCommon();
+    </script>
+
+
 </head>
 <body>
-	<div id="background">
-		<div id="page">
-			<div id="header">
-			</div>
-			<div id="contents">
-				<div class="box">
-					<div>
-						<div class="body camp">
-							<h1><span class="logo"></span>Spring and Summer Camp</h1><div>
-							<h3> <font size="5" color="red">NOTICE:</font> The COVID-19 situation COULD affect camp dates.
-								More information will be released later. Be sure to stay updated! </h3>
-							<img src="images/sc-3.jpg" alt="Img" height="200"
+<div id="background">
+	<div id="page">
+		<div id="header">
+		</div>
+		<div id="contents">
+			<div class="box">
+				<div>
+					<div class="body camp">
+						<div id="calendar"></div>
+						<p>&nbsp;</p>
+						<!--
+                        <b> Recent Changes</b>
+                        <ul>
+                            <li> <b> Mon</b> Adult Group class: Time changed to <b>7pm - 8:30pm</b></li>
+                            <li> <b> Wed </b> Night Kid Group class: Cancelled. Replaced by an Adult Group Class at the same time slot <b>7pm - 8:30pm</b></li>
+                            <li> Coach <b> Qiao Tang </b> will be teaching these classes.
+                        </ul>-->
+						<div>
+							<img src="images/sc-1.jpg" alt="Img" height="200"
 								 style="padding: 10px 10px 10px 0px;" /> <img
-								src="images/sc-4.jpg" alt="Img" height="200"
+								src="images/sc-2.jpg" alt="Img" height="200"
 								style="padding: 10px 10px 10px 0px;" />
 
 						</div>
-								<!--<h2>2020 April Spring Camp</h2>
-							<ul>
-								<li> <b>Times:</b>
-									<ul>
-										<li> April 6th - 10th</li>
-										<li> April 13th - 17th </li>
-									</ul>
-								</li>
-								<li> Dedicated Ping Pong camp for beginner and intermediate level kids aged 5+</li>
-								<li> <b>6 hour</b> training from <b>9am - 12am</b> and <b>1pm - 4pm</b></li>
-								<li> Supervised lunch break hour: <b> 12pm – 1pm </b></li>
-								<li> Free Extended Hour: <b>4pm - 6pm</b> </li>
-								<li> Hot Lunch & afternoon snack  included
-							</ul>
-							<h3> Price and Discount </h3>
-							<ul>
-								<li>
-									<B>$490</B> per Week or <B>$280</B> per half day week
-								</li>
-								<li> Sibling discounted price: <B>$470</B> per week or <B>$270</B> per half day week if 2 or more siblings sign up</li>
-								<li> Drop in:
-									<ul>
-										<li>Pre-registered: <B> $110 </B> per day or <B> $60 </B> per half day.</li>
-										<li>Other: <B> $120 </B> per day or <B> $65 </B> per half day. </li>
-									</ul>
-								<li> All prices include <b>free hot lunch</b> at noon and free afternoon <b> snack </b>.
-							</ul>--> <!--
-							<h2> Coaching </h2>
-							<ul>
-								<li> Classes are taught by professional players and coaches: <br/>
-								<b>Gaolin Tang</b>, <b> Yin Liu</b>, and <b>Jin Miao</b> and coaches from Swan Warrior school</li>
-							</ul>-->
-							<br>
-							<h2> 2020 June to August Summer Camp </h2>
-							<ul>
 
-								<li> <b>Times:</b>
-									<ul>
-										<li> June: </li>
-										<ul>
-											<li> 1st to 5th</li>
-											<li> 8th to 12th</li>
-											<li> 15th to 19th</li>
-											<li> 22th to 26th</li>
-											<li> 29th to July 3rd</li>
-										</ul>
-										<li> July: </li>
-										<ul>
-											<li> 6th to 10th</li>
-											<li> 13th to 17th</li>
-											<li> 20th to 24th</li>
-											<li> 27th to 31st</li>
-										</ul><li> August: </li>
-										<ul>
-											<li> 3rd to 7th</li>
-											<li> 10th to 14th</li>
-											<li> 17th to 21st</li>
-											<li> 24th to 27th</li>
-										</ul>
-									</ul>
-								</li>
-								<li> Dedicated Ping Pong camp for beginner and intermediate level kids aged 5+</li>
-								<li> <b>6 hour</b> training from <b>9am - 12am</b> and <b>1pm - 4pm</b></li>
-								<li> Supervised lunch break hour: <b> 12pm – 1pm </b></li>
-								<li> Free Extended Hour: <b>4pm - 6pm</b> </li>
-								<li> Hot Lunch & afternoon snack  included
-							</ul>
-							<h3> Price and Discount </h3>
+						<h1>Kid Group Class</h1>
+						<p>This class teaches the fundamentals of table tennis
+							to provide kids a solid start in table tennis.</p>
+						<p>Class contents include but are not limited to:</p>
+						<ul>
+							<li>Forehand and backhand strokes</li>
+							<li>Footwork</li>
+							<li>Forehand and backhand rally practices</li>
+							<li>Serving and Receiving</li>
+							<li>Physical conditioning and group games</li>
+						</ul>
+						<h2>Times</h2>
+						<ul>
+							<li>9AM-12PM: 1.5 hours training + 1.5 hours supervised practice/matches </li>
+							<li>9-10:30 or 10:30AM-12PM: 1.5 hours training</li>
+							<li>1PM-4PM: 1.5 hours training + 1.5 hours supervised practice/matches</li>
+							<li>1-2:30 or 2:30-4PM: 1.5 hours training</li>
+
+						</ul>
+						<h2>Coaching (for March 2020)</h2>
+						<ul>
+							<li>Saturday Morning: Guolin Tang / Wendy Wang</li>
+							<li>Saturday Afternoon: Jin Miao / Wendy Wang</li>
+							<li>Sunday Morning: Bob Chen / Wendy Wang</li>
+							<li>Sunday Afternoon: Ye Tian / Wendy Wang except 3/8</li>
+							<li>3/8 Afternoon: Tianxin Zhou / Wendy</li>
+						</ul>
+						<h2>Prices</h2>
+						<ul>
+							<li>1.5-hours class pay monthly:
+								<ul>
+									$120 for 4 classes<br>
+									$150 for 5 classes
+								</ul>
+							</li>
+							<li>3-hours class pay monthly:
+								<ul>
+									$200 for 4 classes<br>
+									$250 for 5 classes
+								</ul>
+							</li>
+							<li>6-hours class pay monthly:
+								<ul>
+									$360 for 4 classes<br>
+									$450 for 5 classes
+								</ul>
+							</li>
+						</ul>
+						<h2> Registration </h2>
+						<ul>
+							<b>Self register </b> by clicking <a href="https://docs.google.com/forms/d/e/1FAIpQLSfP1co0ocYvoTOKoVPeQ69eTrur79uMDwBt8o3u9i70y9vYRw/viewform?from=groupmessage&isappinstalled=0"> here</a>.
+
+						</ul>
+
+						<br>&nbsp; </br>
+						<h1>Adult Group Class</h1>
+						<p>This class teaches the fundamentals of table tennis
+							strokes and movements for adults to learn to play Ping Pong in a correct way.
+							Head coach will demo and train students with various techniques and movements. Students will also rally with each
+							other, and play with each other in game like situation, with Head Coach observing, teaching and correcting on the side.</p>
+						<h2> Times</h2>
+						<ul>
+							<li>Beginners:</li>
 							<ul>
-								<li>
-									<B>$490</B> per Week or <B>$280</B> per half day week
-								</li>
-								<li> Drop in:
-									<ul>
-										<li>Pre-registered: <B> $110 </B> per day or <B> $60 </B> per half day.</li>
-										<li>Other: <B> $120 </B> per day or <B> $65 </B> per half day. </li>
-									</ul>
-								</li>
-								<li> Sibling Discounts: <B>$470</B> per week or <B>$270</B> per half day week if 2 or more siblings sign up</li>
-								<li> Early Bird Discounts: <B>$470</B> per week or <B>$270</B> if registered before April 30th </li>
-								<li> All prices include <b>free hot lunch</b> at noon and free afternoon <b> snack </b>.
+								Every Sunday 4-5PM, 5-6PM
 							</ul>
-							<h2> Registration </h2>
-							<ul class="end">
-								<li> Register for <b>Spring Camp</b> online by <a href="https://docs.google.com/forms/d/e/1FAIpQLSd7knZ-glZPYPOYOE9yhrkKtU1RyaEL8Ifa5YNh5LsJiveBGQ/viewform?from=groupmessage&isappinstalled=0"> Google Form </a>
-								</li>
-								<li> Register for <b>Summer Camp</b> online by <a href="https://docs.google.com/forms/d/e/1FAIpQLSeCpNRn1_OWzpiGMK-TP7hyBjr8Dx-HlYXZ6u2M3gFUvi_NKg/viewform?from=groupmessage&isappinstalled=0"> Google Form </a>
-								</li>
-								<li> Make your check payable to <B>PPC</B> or <B>Ping Pong Community</B>, or Paypal to <b>pingpong.community@gmail.com</b></li>
-								<li> For inquries, text to: 408-389-8760 or email to <a href="mailto: >pingpong.community@gmail.com" >
-								pingpong.community@gmail.com
-								</a></li>
+							<li>Other class times: </li>
+							<ul>
+								TBD
 							</ul>
-							<p> &nbsp; </p>
-							
-						</div>
+						</ul>
+						<h2>Coaching </h2>
+						<ul>
+							Main Coach: Yin Liu
+						</ul>
+						<h2> Prices </h2>
+						<ul>
+							<li>1-hour class pay monthly: $80 for 4-classes or $100 for 5-classes </li>
+							<li>Drop-in: $25 for each class</li>
+						</ul>
+						<h2> Registration </h2>
+						<ul>
+							<b>Self register </b> by clicking <a href="https://docs.google.com/forms/d/e/1FAIpQLScRb-kI2SXvnKreMcaAbkWBzXKB5ktMWPWfYvM3L07LlkOILQ/viewform?from=groupmessage&isappinstalled=0"> here</a>.
+						</ul>
+
+						<br>&nbsp; </br>
+						<h1> General Group Class</h1>
+						<h2> Times</h2>
+						<ul>
+							<li>Beginners:</li>
+							<ul>
+								Every Thursday 10AM-12PM
+							</ul>
+							<li>Other class times: </li>
+							<ul>
+								TBD
+							</ul>
+						</ul>
+						<h2>Coaching </h2>
+						<ul>
+							Main Coach: Ye Tian
+						</ul>
+						<h2> Prices </h2>
+						<ul>
+							<li> General: $20 per hour</li>
+							<li>Free for: </li>
+							<ul>
+								<li> Swan volunteers </li>
+								<li> Seniors (age 70+) </li>
+								<li> First time to Swan </li>
+							</ul>
+						</ul>
+
+						<h2> Registration </h2>
+						<ul>
+							To apply for <b>Volunteer</b>, click
+							<a href="https://docs.google.com/forms/d/e/1FAIpQLSfKN85lOnMX79WHjcbWtkirm89Idy3zleeLthtYKUYTeys4cA/viewform?from=groupmessage&isappinstalled=0"> here</a>.
+							<br> <b>Self register </b> by clicking <a href="https://docs.google.com/forms/d/e/1FAIpQLSdeMCwiunAZUSFrxq2d_Y0GKIGdhZbFrYdkXUb5N1W-VLBW9A/viewform?from=groupmessage&isappinstalled=0"> here</a>.
+						</ul>
+
+
+						<!--  h2>Paid class</h2>
+                        <a id="paid"></a>
+                        <ul>
+                            <li>4 weeks. One 2 hour class each week. Total 8 hours of class time</li>
+                            <li> No class on Thanksgiving week from Nov 19 to Nov 26
+                            <li>Time slot:
+                                <ul>
+                                    <li><b>Mon Night 6 - 8 pm</b>. Nov 14, 28 and Dec 5,
+                                        12. <a href="https://goo.gl/forms/2s8VD7rIJmGqR2sk1">
+                                        Register Online</a></li>
+                                    <li><b>Wed Night 6 - 8 pm</b>. Nov 16, 30 and Dec 7,
+                                        14. <a href="https://goo.gl/forms/LdPlQ7aW3oDRkfJj1">
+                                        Register Online</a></li>
+                                </ul>
+                            </li>
+                            <li>Regular Price: <b>$110</b>
+                            </li>
+                            <li>Discount
+                                <ul>
+                                    <li>Swan member discount: <b>$5</b></li>
+                                    <li>Swan previous summer camp or group student discount:
+                                        <b>$10</b>
+                                    </li>
+                                    <li>Sibling discount: <b>$5</b> per kid
+                                    </li>
+                                </ul>
+                            </li>
+
+                        </ul>
+-->
+						<!--
+                                                    <h1><span class="logo"></span>2016 Swan Thanksgiving Camp</h1>
+                                                    <h2> Mon Nov 21 - Wed Nov 23</h2>
+                                                    <ul>
+                                                        <li> 9:15am - 5:00pm for the first three days in Thanksgiving week</li>
+                                                        <li> Free Extended Hour up to 6:30pm </li>
+                                                        <li> Bring your own lunch or add $7 for lunch per day </li>
+                                                    </ul>
+                                                    <h2> Classes </h2>
+                                                    <ul>
+                                                        <li> Dedicated Ping Pong camp for beginner and intermediate level kids</li>
+                                                        <li> 6 hour training every day from 915am - 1215am and 2pm - 5pm </li>
+                                                        <li>
+                                                            <B>$230</B> full day week or <B>$120</B> half day week
+                                                        </li>
+                                                    </ul>
+                                                    <h2> Discount </h2>
+                                                    <ul>
+                                                        <li> Sibling: <B>$10</B> per week or <B>$5</B> per half day week if 2 or more siblings sign up</li>
+                                                        <li> Loyalty: <B>$10</B> per week or <B>$5</B> per half day week for previous Swan Camp or Group students </li>
+                                                    </ul>
+                                                    <h2> Coaching </h2>
+                                                    <ul>
+                                                        <li> Swan Head Coach Avi </li>
+                                                        <li> Coach Gaolin Tang: former Sichuan provincial team head coach. Former head coach of <br/>
+                                                        Thai and Malaysia National Teams
+                                                        </li>
+                                                    </ul>
+
+                                                    <h2> Registration </h2>
+                                                    <ul class="end">
+                                                        <li> <a href="images/swan_camp_registration.pdf" > Download the registration form </a>, fill it, and mail it back with the payment check to: <br/>
+                                                             PPC Swan Ping Pong Club<br/>
+                                                             1257 Tasman Dr. Ste C, Sunnyvale, CA 94089
+                                                        </li>
+                                                        <li> You can also come on-site to fill the form and register. </li>
+                                                        <li> Make your check payable to <B>PPC</B> or <B>Ping Pong Community</B>
+                                                        <li> Camp Inquiry Number: 408-915-7464, 408-389-8760</li>
+                                                    </ul>
+
+                                                    <h1>Adult Advanced Group Class</h1>
+
+                                                    <p>This class is for experienced adult players who want to take some formal training to further improve strength and stability of their strokes.</p>
+
+                                                    <ul>
+                                                        <li>Coach Avi teach the correct strokes and footwork</li>
+                                                        <li>Students do group excercise to learn correct storkes and footwork</li>
+                                                        <li> Students rally with each other on drills. Coach will observe and correct issues hand by hand</li>
+                                                    </ul>
+
+                                                    <h2>Time and Price</h2>
+                                                    <ul>
+                                                        <li>5 weeks. One 1.5 hour class each week. Total 7.5 hours of class time</li>
+                                                        <li>Time slot:
+                                                            <ul>
+                                                                <li><b>Sun Noon 12pm - 130pm</b>. Nov 20, 27 and Dec 4,
+                                                                    11, 18. <a href="https://goo.gl/forms/g9tSMUao7YOqIYKv2">
+                                                                    Register Online</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>Regular Price: <b>$90</b>
+                                                        </li>
+                                                        <li>Discount
+                                                            <ul>
+                                                                <li>Swan member discount: <b>$10</b></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                        -->
+						<p>&nbsp;</p>
+
+
 					</div>
 				</div>
 			</div>
@@ -142,5 +280,6 @@
 		<div id="footer">
 		</div>
 	</div>
+</div>
 </body>
 </html>
