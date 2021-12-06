@@ -118,6 +118,22 @@ function fetchAllUserDonations($userId) {
 	return ($results);
 }
 
+// fetching top donators
+function fetchTopDonations($limit, $interval) {
+	$db = DB::getInstance();
+	if ($interval!=NULL) {
+	    $where = " WHERE (date BETWEEN DATE_ADD(CURDATE(), INTERVAL -1 $interval) AND NOW()) AND visibility=0 ";
+	}
+	else {
+	    $where = " WHERE visibility=0 ";
+	}
+	$query = $db->query("SELECT sum(donation.amount) as amt, donation.user_id, users.fname, users.lname
+	                    FROM donation JOIN users ON users.id=donation.user_id".$where.
+	                    "group by user_id order by amt desc LIMIT $limit");
+	$results = $query->results();
+	return ($results);
+}
+
 //Retrieve complete user information by username, token or ID
 function fetchUserDetails($username=NULL,$token=NULL, $id=NULL){
 	if($username!=NULL) {
@@ -377,6 +393,20 @@ function createPages($pages) {
 		$fields=array('page'=>$page, 'private'=>'0');
 		$db->insert('pages',$fields);
 	}
+}
+
+function updateUsers($column=NULL,$value=NULL, $id=NULL, $username=NULL){
+	if($username!=NULL) {
+		$target = "username";
+		$data = $username;
+	}else if($id!=NULL) {
+		$target = "id";
+		$data = $id;
+	}
+	$db = DB::getInstance();
+	$query = $db->query("UPDATE users SET $column=$value WHERE $target = $data LIMIT 1");
+	$results = $query->first();
+	return ($results);
 }
 
 //Match permission level(s) with page(s)

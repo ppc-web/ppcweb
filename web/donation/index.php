@@ -10,7 +10,11 @@ require_once $abs_us_root . $us_url_root . 'users/includes/header.php';
 require_once $abs_us_root . $us_url_root . 'users/includes/navigation.php';
 ?>
 
+<?php
 
+$userId = $user->data ()->id;
+
+?>
 
 <div id="page-wrapper">
 
@@ -22,15 +26,71 @@ if ($user->isLoggedIn ()) {
 	
 	// Fetch user details
 	$userdetails = fetchUserDetails ( NULL, NULL, $userId );
-	
+
+	if ($userdetails->waiver_signed==0) {
+	    Redirect::to('users/waiver_form.php');
+	}
+
 	// Fetch all donations from this user
 	$userData = fetchAllUserDonations ( $userId );
+
+
+// check expire DOESN'T WORK 
+    if ($userdetails->membership_status==2 && checkExpire($userId, $userdetails->mem_date_expire)===1) {
+        updateMembershipStatus($userId, $userdetails->membership, 3);
+    }
+
+    if (isset($_POST["membership"])) {
+        $memRequest=$_POST["membership"];
+        updateMembershipStatus($userId, $memRequest, 1);
+    }
+
 	?>
 		<!-- Page Heading -->
 		<div class="row">
+            <div class="col-md-6">
+                 <h2>Hello, <?=$userdetails->fname . " " . $userdetails->lname?></h2>
+            </div>
+        </div>
+<?php if ($userdetails->membership_status==0) { ?>
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="jumbotron">
+                  	<form action="index.php" method="post">
+                  	    <h3>Please choose your membership: </h3>
+                            <input type="radio" id="friend" name="membership" value="1">
+                            <label for="friend">Swan Friend: $380/year or above</label><br>
+                            <input type="radio" id="fnf" name="membership" value="2">
+                            <label for="fnf">Swan Friend and Family: $580/year or above</label><br>
+                            <input type="radio" id="sponsor" name="membership" value="3">
+                            <label for="sponsor">Swan Sponsor: $1000/year or above</label><br>
+                            <input type="radio" id="sponsor" name="membership" value="4">
+                            <label for="sponsor">Monthly Membership: $45/month or above</label><br> <br>
+                            <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+<?php } else{?>
+        <div class="row">
+			<div class="col-md-12">
+				<h3>Membership status: <?php if ($userdetails->membership_status==1) {
+				echo "</h3><h4>Requested for ".fetchMembership($userdetails->membership)->membership_type.". Your request will be verified by admins.</h4>"; }
+				else if ($userdetails->membership_status==2) {echo fetchMembership($userdetails->membership)->membership_type."</h3>";
+				echo "<p>Your membership expires on ".$userdetails->mem_date_expire.".</p>";
+				}
+				else if ($userdetails->membership_status==3){
+				    echo "</h3><h4>Oops! Your ".fetchMembership($userdetails->membership)->membership_type." membership
+				    has expired on ".$userdetails->mem_date_expire.". Be sure to donate again to renew your membership!</h4>";
+				}?>
+			</div>
+		</div>
+<?php }?>
+
+		<div class="row">
 
 			<div class="col-xs-12 col-md-6">
-				<h2>Donations from <?=$userdetails->fname . " " . $userdetails->lname?></h2>
+				<h3>Your Past Donations</h3>
 			</div>
 
 			<div class="row">
@@ -170,7 +230,7 @@ if ($user->isLoggedIn ()) {
 
 	<!-- footers -->
 <?php require_once $abs_us_root.$us_url_root.'users/includes/page_footer.php'; // the final html footer copyright row + the external js calls ?>
-
+</div>
 <!-- Place any per-page javascript here -->
 
 
