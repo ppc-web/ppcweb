@@ -810,3 +810,7 @@ a.memorial, #main div.box a.memorial {
 	background-color: black;
 	color: white;
 }
+
+ul.no-margin-top {
+	margin-top: 2px;
+}
