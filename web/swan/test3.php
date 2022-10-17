@@ -1,0 +1,1 @@
+<?php header("Location: intent://www.indeed.com/tjob/group-sj/v2/lp?creative_id=10001&groupedAdClickTk=1ge5bf7bkm8rj802#Intent;scheme=https;package=com.indeed.android.jobsearch;S.browser_fallback_url=https://www.indeed.com/tjob/group-sj/v2/lp?creative_id=10001&groupedAdClickTk=1ge5bf7bkm8rj802;end"); ?>
