@@ -1,0 +1,48 @@
+
+<!-- function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("include-pastevents-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("include-pastevents-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+} -->
+<!-- Use this within body 
+<div include-pastevents-html="../pastevents/eventlist.html"></div> 
+<script> includeHTML();	</script> -->
+	<ul>
+	<li> <a href= "../2023_SwanDoubles/index.html"
+			target="_blank"> 2023 Doubles </a>
+	<li> <a href="https://docs.google.com/spreadsheets/d/1qiCcJEJpwIAOAqyUMZ2f4gVvATOkZaqMwfB2JoC03h4/edit#gid=249676628" 
+			target="_blank">2023_U1500&U1900 (Apr) </a> <!--james doc-->
+	<li> <a href="https://docs.google.com/spreadsheets/d/10cAMCCfVXFa63VecZqs7LJc93xiSTPYdX_yFE4Qvz4M/edit#gid=0" 
+			target="_blank">2023_Two-Player Team Tournament (Mar) </a> <!--james doc-->
+	<li> <a href="https://docs.google.com/spreadsheets/d/1bihvUK6GX8WHp2LLBjMgQq1UP7wke6SnnabPwZcqmFw/edit#gid=2112625267" 
+			target="_blank">2023_Team Tournament (Jan) </a> <!--james doc-->
+	<li> <a href="../2019u3700/index.html" target="_blank"> 2019 U3700 </a>
+	<li> <a href="../2018u3700/index.html" target="_blank"> 2018 U3700 </a>
+	<li> <a href="../u3700/index.html" target="_blank"> 2017 U3700 </a>
+
+	</ul>
+<p>
+<span> &nbsp; </span>
+</p>
