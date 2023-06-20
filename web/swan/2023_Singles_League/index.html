@@ -105,27 +105,23 @@
     }
 	
 	function 	updateGroupWinners(group, place, champ, cham_name)	{
-	if (group === '1'){
-		if (place === '1'){
-	        document.body.innerHTML =
-            document.body.innerHTML
-		    .replace(/{GroupRank1_champion}/gi, champ);
-			document.body.innerHTML =
-            document.body.innerHTML
-		    .replace(/{GroupRank1_champion_names}/gi, champ_name);
+	if (group === 1){
+		if (place === 1){
+	        document.body.innerHTML = document.body.innerHTML
+		    .replace(/{Rank1_champion}/gi, champ);
+			document.body.innerHTML = document.body.innerHTML
+		    .replace(/{Rank1_champion_names}/gi, champ_name);
 			} else
-			if (place === '2'){
-	        document.body.innerHTML =
-            document.body.innerHTML
+			if (place === 2){
+	        document.body.innerHTML = document.body.innerHTML
 		    .replace(/{GroupRank1_runnerup}/gi, champ);
-			document.body.innerHTML =
-            document.body.innerHTML
+			document.body.innerHTML = document.body.innerHTML
 		    .replace(/{GroupRank1_runnerup_names}/gi, champ_name);
 			}
 	
 	} else
-	if ( group === '2'){
-		if ( place === '1'){	
+	if ( group === 2){
+		if ( place === 1){	
 	        document.body.innerHTML =
             document.body.innerHTML
 		    .replace(/{GroupRank2_champion}/gi, champ);
@@ -133,7 +129,7 @@
             document.body.innerHTML
 		    .replace(/{GroupRank2_champion_names}/gi, champ_name);
 			} else
-			if ( place === '2'){			
+			if ( place === 2){			
 		    document.body.innerHTML =
             document.body.innerHTML
 		    .replace(/{GroupRank2_runnerup}/gi, champ);
@@ -142,8 +138,8 @@
 		    .replace(/{GroupRank2_runnerup_names}/gi, champ_name);
 			}
 	} else 
-	if (group === '3'){
-		if ( place === '1'){	
+	if (group === 3){
+		if ( place === 1){	
 	        document.body.innerHTML =
             document.body.innerHTML
 		    .replace(/{GroupRank3_champion}/gi, champ);
@@ -151,7 +147,7 @@
             document.body.innerHTML
 		    .replace(/{GroupRank3_champion_names}/gi, champ_name);
 			} else
-			if ( place === '2'){			
+			if ( place === 2){			
 		    document.body.innerHTML =
             document.body.innerHTML
 		    .replace(/{GroupRank3_runnerup}/gi, champ);
@@ -160,8 +156,8 @@
 		    .replace(/{GroupRank3_runnerup_names}/gi, champ_name);
 			}
 	} else 
-	if (group === '4'){
-		if (place === '1'){
+	if (group === 4){
+		if (place === 1){
 	        document.body.innerHTML =
             document.body.innerHTML
 		    .replace(/{GroupRank4_champion}/gi, champ);
@@ -169,7 +165,7 @@
             document.body.innerHTML
 		    .replace(/{GroupRank4_champion_names}/gi, champ_name);
 			} else
-			if ( place === '2'){			
+			if ( place === 2){			
 		    document.body.innerHTML =
             document.body.innerHTML
 		    .replace(/{GroupRank4_runnerup}/gi, champ);
@@ -207,7 +203,7 @@
 								<ul>
 								<li>Registration Information &#x1F4E2: <a href="./announcement.jpg" target="_blank"> Flyer</a></li>
 								<li>Time: 1:00pm - 6:00pm June 24 - June 25</li>
-								<li>Registration fee: ? </li>
+								<li>Registration fee: $30 </li>
 								<li>Organzing committee: <br/>James Chai  <br/> </li>
 								<li>Chair: James Chai &#x1F4F2 (408)636-3262 </li>
 								<li> Send Registration Email to <a href="mailto:james.chai@gmail.com"> james.chai@gmail.com</a> </li>
@@ -297,7 +293,7 @@
 									<tr>
 										<td width="36%">
 											<p>
-											&#x1F947 {GroupRank1} Champion: Your Name Here! <br />
+											&#x1F947 {GroupRank1} Champion:  <br />
 												Your Name Here<br/>
 											</p>
 										</td>
@@ -307,11 +303,11 @@
 									<tr>
 										<td width="36%">
 											<p>
-											&#x1F947 {GroupRank1} Champion: {GroupRank1_champion} <br />
-												{GroupRank1_champion_names}<br/>
+											&#x1F947 {GroupRank1} Champion: {Rank1_champion} <br />
+												{Rank1_champion_names}<br/>
 											</p>
 										</td>
-										<td><img src="{GroupRank1}_champion.JPG" alt="{GroupRank1_champion}"/></td>
+										<td><img src="{GroupRank1}_champion.JPG" alt="{Rank1_champion}"/></td>
 									</tr>
 									<tr>
 										<td width="36%">
@@ -401,21 +397,20 @@
 
 				</div>
 
-
+				<div id="footer">
+				</div>
+			</div>
+			
 <script>
     updateGameTitle('Singles');
     updateDoc('https://docs.google.com/spreadsheets/d/13-QMx8R8IA82lo6YDGaAuDI7_hX-L7-PVM0e55DPHhQ/edit#gid=523620735')
 
 	updateGroupsDate('6/24','0624', '6/24','0624', '6/25', '0625', '6/25', '0625');
 	updateGroups('U1500', 'U2100', 'U1200', 'U1700');
-	updateGroupWinners('1', '1', 'TBD', 'TBD?');	
-</script>
-
-
-				
-				<div id="footer">
-				</div>
-			</div>
+	<!-- updateGroupWinners(1, 1, 'TBD', 'TBD?');	 -->
+</script>			
+			
+			
 		</div>
 	</div>
 </body>
