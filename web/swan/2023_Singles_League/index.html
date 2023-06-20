@@ -1,0 +1,421 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2023 Swan Singles.</title>
+<link rel="stylesheet" href="../css/style.css" type="text/css">
+<link rel="icon" type="image/png" href="../images/logo.png">
+	<script src='../lib/jquery.min.js'></script>
+    <script src="../swan.js"></script>  
+    <script>
+    	loadCommon("index");
+    </script>
+	
+<!-- CSS Code: Place this code in the document's head (between the 'head' tags) -->
+<style>
+<!-- groupsTable moved to css style sheet
+</style>
+<!-- end CSS Code -->
+
+<script>
+    function updateGameTitle(t) {
+        document.body.innerHTML =
+            document.body.innerHTML
+		    .replace(/{SWAN_TITLE}/gi, t);
+    }
+    // Replace all the "placeholder" in the page with "doc_link"
+    function updateDoc(newdoc) {
+        document.body.innerHTML =
+            document.body.innerHTML
+            .replace(/GoogleDoc/gi, newdoc);
+    }
+</script>
+<script>
+	function enableGroup (gp_bgn, gp_end, flag){
+		if( flag === '1' ){
+	        document.body.innerHTML =
+            document.body.innerHTML
+            .replace(gp_bgn, "<br>");
+			document.body.innerHTML =
+            document.body.innerHTML
+            .replace(gp_end, "<br>");
+			} else {
+			document.body.innerHTML =
+            document.body.innerHTML
+            .replace(gp_bgn, "<! --- disable group");
+			document.body.innerHTML =
+            document.body.innerHTML
+            .replace(gp_end, "end disable group -->");
+			}
+	}
+	
+    // Replace all the "placeholder" in the page with "doc_link"
+    function updateGroups(g1, g2, g3, g4) {
+        document.body.innerHTML=
+            document.body.innerHTML
+		    .replace(/{GroupRank1}/gi, g1);
+        document.body.innerHTML=
+            document.body.innerHTML
+		    .replace(/{GroupRank2}/gi, g2);
+        document.body.innerHTML=
+            document.body.innerHTML
+		    .replace(/{GroupRank3}/gi, g3);
+        if (g4 !== ""){
+		document.body.innerHTML=
+            document.body.innerHTML
+		    .replace(/{GroupRank4}/gi, g4);
+			enableGroup('{G4_begin}', '{G4_end}', '1');
+			} else {
+			enableGroup('{G4_begin}', '{G4_end}', '0');
+			}
+
+	    // h3 specific
+	document.getElementById('h3')
+                .innerHTML = document.getElementById('h3')
+                                     .innerHTML
+		    .replace(/{GroupRank1}/gi, g1);
+    }
+</script>
+
+<script>
+    function updateGroupsDate(d1,d1cal, d2,d2cal, d3,d3cal, d4,d4cal){
+        document.body.innerHTML =
+            document.body.innerHTML
+		    .replace(/{GRank1Date}/gi, d1);
+        document.body.innerHTML =
+            document.body.innerHTML
+		    .replace(/{GRank1DateCal}/gi, d1cal);
+        document.body.innerHTML =
+            document.body.innerHTML
+		    .replace(/{GRank2Date}/gi, d2);
+        document.body.innerHTML =
+            document.body.innerHTML
+		    .replace(/{GRank2DateCal}/gi, d2cal);
+        document.body.innerHTML =
+            document.body.innerHTML
+		    .replace(/{GRank3Date}/gi, d3);
+        document.body.innerHTML =
+            document.body.innerHTML
+		    .replace(/{GRank3DateCal}/gi, d3cal);
+        document.body.innerHTML =
+            document.body.innerHTML
+		    .replace(/{GRank4Date}/gi, d4);
+        document.body.innerHTML =
+            document.body.innerHTML
+		    .replace(/{GRank4DateCal}/gi, d4cal);
+    }
+	
+	function 	updateGroupWinners(group, place, champ, cham_name)	{
+	if (group === '1'){
+		if (place === '1'){
+	        document.body.innerHTML =
+            document.body.innerHTML
+		    .replace(/{GroupRank1_champion}/gi, champ);
+			document.body.innerHTML =
+            document.body.innerHTML
+		    .replace(/{GroupRank1_champion_names}/gi, champ_name);
+			} else
+			if (place === '2'){
+	        document.body.innerHTML =
+            document.body.innerHTML
+		    .replace(/{GroupRank1_runnerup}/gi, champ);
+			document.body.innerHTML =
+            document.body.innerHTML
+		    .replace(/{GroupRank1_runnerup_names}/gi, champ_name);
+			}
+	
+	} else
+	if ( group === '2'){
+		if ( place === '1'){	
+	        document.body.innerHTML =
+            document.body.innerHTML
+		    .replace(/{GroupRank2_champion}/gi, champ);
+			document.body.innerHTML =
+            document.body.innerHTML
+		    .replace(/{GroupRank2_champion_names}/gi, champ_name);
+			} else
+			if ( place === '2'){			
+		    document.body.innerHTML =
+            document.body.innerHTML
+		    .replace(/{GroupRank2_runnerup}/gi, champ);
+			document.body.innerHTML =
+            document.body.innerHTML
+		    .replace(/{GroupRank2_runnerup_names}/gi, champ_name);
+			}
+	} else 
+	if (group === '3'){
+		if ( place === '1'){	
+	        document.body.innerHTML =
+            document.body.innerHTML
+		    .replace(/{GroupRank3_champion}/gi, champ);
+			document.body.innerHTML =
+            document.body.innerHTML
+		    .replace(/{GroupRank3_champion_names}/gi, champ_name);
+			} else
+			if ( place === '2'){			
+		    document.body.innerHTML =
+            document.body.innerHTML
+		    .replace(/{GroupRank3_runnerup}/gi, champ);
+			document.body.innerHTML =
+            document.body.innerHTML
+		    .replace(/{GroupRank3_runnerup_names}/gi, champ_name);
+			}
+	} else 
+	if (group === '4'){
+		if (place === '1'){
+	        document.body.innerHTML =
+            document.body.innerHTML
+		    .replace(/{GroupRank4_champion}/gi, champ);
+			document.body.innerHTML =
+            document.body.innerHTML
+		    .replace(/{GroupRank4_champion_names}/gi, champ_name);
+			} else
+			if ( place === '2'){			
+		    document.body.innerHTML =
+            document.body.innerHTML
+		    .replace(/{GroupRank4_runnerup}/gi, champ);
+			document.body.innerHTML =
+            document.body.innerHTML
+		    .replace(/{GroupRank4_runnerup_names}/gi, champ_name);
+			}
+	}
+	}
+</script>
+
+
+</head>
+<body>
+	<div id="background">
+		<div id="page">
+			<div id="header">
+			</div>
+			<div id="contents">
+				<div class="box">
+					<div>
+						<div class="body">
+							<div class="logo-holder">
+							<a href="../index.html"><img class="logo" src="../images/logo-45.png" alt="Swan homepage" ></a>
+							<!-- <a href="../index.html"><img class="logo-right" src="../images/logo-45.png" alt="Swan homepage></a> -->
+							</div>
+
+							<h2>2023 Swan {SWAN_TITLE}  &#x1F3D3 </h2>
+							<h3>2023 天鹅 {GroupRank1}, {GroupRank2}, {GroupRank3}, {GroupRank4} 大赛</h3>
+							
+							<table class="table">
+								<tbody>
+								<tr>
+								<td width="620px">
+								<ul>
+								<li>Registration Information &#x1F4E2: <a href="./announcement.JPG " target="_blank"> Flyer</a></li>
+								<li>Time: 1:00pm - 6:00pm June 24 - June 25</li>
+								<li>Registration fee: ? </li>
+								<li>Organzing committee: <br/>James Chai  <br/> </li>
+								<li>Chair: James Chai &#x1F4F2 (408)636-3262 </li>
+								<li> Send Registration Email to <a href="mailto:james.chai@gmail.com"> james.chai@gmail.com</a> </li>
+								<li> Contact email: <a href="mailto:pingpong.community@gmail.com"> pingpong.community@gmail.com</a> </li>
+								<li> Zelle: pingpong.community@gmail.com </li>
+								<li> Venmo : @SWANPPC </li>
+								<li> Note: Please include the team and event name in your payment</li>
+								<!-- <li> Wechat group: scan QR code on right &#x02192 </li> -->
+								</ul>
+								</td>
+								<td>
+								<!-- <img src="./wechat.jpg" height="200px" style="vertical-align: middle; padding: 5px;"> -->
+								</td>								
+								</tr>
+								</tbody>
+							</table>
+					
+							
+<!-- HTML Code: Place this code in the document's body (between the 'body' tags) where the table should appear -->
+<table class="groupsTable">
+  <thead>
+    <tr>
+      <th>Group</th>
+	  <th>Date</th>
+	  <th> + Google &#x1F4C5; </th>
+	  <th> + Yahoo &#x1F4C5; </th>
+      <th>Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+	    <td>{GroupRank1}</td>
+	    <td>{GRank1Date}</td>
+	    <td> <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=2023%20Swan%20{SWAN_TITLE}&dates=2023{GRank1DateCal}T130000/2023{GRank1DateCal}T180000&details=Swan%20reminder%20{GroupRank1}%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&location=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050"
+	      target="_blank"> Add Event </a> </td>
+	    <td> <a href="http://calendar.yahoo.com/?v=60&view=d&type=20&TITLE=2023%20Swan%20{SWAN_TITLE}&ST=2023{GRank1DateCal}T130000&ET=2023{GRank1DateCal}T180000&DESC=Swan%20reminder%20{GroupRank1}%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&in_loc=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050 "
+	      target="_blank"> Add Event</a></td>
+                <td> <a href="GoogleDoc"
+		      target="_blank"> link...</a> 
+	      <!-- "https://docs.google.com/spreadsheets/d/13-QMx8R8IA82lo6YDGaAuDI7_hX-L7-PVM0e55DPHhQ/edit#gid=469343062"  -->
+	  </td>
+    </tr>
+    <tr>
+	    <td>{GroupRank2}</td>
+	    <td>{GRank2Date}</td>
+	    <td> <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=2023%20Swan%20{SWAN_TITLE}&dates=2023{GRank2DateCal}T130000/2023{GRank2DateCal}T180000&details=Swan%20reminder%20{GroupRank2}%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&location=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050"
+	      target="_blank"> Add Event </a> </td>
+	    <td> <a href="http://calendar.yahoo.com/?v=60&view=d&type=20&TITLE=2023%20Swan%20{SWAN_TITLE}&ST=2023{GRank2DateCal}T130000&ET=2023{GRank2DateCal}T180000&DESC=Swan%20reminder%20{GroupRank2}%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&in_loc=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050 "
+	      target="_blank"> Add Event </a> </td>
+	  <td> <a href= "GoogleDoc"
+		  target="_blank"> link... </a> </td>
+	  <!-- mirror "https://docs.google.com/spreadsheets/d/1Mur3wTZsF4QBV-uASa1pxsW2oRmYIzwMd6bzI_AMiXs/edit#gid=1996385974" -->
+    </tr>
+    <tr>
+	    <td>{GroupRank3}</td>
+	    <td>{GRank3Date}</td>
+	    <td> <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=2023%20Swan%20{SWAN_TITLE}&dates=2023{GRank3DateCal}T130000/2023{GRank3DateCal}T180000&details=Swan%20reminder%20{GroupRank3}%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&location=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050"
+	      target="_blank"> Add Event </a> </td>
+	    <td> <a href="http://calendar.yahoo.com/?v=60&view=d&type=20&TITLE=2023%20Swan%20{SWAN_TITLE}&ST=2023{GRank3DateCal}T130000&ET=2023{GRank3DateCal}T180000&DESC=Swan%20reminder%20{GroupRank3}%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&in_loc=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050 "
+	      target="_blank"> Add Event </a> </td>
+	  <td> <a href= "GoogleDoc"
+		  target="_blank"> link... </a> </td>
+		  <!-- "https://docs.google.com/spreadsheets/d/13-QMx8R8IA82lo6YDGaAuDI7_hX-L7-PVM0e55DPHhQ/edit#gid=523620735"  -->
+	      
+    </tr>
+	
+
+	<tr>
+		<td>{GroupRank4}</td>
+		<td>{GRank4Date}</td>
+		<td> <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=2023%20Swan%20{SWAN_TITLE}&dates=2023{GRank4DateCal}T130000/2023{GRank4DateCal}T180000&details=Swan%20scheduled%20{GroupRank4}%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&location=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050 "
+	      target="_blank"> Add Event </a> </td>
+		<td> <a href="http://calendar.yahoo.com/?v=60&view=d&type=20&TITLE=2023%20Swan%20{SWAN_TITLE}&ST=2023{GRank4DateCal}T130000&ET=2023{GRank4DateCal}T180000&DESC=Swan%20scheduled%20{GroupRank4}%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&in_loc=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050 "
+	      target="_blank"> Add Event </a> </td>
+      <td> <a href="GoogleDoc"
+			  target="_blank"> link...</a> </td>
+    </tr>
+
+	
+  </tbody>
+</table>
+<!-- Codes by Quackit.com -->
+															
+							<table class="history-table">
+
+								<tbody>
+									<tr>
+										<td width="36%">
+											<p>
+											&#x1F947 {GroupRank1} Champion: Your Name Here! <br />
+												Your Name Here<br/>
+											</p>
+										</td>
+										<td><img src="{GroupRank1}_champion.JPG" alt="{GroupRank1}"/></td>
+									</tr>
+<!-- No result yet
+									<tr>
+										<td width="36%">
+											<p>
+											&#x1F947 {GroupRank1} Champion: {GroupRank1_champion} <br />
+												{GroupRank1_champion_names}<br/>
+											</p>
+										</td>
+										<td><img src="{GroupRank1}_champion.JPG" alt="{GroupRank1_champion}"/></td>
+									</tr>
+									<tr>
+										<td width="36%">
+											<p>
+											&#x1F948 {GroupRank1} Runner up: {GroupRank1_runnerup} <br />
+											    {GroupRank1_runnerup_names}<br/>
+									
+											</p>
+										</td>
+										<td><img src="{GroupRank1}_runnerup.JPG" alt="{GroupRank1_runnerup}"/></td>
+									</tr>
+
+									<tr>
+										<td width="36%">
+											<p>
+											&#x1F947 {GroupRank2} Champion: {GroupRank2_champion} <br />
+												{GroupRank2_champion_names}<br/>
+
+											</p>
+										</td>
+										<td><img src="{GroupRank2}_champion.JPG" alt="{GroupRank2_champion}"/></td>
+									</tr>
+									<tr>
+										<td width="36%">
+											<p>
+											&#x1F948 {GroupRank2} Runner up:  {GroupRank2_runnerup}<br />
+											    {GroupRank2_runnerup_names} <br/>
+									
+											</p>
+										</td>
+										<td><img src="{GroupRank2}_runnerup.JPG" alt="{GroupRank2_runnerup}" </td>
+									</tr>
+									
+									<tr>
+										<td width="36%">
+											<p>
+											&#x1F947 {GroupRank3} Champion: {GroupRank3_champion} <br />
+												...<br/>
+												...<br/>
+											</p>
+										</td>
+										<td><img src="{GroupRank3}_champion.JPG" alt="{GroupRank3_champion}"/></td>
+									</tr>
+									<tr>
+										<td width="36%">
+											<p>
+											&#x1F948 {GroupRank3} Runner up:  {GroupRank3_runnerup}<br />
+											    {GroupRank3_runnerup_names}<br/>
+
+																						
+											</p>
+										</td>
+										<td><img src="{GroupRank3}_runnerup.JPG" alt="{GroupRank3_runnerup}" </td>
+									</tr>
+									
+									{G4_begin}
+									<tr>
+										<td width="36%">
+											<p>
+											&#x1F947 {GroupRank4} Champion: {GroupRank4_champion} <br />
+												{GroupRank4_champion_names} <br/>
+											</p>
+										</td>
+										<td><img src="{GroupRank4}_champion.JPG" alt="{GroupRank4_champion}"/></td>
+									</tr>
+									<tr>
+										<td width="36%">
+											<p>
+											&#x1F948 {GroupRank4} Runner up:  {GroupRank4_runnerup}<br />
+											    {GroupRank4_runnerup_names} <br/>
+												
+																						
+											</p>
+										</td>
+										<td><img src="{GroupRank4}_runnerup.JPG" alt="{GroupRank4_runnerup}" </td>
+									</tr>
+									{G4_end}
+	No Results -->
+								</tbody>
+
+							</table>
+							<h2> Past Events </h2>
+							<iframe width="550px" height="150px" src="../pastevents/eventlist.html" frameborder="1" ></iframe>
+							<h2> &#x1F3D3 </h2>
+						</div>
+					</div>
+
+				</div>
+
+
+<script>
+    updateGameTitle('Singles');
+    updateDoc('https://docs.google.com/spreadsheets/d/13-QMx8R8IA82lo6YDGaAuDI7_hX-L7-PVM0e55DPHhQ/edit#gid=523620735')
+
+	updateGroupsDate('6/24','0624', '6/24','0624', '6/25', '0625', '6/25', '0625');
+	updateGroups('U1500', 'U2100', 'U1200', 'U1700');
+	updateGroupWinners('1', '1', 'TBD', 'TBD?');	
+</script>
+
+
+				
+				<div id="footer">
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
