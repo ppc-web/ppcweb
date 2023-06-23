@@ -84,6 +84,25 @@
 		    .replace(/{GRank4DateCal}/gi, d4cal);
     }
 	
+	function updateGroupsPid(d1, d2, d3, d4) {
+		document.body.innerHTML =
+            document.body.innerHTML
+		    .replace(/{GRank1DocPage/gi, d1);
+
+        document.body.innerHTML =
+            document.body.innerHTML
+		    .replace(/{GRank2DocPage/gi, d2);
+
+        document.body.innerHTML =
+            document.body.innerHTML
+		    .replace(/{GRank3DocPage/gi, d3);
+
+        document.body.innerHTML =
+            document.body.innerHTML
+		    .replace(/{GRank4DocPage/gi, d4);
+		
+	}
+	
 	function 	updateGroupWinners(group, place, champ, cham_name)	{
 	if (group === 1){
 		if (place === 1){
