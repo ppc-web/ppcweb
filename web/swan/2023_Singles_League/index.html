@@ -1,4 +1,6 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <title>2023 Swan Singles.</title>
@@ -12,12 +14,11 @@
     </script>
 	
 <!-- CSS Code: Place this code in the document's head (between the 'head' tags) -->
-<style>
-<!-- groupsTable moved to css style sheet
-</style>
+
 <!-- end CSS Code -->
 
 </head>
+
 <body>
 	<div id="background">
 		<div id="page">
@@ -60,7 +61,7 @@
 								</tbody>
 							</table>
 					
-							
+					
 <!-- HTML Code: Place this code in the document's body (between the 'body' tags) where the table should appear -->
 <table class="groupsTable">
   <thead>
@@ -69,7 +70,7 @@
 	  <th>Date</th>
 	  <th> + Google &#x1F4C5; </th>
 	  <th> + Yahoo &#x1F4C5; </th>
-      <th>Result</th>
+      <th>Players/Result</th>
     </tr>
   </thead>
   <tbody>
@@ -81,7 +82,7 @@
 	    <td> <a href="http://calendar.yahoo.com/?v=60&view=d&type=20&TITLE={GAME_TITLE}&ST=2023{GRank1DateCal}T130000&ET=2023{GRank1DateCal}T180000&DESC=Swan%20reminder%20{GroupRank1}%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&in_loc=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050 "
 	      target="_blank"> Add Event</a></td>
                 <td> <a href="{GoogleDoc}#gid={GRank1DocPage}"
-		      target="_blank"> team/link...</a> 
+		      target="_blank"> {GroupRank1} info...</a> 
 	      <!-- "https://docs.google.com/spreadsheets/d/13-QMx8R8IA82lo6YDGaAuDI7_hX-L7-PVM0e55DPHhQ/edit#gid=469343062"  -->
 	  </td>
     </tr>
@@ -93,10 +94,10 @@
 	    <td> <a href="http://calendar.yahoo.com/?v=60&view=d&type=20&TITLE={GAME_TITLE}&ST=2023{GRank2DateCal}T130000&ET=2023{GRank2DateCal}T180000&DESC=Swan%20reminder%20{GroupRank2}%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&in_loc=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050 "
 	      target="_blank"> Add Event </a> </td>
 	  <td> <a href= "{GoogleDoc}#gid={GRank2DocPage}"
-		  target="_blank"> team/link... </a> </td>
+		  target="_blank"> {GroupRank2} info... </a> </td>
 	  <!-- mirror "https://docs.google.com/spreadsheets/d/1Mur3wTZsF4QBV-uASa1pxsW2oRmYIzwMd6bzI_AMiXs/edit#gid=1996385974" -->
     </tr>
-<!-- 
+<!-- group
     <tr>
 	    <td>{GroupRank3}</td>
 	    <td>{GRank3Date}</td>
@@ -105,12 +106,12 @@
 	    <td> <a href="http://calendar.yahoo.com/?v=60&view=d&type=20&TITLE={GAME_TITLE}&ST=2023{GRank3DateCal}T130000&ET=2023{GRank3DateCal}T180000&DESC=Swan%20reminder%20{GroupRank3}%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&in_loc=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050 "
 	      target="_blank"> Add Event </a> </td>
 	  <td> <a href= "{GoogleDoc}#gid={GRank3DocPage}"
-		  target="_blank"> team/link... </a> </td>
+		  target="_blank"> {GroupRank3} info...</a> </td>
 		  
 	      
     </tr>
-	
-
+group -->
+<!-- group
 	<tr>
 		<td>{GroupRank4}</td>
 		<td>{GRank4Date}</td>
@@ -119,9 +120,9 @@
 		<td> <a href="http://calendar.yahoo.com/?v=60&view=d&type=20&TITLE={GAME_TITLE}&ST=2023{GRank4DateCal}T130000&ET=2023{GRank4DateCal}T180000&DESC=Swan%20scheduled%20{GroupRank4}%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&in_loc=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050 "
 	      target="_blank"> Add Event </a> </td>
       <td> <a href="{GoogleDoc}#gid={GRank4DocPage}"
-			  target="_blank"> team/link...</a> </td>
+			  target="_blank"> {GroupRank4} info...</a> </td>
     </tr>
-	-->
+group -->
 	
   </tbody>
 </table>
@@ -130,24 +131,15 @@
 							<table class="history-table">
 
 								<tbody>
+
 									<tr>
 										<td width="36%">
 											<p>
-											&#x1F947 {GroupRank1} Champion:  <br />
-												Your Name Here<br/>
+											&#x1F947 {GroupRank1} Champion: {GroupRank1_champion} <br />
+												{GroupRank1_champion_names}<br/>
 											</p>
 										</td>
-										<td><img src="{GroupRank1}_champion.JPG" alt="{GroupRank1}"/></td>
-									</tr>
-<!-- No result yet
-									<tr>
-										<td width="36%">
-											<p>
-											&#x1F947 {GroupRank1} Champion: {Rank1_champion} <br />
-												{Rank1_champion_names}<br/>
-											</p>
-										</td>
-										<td><img src="{GroupRank1}_champion.JPG" alt="{Rank1_champion}"/></td>
+										<td><img src="{GroupRank1}_champion.JPG" alt="{GroupRank1_champion}"/></td>
 									</tr>
 									<tr>
 										<td width="36%">
@@ -159,7 +151,7 @@
 										</td>
 										<td><img src="{GroupRank1}_runnerup.JPG" alt="{GroupRank1_runnerup}"/></td>
 									</tr>
-
+<!-- No Result yet
 									<tr>
 										<td width="36%">
 											<p>
@@ -180,13 +172,14 @@
 										</td>
 										<td><img src="{GroupRank2}_runnerup.JPG" alt="{GroupRank2_runnerup}" </td>
 									</tr>
-									
+Results -->
+<!-- group
 									<tr>
 										<td width="36%">
 											<p>
 											&#x1F947 {GroupRank3} Champion: {GroupRank3_champion} <br />
-												...<br/>
-												...<br/>
+												{GroupRank3_champion_names}<br/>
+												
 											</p>
 										</td>
 										<td><img src="{GroupRank3}_champion.JPG" alt="{GroupRank3_champion}"/></td>
@@ -196,14 +189,13 @@
 											<p>
 											&#x1F948 {GroupRank3} Runner up:  {GroupRank3_runnerup}<br />
 											    {GroupRank3_runnerup_names}<br/>
-
-																						
+											
 											</p>
 										</td>
 										<td><img src="{GroupRank3}_runnerup.JPG" alt="{GroupRank3_runnerup}" </td>
 									</tr>
-									
-									{G4_begin}
+end disable group -->
+<!-- group
 									<tr>
 										<td width="36%">
 											<p>
@@ -224,8 +216,7 @@
 										</td>
 										<td><img src="{GroupRank4}_runnerup.JPG" alt="{GroupRank4_runnerup}" </td>
 									</tr>
-									{G4_end}
-	No Results -->
+end disable group -->
 								</tbody>
 
 							</table>
@@ -241,17 +232,28 @@
 				</div>
 			</div>
 			
-<script>
-    updateGameTitle('2023 Swan Singles');
-    updateDoc('https://docs.google.com/spreadsheets/d/1o9V9EExoLrOAYqcTGiBKfrtq-eVSrPNZtapa4mcxk6E/edit')
-	updateGroupsPid('1308111473', '727693339', '0', '0'); <!-- DocPage-->
-	
-	updateGroupsDate('6/24','0624', '6/25','0625', '6/25', '0625', '6/25', '0625');
-	updateGroups('U2100', 'U1800', 'U1500', 'U1200');
 
-	<!-- updateGroupWinners(1, 1, 'TBD', 'TBD?');	 -->
+<script>
+/* Comment Block
+<!--- Result section should come first in script exec -->
+<!-- (group, place, alias, players_name)-->
+<!-- finalResult(1,1,"Team", "<b>Well1</b>, <br/> Next <br/>"); -->
+<!-- U2100_champion.JPG U2100_runnerup.JPG -->
+*/	
+
+    updateGameTitle('2023 Swan Singles');
+ 	updateGroups('U2100', 'U1800', '', '');
+	updateGroupsDate('6/24','0624', '6/25','0625', '6/25', '0625', '6/25', '0625');
+	
+    updateDoc('https://docs.google.com/spreadsheets/d/1o9V9EExoLrOAYqcTGiBKfrtq-eVSrPNZtapa4mcxk6E/edit')
+	updateGroupsPid('1308111473', '727693339', '0', '0');
+
+	finalResult(1,1,"PipsKiller", "<b>Your Name Here,</b><br\>Done");
+		finalResult(1,2,"Tiger", "So Close");
+	finalResult(2,1,"Pips", "Well2_1");
+		finalResult(2,2,"TopSpin", "Well2_2"); 	
+		
 </script>			
-			
 			
 		</div>
 	</div>
