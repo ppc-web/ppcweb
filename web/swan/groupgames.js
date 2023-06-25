@@ -31,58 +31,45 @@
 			}
 	}
 	
+	
+	function resizeGroupsTable(g1, g2, g3, g4){
+		if ( g4 == '') {	
+			document.getElementById("groupsTableID").deleteRow(4); }
+		if ( g3 == '') {
+			document.getElementById("groupsTableID").deleteRow(3);}
+		if ( g2 == '') { 
+			document.getElementById("groupsTableID").deleteRow(2);}
+		/* always has at least one group 😂 */
+	}
+	
     // Replace all the "placeholder" in the page with "doc_link"
     function updateGroups(g1, g2, g3, g4) {
         document.body.innerHTML=
             document.body.innerHTML
 		    .replace(/{GroupRank1}/g, g1);
+		if (g2 != ''){
         document.body.innerHTML=
             document.body.innerHTML
 		    .replace(/{GroupRank2}/g, g2);
-        if (g3 !== '') {
+		}
+		if (g3 != ''){
 		document.body.innerHTML=
             document.body.innerHTML
 		    .replace(/{GroupRank3}/g, g3);
-			document.body.innerHTML =
-            document.body.innerHTML
-			            .replace(/{G3_begin}/, '<br\>');
-			document.body.innerHTML =
-            document.body.innerHTML
-            .replace(/{G3_end}/, '<br/>');
-		} else {
-			document.body.innerHTML =
-            document.body.innerHTML
-            .replace(/{G3_begin}/, '<! --- disable group');
-			document.body.innerHTML =
-            document.body.innerHTML
-            .replace(/{G3_end}/, 'end disable group -->');
 		}
-        if (g4 !== ''){
+        if (g4 != '') {
 		document.body.innerHTML=
             document.body.innerHTML
 		    .replace(/{GroupRank4}/g, g4);
-			/* enableGroup('{G4_begin}', '{G4_end}', '1'); */
-									document.body.innerHTML =
-            document.body.innerHTML
-            .replace(/{G4_begin}/, '<br\>');
-			document.body.innerHTML =
-            document.body.innerHTML
-            .replace(/{G4_end}/, '<br\>');
-			} else {
-			/* enableGroup('{G4_begin}', '{G4_end}', '0'); */
-						document.body.innerHTML =
-            document.body.innerHTML
-            .replace(/{G4_begin}/, '<! --- disable group');
-			document.body.innerHTML =
-            document.body.innerHTML
-            .replace(/{G4_end}/, 'end disable group -->');
-			}
+		}
 
 	    // h3 specific
-/* 	document.getElementById('h3')
+/* 		document.getElementById('h3')
                 .innerHTML = document.getElementById('h3')
                                      .innerHTML
 		    .replace(/{GroupRank1}/gi, g1); */
+			
+		resizeGroupsTable( g1, g2, g3, g4);
     }
 
 
@@ -133,49 +120,143 @@
 		
 	}
 	
-	function finalResult(group, place, champ, champ_name)	{
-		var localHtml = document.body.innerHTML;
-		if (group == 1){
-			if (place == 1){
-				localHtml=localHtml.replace(/{GroupRank1_champion}/g, champ);
-				localHtml=localHtml.replace(/{GroupRank1_champion_names}/g, champ_name);	
-			} else 
-			if (place == 2){
-				localHtml=localHtml.replace(/{GroupRank1_runnerup}/g, champ);
-				localHtml=localHtml.replace(/{GroupRank1_runnerup_names}/g, champ_name);
+	function updateEvents(gp, flag){ 
+			var localHtml = document.body.innerHTML;
+		if (gp == 1){
+			if (flag == 0){
+			localHtml=localHtml.replace(/{GRank1_event_begin}/g, 'Finished <!-- ');
+			localHtml=localHtml.replace(/{GRank1_event_end}/g, '--> ');
+			} else {
+			localHtml=localHtml.replace(/{GRank1_event_begin}/g, ' ');
+			localHtml=localHtml.replace(/{GRank1_event_end}/g, ' ');
 			}
-		} else
-		if ( group == 2){
-			if ( place == 1){	
-localHtml=localHtml.replace(/{GroupRank2_champion}/g, champ);
-localHtml=localHtml.replace(/{GroupRank2_champion_names}/g, champ_name);
-			} else
-			if ( place == 2){			
-localHtml=localHtml.replace(/{GroupRank2_runnerup}/g, champ);
-localHtml=localHtml.replace(/{GroupRank2_runnerup_names}/g, champ_name);
+		} else if (gp == 2) {
+			if (flag == 0){
+			localHtml=localHtml.replace(/{GRank2_event_begin}/g, 'Finished <!-- ');
+			localHtml=localHtml.replace(/{GRank2_event_end}/g, '--> ');
+			} else {
+			localHtml=localHtml.replace(/{GRank2_event_begin}/g, ' ');
+			localHtml=localHtml.replace(/{GRank2_event_end}/g, ' ');
 			}
-		} else 
-		if (group == 3){
-			if ( place == 1){	
-localHtml=localHtml.replace(/{GroupRank3_champion}/g, champ);
-localHtml=localHtml.replace(/{GroupRank3_champion_names}/g, champ_name);
-			} else
-			if ( place == 2){			
-localHtml=localHtml.replace(/{GroupRank3_runnerup}/g, champ);
-localHtml=localHtml.replace(/{GroupRank3_runnerup_names}/g, champ_name);
+		} else if (gp == 3) {
+			if (flag == 0){
+			localHtml=localHtml.replace(/{GRank3_event_begin}/g, 'Finished <!-- ');
+			localHtml=localHtml.replace(/{GRank3_event_end}/g, '--> ');
+			} else {
+			localHtml=localHtml.replace(/{GRank3_event_begin}/g, ' ');
+			localHtml=localHtml.replace(/{GRank3_event_end}/g, ' ');
 			}
-		} else 
-		if (group == 4){
-			if (place == 1){
-localHtml=localHtml.replace(/{GroupRank4_champion}/g, champ);
-localHtml=localHtml.replace(/{GroupRank4_champion_names}/g, champ_name);
-			} else
-			if ( place == 2){			
-localHtml=localHtml.replace(/{GroupRank4_runnerup}/g, champ);
-localHtml=localHtml.replace(/{GroupRank4_runnerup_names}/g, champ_name);
+		} else if (gp == 4) {
+			if (flag == 0){
+			localHtml=localHtml.replace(/{GRank4_event_begin}/g, 'Finished <!-- ');
+			localHtml=localHtml.replace(/{GRank4_event_end}/g, '--> ');
+			} else {
+			localHtml=localHtml.replace(/{GRank4_event_begin}/g, ' ');
+			localHtml=localHtml.replace(/{GRank4_event_end}/g, ' ');
 			}
 		}
 		document.body.innerHTML = localHtml;
+	}
+	
+	function resizeTable( group, place){
+		if ( group == 1){
+			if ( place == 0){
+				//document.getElementById("resultTable").deleteRow(0);
+				//document.getElementById("resultTable").deleteRow(1);
+			} else 
+			if ( place == -1 ){
+				document.getElementById("resultTable").deleteRow(1);
+			}
+		}
+		else
+		if ( group > 1 && group<= 4){
+			if ( place == 0){
+				var entry = (group-1) *2;
+				document.getElementById("resultTable").deleteRow(entry+1);
+				document.getElementById("resultTable").deleteRow(entry);
+			} 
+		} else {
+			    // More than 4 groups?
+		}
+	}
+	
+	// place = 0 is initial state for Cal event. User should remove this usage when finalResult came in.
+	function finalResult(group, place, champ, champ_name)	{
+		var localHtml = document.body.innerHTML;
+		if (group == 1){
+			if (place <= 0){ 
+			localHtml=localHtml.replace(/{GRank1_event_begin}/g, ' ');
+			localHtml=localHtml.replace(/{GRank1_event_end}/g, ' ');
+			} else {
+				if (place == 1){
+				localHtml=localHtml.replace(/{GroupRank1_champion}/g, champ);
+				localHtml=localHtml.replace(/{GroupRank1_champion_names}/g, champ_name);	
+				} else 
+				if (place == 2){
+				localHtml=localHtml.replace(/{GroupRank1_runnerup}/g, champ);
+				localHtml=localHtml.replace(/{GroupRank1_runnerup_names}/g, champ_name);
+				}
+				localHtml=localHtml.replace(/{GRank1_event_begin}/g, 'Finished <!-- ');
+				localHtml=localHtml.replace(/{GRank1_event_end}/g, '--> ');
+			}
+		} else
+		if ( group == 2){
+			if ( place <= 0){
+				localHtml=localHtml.replace(/{GRank2_event_begin}/g, ' ');
+				localHtml=localHtml.replace(/{GRank2_event_end}/g, ' ');
+			} else { 
+			if ( place == 1){	
+			localHtml=localHtml.replace(/{GroupRank2_champion}/g, champ);
+			localHtml=localHtml.replace(/{GroupRank2_champion_names}/g, champ_name);
+			} else
+			if ( place == 2){			
+			localHtml=localHtml.replace(/{GroupRank2_runnerup}/g, champ);
+			localHtml=localHtml.replace(/{GroupRank2_runnerup_names}/g, champ_name);
+			}
+			localHtml=localHtml.replace(/{GRank2_event_begin}/g, 'Finished <!-- ');
+			localHtml=localHtml.replace(/{GRank2_event_end}/g, '--> ');
+				}
+		} else 
+		if (group == 3){
+			if ( place <= 0){
+				localHtml=localHtml.replace(/{GRank3_event_begin}/g, ' ');
+				localHtml=localHtml.replace(/{GRank3_event_end}/g, ' ');
+			} else {
+				if ( place == 1){	
+				localHtml=localHtml.replace(/{GroupRank3_champion}/g, champ);
+				localHtml=localHtml.replace(/{GroupRank3_champion_names}/g, champ_name);
+				} else
+				if ( place == 2){			
+				localHtml=localHtml.replace(/{GroupRank3_runnerup}/g, champ);
+				localHtml=localHtml.replace(/{GroupRank3_runnerup_names}/g, champ_name);
+				}
+				localHtml=localHtml.replace(/{GRank3_event_begin}/g, 'Finished <!-- ');
+				localHtml=localHtml.replace(/{GRank3_event_end}/g, '--> ');
+			}
+		} else 
+		if (group == 4){
+			if ( place <= 0){
+				localHtml=localHtml.replace(/{GRank4_event_begin}/g, ' ');
+				localHtml=localHtml.replace(/{GRank4_event_end}/g, ' ');
+			} else {
+			if (place == 1){
+				localHtml=localHtml.replace(/{GroupRank4_champion}/g, champ);
+				localHtml=localHtml.replace(/{GroupRank4_champion_names}/g, champ_name);
+			} else
+			if ( place == 2){			
+				localHtml=localHtml.replace(/{GroupRank4_runnerup}/g, champ);
+				localHtml=localHtml.replace(/{GroupRank4_runnerup_names}/g, champ_name);
+			}
+			localHtml=localHtml.replace(/{GRank4_event_begin}/g, 'Finished <!-- ');
+			localHtml=localHtml.replace(/{GRank4_event_end}/g, '--> ');
+			}
+		}
+		document.body.innerHTML = localHtml;
+		
+		//Deal with resultTable, should be done AFTER innerHTML updated.
+		//var tableHtml = document.getElementById("resultTable").innerHTML;
+		resizeTable( group, place );
+		//document.getElementById("resultTable").innerHTML = tableHtml;
 	}
 	
 	
