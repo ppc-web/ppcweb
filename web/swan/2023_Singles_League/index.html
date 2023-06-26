@@ -61,15 +61,15 @@
 								</tbody>
 							</table>
 					
-					
+
 <!-- HTML Code: Place this code in the document's body (between the 'body' tags) where the table should appear -->
 <table id=groupsTableID class="groupsTable">
   <thead>
     <tr>
       <th>Group</th>
 	  <th>Date</th>
-	  <th> + Google &#x1F4C5; </th>
-	  <th> + Yahoo &#x1F4C5; </th>
+	  <th> + Reminder </th>
+
       <th>Players/Result</th>
     </tr>
   </thead>
@@ -77,23 +77,29 @@
     <tr>
 	    <td>{GroupRank1}</td>
 	    <td>{GRank1Date}</td>
-	    <td>{GRank1_event_begin} <a  href="https://www.google.com/calendar/render?action=TEMPLATE&text={GAME_TITLE}&dates=2023{GRank1DateCal}T130000/2023{GRank1DateCal}T180000&details=Swan%20reminder%20{GroupRank1}%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&location=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050"
-	      target="_blank"> Add Event </a> {GRank1_event_end}  </td>
-	    <td>{GRank1_event_begin} <a href="http://calendar.yahoo.com/?v=60&view=d&type=20&TITLE={GAME_TITLE}&ST=2023{GRank1DateCal}T130000&ET=2023{GRank1DateCal}T180000&DESC=Swan%20reminder%20{GroupRank1}%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&in_loc=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050 "
-	      target="_blank"> Add Event </a> {GRank1_event_end} </td>
+	    <td>{GRank1_event_begin} 
+		  <a href="https://www.google.com/calendar/render?action=TEMPLATE&text={GAME_TITLE}&dates=2023{GRank1DateCal}T130000/2023{GRank1DateCal}T180000&details=Swan%20reminder%20{GroupRank1}%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&location=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050"
+	      target="_blank"> Google &#x1F4C5 Event </a> ,&nbsp&nbsp&nbsp   
+		  <a href="http://calendar.yahoo.com/?v=60&view=d&type=20&TITLE={GAME_TITLE}&ST=2023{GRank1DateCal}T130000&ET=2023{GRank1DateCal}T180000&DESC=Swan%20reminder%20{GroupRank1}%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&in_loc=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050 "
+	      target="_blank"> Yahoo &#x1F4C5 Event </a> 
+		  {GRank1_event_end}  </td>
+
                 <td> <a href="{GoogleDoc}#gid={GRank1DocPage}"
 		      target="_blank"> {GroupRank1} info...</a> 
-	      <!-- "https://docs.google.com/spreadsheets/d/13-QMx8R8IA82lo6YDGaAuDI7_hX-L7-PVM0e55DPHhQ/edit#gid=469343062"  -->
+
 	  </td>
     </tr>
     <tr>
 	    <td>{GroupRank2}</td>
 	    <td>{GRank2Date}</td>
-	    <td> {GRank2_event_begin} <a href="https://www.google.com/calendar/render?action=TEMPLATE&text={GAME_TITLE}&dates=2023{GRank2DateCal}T130000/2023{GRank2DateCal}T180000&details=Swan%20reminder%20{GroupRank2}%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&location=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050"
-	      target="_blank"> Add Event </a> {GRank2_event_end} </td>
-	    <td> {GRank2_event_begin} <a href="http://calendar.yahoo.com/?v=60&view=d&type=20&TITLE={GAME_TITLE}&ST=2023{GRank2DateCal}T130000&ET=2023{GRank2DateCal}T180000&DESC=Swan%20reminder%20{GroupRank2}%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&in_loc=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050 "
-	      target="_blank"> Add Event </a> {GRank2_event_end}</td>
-	  <td> <a href= "{GoogleDoc}#gid={GRank2DocPage}"
+	    <td> {GRank2_event_begin} 
+		<a href="https://www.google.com/calendar/render?action=TEMPLATE&text={GAME_TITLE}&dates=2023{GRank2DateCal}T130000/2023{GRank2DateCal}T180000&details=Swan%20reminder%20{GroupRank2}%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&location=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050"
+	      target="_blank"> Google &#x1F4C5 Event </a> ,&nbsp&nbsp&nbsp
+		<a href="http://calendar.yahoo.com/?v=60&view=d&type=20&TITLE={GAME_TITLE}&ST=2023{GRank2DateCal}T130000&ET=2023{GRank2DateCal}T180000&DESC=Swan%20reminder%20{GroupRank2}%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&in_loc=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050 "
+	      target="_blank"> Yahoo &#x1F4C5 Event </a> 
+		  {GRank2_event_end} </td>
+
+		<td> <a href= "{GoogleDoc}#gid={GRank2DocPage}"
 		  target="_blank"> {GroupRank2} info... </a> </td>
 	  <!-- mirror "https://docs.google.com/spreadsheets/d/1Mur3wTZsF4QBV-uASa1pxsW2oRmYIzwMd6bzI_AMiXs/edit#gid=1996385974" -->
     </tr>
@@ -101,10 +107,14 @@
     <tr>
 	    <td>{GroupRank3}</td>
 	    <td>{GRank3Date}</td>
-	    <td> {GRank3_event_begin} <a href="https://www.google.com/calendar/render?action=TEMPLATE&text={GAME_TITLE}&dates=2023{GRank3DateCal}T130000/2023{GRank3DateCal}T180000&details=Swan%20reminder%20{GroupRank3}%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&location=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050"
-	      target="_blank"> Add Event </a> {GRank3_event_end}</td>
-	    <td> {GRank3_event_begin} <a href="http://calendar.yahoo.com/?v=60&view=d&type=20&TITLE={GAME_TITLE}&ST=2023{GRank3DateCal}T130000&ET=2023{GRank3DateCal}T180000&DESC=Swan%20reminder%20{GroupRank3}%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&in_loc=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050 "
-	      target="_blank"> Add Event </a> {GRank3_event_end}</td>
+	    <td> {GRank3_event_begin} 
+			<a href="https://www.google.com/calendar/render?action=TEMPLATE&text={GAME_TITLE}&dates=2023{GRank3DateCal}T130000/2023{GRank3DateCal}T180000&details=Swan%20reminder%20{GroupRank3}%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&location=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050"
+				target="_blank"> Google &#x1F4C5 Event </a> ,&nbsp&nbsp&nbsp
+			<a href="http://calendar.yahoo.com/?v=60&view=d&type=20&TITLE={GAME_TITLE}&ST=2023{GRank3DateCal}T130000&ET=2023{GRank3DateCal}T180000&DESC=Swan%20reminder%20{GroupRank3}%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&in_loc=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050 "
+				target="_blank"> Yahoo &#x1F4C5 Event </a>, 
+		  {GRank3_event_end}</td>
+<!-- 	    <td> {GRank3_event_begin} <a href="http://calendar.yahoo.com/?v=60&view=d&type=20&TITLE={GAME_TITLE}&ST=2023{GRank3DateCal}T130000&ET=2023{GRank3DateCal}T180000&DESC=Swan%20reminder%20{GroupRank3}%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&in_loc=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050 "
+	      target="_blank"> Add Event </a> {GRank3_event_end}</td> -->
 	  <td> <a href= "{GoogleDoc}#gid={GRank3DocPage}"
 		  target="_blank"> {GroupRank3} info...</a> </td>
 		  
@@ -114,10 +124,12 @@
 	<tr>
 		<td>{GroupRank4}</td>
 		<td>{GRank4Date}</td>
-		<td>{GRank4_event_begin} <a href="https://www.google.com/calendar/render?action=TEMPLATE&text={GAME_TITLE}&dates=2023{GRank4DateCal}T130000/2023{GRank4DateCal}T180000&details=Swan%20scheduled%20{GroupRank4}%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&location=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050 "
-	      target="_blank"> Add Event </a> {GRank4_event_end}</td>
-		<td>{GRank4_event_begin} <a href="http://calendar.yahoo.com/?v=60&view=d&type=20&TITLE={GAME_TITLE}&ST=2023{GRank4DateCal}T130000&ET=2023{GRank4DateCal}T180000&DESC=Swan%20scheduled%20{GroupRank4}%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&in_loc=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050 "
-	      target="_blank"> Add Event </a> {GRank4_event_end}</td>
+		<td>{GRank4_event_begin} 
+			<a href="https://www.google.com/calendar/render?action=TEMPLATE&text={GAME_TITLE}&dates=2023{GRank4DateCal}T130000/2023{GRank4DateCal}T180000&details=Swan%20scheduled%20{GroupRank4}%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&location=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050 "
+				target="_blank"> Google &#x1F4C5 Event </a>  &nbsp&nbsp&nbsp
+			<a href="http://calendar.yahoo.com/?v=60&view=d&type=20&TITLE={GAME_TITLE}&ST=2023{GRank4DateCal}T130000&ET=2023{GRank4DateCal}T180000&DESC=Swan%20scheduled%20{GroupRank4}%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&in_loc=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050 "
+				target="_blank"> Yahoo &#x1F4C5 Event </a>	
+            {GRank4_event_end}</td>
       <td> <a href="{GoogleDoc}#gid={GRank4DocPage}"
 			  target="_blank"> {GroupRank4} info...</a> </td>
     </tr>
@@ -260,9 +272,9 @@
 		//finalResult(3,2,"..3", "...3"); 	
 		
 	//Group2
-   finalResult( 2, 0);
-		finalResult(2,1,".2", "...2");
-		finalResult(2,2,"..2", "...2"); 
+   //finalResult( 2, -1);
+		finalResult(2,1,"", "<b>Xingang Huang</b>");
+		finalResult(2,2,"", "Dony Oswen"); 
 		
 	//Group1
     //finalResult( 1, -1); //Enable event, Comment this out to mark finish eventCal
