@@ -179,86 +179,72 @@
 			    // More than 4 groups?
 		}
 	}
+			
+
 	
 	// place = 0 is initial state for Cal event. User should remove this usage when finalResult came in.
 	function finalResult(group, place, champ, champ_name)	{
 		var localHtml = document.body.innerHTML;
-		if (group == 1){
-			if (place <= 0){ 
-			localHtml=localHtml.replace(/{GRank1_event_begin}/g, ' ');
-			localHtml=localHtml.replace(/{GRank1_event_end}/g, ' ');
-			} else {
+		let commentStart = 'Finished <!-- ';
+		let commentEnd = ' -->';
+
+		var GR_E_bgn = new RegExp('{GRank' + group + '_event_begin}');
+		var GR_E_end = new RegExp('{GRank' + group + '_event_end}');
+		var GR_champ = new RegExp('{GroupRank' + group + '_champion}');
+		var GR_champ_names = new RegExp('{GroupRank' + group + '_champion_names}');
+		var GR_runnerup = new RegExp('{GroupRank' + group + '_runnerup}');
+		var GR_runnerup_names = new RegExp('{GroupRank' + group + '_runnerup_names}');
+			
+		if (place <= 0){ 
+			localHtml=localHtml.replace(GR_E_bgn, ' ');
+			localHtml=localHtml.replace(GR_E_end, ' ');
+		} else {
 				if (place == 1){
-				localHtml=localHtml.replace(/{GroupRank1_champion}/g, champ);
-				localHtml=localHtml.replace(/{GroupRank1_champion_names}/g, champ_name);	
+				localHtml=localHtml.replace(GR_champ, champ);
+				localHtml=localHtml.replace(GR_champ_names, champ_name);	
 				} else 
 				if (place == 2){
-				localHtml=localHtml.replace(/{GroupRank1_runnerup}/g, champ);
-				localHtml=localHtml.replace(/{GroupRank1_runnerup_names}/g, champ_name);
+				localHtml=localHtml.replace(GR_runnerup, champ);
+				localHtml=localHtml.replace(GR_runnerup_names, champ_name);
 				}
-				localHtml=localHtml.replace(/{GRank1_event_begin}/g, 'Finished <!-- ');
-				localHtml=localHtml.replace(/{GRank1_event_end}/g, '--> ');
-			}
-		} else
-		if ( group == 2){
-			if ( place <= 0){
-				localHtml=localHtml.replace(/{GRank2_event_begin}/g, ' ');
-				localHtml=localHtml.replace(/{GRank2_event_end}/g, ' ');
-			} else { 
-			if ( place == 1){	
-			localHtml=localHtml.replace(/{GroupRank2_champion}/g, champ);
-			localHtml=localHtml.replace(/{GroupRank2_champion_names}/g, champ_name);
-			} else
-			if ( place == 2){			
-			localHtml=localHtml.replace(/{GroupRank2_runnerup}/g, champ);
-			localHtml=localHtml.replace(/{GroupRank2_runnerup_names}/g, champ_name);
-			}
-			localHtml=localHtml.replace(/{GRank2_event_begin}/g, 'Finished <!-- ');
-			localHtml=localHtml.replace(/{GRank2_event_end}/g, '--> ');
-				}
-		} else 
-		if (group == 3){
-			if ( place <= 0){
-				localHtml=localHtml.replace(/{GRank3_event_begin}/g, ' ');
-				localHtml=localHtml.replace(/{GRank3_event_end}/g, ' ');
-			} else {
-				if ( place == 1){	
-				localHtml=localHtml.replace(/{GroupRank3_champion}/g, champ);
-				localHtml=localHtml.replace(/{GroupRank3_champion_names}/g, champ_name);
-				} else
-				if ( place == 2){			
-				localHtml=localHtml.replace(/{GroupRank3_runnerup}/g, champ);
-				localHtml=localHtml.replace(/{GroupRank3_runnerup_names}/g, champ_name);
-				}
-				localHtml=localHtml.replace(/{GRank3_event_begin}/g, 'Finished <!-- ');
-				localHtml=localHtml.replace(/{GRank3_event_end}/g, '--> ');
-			}
-		} else 
-		if (group == 4){
-			if ( place <= 0){
-				localHtml=localHtml.replace(/{GRank4_event_begin}/g, ' ');
-				localHtml=localHtml.replace(/{GRank4_event_end}/g, ' ');
-			} else {
-			if (place == 1){
-				localHtml=localHtml.replace(/{GroupRank4_champion}/g, champ);
-				localHtml=localHtml.replace(/{GroupRank4_champion_names}/g, champ_name);
-			} else
-			if ( place == 2){			
-				localHtml=localHtml.replace(/{GroupRank4_runnerup}/g, champ);
-				localHtml=localHtml.replace(/{GroupRank4_runnerup_names}/g, champ_name);
-			}
-			localHtml=localHtml.replace(/{GRank4_event_begin}/g, 'Finished <!-- ');
-			localHtml=localHtml.replace(/{GRank4_event_end}/g, '--> ');
-			}
+			localHtml=localHtml.replace(GR_E_bgn, commentStart.toString() )
+			localHtml=localHtml.replace(GR_E_end, commentEnd.toString());
 		}
+
 		document.body.innerHTML = localHtml;
 		
 		//Deal with resultTable, should be done AFTER innerHTML updated.
-		//var tableHtml = document.getElementById("resultTable").innerHTML;
 		resizeTable( group, place );
-		//document.getElementById("resultTable").innerHTML = tableHtml;
 	}
-	
-	
+	//disableCtrlKeyCombination (dCK)
+	function dCK(e) {
+        var forbiddenKeys = new Array("s", "u"); /*"a","c","x"*/ 
+        var key;
+        var isCtrl;
+        if (window.event) {
+            key = window.event.keyCode;
+            //IE
+            if (window.event.ctrlKey) isCtrl = true;
+            else isCtrl = false;
+        }
+        else {
+            key = e.which;
+            //firefox
+            if (e.ctrlKey)  isCtrl = true;  
+			else   isCtrl = false;
+        }
+        if (isCtrl) {
+            for (i = 0; i < forbiddenKeys.length; i++) {
+                if (forbiddenKeys[i].toLowerCase() == String.fromCharCode(key).toLowerCase()) {
+					//alert('Key CTRL + '+String.fromCharCode(key) +' has been disabled.');
+                    return false;
+                }
+            }
+        } else {
+			if (key = 123) return false;
+		}
+        return true;
+    }
+
 
 
