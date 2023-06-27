@@ -120,44 +120,6 @@
 		
 	}
 	
-	function updateEvents(gp, flag){ 
-			var localHtml = document.body.innerHTML;
-		if (gp == 1){
-			if (flag == 0){
-			localHtml=localHtml.replace(/{GRank1_event_begin}/g, 'Finished <!-- ');
-			localHtml=localHtml.replace(/{GRank1_event_end}/g, '--> ');
-			} else {
-			localHtml=localHtml.replace(/{GRank1_event_begin}/g, ' ');
-			localHtml=localHtml.replace(/{GRank1_event_end}/g, ' ');
-			}
-		} else if (gp == 2) {
-			if (flag == 0){
-			localHtml=localHtml.replace(/{GRank2_event_begin}/g, 'Finished <!-- ');
-			localHtml=localHtml.replace(/{GRank2_event_end}/g, '--> ');
-			} else {
-			localHtml=localHtml.replace(/{GRank2_event_begin}/g, ' ');
-			localHtml=localHtml.replace(/{GRank2_event_end}/g, ' ');
-			}
-		} else if (gp == 3) {
-			if (flag == 0){
-			localHtml=localHtml.replace(/{GRank3_event_begin}/g, 'Finished <!-- ');
-			localHtml=localHtml.replace(/{GRank3_event_end}/g, '--> ');
-			} else {
-			localHtml=localHtml.replace(/{GRank3_event_begin}/g, ' ');
-			localHtml=localHtml.replace(/{GRank3_event_end}/g, ' ');
-			}
-		} else if (gp == 4) {
-			if (flag == 0){
-			localHtml=localHtml.replace(/{GRank4_event_begin}/g, 'Finished <!-- ');
-			localHtml=localHtml.replace(/{GRank4_event_end}/g, '--> ');
-			} else {
-			localHtml=localHtml.replace(/{GRank4_event_begin}/g, ' ');
-			localHtml=localHtml.replace(/{GRank4_event_end}/g, ' ');
-			}
-		}
-		document.body.innerHTML = localHtml;
-	}
-	
 	function resizeTable( group, place){
 		if ( group == 1){
 			if ( place == 0){
@@ -188,12 +150,12 @@
 		let commentStart = 'Finished <!-- ';
 		let commentEnd = ' -->';
 
-		var GR_E_bgn = new RegExp('{GRank' + group + '_event_begin}');
-		var GR_E_end = new RegExp('{GRank' + group + '_event_end}');
-		var GR_champ = new RegExp('{GroupRank' + group + '_champion}');
-		var GR_champ_names = new RegExp('{GroupRank' + group + '_champion_names}');
-		var GR_runnerup = new RegExp('{GroupRank' + group + '_runnerup}');
-		var GR_runnerup_names = new RegExp('{GroupRank' + group + '_runnerup_names}');
+		var GR_E_bgn = new RegExp('{GRank' + group + '_event_begin}', 'gi');
+		var GR_E_end = new RegExp('{GRank' + group + '_event_end}', 'gi');
+		var GR_champ = new RegExp('{GroupRank' + group + '_champion}', 'gi');
+		var GR_champ_names = new RegExp('{GroupRank' + group + '_champion_names}', 'gi');
+		var GR_runnerup = new RegExp('{GroupRank' + group + '_runnerup}', 'gi');
+		var GR_runnerup_names = new RegExp('{GroupRank' + group + '_runnerup_names}', 'gi');
 			
 		if (place <= 0){ 
 			localHtml=localHtml.replace(GR_E_bgn, ' ');
