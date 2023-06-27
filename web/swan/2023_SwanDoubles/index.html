@@ -1,23 +1,25 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
 <meta charset="UTF-8">
-<title>2023 Swan Doubles</title>
+<title>2023 Swan Singles</title>
 <link rel="stylesheet" href="../css/style.css" type="text/css">
 <link rel="icon" type="image/png" href="../images/logo.png">
 	<script src='../lib/jquery.min.js'></script>
     <script src="../swan.js"></script>  
+	<script src='../groupgames.js'></script>
     <script>
     	loadCommon("index");
     </script>
 	
 <!-- CSS Code: Place this code in the document's head (between the 'head' tags) -->
-<style>
-<!-- groupsTable moved to css style sheet
-</style>
+
 <!-- end CSS Code -->
 
 </head>
-<body>
+<!-- oncontextmenu="return false";  -->
+<body oncontextmenu="return false"; onkeypress="return dCK(event);" onkeydown="return dCK(event);">
 	<div id="background">
 		<div id="page">
 			<div id="header">
@@ -31,24 +33,24 @@
 							<!-- <a href="../index.html"><img class="logo-right" src="../images/logo-45.png" alt="Swan homepage></a> -->
 							</div>
 
-							<h2>2023 Swan Doubles &#x1F3D3 </h2>
-							<h3>2023 天鹅双打 U2900, U3200, U3800, U4500 大赛</h3>
+							<h2>{GAME_TITLE}  &#x1F3D3 </h2>
+							<h3>2023 天鹅 {GroupRank1}, {GroupRank2} {GroupRank3}, {GroupRank4}  大赛</h3>
 							
 							<table class="table">
 								<tbody>
 								<tr>
 								<td width="620px">
 								<ul>
-								<li>Registration Information &#x1F4E2: <a href="./announcement.png " target="_blank"> Flyer</a></li>
-								<li>Time: 1:00pm - 6:00pm June 10 - June 18</li>
-								<li>Registration fee: $60 per team.</li>
-								<li>Organzing committee: <br/>James Chai  <br/> </li>
-								<li>Chair: James Chai &#x1F4F2 (408)636-3262 </li>
+								<li>Registration Information &#x1F4E2: <a href="./announcement.jpg" target="_blank"> Flyer</a></li>
+								<li>Time: 12:00pm - 6:00pm June 24 - June 25</li>
+								<li>Registration fee: $30 </li>
+
+								<li>Event Contact: James Chai &#x1F4F2 (408)636-3262 </li>
 								<li> Send Registration Email to <a href="mailto:james.chai@gmail.com"> james.chai@gmail.com</a> </li>
-								<li> Contact email: <a href="mailto:pingpong.community@gmail.com"> pingpong.community@gmail.com</a> </li>
+				
 								<li> Zelle: pingpong.community@gmail.com </li>
 								<li> Venmo : @SWANPPC </li>
-								<li> Note: Please include the team and event name in your payment</li>
+								<li> Note: Please include the event-name and your name in the payment</li>
 								<!-- <li> Wechat group: scan QR code on right &#x02192 </li> -->
 								</ul>
 								</td>
@@ -59,147 +61,235 @@
 								</tbody>
 							</table>
 					
-							
+
 <!-- HTML Code: Place this code in the document's body (between the 'body' tags) where the table should appear -->
-<table class="groupsTable">
+<table id=groupsTableID class="groupsTable">
   <thead>
     <tr>
       <th>Group</th>
 	  <th>Date</th>
-	  <th> + Google &#x1F4C5; </th>
-	  <th> + Yahoo &#x1F4C5; </th>
-      <th>Result</th>
+	  <th> + Reminder </th>
+
+      <th>Players/Result</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-		<td>U2900</td>
-		<td> 6/10 </td>
-		<td><a " "
-	      target="_blank"> Add Event </a></td>
-		<td><a " "
-	      target="_blank"> Add Event</a></td>
-                <td> <a href="https://docs.google.com/spreadsheets/d/10kNofEEhUFWwu9o7T_GbL-HVEfwtzbsCldNoqr5ADVc/edit#gid=779985971"
-		      target="_blank"> link...</a> 
-	      <!-- "https://docs.google.com/spreadsheets/d/13-QMx8R8IA82lo6YDGaAuDI7_hX-L7-PVM0e55DPHhQ/edit#gid=469343062"  -->
-	  </td>
+	    <td>{GroupRank1}</td>
+	    <td>{GRank1Date}</td>
+	    <td>{GRank1_event_begin} 
+		  <a href="https://www.google.com/calendar/render?action=TEMPLATE&text={GAME_TITLE}&dates=2023{GRank1DateCal}T130000/2023{GRank1DateCal}T180000&details=Swan%20reminder%20{GroupRank1}%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&location=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050"
+	      target="_blank"> Google &#x1F4C5 Event </a> ,&nbsp&nbsp&nbsp   
+		  <a href="http://calendar.yahoo.com/?v=60&view=d&type=20&TITLE={GAME_TITLE}&ST=2023{GRank1DateCal}T130000&ET=2023{GRank1DateCal}T180000&DESC=Swan%20reminder%20{GroupRank1}%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&in_loc=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050 "
+	      target="_blank"> Yahoo &#x1F4C5 Event </a> 
+		  {GRank1_event_end}  </td>
+        <td> <a href="{GoogleDoc}#gid={GRank1DocPage}"
+		      target="_blank"> {GroupRank1} info...</a> 
+		</td>
     </tr>
     <tr>
-      <td>U3200</td>
-	  <td>6/17</td>
-	  <td> <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=2023%20Swan%20Doubles&dates=20230617T130000/20230617T180000&details=Swan%20signed%20up%20U3200%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&location=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050"
-	      target="_blank"> Add Event </a> </td>
-	  <td> <a href="http://calendar.yahoo.com/?v=60&view=d&type=20&TITLE=2023%20Swan%20Doubles&ST=20230617T130000&ET=20230617T180000&DESC=Swan%20signed%20up%20U3200%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&in_loc=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050 "
-	      target="_blank"> Add Event </a> </td>
-	  <td> <a href= "https://docs.google.com/spreadsheets/d/10kNofEEhUFWwu9o7T_GbL-HVEfwtzbsCldNoqr5ADVc/edit#gid=0"
-		  target="_blank"> link... </a> </td>
+	    <td>{GroupRank2}</td>
+	    <td>{GRank2Date}</td>
+	    <td> {GRank2_event_begin} 
+		<a href="https://www.google.com/calendar/render?action=TEMPLATE&text={GAME_TITLE}&dates=2023{GRank2DateCal}T130000/2023{GRank2DateCal}T180000&details=Swan%20reminder%20{GroupRank2}%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&location=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050"
+	      target="_blank"> Google &#x1F4C5 Event </a> ,&nbsp&nbsp&nbsp
+		<a href="http://calendar.yahoo.com/?v=60&view=d&type=20&TITLE={GAME_TITLE}&ST=2023{GRank2DateCal}T130000&ET=2023{GRank2DateCal}T180000&DESC=Swan%20reminder%20{GroupRank2}%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&in_loc=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050 "
+	      target="_blank"> Yahoo &#x1F4C5 Event </a> 
+		  {GRank2_event_end} </td>
+		<td> <a href= "{GoogleDoc}#gid={GRank2DocPage}"
+		  target="_blank"> {GroupRank2} info... </a> </td>
 	  <!-- mirror "https://docs.google.com/spreadsheets/d/1Mur3wTZsF4QBV-uASa1pxsW2oRmYIzwMd6bzI_AMiXs/edit#gid=1996385974" -->
     </tr>
     <tr>
-      <td>U3800</td>
-	  	  <td>6/11</td>
-		  <td> <a " "
-	      target="_blank"> Add Event </a> </td>
-		  <td> <a " "
-	      target="_blank"> Add Event </a> </td>
-		  <td> <a href="https://docs.google.com/spreadsheets/d/10kNofEEhUFWwu9o7T_GbL-HVEfwtzbsCldNoqr5ADVc/edit#gid=1958273252"
-			  target="_blank"> link... </a> </td>
-		  <!-- "https://docs.google.com/spreadsheets/d/13-QMx8R8IA82lo6YDGaAuDI7_hX-L7-PVM0e55DPHhQ/edit#gid=523620735"  -->
-	      
+	    <td>{GroupRank3}</td>
+	    <td>{GRank3Date}</td>
+	    <td> {GRank3_event_begin} 
+			<a href="https://www.google.com/calendar/render?action=TEMPLATE&text={GAME_TITLE}&dates=2023{GRank3DateCal}T130000/2023{GRank3DateCal}T180000&details=Swan%20reminder%20{GroupRank3}%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&location=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050"
+				target="_blank"> Google &#x1F4C5 Event </a> ,&nbsp&nbsp&nbsp
+			<a href="http://calendar.yahoo.com/?v=60&view=d&type=20&TITLE={GAME_TITLE}&ST=2023{GRank3DateCal}T130000&ET=2023{GRank3DateCal}T180000&DESC=Swan%20reminder%20{GroupRank3}%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&in_loc=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050 "
+				target="_blank"> Yahoo &#x1F4C5 Event </a>, 
+		  {GRank3_event_end}</td>
+	  <td> <a href= "{GoogleDoc}#gid={GRank3DocPage}"
+		  target="_blank"> {GroupRank3} info...</a> </td>
+		  
     </tr>
 	<tr>
-      <td>U4500</td>
-	  <td>6/18</td>
-	  <td> <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=2023%20Swan%20Doubles&dates=20230618T130000/20230618T180000&details=Swan%20scheduled%20U4500%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&location=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050 "
-	      target="_blank"> Add Event </a> </td>
-	  <td> <a href="http://calendar.yahoo.com/?v=60&view=d&type=20&TITLE=2023%20Swan%20Doubles&ST=20230618T130000&ET=20230618T180000&DESC=Swan%20scheduled%20U4500%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&in_loc=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050 "
-	      target="_blank"> Add Event </a> </td>
-      <td> <a href="https://docs.google.com/spreadsheets/d/10kNofEEhUFWwu9o7T_GbL-HVEfwtzbsCldNoqr5ADVc/edit#gid=539062678"
-			  target="_blank"> link...</a> </td>
-      <!-- mirror "https://docs.google.com/spreadsheets/d/1Mur3wTZsF4QBV-uASa1pxsW2oRmYIzwMd6bzI_AMiXs/edit#gid=0" -->
+		<td>{GroupRank4}</td>
+		<td>{GRank4Date}</td>
+		<td>{GRank4_event_begin} 
+			<a href="https://www.google.com/calendar/render?action=TEMPLATE&text={GAME_TITLE}&dates=2023{GRank4DateCal}T130000/2023{GRank4DateCal}T180000&details=Swan%20scheduled%20{GroupRank4}%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&location=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050 "
+				target="_blank"> Google &#x1F4C5 Event </a>  &nbsp&nbsp&nbsp
+			<a href="http://calendar.yahoo.com/?v=60&view=d&type=20&TITLE={GAME_TITLE}&ST=2023{GRank4DateCal}T130000&ET=2023{GRank4DateCal}T180000&DESC=Swan%20scheduled%20{GroupRank4}%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&in_loc=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050 "
+				target="_blank"> Yahoo &#x1F4C5 Event </a>	
+            {GRank4_event_end}</td>
+		<td> <a href="{GoogleDoc}#gid={GRank4DocPage}"
+			  target="_blank"> {GroupRank4} info...</a> </td>
     </tr>
   </tbody>
 </table>
 <!-- Codes by Quackit.com -->
 															
-							<table class="history-table">
+							<table id=resultTable class="history-table">
+
 								<tbody>
-									<tr>
-										<td width="36%">
-											<p>
-												&#x1F947 U3800 Champion: Lang Yan <br />
-												Lang Deng <br/>
-												Yan He 
-											</p>
-										</td>
-										<td><img src="u3800_champion.jpeg" alt="Lang Yan"/></td>
-									</tr>
-									<tr>
-										<td width="36%">
-											<p>
-												&#x1F948 Runner up: 黑象 <br />
-											    Hui Su <br/>
-												Shawn Wang										
-											</p>
-										</td>
-										<td><img src="u3800_runnerup.JPG" alt="黑象"/></td>
-									</tr>
 
 									<tr>
 										<td width="36%">
 											<p>
-												&#x1F947 U3200 Champion: The Dragon <br />
-												Tom Ruan <br/>
-												Michael Xu<br/>
+											&#x1F947 {GroupRank1} Champion: {GroupRank1_champion} <br />
+												{GroupRank1_champion_names}<br/>
 											</p>
 										</td>
-										<td><img src="u3200dbl_champion.JPG" alt="The Dragon"/></td>
+										<td><img src="{GroupRank1}_champion.JPG" alt="{GroupRank1_champion}" width="300px" height="400px" style="vertical-align: middle; padding: 5px;"/></td>
 									</tr>
 									<tr>
 										<td width="36%">
 											<p>
-												&#x1F948 U3200 Runner up:  流烟再試<br />
-											    Yan He <br/>
-												Xu Liu										
-											</p>
-										</td>
-										<td><img src="u3200dbl_runnerup.JPG" alt="流烟再試" </td>
-									</tr>
+											&#x1F948 {GroupRank1} Runner up: {GroupRank1_runnerup} <br />
+											    {GroupRank1_runnerup_names}<br/>
 									
+											</p>
+										</td>
+										<td><img src="{GroupRank1}_runnerup.JPG" alt="{GroupRank1_runnerup}"/></td>
+									</tr>
+<!-- {GRank2_table_begin} -->
+
 									<tr>
 										<td width="36%">
 											<p>
-												&#x1F947 U4500 Champion: Pips Mafia Plus <br />
-												Yaroslav Zubets<br/>
-												James Chai<br/>
+											&#x1F947 {GroupRank2} Champion: {GroupRank2_champion} <br />
+												{GroupRank2_champion_names}<br/>
+
 											</p>
 										</td>
-										<td><img src="u4500dbl_champion.JPG" alt="Pips Mafia Plus"/></td>
+										<td><img src="{GroupRank2}_champion.JPG" alt="{GroupRank2_champion}"/></td>
 									</tr>
 									<tr>
 										<td width="36%">
 											<p>
-												&#x1F948 U4500 Runner up:  TAnishs<br />
-											    Tanish Balamurugan <br/>
-												Sai Anish Karthik Sivakumar<br/>
-																						
+											&#x1F948 {GroupRank2} Runner up:  {GroupRank2_runnerup}<br />
+											    {GroupRank2_runnerup_names} <br/>
+									
 											</p>
 										</td>
-										<td><img src="u4500dbl_runnerup.JPG" alt="TAnishs" </td>
+										<td><img src="{GroupRank2}_runnerup.JPG" alt="{GroupRank2_runnerup}" </td>
+									</tr>
+
+<!-- {GRank2_table_end} -->
+<!-- group -->
+									<tr>
+										<td width="36%">
+											<p>
+											&#x1F947 {GroupRank3} Champion: {GroupRank3_champion} <br />
+												{GroupRank3_champion_names}<br/>
+												
+											</p>
+										</td>
+										<td><img src="{GroupRank3}_champion.JPG" alt="{GroupRank3_champion}"/></td>
+									</tr>
+									<tr>
+										<td width="36%">
+											<p>
+											&#x1F948 {GroupRank3} Runner up:  {GroupRank3_runnerup}<br />
+											    {GroupRank3_runnerup_names}<br/>
+											
+											</p>
+										</td>
+										<td><img src="{GroupRank3}_runnerup.JPG" alt="{GroupRank3_runnerup}" </td>
+									</tr>
+<!-- end disable group -->
+<!-- group -->
+									<tr>
+										<td width="36%">
+											<p>
+											&#x1F947 {GroupRank4} Champion: {GroupRank4_champion} <br />
+												{GroupRank4_champion_names} <br/>
+											</p>
+										</td>
+										<td><img src="{GroupRank4}_champion.JPG" alt="{GroupRank4_champion}"/></td>
+									</tr>
+									<tr>
+										<td width="36%">
+											<p>
+											&#x1F948 {GroupRank4} Runner up:  {GroupRank4_runnerup}<br />
+											    {GroupRank4_runnerup_names} <br/>
+																					
+											</p>
+										</td>
+										<td><img src="{GroupRank4}_runnerup.JPG" alt="{GroupRank4_runnerup}" </td>
+									</tr>
+<!-- end disable group -->
+
+								</tbody>
+
+							</table>
+					
+<!-- 							<table class="video-table">
+								<tbody>
+									<tr>
+										<td width="36%">
+											<p>
+												<a href="https://www.youtube.com/live/cGUiPUIjnp4?feature=share&t=7364s" target="_blank" > {GroupRank1} {GRank1Date}/2023 Video Finals📹</a>
+											</p>
+										</td>
+										<td>
+										<div id="idYouTubeIconHtml" onclick="window.open('https://www.youtube.com/live/cGUiPUIjnp4?feature=share&t=7364s');"></div>
+										</td>
 									</tr>
 								</tbody>
-							</table>
+							</table> -->
+							
 							<h2> Past Events </h2>
-							<iframe width="550px" height="150px" src="../pastevents/eventlist.html" frameborder="1" ></iframe>
+							<iframe width="550px" height="150px" src="../pastevents/eventlist.html" frameborder="1" oncontextmenu="return false"></iframe>
 							<h2> &#x1F3D3 </h2>
 						</div>
 					</div>
 
 				</div>
-				
+
 				<div id="footer">
 				</div>
 			</div>
+			
+
+<script>
+/* Comment Block
+// (group, place, alias, players_name)
+// finalResult(group,place,alias,names(s) e.g."<b>player1</b>, <br/> player2 <br/>");
+//             place=0 to initialize table
+// U2100_champion.JPG U2100_runnerup.JPG 
+*/	
+
+	updateGameTitle('2023 Swan Doubles'); 
+ 	updateGroups('U3800', 'U3200','U4500', 'U2900');
+	updateGroupsDate('6/11','0611', '6/17','0617', '6/18','0618', '6/10','0610');
+	
+	updateDoc('https://docs.google.com/spreadsheets/d/10kNofEEhUFWwu9o7T_GbL-HVEfwtzbsCldNoqr5ADVc/edit')
+	updateGroupsPid(  '1958273252', '0', '539062678', '779985971');
+	
+	/* Reverse order processing for proper table resizing*/
+	
+	//Group4
+    //finalResult( 4, 0);	
+		finalResult(4,1,"TJ", "<b>Tengjiao Chen,<br/>Johnny Zhang<br></b>");
+		finalResult(4,2,"Hurricane", "JunWei Hou,<br>Brian Huang<br>"); 	
+		
+	//Group3
+    //finalResult( 3, 0);
+		finalResult(3,1,"Pips Mafia Plus", "<b>Yaroslav Zubets<br/>James Chai<br/></b>");
+		finalResult(3,2,"TAnishs", "Tanish Balamurugan <br/>Sai Anish Karthik Sivakumar<br/>"); 	
+		
+	//Group2
+   //finalResult( 2, -1);
+		finalResult(2,1,"The Dragon", "<b>Tom Ruan <br/>Michael Xu<br/></b>");
+		finalResult(2,2,"流烟再試", "Yan He <br/>Xu Liu"); 
+		
+	//Group1
+    //finalResult( 1, -1); //Enable event, Comment this out to mark finish eventCal
+		finalResult( 1, 1,"Lang Yan", "<b>Lang Deng <br/> Yan He <br\> </b>");
+		finalResult(1, 2,"黑象", "Hui Su <br/>Shawn Wang	<br\>");
+</script>			
+			
 		</div>
 	</div>
 </body>
