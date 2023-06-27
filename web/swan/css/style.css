@@ -819,7 +819,7 @@ table.groupsTable thead {
   background-color: #ffcc00;
 }
 
-#idYouTubeIconHtml{background:red;border-radius:25%/12%;color:white;cursor:pointer;height:35px;font-size:20px;line-height:28px;position:relative;text-align:center;text-indent:10%;width:45.5px;}
+#idYouTubeIconHtml{background:red;border-radius:25%/12%;color:white;cursor:pointer;height:35px;font-size:20px;line-height:28px;position:relative;text-align:center;text-indent:10%;width:55px;}
 #idYouTubeIconHtml:before{background:inherit;border-radius:5%/30%;bottom:10%;content:'\25B6';left:-5%;position:absolute;right:-5%;top:10%;}
 #idYouTubeIconHtml:hover{background:#f66;}
 
