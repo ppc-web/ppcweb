@@ -224,27 +224,47 @@
 
 							</table>
 					
-							<table id=resultTable class="history-table">
+							<table id=videoTable class="history-table">
 								<tbody>
 									<tr>
-										<td width="36%">
+										<td width="30%">
 											<p>
-												<a href="https://tinyurl.com/2899y59y" target="_blank" > {GroupRank1} {GRank1Date}/2023 Finals Video📹</a> 
-												<span> &nbsp;</span>
+												<a href="{GRank1Video}" target="_blank" > {GroupRank1} {GRank1Date}{GRank1VideoTitle}&nbsp📹</a> 
 											</p>
 										</td>
 										<td>
-											<p>
-											<div id="idYouTubeIconHtml2" 
+						       
+										<iframe width="480" height="270" src="https://www.youtube.com/embed/cGUiPUIjnp4" title="Swan u2100 league 6/24/2023" 
+												frameborder="0" allow="accelerometer;  encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+<!-- 											<p>
+ 											<div id="idYouTubeIconHtml2" 
 											     onclick="window.open('https://tinyurl.com/2899y59y');" 
 											     title="{GroupRank1} on utube"></div>
-											</p>
+											</p> 
+-->
 										</td>
 									</tr>
+
+<!-- 									<tr>
+										<td width="30%">
+											<p>
+												<a href="{GRank2Video}" target="_blank" > {GroupRank2} {GRank2Date}{GRank2VideoTitle}&nbsp📹</a> 
+											</p>
+										</td>
+										<td>
+						       
+										<iframe width="480" height="270" src="https://www.youtube.com/embed/cGUiPUIjnp4" title="Swan {GroupRank2} {GRank2Date}" 
+												frameborder="0" allow="accelerometer;  encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy">
+												</iframe>
+
+										</td>
+									</tr> 
+-->
+
 								</tbody>
 							</table>
 							<h2> Past Events </h2>
-							<iframe width="550px" height="150px" src="../pastevents/eventlist.html" frameborder="1" oncontextmenu="return false"></iframe>
+							<iframe width="550px" height="150px" src="../pastevents/eventlist.html" frameborder="1"  ></iframe>
 							<h2> &#x1F3D3 </h2>
 						</div>
 					</div>
@@ -258,7 +278,7 @@
 
 <script>
 /* Comment Block
-// (group, place, alias, players_name)
+// 
 // finalResult(group,place,alias,names(s) e.g."<b>player1</b>, <br/> player2 <br/>");
 //             place=0 to initialize table
 // U2100_champion.JPG U2100_runnerup.JPG 
@@ -272,7 +292,7 @@
 	updateGroupsPid('1308111473', '727693339', '0', '0');
 	
 	/* Reverse order processing for proper table resizing*/
-	
+
 	//Group4
     finalResult( 4, 0);	
 		finalResult(4,1,".4", "...4");
@@ -285,13 +305,21 @@
 		
 	//Group2
    //finalResult( 2, -1);
-		finalResult(2,1,"", "<b>Xingang Huang</b>");
+	finalResult(2,1,"", "<b>Xingang Huang</b>");
 		finalResult(2,2,"", "Dony Oswen"); 
 		
 	//Group1
     //finalResult( 1, -1); //Enable event, Comment this out to mark finish eventCal
-		finalResult( 1, 1," ", "<b>Derrick Phan</b><br\>");
+	finalResult( 1, 1," ", "<b>Derrick Phan</b><br\>");
 		finalResult(1, 2," ", "Ma Yi<br\>");
+	
+<!-- 	
+	finalVideo( 4, 0, "https://tinyurl.com/2899y59y", '/2023 ' );
+	finalVideo( 3, 0, "https://tinyurl.com/2899y59y", "/2023 "); 
+-->
+	finalVideo( 2, 0, "https://tinyurl.com/2899y59y", "/2023 HaHa" );
+	finalVideo( 1, 1, "https://tinyurl.com/2899y59y", "/2023 Finals");
+	
 </script>			
 			
 		</div>

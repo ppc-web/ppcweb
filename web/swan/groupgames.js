@@ -120,11 +120,12 @@
 		
 	}
 	
+	
 	function resizeTable( group, place){
 		if ( group == 1){
 			if ( place == 0){
-				//document.getElementById("resultTable").deleteRow(0);
-				//document.getElementById("resultTable").deleteRow(1);
+				document.getElementById("resultTable").deleteRow(0);
+				document.getElementById("resultTable").deleteRow(1);
 			} else 
 			if ( place == -1 ){
 				document.getElementById("resultTable").deleteRow(1);
@@ -134,6 +135,7 @@
 		if ( group > 1 && group<= 4){
 			if ( place == 0){
 				var entry = (group-1) *2;
+				// winner & runnerup placeholders
 				document.getElementById("resultTable").deleteRow(entry+1);
 				document.getElementById("resultTable").deleteRow(entry);
 			} 
@@ -141,9 +143,17 @@
 			    // More than 4 groups?
 		}
 	}
-			
-
 	
+	function resizeVideoTable(group, flag){
+		if ( group >= 1 && group<= 4){
+			if ( flag == 0){
+				document.getElementById("videoTable").deleteRow(group-1);
+			} 
+		} else {
+			    // More than 4 groups?
+		}
+	}	
+
 	// place = 0 is initial state for Cal event. User should remove this usage when finalResult came in.
 	function finalResult(group, place, champ, champ_name)	{
 		var localHtml = document.body.innerHTML;
@@ -174,10 +184,22 @@
 		}
 
 		document.body.innerHTML = localHtml;
-		
 		//Deal with resultTable, should be done AFTER innerHTML updated.
 		resizeTable( group, place );
 	}
+	
+	function finalVideo( group, flag, vlink, title ){
+		var localHtml = document.body.innerHTML;
+		var GR_V = new RegExp('{GRank' + group + 'Video}', 'g');
+		var GR_VTITLE = new RegExp('{GRank' + group + 'VideoTitle}', 'g');
+		if (flag==1){
+			localHtml=localHtml.replace(GR_V, vlink);
+			localHtml=localHtml.replace(GR_VTITLE, title);
+		}
+		document.body.innerHTML = localHtml;
+		//resizeVideoTable( group, flag );
+	}
+	
 	//disableCtrlKeyCombination (dCK)
 	function dCK(e) {
         var forbiddenKeys = new Array("s", "u"); /*"a","c","x"*/ 
