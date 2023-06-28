@@ -823,6 +823,10 @@ table.groupsTable thead {
 #idYouTubeIconHtml:before{background:inherit;border-radius:5%/30%;bottom:10%;content:'\25B6';left:-5%;position:absolute;right:-5%;top:10%;}
 #idYouTubeIconHtml:hover{background:#f66;}
 
+#idYouTubeIconHtml2{background:red;border-radius:25%/12%;color:white;cursor:pointer;height:55px;font-size:45px;line-height:44px;position:relative;text-align:center;text-indent:10%;width:71.5px;}
+#idYouTubeIconHtml2:before{background:inherit;border-radius:5%/30%;bottom:10%;content:'\25B6';left:-5%;position:absolute;right:-5%;top:10%;}
+#idYouTubeIconHtml2:hover{background:#f66;}
+
 .rotateimg90 {
   -webkit-transform:rotate(90deg);
   -moz-transform: rotate(90deg);
