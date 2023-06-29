@@ -18,7 +18,7 @@
 <!-- end CSS Code -->
 
 </head>
-<!-- oncontextmenu="return false";  -->
+
 <body oncontextmenu="return false"; onkeypress="return dCK(event);" onkeydown="return dCK(event);">
 	<div id="background">
 		<div id="page">
@@ -63,7 +63,10 @@
 					
 
 <!-- HTML Code: Place this code in the document's body (between the 'body' tags) where the table should appear -->
-<table id=groupsTableID class="groupsTable">
+
+<!-- <div include-custom-html="./content.html"> </div>  -->
+
+ <table id=groupsTableID class="groupsTable" >
   <thead>
     <tr>
       <th>Group</th>
@@ -73,15 +76,15 @@
       <th>Players/Result</th>
     </tr>
   </thead>
-  <tbody>
-    <tr>
 
+<tbody>
+    <tr>
 	    <td>{GroupRank1}</td>
 	    <td>{GRank1Date}</td>
 	    <td>{GRank1_event_begin} 
 		<a href="{GRank1_Google}"
-		  target="_blank"> Google &#x1F4C5 Event </a> ,&nbsp&nbsp&nbsp   
-		  <a href="{GRank1_Yahoo}"
+		  target="_blank"> Google &#x1F4C5 Event </a>, &nbsp&nbsp&nbsp
+		<a href="{GRank1_Yahoo}"
 		  target="_blank"> Yahoo &#x1F4C5 Event </a> 
 		  {GRank1_event_end}  </td>
         <td> <a href="{GoogleDoc}#gid={GRank1DocPage}"
@@ -93,10 +96,10 @@
 	    <td>{GRank2Date}</td>
 	    <td> {GRank2_event_begin} 
 		<a href="{GRank2_Google}"
-	      target="_blank"> Google &#x1F4C5 Event </a> ,&nbsp&nbsp&nbsp
+		  target="_blank"> Google &#x1F4C5 Event </a>, &nbsp&nbsp&nbsp
 		<a href="{GRank2_Yahoo}"
-	      target="_blank"> Yahoo &#x1F4C5 Event </a> 
-		  {GRank2_event_end} </td>
+		  target="_blank"> Yahoo &#x1F4C5 Event </a> 
+		  {GRank1_event_end}  </td>
 		<td> <a href= "{GoogleDoc}#gid={GRank2DocPage}"
 		  target="_blank"> {GroupRank2} info... </a> </td>
 	  <!-- mirror "https://docs.google.com/spreadsheets/d/1Mur3wTZsF4QBV-uASa1pxsW2oRmYIzwMd6bzI_AMiXs/edit#gid=1996385974" -->
@@ -106,9 +109,9 @@
 	    <td>{GRank3Date}</td>
 	    <td> {GRank3_event_begin} 
 			<a href="{GRank3_Google}"
-				target="_blank"> Google &#x1F4C5 Event </a> ,&nbsp&nbsp&nbsp
+				target="_blank"> Google &#x1F4C5 Event </a>, &nbsp&nbsp&nbsp
 			<a href="{GRank3_Yahoo}"
-				target="_blank"> Yahoo &#x1F4C5 Event </a>, 
+				target="_blank"> Yahoo &#x1F4C5 Event </a> 
 		  {GRank3_event_end}</td>
 	  <td> <a href= "{GoogleDoc}#gid={GRank3DocPage}"
 		  target="_blank"> {GroupRank3} info...</a> </td>
@@ -119,15 +122,16 @@
 		<td>{GRank4Date}</td>
 		<td>{GRank4_event_begin} 
 			<a href="{GRank4_Google}"
-				target="_blank"> Google &#x1F4C5 Event </a>  &nbsp&nbsp&nbsp
+				target="_blank"> Google &#x1F4C5 Event </a>, &nbsp&nbsp&nbsp
 			<a href="{GRank4_Yahoo}"
 				target="_blank"> Yahoo &#x1F4C5 Event </a>	
             {GRank4_event_end}</td>
 		<td> <a href="{GoogleDoc}#gid={GRank4DocPage}"
 			  target="_blank"> {GroupRank4} info...</a> </td>
     </tr>
-  </tbody>
+</tbody>
 </table>
+
 <!-- Codes by Quackit.com -->
 															
 							<table id=resultTable class="history-table">
@@ -284,11 +288,13 @@
 <!-- -->
 								</tbody>
 							</table>
+
 							<h2> Past Events </h2>
 							<iframe width="550px" height="150px" src="../pastevents/eventlist.html" frameborder="1"  ></iframe>
 							<h2> &#x1F3D3 </h2>
 						</div>
 					</div>
+
 
 				</div>
 				<div id="footer">
@@ -297,12 +303,10 @@
 			
 <script>
 /* Comment Block
-// 
 // finalResult(group,place,alias,names(s) e.g."<b>player1</b>, <br/> player2 <br/>");
 //             place:0 to initialize table, -1 to finishit off
-// U2100_champion.JPG U2100_runnerup.JPG 
 */	
-
+	//includeCustomHTML();
 	//updateGameTitle('2023 Swan Singles');
  	updateGroups('2023 Swan Singles', 'U2100', 'U1800', '', '');
 	updateGroupsDate('6/24','20230624', '6/25','20230625', '7/25', '20230725', '6/25', '20230625');
@@ -311,8 +315,6 @@
 	updateDoc('https://docs.google.com/spreadsheets/d/1o9V9EExoLrOAYqcTGiBKfrtq-eVSrPNZtapa4mcxk6E/edit')
 	updateGroupsPid('1308111473', '727693339', '0', '0');
 	
-	/* Reverse order processing*/
-
 	//Group4 0=noshow -1=show+notyet, remove=done
     finalResult( 4, 0/*no show*/);	
 		finalResult(4,1,".4", "...4");
@@ -324,13 +326,13 @@
 		finalResult(3,2,"..3", "...3"); 	
 		
 	//Group2
-   //finalResult( 2, -1);
-	finalResult(2,1,"", "<b>Xingang Huang</b>");
+	//finalResult( 2, -1);
+		finalResult(2,1,"", "<b>Xingang Huang</b>");
 		finalResult(2,2,"", "Dony Oswen"); 
 		
 	//Group1
-    //finalResult( 1, -1);
-	finalResult( 1, 1," ", "<b>Derrick Phan</b><br\>");
+    //finalResult( 1, 0);
+		finalResult( 1, 1," ", "<b>Derrick Phan</b><br\>");
 		finalResult(1, 2," ", "Ma Yi<br\>");
 	
 	finalVideo( 4, 0, "bookmark4", '/2023 ' );
