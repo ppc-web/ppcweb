@@ -36,14 +36,42 @@
 			}
 	}
 	
+	function updateGroupTitle( group, flag ){
+		var localHtml = document.body.innerHTML;
+		var GR_Title_b = new RegExp('{GRank' + group + '_Title_bgn}', 'gi');
+		var GR_Title_e = new RegExp('{GRank' + group + '_Title_end}', 'gi');
+		if (flag==0){
+			localHtml=localHtml.replace(GR_Title_b, ' <!-- ');
+			localHtml=localHtml.replace(GR_Title_e, ' --> ');
+		}
+		else{
+			localHtml=localHtml.replace(GR_Title_b, ' ');
+			localHtml=localHtml.replace(GR_Title_e, ' ');
+		}
+		document.body.innerHTML = localHtml;
+	}
 	
 	function resizeGroupsTable(g1, g2, g3, g4){
+		
 		if ( g4 == '') {	
-			document.getElementById("groupsTableID").deleteRow(4); }
+			document.getElementById("groupsTableID").deleteRow(4);
+			updateGroupTitle(4,0); }
+		else{
+			updateGroupTitle(4,1);
+			}
 		if ( g3 == '') {
-			document.getElementById("groupsTableID").deleteRow(3);}
+			document.getElementById("groupsTableID").deleteRow(3);
+			updateGroupTitle(3,0); }
+		else {
+			updateGroupTitle(3,1);
+			}
 		if ( g2 == '') { 
-			document.getElementById("groupsTableID").deleteRow(2);}
+			document.getElementById("groupsTableID").deleteRow(2);
+			updateGroupTitle(2,0);
+			}
+		else {
+			updateGroupTitle(2,1);
+			}
 		/* always has at least one group 😂 */
 	}
 	
@@ -66,7 +94,6 @@ target="_blank"> Google &#x1F4C5 Event </a>  &nbsp&nbsp&nbsp */
             document.body.innerHTML
 		    .replace(GR_E_Yahoo, ystr);
 	}
-	
 
     // Replace all the "placeholder" in the page with "doc_link"
     function updateGroups(title,g1, g2, g3, g4) {
@@ -93,7 +120,7 @@ target="_blank"> Google &#x1F4C5 Event </a>  &nbsp&nbsp&nbsp */
 		    .replace(/{GroupRank4}/g, g4);
 		}
 		
-        updateGameTitle(title);
+        updateGameTitle(title);/*after all secondary Macros are generated*/
 		
 	    // h3 specific
 /* 		document.getElementById('h3')
