@@ -4,6 +4,11 @@
 		document.body.innerHTML
 		.replace(/{GAME_TITLE}/g, t);
     }
+	function updateGameVenue(ad) {
+		document.body.innerHTML =
+		document.body.innerHTML
+		.replace(/{GAME_VENUE}/g, ad);
+	}
     // Replace all the "placeholder" in the page with "doc_link"
     function updateDoc(newdoc) {
         document.body.innerHTML =
@@ -42,27 +47,54 @@
 		/* always has at least one group 😂 */
 	}
 	
+/* replace 2nd level macros : <a href="https://www.google.com/calendar/render?action=TEMPLATE&text={GAME_TITLE}&dates={GRank4DateCal}T130000/{GRank4DateCal}T180000&details=Swan%20scheduled%20{GroupRank4}%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&location=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050 "
+target="_blank"> Google &#x1F4C5 Event </a>  &nbsp&nbsp&nbsp */
+	function genCalMacros(gp){
+		var gstr = 'https:\/\/www.google.com/calendar/render?action=TEMPLATE&text={GAME_TITLE}&dates={GRank' +gp+
+		'DateCal}T130000/{GRank' +gp+ 'DateCal}T180000&details=Swan%20reminder%20{GroupRank' +gp+
+		'}%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&location={GAME_VENUE}';
+		var ystr = 'http:\/\/calendar.yahoo.com/?v=60&view=d&type=20&TITLE={GAME_TITLE}&ST={GRank' +gp+
+		'DateCal}T130000&ET={GRank' +gp+ 'DateCal}T180000&DESC=Swan%20reminder%20{GroupRank' +gp+
+		'}%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&in_loc={GAME_VENUE}';
+		
+		var GR_E_Google = new RegExp('{GRank' + gp + '_Google}', 'g');
+		var GR_E_Yahoo = new RegExp('{GRank' + gp + '_Yahoo}', 'g');
+		document.body.innerHTML=
+            document.body.innerHTML
+		    .replace(GR_E_Google, gstr);
+		document.body.innerHTML=
+            document.body.innerHTML
+		    .replace(GR_E_Yahoo, ystr);
+	}
+	
+
     // Replace all the "placeholder" in the page with "doc_link"
-    function updateGroups(g1, g2, g3, g4) {
+    function updateGroups(title,g1, g2, g3, g4) {
+		genCalMacros(1);
         document.body.innerHTML=
             document.body.innerHTML
 		    .replace(/{GroupRank1}/g, g1);
 		if (g2 != ''){
+		genCalMacros(2);
         document.body.innerHTML=
             document.body.innerHTML
 		    .replace(/{GroupRank2}/g, g2);
 		}
 		if (g3 != ''){
+		genCalMacros(3);
 		document.body.innerHTML=
             document.body.innerHTML
 		    .replace(/{GroupRank3}/g, g3);
 		}
         if (g4 != '') {
+		genCalMacros(4);
 		document.body.innerHTML=
             document.body.innerHTML
 		    .replace(/{GroupRank4}/g, g4);
 		}
-
+		
+        updateGameTitle(title);
+		
 	    // h3 specific
 /* 		document.getElementById('h3')
                 .innerHTML = document.getElementById('h3')
@@ -197,7 +229,7 @@
 			localHtml=localHtml.replace(GR_VTITLE, title);
 		}
 		document.body.innerHTML = localHtml;
-		//resizeVideoTable( group, flag );
+		resizeVideoTable( group, flag );
 	}
 	
 	//disableCtrlKeyCombination (dCK)

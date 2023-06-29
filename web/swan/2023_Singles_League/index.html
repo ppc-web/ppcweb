@@ -75,13 +75,14 @@
   </thead>
   <tbody>
     <tr>
+
 	    <td>{GroupRank1}</td>
 	    <td>{GRank1Date}</td>
 	    <td>{GRank1_event_begin} 
-		  <a href="https://www.google.com/calendar/render?action=TEMPLATE&text={GAME_TITLE}&dates=2023{GRank1DateCal}T130000/2023{GRank1DateCal}T180000&details=Swan%20reminder%20{GroupRank1}%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&location=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050"
-	      target="_blank"> Google &#x1F4C5 Event </a> ,&nbsp&nbsp&nbsp   
-		  <a href="http://calendar.yahoo.com/?v=60&view=d&type=20&TITLE={GAME_TITLE}&ST=2023{GRank1DateCal}T130000&ET=2023{GRank1DateCal}T180000&DESC=Swan%20reminder%20{GroupRank1}%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&in_loc=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050 "
-	      target="_blank"> Yahoo &#x1F4C5 Event </a> 
+		<a href="{GRank1_Google}"
+		  target="_blank"> Google &#x1F4C5 Event </a> ,&nbsp&nbsp&nbsp   
+		  <a href="{GRank1_Yahoo}"
+		  target="_blank"> Yahoo &#x1F4C5 Event </a> 
 		  {GRank1_event_end}  </td>
         <td> <a href="{GoogleDoc}#gid={GRank1DocPage}"
 		      target="_blank"> {GroupRank1} info...</a> 
@@ -91,9 +92,9 @@
 	    <td>{GroupRank2}</td>
 	    <td>{GRank2Date}</td>
 	    <td> {GRank2_event_begin} 
-		<a href="https://www.google.com/calendar/render?action=TEMPLATE&text={GAME_TITLE}&dates=2023{GRank2DateCal}T130000/2023{GRank2DateCal}T180000&details=Swan%20reminder%20{GroupRank2}%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&location=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050"
+		<a href="{GRank2_Google}"
 	      target="_blank"> Google &#x1F4C5 Event </a> ,&nbsp&nbsp&nbsp
-		<a href="http://calendar.yahoo.com/?v=60&view=d&type=20&TITLE={GAME_TITLE}&ST=2023{GRank2DateCal}T130000&ET=2023{GRank2DateCal}T180000&DESC=Swan%20reminder%20{GroupRank2}%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&in_loc=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050 "
+		<a href="{GRank2_Yahoo}"
 	      target="_blank"> Yahoo &#x1F4C5 Event </a> 
 		  {GRank2_event_end} </td>
 		<td> <a href= "{GoogleDoc}#gid={GRank2DocPage}"
@@ -104,9 +105,9 @@
 	    <td>{GroupRank3}</td>
 	    <td>{GRank3Date}</td>
 	    <td> {GRank3_event_begin} 
-			<a href="https://www.google.com/calendar/render?action=TEMPLATE&text={GAME_TITLE}&dates=2023{GRank3DateCal}T130000/2023{GRank3DateCal}T180000&details=Swan%20reminder%20{GroupRank3}%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&location=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050"
+			<a href="{GRank3_Google}"
 				target="_blank"> Google &#x1F4C5 Event </a> ,&nbsp&nbsp&nbsp
-			<a href="http://calendar.yahoo.com/?v=60&view=d&type=20&TITLE={GAME_TITLE}&ST=2023{GRank3DateCal}T130000&ET=2023{GRank3DateCal}T180000&DESC=Swan%20reminder%20{GroupRank3}%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&in_loc=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050 "
+			<a href="{GRank3_Yahoo}"
 				target="_blank"> Yahoo &#x1F4C5 Event </a>, 
 		  {GRank3_event_end}</td>
 	  <td> <a href= "{GoogleDoc}#gid={GRank3DocPage}"
@@ -117,9 +118,9 @@
 		<td>{GroupRank4}</td>
 		<td>{GRank4Date}</td>
 		<td>{GRank4_event_begin} 
-			<a href="https://www.google.com/calendar/render?action=TEMPLATE&text={GAME_TITLE}&dates=2023{GRank4DateCal}T130000/2023{GRank4DateCal}T180000&details=Swan%20scheduled%20{GroupRank4}%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&location=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050 "
+			<a href="{GRank4_Google}"
 				target="_blank"> Google &#x1F4C5 Event </a>  &nbsp&nbsp&nbsp
-			<a href="http://calendar.yahoo.com/?v=60&view=d&type=20&TITLE={GAME_TITLE}&ST=2023{GRank4DateCal}T130000&ET=2023{GRank4DateCal}T180000&DESC=Swan%20scheduled%20{GroupRank4}%20%F0%9F%98%89.%0ASee%20you%20soon.%20%F0%9F%91%8C&in_loc=Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050 "
+			<a href="{GRank4_Yahoo}"
 				target="_blank"> Yahoo &#x1F4C5 Event </a>	
             {GRank4_event_end}</td>
 		<td> <a href="{GoogleDoc}#gid={GRank4DocPage}"
@@ -130,9 +131,7 @@
 <!-- Codes by Quackit.com -->
 															
 							<table id=resultTable class="history-table">
-
 								<tbody>
-
 									<tr>
 										<td width="36%">
 											<p>
@@ -152,8 +151,6 @@
 										</td>
 										<td><img src="{GroupRank1}_runnerup.JPG" alt="{GroupRank1_runnerup}"/></td>
 									</tr>
-<!-- {GRank2_table_begin} -->
-
 									<tr>
 										<td width="36%">
 											<p>
@@ -174,8 +171,6 @@
 										</td>
 										<td><img src="{GroupRank2}_runnerup.JPG" alt="{GroupRank2_runnerup}" </td>
 									</tr>
-
-<!-- {GRank2_table_end} -->
 <!-- group -->
 									<tr>
 										<td width="36%">
@@ -219,9 +214,7 @@
 										<td><img src="{GroupRank4}_runnerup.JPG" alt="{GroupRank4_runnerup}" </td>
 									</tr>
 <!-- end disable group -->
-
 								</tbody>
-
 							</table>
 					
 							<table id=videoTable class="history-table">
@@ -245,7 +238,7 @@
 										</td>
 									</tr>
 
-<!-- 									<tr>
+									<tr>
 										<td width="30%">
 											<p>
 												<a href="{GRank2Video}" target="_blank" > {GroupRank2} {GRank2Date}{GRank2VideoTitle}&nbsp📹</a> 
@@ -259,8 +252,36 @@
 
 										</td>
 									</tr> 
--->
+									<tr>
+										<td width="30%">
+											<p>
+												<a href="{GRank3Video}" target="_blank" > {GroupRank3} {GRank3Date}{GRank3VideoTitle}&nbsp📹</a> 
+											</p>
+										</td>
+										<td>
+						       
+										<iframe width="480" height="270" src="https://www.youtube.com/embed/cGUiPUIjnp4" title="Swan {GroupRank2} {GRank2Date}" 
+												frameborder="0" allow="accelerometer;  encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy">
+												</iframe>
 
+										</td>
+									</tr> 
+<!-- -->
+									<tr>
+										<td width="30%">
+											<p>
+												<a href="{GRank4Video}" target="_blank" > {GroupRank4} {GRank4Date}{GRank4VideoTitle}&nbsp📹</a> 
+											</p>
+										</td>
+										<td>
+						       
+										<iframe width="480" height="270" src="https://www.youtube.com/embed/cGUiPUIjnp4" title="Swan {GroupRank2} {GRank2Date}" 
+												frameborder="0" allow="accelerometer;  encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy">
+												</iframe>
+
+										</td>
+									</tr> 
+<!-- -->
 								</tbody>
 							</table>
 							<h2> Past Events </h2>
@@ -270,36 +291,35 @@
 					</div>
 
 				</div>
-
 				<div id="footer">
 				</div>
 			</div>
 			
-
 <script>
 /* Comment Block
 // 
 // finalResult(group,place,alias,names(s) e.g."<b>player1</b>, <br/> player2 <br/>");
-//             place=0 to initialize table
+//             place:0 to initialize table, -1 to finishit off
 // U2100_champion.JPG U2100_runnerup.JPG 
 */	
 
-	updateGameTitle('2023 Swan Singles');
- 	updateGroups('U2100', 'U1800', '', '');
-	updateGroupsDate('6/24','0624', '6/25','0625', '6/25', '0625', '6/25', '0625');
-	
+	//updateGameTitle('2023 Swan Singles');
+ 	updateGroups('2023 Swan Singles', 'U2100', 'U1800', '', '');
+	updateGroupsDate('6/24','20230624', '6/25','20230625', '7/25', '20230725', '6/25', '20230625');
+	updateGameVenue('Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050');
+
 	updateDoc('https://docs.google.com/spreadsheets/d/1o9V9EExoLrOAYqcTGiBKfrtq-eVSrPNZtapa4mcxk6E/edit')
 	updateGroupsPid('1308111473', '727693339', '0', '0');
 	
-	/* Reverse order processing for proper table resizing*/
+	/* Reverse order processing*/
 
-	//Group4
-    finalResult( 4, 0);	
+	//Group4 0=noshow -1=show+notyet, remove=done
+    finalResult( 4, 0/*no show*/);	
 		finalResult(4,1,".4", "...4");
 		finalResult(4,2,"..4", "...4"); 	
 		
 	//Group3
-    finalResult( 3, 0);
+    finalResult( 3, 0/*-1,show+unfinished*/);
 		finalResult(3,1,".3", "..3.");
 		finalResult(3,2,"..3", "...3"); 	
 		
@@ -309,15 +329,13 @@
 		finalResult(2,2,"", "Dony Oswen"); 
 		
 	//Group1
-    //finalResult( 1, -1); //Enable event, Comment this out to mark finish eventCal
+    //finalResult( 1, -1);
 	finalResult( 1, 1," ", "<b>Derrick Phan</b><br\>");
 		finalResult(1, 2," ", "Ma Yi<br\>");
 	
-<!-- 	
-	finalVideo( 4, 0, "https://tinyurl.com/2899y59y", '/2023 ' );
-	finalVideo( 3, 0, "https://tinyurl.com/2899y59y", "/2023 "); 
--->
-	finalVideo( 2, 0, "https://tinyurl.com/2899y59y", "/2023 HaHa" );
+	finalVideo( 4, 0, "bookmark4", '/2023 ' );
+	finalVideo( 3, 0, "bookmark3", "/2023 "); 
+	finalVideo( 2, 0, "https://www.youtube.com/embed/cGUiPUIjnp4", "/2023 HaHa" );
 	finalVideo( 1, 1, "https://tinyurl.com/2899y59y", "/2023 Finals");
 	
 </script>			
