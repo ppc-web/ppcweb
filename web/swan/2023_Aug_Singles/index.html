@@ -3,7 +3,7 @@
 
 <head>
 <meta charset="UTF-8">
-<title>2023 Swan Singles</title>
+<title>2023 August Swan Singles</title>
 <link rel="stylesheet" href="../css/style.css" type="text/css">
 <link rel="icon" type="image/png" href="../images/logo.png">
 	<script src='../lib/jquery.min.js'></script>
@@ -33,22 +33,22 @@
 							</div>
 
 							<h2>{GAME_TITLE}  &#x1F3D3 </h2>
-							<h3>2023 ?? {GroupRank1} {GRank2_Title_bgn}, {GroupRank2}{GRank2_Title_end}{GRAnk3_Title_bgn}, {GroupRank3}{GRank3_Title_end} {GRAnk4_title_bgn}, {GroupRank4}{GRank4_Title_end} ??</h3>
+							<h3>{GAME_TITLE}  {GroupRank1} {GRank2_Title_bgn}, {GroupRank2}{GRank2_Title_end}{GRAnk3_Title_bgn}, {GroupRank3}{GRank3_Title_end} {GRAnk4_title_bgn}, {GroupRank4}{GRank4_Title_end} </h3>
 							
 							<table class="table">
 								<tbody>
 								<tr>
 								<td width="620px">
 								<ul>
-								<li>Registration Information &#x1F4E2: <a href="./announcement.jpg" target="_blank"> Flyer</a></li>
-								<li>Time: 12:00pm - 6:00pm June 24 - June 25</li>
+								<li>Registration Information &#x1F4E2: <a href="./announcement.pdf" target="_blank"> Flyer</a></li>
+								<li>Time: 1:00pm - 6:00pm August 5 - August 6</li>
 								<li>Registration fee: $30 </li>
 
 								<li>Event Contact: James Chai &#x1F4F2 (408)636-3262 </li>
 								<li> Send Registration Email to <a href="mailto:james.chai@gmail.com"> james.chai@gmail.com</a> </li>
 				
 								<li> Zelle: pingpong.community@gmail.com </li>
-								<li> Venmo : @SWANPPC </li>
+								<li> Venmo : @SWANPPC (last 4 digits 9919)</li>
 								<li> Note: Please include the event-name and your name in the payment</li>
 								<!-- <li> Wechat group: scan QR code on right &#x02192 </li> -->
 								</ul>
@@ -218,8 +218,15 @@
 <!-- end disable group -->
 								</tbody>
 							</table>
+							
+<!-- 										<p>
+ 											<div id="idYouTubeIconHtml2" 
+											     onclick="window.open('https://tinyurl.com/2899y59y');" 
+											     title="{GroupRank1} on utube"></div>
+											</p> 
+-->
 					
-							<table id=videoTable class="history-table">
+<!-- 							<table id=videoTable class="history-table">
 								<tbody>
 									<tr>
 										<td width="30%">
@@ -231,12 +238,7 @@
 						       
 										<iframe width="480" height="270" src="https://www.youtube.com/embed/cGUiPUIjnp4" title="Swan u2100 league 6/24/2023" 
 												frameborder="0" allow="accelerometer;  encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-<!-- 											<p>
- 											<div id="idYouTubeIconHtml2" 
-											     onclick="window.open('https://tinyurl.com/2899y59y');" 
-											     title="{GroupRank1} on utube"></div>
-											</p> 
--->
+
 										</td>
 									</tr>
 
@@ -268,7 +270,7 @@
 
 										</td>
 									</tr> 
-<!-- -->
+
 									<tr>
 										<td width="30%">
 											<p>
@@ -283,9 +285,10 @@
 
 										</td>
 									</tr> 
-<!-- -->
+
 								</tbody>
 							</table>
+							-->
 
 							<h2> Past Events </h2>
 							<iframe width="550px" height="150px" src="../pastevents/eventlist.html" frameborder="1"  ></iframe>
@@ -306,12 +309,12 @@
 */	
 	<!-- includeCustomHTML(); -->
 	//updateGameTitle('2023 Swan Singles');
- 	updateGroups('2023 Swan Singles', 'U2100', 'U1800', '', '');
-	updateGroupsDate('6/24','20230624', '6/25','20230625', '7/25', '20230725', '6/25', '20230625');
+ 	updateGroups('2023 August Swan Singles', 'U1100-1600', 'U1600-2100', '', '');
+	updateGroupsDate('8/5','20230805', '8/6','20230806', '', '', '', '');
 	updateGameVenue('Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050');
 
-	updateDoc('https://docs.google.com/spreadsheets/d/1o9V9EExoLrOAYqcTGiBKfrtq-eVSrPNZtapa4mcxk6E/edit')
-	updateGroupsPid('1308111473', '727693339', '0', '0');
+	updateDoc('https://docs.google.com/spreadsheets/d/')
+	updateGroupsPid('0', '0', '0', '0');
 	
 	//Group4 0=noshow -1=show+notyet, remove=done
     finalResult( 4, 0/*no show*/);	
@@ -324,19 +327,20 @@
 		finalResult(3,2,"..3", "...3"); 	
 		
 	//Group2
-	//finalResult( 2, -1);
-		finalResult(2,1,"", "<b>Xingang Huang</b>");
-		finalResult(2,2,"", "Dony Oswen"); 
+	finalResult( 2, 0);
+		finalResult(2,1,"", "<b>..2</b>");
+		finalResult(2,2,"", ""); 
 		
 	//Group1
-    //finalResult( 1, 0);
-		finalResult( 1, 1," ", "<b>Derrick Phan</b><br\>");
-		finalResult(1, 2," ", "Ma Yi<br\>");
+    finalResult( 1, -1);
+		finalResult( 1, 1,"Your name here", "<b>Champion</b>");
+
 	
 	finalVideo( 4, 0, "bookmark4", '/2023 ' );
 	finalVideo( 3, 0, "bookmark3", "/2023 "); 
 	finalVideo( 2, 0, "https://www.youtube.com/embed/cGUiPUIjnp4", "/2023 HaHa" );
 	finalVideo( 1, 1, "https://tinyurl.com/2899y59y", "/2023 Finals");
+	
 	
 </script>			
 			

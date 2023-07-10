@@ -289,6 +289,7 @@ target="_blank"> Google &#x1F4C5 Event </a>  &nbsp&nbsp&nbsp */
         return true;
     }
 
+//Deprecated by chrome
   function includeCustomHTML() {
   var z, i, elmnt, file, xhttp;
   /*loop through a collection of all HTML elements:*/
@@ -304,11 +305,11 @@ target="_blank"> Google &#x1F4C5 Event </a>  &nbsp&nbsp&nbsp */
       xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function() {
         if (this.readyState == 4) {
-          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 200) {elmnt.innerHTML = this.responseText; alert("Text="+this.responseText);}
           if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-          /*remove the attribute, and call this function once more:*/
+          /*remove the attribute, and recursively call this function once more:*/
           elmnt.removeAttribute("include-custom-html");
-         // includeCustomHTML();
+          includeCustomHTML();
         }
       }      
       xhttp.open("GET", file, true);
