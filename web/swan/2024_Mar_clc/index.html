@@ -33,7 +33,7 @@
 							</div>
 
 							<h2>{GAME_TITLE}  &#x1F3D3 </h2>
-							<h3>{GAME_TITLE}  {GroupRank1} {GRank2_Title_bgn}, {GroupRank2}{GRank2_Title_end}{GRAnk3_Title_bgn}, {GroupRank3}{GRank3_Title_end} {GRAnk4_title_bgn}, {GroupRank4}{GRank4_Title_end} </h3>
+							<h3>{GAME_TITLE} : {GroupRank1} {GRank2_Title_bgn}, {GroupRank2}{GRank2_Title_end}{GRAnk3_Title_bgn}, {GroupRank3}{GRank3_Title_end} {GRAnk4_title_bgn}, {GroupRank4}{GRank4_Title_end} </h3>
 							
 							<table class="table">
 								<tbody>
@@ -42,6 +42,7 @@
 								<ul>
 								<li>Team Information &#x1F4E2: <a href="https://docs.google.com/spreadsheets/d/1kFTClgg-1-ZOOTEtyWzMotutjr7rOi2iUIqUlSVtIZc/edit#gid=185803555" target="_blank"> Roster</a></li>
 								<li>Playoff Time: 1:00pm - 7:00pm 3/9/2024 </li>
+								<li>Acknowledgement and Thanks to James, Hui Su, Jerry, Kyle, Minhua, 崔正元
 				<!--
 								<li>Registration fee: per team (U1500-$110, U1900-$130, U2350-$150) </li>
 
@@ -311,12 +312,12 @@
 */	
 	<!-- includeCustomHTML(); -->
 	//updateGameTitle('2023 August Swan Singles'); noneed, merged w/groups
- 	updateGroups('2024 March Company/Club Leagues', 'CLC', '', '', '');
-	updateGroupsDate('3/9','20240309', '','', '', '', '', '');
+ 	updateGroups('2024 March Company/Club Leagues', 'Corporate CLC', 'Club CLC', '', '');
+	updateGroupsDate('3/9','20240309', '3/9','20240309', '', '', '', '');
 	updateGameVenue('Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050');
     //updateDoc('https://docs.google.com/spreadsheets/d/1NqzmZC4_aYfy55iAdJ7MQh6H8atwQv-jnMen7I4h5d8/edit?usp=sharing'); //ready soon
 	updateDoc('https://docs.google.com/spreadsheets/d/1kFTClgg-1-ZOOTEtyWzMotutjr7rOi2iUIqUlSVtIZc/edit'); //real
-	updateGroupsPid('2049173041', '', '', '0');
+	updateGroupsPid('2049173041', '525178210', '', '0');
 
 	//Group4 0=noshow -1=show+notyet, remove=done
     finalResult( 4, 0/*no show*/);	
@@ -329,14 +330,14 @@
 		finalResult(3,2,"gp3", "2nd..."); 	
 		
 	//Group2
-	finalResult( 2, 0); // comment out = finished
-		finalResult(2,1,"gp2", "winners..."); 
-		finalResult(2,2,"gp2", "2nd...");
+	//finalResult( 2, -1); // comment out = finished
+		finalResult(2,1,"<u>Let the Balls Fly</u>", "<ul><b>Yi Ma<br>Jirui Wen<br>Kenan Xiao<br></b>"); 
+		finalResult(2,2,"<u>TTA1</u>", "<ul>Liu Dong<br> Jiazhou Wang<br> Ray Khaikin<br>");
 		
 	//Group1
-	finalResult(1, -1," ", "<br/>");
-		finalResult( 1, 1,"", "1st");
-		finalResult( 1, 2,"", "2nd");
+	//finalResult(1, 0," ", "<br/>");
+		finalResult( 1, 1,"<u><u>LinkedIn A</u>", "<ul><b>Krish Avvari<br>Shivansh Kumar<br>Raymond  Yip<br>Youdong Qiu<br></b>");
+		finalResult( 1, 2,"<u>Google Upside Down Cake</u>", "<ul>Kyle Jao<br>Xiangjie Ji<br>Abhilash Kumar<br>Peter Liu<br>Tony Ma<br>");
 
 	// finalVideo(team, add/remove entry, link, label)
 	finalVideo( 4, 0, "bookmark4", '/2024 ' );
