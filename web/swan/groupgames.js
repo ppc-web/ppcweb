@@ -51,8 +51,20 @@
 		document.body.innerHTML = localHtml;
 	}
 	
-	function resizeGroupsTable(g1, g2, g3, g4){
+	function resizeGroupsTable(g1, g2, g3, g4, g5, g6){
 		
+		if ( g6 == '') {	
+			document.getElementById("groupsTableID").deleteRow(6);
+			updateGroupTitle(6,0); }
+		else{
+			updateGroupTitle(6,1);
+			}
+		if ( g5 == '') {	
+			document.getElementById("groupsTableID").deleteRow(5);
+			updateGroupTitle(5,0); }
+		else{
+			updateGroupTitle(5,1);
+			}
 		if ( g4 == '') {	
 			document.getElementById("groupsTableID").deleteRow(4);
 			updateGroupTitle(4,0); }
@@ -96,7 +108,7 @@ target="_blank"> Google &#x1F4C5 Event </a>  &nbsp&nbsp&nbsp */
 	}
 
     // Replace all the "placeholder" in the page with "doc_link"
-    function updateGroups(title,g1, g2, g3, g4) {
+    function updateGroups(title,g1, g2, g3, g4, g5, g6) {
 		genCalMacros(1);
         document.body.innerHTML=
             document.body.innerHTML
@@ -119,7 +131,18 @@ target="_blank"> Google &#x1F4C5 Event </a>  &nbsp&nbsp&nbsp */
             document.body.innerHTML
 		    .replace(/{GroupRank4}/g, g4);
 		}
-		
+		if (g5 != '') {
+		genCalMacros(5);
+		document.body.innerHTML=
+            document.body.innerHTML
+		    .replace(/{GroupRank5}/g, g5);
+		}
+		if (g6 != '') {
+		genCalMacros(6);
+		document.body.innerHTML=
+            document.body.innerHTML
+		    .replace(/{GroupRank6}/g, g6);
+		}
         updateGameTitle(title);/*after all secondary Macros are generated*/
 		
 	    // h3 specific
@@ -128,11 +151,11 @@ target="_blank"> Google &#x1F4C5 Event </a>  &nbsp&nbsp&nbsp */
                                      .innerHTML
 		    .replace(/{GroupRank1}/gi, g1); */
 			
-		resizeGroupsTable( g1, g2, g3, g4);
+		resizeGroupsTable( g1, g2, g3, g4, g5, g6);
     }
 
 
-    function updateGroupsDate(d1,d1cal, d2,d2cal, d3,d3cal, d4,d4cal){
+    function updateGroupsDate(d1,d1cal, d2,d2cal, d3,d3cal, d4,d4cal, d5,d5cal, d6,d6cal){
         document.body.innerHTML =
             document.body.innerHTML
 		    .replace(/{GRank1Date}/g, d1);
@@ -157,10 +180,22 @@ target="_blank"> Google &#x1F4C5 Event </a>  &nbsp&nbsp&nbsp */
         document.body.innerHTML =
             document.body.innerHTML
 		    .replace(/{GRank4DateCal}/g, d4cal);
+	    document.body.innerHTML =
+            document.body.innerHTML
+		    .replace(/{GRank5Date}/g, d5);
+        document.body.innerHTML =
+            document.body.innerHTML
+		    .replace(/{GRank5DateCal}/g, d5cal);
+        document.body.innerHTML =
+            document.body.innerHTML
+		    .replace(/{GRank6Date}/g, d6);
+        document.body.innerHTML =
+            document.body.innerHTML
+		    .replace(/{GRank6DateCal}/g, d6cal);
     }
 	
 	/* 	Doc page id */	
-	function updateGroupsPid(d1, d2, d3, d4) {
+	function updateGroupsPid(d1, d2, d3, d4, d5,d6) {
 		document.body.innerHTML =
             document.body.innerHTML
 		    .replace(/{GRank1DocPage}/g, d1);
@@ -177,6 +212,13 @@ target="_blank"> Google &#x1F4C5 Event </a>  &nbsp&nbsp&nbsp */
             document.body.innerHTML
 		    .replace(/{GRank4DocPage}/g, d4);
 		
+		document.body.innerHTML =
+            document.body.innerHTML
+		    .replace(/{GRank5DocPage}/g, d5);
+			
+	    document.body.innerHTML =
+            document.body.innerHTML
+		    .replace(/{GRank6DocPage}/g, d6);
 	}
 	
 	
@@ -191,7 +233,7 @@ target="_blank"> Google &#x1F4C5 Event </a>  &nbsp&nbsp&nbsp */
 			}
 		}
 		else
-		if ( group > 1 && group<= 4){
+		if ( group > 1 && group<= 6){
 			if ( place == 0){
 				var entry = (group-1) *2;
 				// winner & runnerup placeholders
@@ -204,7 +246,7 @@ target="_blank"> Google &#x1F4C5 Event </a>  &nbsp&nbsp&nbsp */
 	}
 	
 	function resizeVideoTable(group, flag){
-		if ( group >= 1 && group<= 4){
+		if ( group >= 1 && group<= 6){
 			if ( flag == 0){
 				document.getElementById("videoTable").deleteRow(group-1);
 			} 
