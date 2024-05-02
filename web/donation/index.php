@@ -12,7 +12,7 @@ require_once $abs_us_root . $us_url_root . 'users/includes/navigation.php';
 
 <?php
 
-$userId = $user->data ()->id;
+$userId = $user->data ()?->id;
 
 ?>
 
@@ -36,6 +36,7 @@ if ($user->isLoggedIn ()) {
 
 
 // check expire DOESN'T WORK 
+/*
     if ($userdetails->membership_status==2 && checkExpire($userId, $userdetails->mem_date_expire)===1) {
         updateMembershipStatus($userId, $userdetails->membership, 3);
     }
@@ -44,7 +45,7 @@ if ($user->isLoggedIn ()) {
         $memRequest=$_POST["membership"];
         updateMembershipStatus($userId, $memRequest, 1);
     }
-
+*/
 	?>
 		<!-- Page Heading -->
 		<div class="row">
@@ -74,7 +75,8 @@ if ($user->isLoggedIn ()) {
 <?php } else{?>
         <div class="row">
 			<div class="col-md-12">
-				<h3>Membership status: <?php if ($userdetails->membership_status==1) {
+			<!--  
+				<h3>Membership status: <--?php if ($userdetails->membership_status==1) {
 				echo "</h3><h4>Requested for ".fetchMembership($userdetails->membership)->membership_type.". Your request will be verified by admins.</h4>"; }
 				else if ($userdetails->membership_status==2) {echo fetchMembership($userdetails->membership)->membership_type."</h3>";
 				echo "<p>Your membership expires on ".$userdetails->mem_date_expire.".</p>";
@@ -82,7 +84,12 @@ if ($user->isLoggedIn ()) {
 				else if ($userdetails->membership_status==3){
 				    echo "</h3><h4>Oops! Your ".fetchMembership($userdetails->membership)->membership_type." membership
 				    has expired on ".$userdetails->mem_date_expire.". Be sure to donate again to renew your membership!</h4>";
-				}?>
+				
+				}
+				
+	?>
+	        -->
+				 
 			</div>
 		</div>
 <?php }?>
@@ -160,7 +167,9 @@ if ($user->isLoggedIn ()) {
 
 
 
-<?php } else{?>
+<?php 
+} else {
+?>
 <div class="row">
 			<div class="col-xs-12">
 				<div class="jumbotron">
@@ -179,7 +188,7 @@ if ($user->isLoggedIn ()) {
 		
 <?php } ?>
 
-		<div class="row">
+		<!--  div class="row">
 
 			<div class="col-xs-12">
 				<div class="jumbotron">
@@ -219,7 +228,7 @@ if ($user->isLoggedIn ()) {
 						<h4> We greatly appreciate your support to PPC and wish you a happy and fruitful year 2018! </h4>
 				</div>
 			</div>
-		</div>
+		</div-->
 
 
 
