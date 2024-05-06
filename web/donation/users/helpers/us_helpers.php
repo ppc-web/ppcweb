@@ -644,7 +644,7 @@ function checkMenu($permission, $id) {
 	if ($access == 1){
 		return true;
 	}
-	if ($user->data()->id == 1){
+	if ($user->exists() && $user->data()->id == 1){
 		return true;
 	}else{
 		return false;

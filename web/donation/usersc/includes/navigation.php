@@ -4,7 +4,7 @@
 <div class="collapse navbar-collapse navbar-top-menu-collapse navbar-left"> <!-- Left navigation items -->
 	<ul class="nav navbar-nav ">
 		<li><a href="<?=$us_url_root?>"><i class="fa"></i> My PPC Donations</a></li>
-		<?php if (checkMenu(2,$user->data()->id)){  //Links for permission level 2 (default admin) ?>
+		<?php if (checkMenu(2,$user->data()?->id)){  //Links for permission level 2 (default admin) ?>
 
 		<li><a href="<?=$us_url_root?>users/admin_users.php"><i class="fa"></i> Manage Users</a></li>
 		<!-- <li><a href="<?=$us_url_root?>users/memberRequests.php"><i class="fa"></i> Member Requests </a></li> -->

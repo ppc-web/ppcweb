@@ -39,3 +39,16 @@ class Config {
 		return false;
 	}
 }
+
+function asDollars($value) {
+    if ($value<0)
+        return “-“.asDollars(-$value);
+    
+    return number_format($value, 2);
+}
+
+if (!function_exists('money_format')) {
+    function money_format($fmt, $value) {
+        return asDollars($value);
+    }
+}
