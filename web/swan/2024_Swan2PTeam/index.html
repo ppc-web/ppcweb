@@ -8,7 +8,7 @@
 <link rel="icon" type="image/png" href="../images/logo.png">
 	<script src='../lib/jquery.min.js'></script>
     <script src="../swan.js"></script>  
-	<script src='../groupgames.js'></script>
+	<script src='./_groupgames.js'></script>
     <script>
     	loadCommon("index");
     </script>
@@ -200,7 +200,7 @@
 										</td>
 										<td><img src="{GroupRank2}_runnerup.JPG" alt="{GroupRank2_runnerup}" </td>
 									</tr>
-<!-- {GRank2_third} special entry! -->
+<!-- 3rd special entry! -->
 									<tr>
 										<td width="36%">
 											<p>
@@ -354,12 +354,13 @@
 	//Group4 0=noshow -1=show+notyet, remove=done
     finalResult( 4, 0/*no show*/);	
 		finalResult(4,1,"", "<b></b>");
-		finalResult(4,2,"", ""); 	
+		finalResult(4,2,"", ""); 
 		
+    //----- Now the visible entries 
 	//Group3
     finalResult( 3, -1/*-1,show+unfinished*/);
 		finalResult(3,1,"", "<b>Your name here!</b>");
-		finalResult(3,2,"", ""); 	
+		finalResult(3,2,"", "2nd"); 	
 		
 	//Group2
 	//finalResult( 2, -1); // comment out = finished
