@@ -267,7 +267,9 @@ target="_blank"> Google &#x1F4C5 Event </a>  &nbsp&nbsp&nbsp */
 		var GR_champ_names = new RegExp('{GroupRank' + group + '_champion_names}', 'gi');
 		var GR_runnerup = new RegExp('{GroupRank' + group + '_runnerup}', 'gi');
 		var GR_runnerup_names = new RegExp('{GroupRank' + group + '_runnerup_names}', 'gi');
-			
+		var GR_third = new RegExp('{GroupRank' + group + '_third}', 'gi');
+		var GR_third_names = new RegExp('{GroupRank' + group + '_third_names}', 'gi');
+		
 		if (place <= 0){ 
 			localHtml=localHtml.replace(GR_E_bgn, ' ');
 			localHtml=localHtml.replace(GR_E_end, ' ');
@@ -279,6 +281,10 @@ target="_blank"> Google &#x1F4C5 Event </a>  &nbsp&nbsp&nbsp */
 				if (place == 2){
 				localHtml=localHtml.replace(GR_runnerup, champ);
 				localHtml=localHtml.replace(GR_runnerup_names, champ_name);
+				} else
+				if (place == 3){
+				localHtml=localHtml.replace(GR_third, champ);
+				localHtml=localHtml.replace(GR_third_names, champ_name);
 				}
 			localHtml=localHtml.replace(GR_E_bgn, commentStart.toString() )
 			localHtml=localHtml.replace(GR_E_end, commentEnd.toString());
