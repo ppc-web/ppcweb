@@ -118,30 +118,52 @@ target="_blank"> Google &#x1F4C5 Event </a>  &nbsp&nbsp&nbsp */
         document.body.innerHTML=
             document.body.innerHTML
 		    .replace(/{GroupRank2}/g, g2);
+		} else {
+			document.body.innerHTML=
+            document.body.innerHTML
+		    .replace(/, {GroupRank2}/g, g2);
 		}
 		if (g3 != ''){
 		genCalMacros(3);
 		document.body.innerHTML=
             document.body.innerHTML
 		    .replace(/{GroupRank3}/g, g3);
+		} else {
+			document.body.innerHTML=
+            document.body.innerHTML
+		    .replace(/, {GroupRank3}/g, g3);
 		}
+		
         if (g4 != '') {
 		genCalMacros(4);
 		document.body.innerHTML=
             document.body.innerHTML
 		    .replace(/{GroupRank4}/g, g4);
+		} else {
+			document.body.innerHTML=
+            document.body.innerHTML
+		    .replace(/, {GroupRank4}/g, g4);
 		}
 		if (g5 != '') {
 		genCalMacros(5);
+		
 		document.body.innerHTML=
             document.body.innerHTML
 		    .replace(/{GroupRank5}/g, g5);
+		} else {
+			document.body.innerHTML=
+            document.body.innerHTML
+		    .replace(/, {GroupRank5}/g, g5);
 		}
 		if (g6 != '') {
 		genCalMacros(6);
 		document.body.innerHTML=
             document.body.innerHTML
 		    .replace(/{GroupRank6}/g, g6);
+		} else {
+			document.body.innerHTML=
+            document.body.innerHTML
+		    .replace(/, {GroupRank6}/g, g6);
 		}
         updateGameTitle(title);/*after all secondary Macros are generated*/
 		

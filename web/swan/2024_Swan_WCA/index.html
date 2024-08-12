@@ -3,12 +3,12 @@
 
 <head>
 <meta charset="UTF-8">
-<title>2024 Swan 2-Player Team</title>
+<title>2024 Swan Worldwide Colleges Alumni (WCA) Tournament</title>
 <link rel="stylesheet" href="../css/style.css" type="text/css">
 <link rel="icon" type="image/png" href="../images/logo.png">
 	<script src='../lib/jquery.min.js'></script>
     <script src="../swan.js"></script>  
-	<script src='./_groupgames.js'></script>
+	<script src='../groupgames.js'></script>
     <script>
     	loadCommon("index");
     </script>
@@ -34,7 +34,7 @@
 							</div>
 
 							<h2>{GAME_TITLE}  &#x1F3D3 </h2>
-							<h3>2024 天鹅 {GroupRank1}, {GroupRank2}, {GroupRank3}  大赛</h3>
+							<h3>2024 天鹅 {GroupRank1}, {GroupRank2}, {GroupRank3}, {GroupRank4}, {GroupRank5}, {GroupRank6}  大赛</h3>
 							
 							<table class="table">
 								<tbody>
@@ -42,15 +42,15 @@
 								<td width="620px">
 								<ul>
 								<li>Registration Information &#x1F4E2: <a href="./announcement.pdf" target="_blank"> Flyer</a></li>
-								<li>Time: 12:00pm - 6:00pm June 15 - June 29</li>
-								<li>Registration fee: $70 </li>
+								<li>Time: 12:00pm - 6:00pm August 10</li>
+								<li>Registration fee:  </li>
 
 								<li>Event Contact: James Chai &#x1F4F2 (408)636-3262 </li>
 								<li> Send Registration Email to <a href="mailto:james.chai@gmail.com"> james.chai@gmail.com</a> </li>
 				
 								<li> Zelle: pingpong.community@gmail.com </li>
 								<li> Venmo : @SWANPPC </li>
-								<li> Note: Please include the event and your name in the payment</li>
+								<li> Note: Please include the event-name and your name in the payment</li>
 								<!-- <li> Wechat group: scan QR code on right &#x02192 </li> -->
 								</ul>
 								</td>
@@ -200,17 +200,6 @@
 										</td>
 										<td><img src="{GroupRank2}_runnerup.JPG" alt="{GroupRank2_runnerup}" </td>
 									</tr>
-<!-- 3rd special entry! -->
-									<tr>
-										<td width="36%">
-											<p>
-											🥉 {GroupRank2} 3rd place:  {GroupRank2_third}<br />
-											    {GroupRank2_third_names} <br/>
-									
-											</p>
-										</td>
-										<td><img src="{GroupRank2}_third.JPG" alt="{GroupRank2_third}" </td>
-									</tr>
 
 <!-- {GRank2_table_end} -->
 <!-- group -->
@@ -336,42 +325,40 @@
 */	
 
 	//updateGameTitle('2023 Swan Doubles'); 
- 	updateGroups('2024 Swan 2-Player Team', 'U3200', 'U3800', 'U4200', '', '', '');
-	updateGroupsDate('6/15','20240615', '6/23','20240623', '6/29','20240629', '', '', '','', '','');
-	updateDoc('https://docs.google.com/spreadsheets/d/1a8vIGn5CjlRiKgQRsTHYn5ESjLlX_9D6V-9qX1-ynhk/edit');
-	updateGroupsPid(  '0', '1260897258', '368409850', '0', '0', '0');
-	//Original: https://docs.google.com/spreadsheets/d/1GE78m2Z4bMmH2feQN_zFVigzZlT5pgVctD4PTiJlu2s/edit '987228370', '342124903' 
+ 	updateGroups('2024 Swan Worldwide Colleges Alumni Tournament','WCA', '', '', '', '', '');
+	updateGroupsDate('8/10','20240810', '','', '','', '', '', '','', '','');
+	updateDoc('https://docs.google.com/spreadsheets/d/1dquaC80LL4L-VRITurcvCFS_WoluCQZOtrloCMC6EZ0/edit')
+	updateGroupsPid(  '0', '', '', '', '', '');
+	
 	//Group6 0=noshow -1=show+notyet, remove=done
     finalResult( 6, 0/*no show*/);	
-		finalResult(6,1,"", "");
-		finalResult(6,2,"", ""); 
+		finalResult(6,1,"Let the Ball Fly", "Yi Ma <br> Jirui Wen ");
+		finalResult(6,2,"Ping Pong Playa", "James Chai <br> Dong Liu"); 
 		
 	//Group5 0=noshow -1=show+notyet, remove=done
-    finalResult( 5, 0/*no show*/);	
-		finalResult(5,1,"LY", "<b></b>");
-		finalResult(5,2,"黑冰", ""); 	
+   finalResult( 5, 0/*no show*/);	
+		finalResult(5,1,"LY", "<b>Laura Zhang <br> Yi Ma </b>");
+		finalResult(5,2,"黑冰", "<b>Bingyu Li</b> <br>Hui Su "); 	
 		
 	//Group4 0=noshow -1=show+notyet, remove=done
     finalResult( 4, 0/*no show*/);	
-		finalResult(4,1,"", "<b></b>");
-		finalResult(4,2,"", ""); 
+		finalResult(4,1,"新顏", "<b>Xingang Huang <br> He Yan</b>");
+		finalResult(4,2,"喜洋洋", "Jason Liang <br> Laura Zhang"); 	
 		
-    //----- Now the visible entries 
 	//Group3
-    //finalResult( 3, -1/*-1,show+unfinished*/);
-		finalResult(3,1,"Let the Ball Fly", "<b>Yi Ma <br> Jirui Wen</b>");
-		finalResult(3,2,"Pips Mafia Plus", "Jim Chai <br> Tianxin Zhou"); 	
+    finalResult( 3, 0/*-1,show+unfinished*/);
+		finalResult(3,1,"LuxSquare", "<b>Cyndi Zhang <br> Justin Huang</b>");
+		finalResult(3,2,"喜洋洋", "Jason Liang <br>Zhenpei Yang"); 	
 		
 	//Group2
-	//finalResult( 2, -1); // comment out = finished
-		finalResult(2,1, "The Loop Duet", "<b> Johnny Zhang <br> Alvin Zhou</b>");
-		finalResult(2,2,"James and Yan", "James Wan <br> He Yan");
-		finalResult(2,3,"Pips Mafia Plus", "Xiaofei Ren <br> Jim Chai ");
+	finalResult( 2, 0); // comment out = finished
+		finalResult(2,1, "LuxSquad", "<b>Cyndi Zhang <br> Justin Huang</b>");
+		finalResult(2,2,"Play for Fun", "Weiyi Zhao <br> Qin Wei");
 		
 	//Group1
     //finalResult( 1, -1); //Enable event, Comment this out to mark finish eventCal
-		finalResult( 1, 1,"Yo-Yo Ma", "<b>Anthony Ma <br> SF You</b>");
-		finalResult(1, 2,"Spin Masters", "Calvin Tai <br> Xiang Guan");
+		finalResult( 1, 1,"UCD", "<b>Wesley Guan<br> Trevor Deng <br> Teresa Chan <br>Yi Su <br> Yudong Qiu <br> Danny Yip <br></b>");
+		finalResult(1, 2,"Stanford", "James Wan <br> Hao Li <br> Darshan Charlise <br> Tom Tsao <br>Divya Charlise <br> Yimin Liu <br>Chenchen Pan <br> Chang Su");
 </script>			
 			
 		</div>
