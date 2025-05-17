@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>2025 May CLC</title>
+<link rel="stylesheet" href="../css/style.css" type="text/css">
+<link rel="icon" type="image/png" href="../images/logo.png">
+	<script src='../lib/jquery.min.js'></script>
+    <script src="../swan.js"></script>  
+	<script src='../groupgames.js'></script>
+    <script>
+    	loadCommon("index");
+    </script>
+<!-- CSS Code: Place this code in the document's head (between the 'head' tags) -->
+
+<!-- end CSS Code -->
+
+</head>
+
+<body oncontextmenu="return false"; onkeypress="return dCK(event);" onkeydown="return dCK(event);">
+	<div id="background">
+		<div id="page">
+			<div id="header">
+			</div>
+			<div id="contents">
+				<div class="box">
+					<div>
+						<div class="body">
+							<div class="logo-holder">
+							<a href="../index.html"><img class="logo" src="../images/logo-45.png" alt="Swan homepage" ></a>
+							<!-- <a href="../index.html"><img class="logo-right" src="../images/logo-45.png" alt="Swan homepage></a> -->
+							</div>
+
+							<h2>{GAME_TITLE}  &#x1F3D3 </h2>
+							<h3>{GAME_TITLE} : {GroupRank1} {GRank2_Title_bgn}, {GroupRank2}{GRank2_Title_end}{GRAnk3_Title_bgn}, {GroupRank3}{GRank3_Title_end} {GRAnk4_title_bgn}, {GroupRank4}{GRank4_Title_end} </h3>
+							
+							<table class="table">
+								<tbody>
+								<tr>
+								<td width="620px">
+								<ul>
+								
+								<li>Registration Information &#x1F4E2: <a href="./announcement.pdf" target="_blank"> Flyer</a></li>
+								<li>Playoff Time: 1:00pm - 7:00pm 5/16/2025 </li>
+
+
+								<li>Registration fee: $100 per team  </li>
+
+								<li>Event Contact: James Chai &#x1F4F2 (408)636-3262 </li>
+								<li> Send Registration Email to <a href="mailto:james.chai@gmail.com"> james.chai@gmail.com</a> </li>
+				
+								<li> Zelle: pingpong.community@gmail.com </li>
+								<li> Venmo : @SWANPPC (last 4 digits 9919)</li>
+								<li> Note: Please include the event-name and your name in the payment</li>
+
+								<!-- <li> Wechat group: scan QR code on right &#x02192 </li> -->
+								</ul>
+								</td>
+								<td>
+								<!-- <img src="./wechat.jpg" height="200px" style="vertical-align: middle; padding: 5px;"> -->
+								</td>								
+								</tr>
+								</tbody>
+							</table>
+					
+
+<!-- HTML Code: Place this code in the document's body (between the 'body' tags) where the table should appear -->
+<!-- <div include-custom-html="./goodbye.html"> </div> -->
+
+ <table id=groupsTableID class="groupsTable" >
+  <thead>
+    <tr>
+      <th>Group</th>
+	  <th>Date</th>
+	  <th> + Reminder </th>
+
+      <th>Players/Result</th>
+    </tr>
+  </thead>
+
+<tbody>
+    <tr>
+	    <td>{GroupRank1}</td>
+	    <td>{GRank1Date}</td>
+	    <td>{GRank1_event_begin} 
+		<a href="{GRank1_Google}"
+		  target="_blank"> Google &#x1F4C5 Event </a>, &nbsp&nbsp&nbsp
+		<a href="{GRank1_Yahoo}"
+		  target="_blank"> Yahoo &#x1F4C5 Event </a> 
+		  {GRank1_event_end}  </td>
+        <td> <a href="{GoogleDoc}#gid={GRank1DocPage}"
+		      target="_blank"> {GroupRank1} info...</a> 
+		</td>
+    </tr>
+    <tr>
+	    <td>{GroupRank2}</td>
+	    <td>{GRank2Date}</td>
+	    <td> {GRank2_event_begin} 
+		<a href="{GRank2_Google}"
+		  target="_blank"> Google &#x1F4C5 Event </a>, &nbsp&nbsp&nbsp
+		<a href="{GRank2_Yahoo}"
+		  target="_blank"> Yahoo &#x1F4C5 Event </a> 
+		  {GRank2_event_end}  </td>
+		<td> <a href= "{GoogleDoc}#gid={GRank2DocPage}"
+		  target="_blank"> {GroupRank2} info... </a> </td>
+	  <!-- mirror "https://docs.google.com/spreadsheets/d/1Mur3wTZsF4QBV-uASa1pxsW2oRmYIzwMd6bzI_AMiXs/edit#gid=1996385974" -->
+    </tr>
+    <tr>
+	    <td>{GroupRank3}</td>
+	    <td>{GRank3Date}</td>
+	    <td> {GRank3_event_begin} 
+			<a href="{GRank3_Google}"
+				target="_blank"> Google &#x1F4C5 Event </a>, &nbsp&nbsp&nbsp
+			<a href="{GRank3_Yahoo}"
+				target="_blank"> Yahoo &#x1F4C5 Event </a> 
+		  {GRank3_event_end}</td>
+	  <td> <a href= "{GoogleDoc}#gid={GRank3DocPage}"
+		  target="_blank"> {GroupRank3} info...</a> </td>
+		  
+    </tr>
+	<tr>
+		<td>{GroupRank4}</td>
+		<td>{GRank4Date}</td>
+		<td>{GRank4_event_begin} 
+			<a href="{GRank4_Google}"
+				target="_blank"> Google &#x1F4C5 Event </a>, &nbsp&nbsp&nbsp
+			<a href="{GRank4_Yahoo}"
+				target="_blank"> Yahoo &#x1F4C5 Event </a>	
+            {GRank4_event_end}</td>
+		<td> <a href="{GoogleDoc}#gid={GRank4DocPage}"
+			  target="_blank"> {GroupRank4} info...</a> </td>
+    </tr>
+</tbody>
+</table>
+
+<!-- Codes by Quackit.com -->
+															
+							<table id=resultTable class="history-table">
+								<tbody>
+									<tr>
+										<td width="36%">
+											<p>
+											&#x1F947 {GroupRank1} Champion: {GroupRank1_champion} <br />
+												{GroupRank1_champion_names}<br/>
+											</p>
+										</td>
+										<td><img src="{GroupRank1}_champion.JPG" alt="{GroupRank1_champion}" width="300px" height="400px" style="vertical-align: middle; padding: 5px;"/></td>
+									</tr>
+									<tr>
+										<td width="36%">
+											<p>
+											&#x1F948 {GroupRank1} Runner up: {GroupRank1_runnerup} <br />
+											    {GroupRank1_runnerup_names}<br/>
+									
+											</p>
+										</td>
+										<td><img src="{GroupRank1}_runnerup.JPG" alt="{GroupRank1_runnerup}"/></td>
+									</tr>
+									<tr>
+										<td width="36%">
+											<p>
+											&#x1F947 {GroupRank2} Champion: {GroupRank2_champion} <br />
+												{GroupRank2_champion_names}<br/>
+
+											</p>
+										</td>
+										<td><img src="{GroupRank2}_champion.JPG" alt="{GroupRank2_champion}"/></td>
+									</tr>
+									<tr>
+										<td width="36%">
+											<p>
+											&#x1F948 {GroupRank2} Runner up:  {GroupRank2_runnerup}<br />
+											    {GroupRank2_runnerup_names} <br/>
+									
+											</p>
+										</td>
+										<td><img src="{GroupRank2}_runnerup.JPG" alt="{GroupRank2_runnerup}" </td>
+									</tr>
+<!-- group -->
+									<tr>
+										<td width="36%">
+											<p>
+											&#x1F947 {GroupRank3} Champion: {GroupRank3_champion} <br />
+												{GroupRank3_champion_names}<br/>
+												
+											</p>
+										</td>
+										<td><img src="{GroupRank3}_champion.JPG" alt="{GroupRank3_champion}"/></td>
+									</tr>
+									<tr>
+										<td width="36%">
+											<p>
+											&#x1F948 {GroupRank3} Runner up:  {GroupRank3_runnerup}<br />
+											    {GroupRank3_runnerup_names}<br/>
+											
+											</p>
+										</td>
+										<td><img src="{GroupRank3}_runnerup.JPG" alt="{GroupRank3_runnerup}" </td>
+									</tr>
+<!-- end disable group -->
+<!-- group -->
+									<tr>
+										<td width="36%">
+											<p>
+											&#x1F947 {GroupRank4} Champion: {GroupRank4_champion} <br />
+												{GroupRank4_champion_names} <br/>
+											</p>
+										</td>
+										<td><img src="{GroupRank4}_champion.JPG" alt="{GroupRank4_champion}"/></td>
+									</tr>
+									<tr>
+										<td width="36%">
+											<p>
+											&#x1F948 {GroupRank4} Runner up:  {GroupRank4_runnerup}<br />
+											    {GroupRank4_runnerup_names} <br/>
+																					
+											</p>
+										</td>
+										<td><img src="{GroupRank4}_runnerup.JPG" alt="{GroupRank4_runnerup}" </td>
+									</tr>
+<!-- end disable group -->
+								</tbody>
+							</table>
+							
+<!-- 										<p>
+ 											<div id="idYouTubeIconHtml2" 
+											     onclick="window.open('https://tinyurl.com/2899y59y');" 
+											     title="{GroupRank1} on utube"></div>
+											</p> 
+-->
+					
+							<table id=videoTable class="history-table">
+								<tbody>
+									<tr>
+										<td width="30%">
+											<p>
+												<a href="{GRank1Video}" target="_blank" > {GroupRank1} {GRank1Date}{GRank1VideoTitle}&nbsp??</a> 
+											</p>
+										</td>
+										<td>
+						       
+										<iframe width="480" height="270" src="https://www.youtube.com/embed/cGUiPUIjnp4" title="Swan u2100 league 6/24/2023" 
+												frameborder="0" allow="accelerometer;  encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+
+										</td>
+									</tr>
+
+									<tr>
+										<td width="30%">
+											<p>
+												<a href="{GRank2Video}" target="_blank" > {GroupRank2} {GRank2Date}{GRank2VideoTitle}&nbsp??</a> 
+											</p>
+										</td>
+										<td>
+						       
+										<iframe width="480" height="270" src="https://www.youtube.com/embed/cGUiPUIjnp4" title="Swan {GroupRank2} {GRank2Date}" 
+												frameborder="0" allow="accelerometer;  encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy">
+												</iframe>
+
+										</td>
+									</tr> 
+									<tr>
+										<td width="30%">
+											<p>
+												<a href="{GRank3Video}" target="_blank" > {GroupRank3} {GRank3Date}{GRank3VideoTitle}&nbsp??</a> 
+											</p>
+										</td>
+										<td>
+						       
+										<iframe width="480" height="270" src="https://www.youtube.com/embed/cGUiPUIjnp4" title="Swan {GroupRank2} {GRank2Date}" 
+												frameborder="0" allow="accelerometer;  encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy">
+												</iframe>
+
+										</td>
+									</tr> 
+
+									<tr>
+										<td width="30%">
+											<p>
+												<a href="{GRank4Video}" target="_blank" > {GroupRank4} {GRank4Date}{GRank4VideoTitle}&nbsp??</a> 
+											</p>
+										</td>
+										<td>
+						       
+										<iframe width="480" height="270" src="https://www.youtube.com/embed/cGUiPUIjnp4" title="Swan {GroupRank2} {GRank2Date}" 
+												frameborder="0" allow="accelerometer;  encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy">
+												</iframe>
+
+										</td>
+									</tr> 
+
+								</tbody>
+							</table>
+
+
+							<h2> Past Events </h2>
+							<iframe width="550px" height="150px" src="../pastevents/eventlist.html" frameborder="1"  ></iframe>
+							<h2> &#x1F3D3 </h2>
+						</div>
+					</div>
+
+
+				</div>
+				<div id="footer">
+				</div>
+			</div>
+			
+<script>
+/* Comment Block
+// finalResult(group,place,alias,names(s) e.g."<b>player1</b>, <br/> player2 <br/>");
+//             place:0 to initialize table, -1 to finishit off
+*/	
+	<!-- includeCustomHTML(); -->
+	//updateGameTitle('2023 August Swan Singles'); noneed, merged w/groups
+ 	updateGroups('2025 May Company Leagues', 'Corporate CLC Div-1', '', '', '');
+	updateGroupsDate('5/16','20250516', '5/16','20250516', '', '', '', '');
+	updateGameVenue('Address%3A%202600%20Lafayette%20Street%2C%20Santa%20Clara%2C%20CA%2C%2095050');
+    updateDoc('https://docs.google.com/spreadsheets/d/1NqzmZC4_aYfy55iAdJ7MQh6H8atwQv-jnMen7I4h5d8/edit?usp=sharing'); //ready soon
+	//updateDoc('https://docs.google.com/spreadsheets/d/1WClkx16v4NKonRA3TKPrp4Cp_FSMtYRsQl5Eyp1EFog/edit'); //real 2024 clc
+	updateGroupsPid('0', '0', '', '');
+
+	//Group4 0=noshow -1=show+notyet, remove=done
+    finalResult( 4, 0/*0 = no show*/);	
+		finalResult(4,1,"team", "...4");
+		finalResult(4,2,"team", "...4"); 	
+		
+	//Group3
+    finalResult( 3, 0/*-1 = show+unfinished*/);
+		finalResult(3,1,"gp3", "winners...");
+		finalResult(3,2,"gp3", "2nd..."); 	
+		
+	//Group2
+	finalResult( 2, 0); // comment out = finished
+		finalResult(2,1,"<u>Fortinet</u>", "<ul>Xiaofei Ren <br> Niu Ding <br>  Ron Liu <br>  Ramond Xue <br>  Hao Wang "); 
+		finalResult(2,2,"<u>MemVerge</u>", "<ul>Charles Fan <br>  Yue Li <br>  Jon Jiang <br>  Jeffres Wang <br>  Hui Chen");
+		
+	//Group1
+	//finalResult(1, -1," ", "<br/>");
+	//finalResult(1, -1,"", "");
+		finalResult( 1, 1,"Meta TopSpin", "<ul> <br>  <br>  <br> <br> ");
+		finalResult( 1, 2,"Google MAYAZ", "<ul> ");
+
+	// finalVideo(team, add/remove entry, link, label)
+	finalVideo( 4, 0, "bookmark4", '/2024 ' );
+	finalVideo( 3, 0, "bookmark3", "/2024 "); 
+	finalVideo( 2, 0, "bookmark2", "/2024 " );
+	finalVideo( 1, 0, "bookmark1", "/2024 Finals");
+	
+	
+</script>			
+			
+		</div>
+	</div>
+</body>
