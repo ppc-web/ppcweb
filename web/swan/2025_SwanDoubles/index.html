@@ -323,12 +323,21 @@
 /* Comment Block
 // finalResult(group,place,alias,names(s) e.g."<b>player1</b>, <br/> player2 <br/>");
 */	
-
+    let GameRoster = "https://docs.google.com/spreadsheets/d/1W8cVK5A6YCPVdQSaNPvA1TDeTGglOBcEhIJ6_HXA4AE/edit?usp=drivesdk";
+	let PageGroup1 = '237803023';
+	let PageGroup2 = '1958273252';
+	let PageGroup3 = '1761787944';
+	let PageGroup4 = '539062678';
+	let PageGroup5 = '0';
+	let PageGroup6 = '0';
+	
 	//updateGameTitle('2023 Swan Doubles'); 
  	updateGroups('2025 July Swan Doubles','U3200', 'U3500', 'U3800', 'U4200', '', '');
 	updateGroupsDate('8/9','20250809', '7/26','20250726', '8/2','20250802', '8/16', '20250816', '','', '','');
-	updateDoc('https://docs.google.com/spreadsheets/d/1NqzmZC4_aYfy55iAdJ7MQh6H8atwQv-jnMen7I4h5d8/edit?usp=drive_link') //ready soon
-	updateGroupsPid(  '779985971', '237803023', '1958273252', '1022340716', '0', '0');
+	//updateDoc('https://docs.google.com/spreadsheets/d/1NqzmZC4_aYfy55iAdJ7MQh6H8atwQv-jnMen7I4h5d8/edit?usp=drive_link') //ready soon
+	updateDoc(GameRoster) ;
+	// https://docs.google.com/spreadsheets/d/1W8cVK5A6YCPVdQSaNPvA1TDeTGglOBcEhIJ6_HXA4AE/edit?usp=drivesdk
+	updateGroupsPid(  PageGroup1, PageGroup2, PageGroup3, PageGroup4, PageGroup5, PageGroup6);
 	
 	//Group6 0=noshow -1=show+notyet, remove=done
     finalResult( 6, 0/*no show*/);	
