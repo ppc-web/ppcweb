@@ -58,13 +58,13 @@ img {
 	background: url(../images/bg-navigation.png) no-repeat;
 	clear: both;
 	height: 50px;
-	width: 880px;
+	width: 860px;
 	margin: 0 auto;
 	padding: 1px 1px 0 1px;
 }
 #navigation ul {
 	display: inline-block;
-	width: 880px;
+	width: 860px;
 	list-style: none;
 	margin: 0;
 	padding: 0;
