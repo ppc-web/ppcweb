@@ -844,3 +844,9 @@ a.memorial, #main div.box a.memorial {
 ul.no-margin-top {
 	margin-top: 2px;
 }
+ tr.colored-row {
+    background-color: lightgray ; 
+}
+ tr.lavender-row {
+    background-color: lavender ; /* lavender #e0f2f7 = Light blue */
+}
