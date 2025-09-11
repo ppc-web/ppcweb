@@ -1,6 +1,34 @@
 events.push.apply(events,
 [
 	{
+		title: '<center> 🏓Swan Team U1600 </center>',
+		start: '2025-09-13T09:00:00',
+		end:   '2025-09-13T17:00:00',
+		url: "https://www.swanpp.com/2025_SwanTeam/index.html",
+		color: "CadetBlue"
+	},
+		{
+		title: '<center> 🏓Swan Team U1800 </center>',
+		start: '2025-09-20T09:00:00',
+		end:   '2025-09-20T17:00:00',
+		url: "https://www.swanpp.com/2025_SwanTeam/index.html",
+		color: "CadetBlue"
+	},
+	{
+		title: '<center> 🏓Swan Team U2000 </center>',
+		start: '2025-10-18T09:00:00',
+		end:   '2025-10-18T17:00:00',
+		url: "https://www.swanpp.com/2025_SwanTeam/index.html",
+		color: "CadetBlue"
+	},
+	{
+		title: '<center> 🏓Swan Team U2350 </center>',
+		start: '2025-09-27T09:00:00',
+		end:   '2025-09-27T17:00:00',
+		url: "https://www.swanpp.com/2025_SwanTeam/index.html",
+		color: "CadetBlue"
+	},
+	{
 		title: '<center> 🏓Swan Doubles u3500 </center>',
 		start: '2025-07-26T09:00:00',
 		end: '2025-07-26T17:00:00',
