@@ -19,7 +19,7 @@ events.push.apply(events,
 		start: '2025-10-18T09:00:00',
 		end:   '2025-10-18T17:00:00',
 		url: "https://www.swanpp.com/2025_SwanTeam/index.html",
-		color: "CadetBlue"
+		color: "CadetBlue" 
 	},
 	{
 		title: '<center> 🏓Swan Team U2350 </center>',
